@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vitals Data</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <h1>Vitals Data</h1>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Metric</th>
+                <th>Zero</th>
+                <th>One</th>
+                <th>Two</th>
+                <th>Three</th>
+                <th>Four</th>
+                <th>Five</th>
+                <th>Six</th>
+                <th>Seven</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for data in vitals_data %}
+                <tr>
+                    <td>{{ data.metric }}</td>
+                    <td>{{ data.zero }}</td>
+                    <td>{{ data.one }}</td>
+                    <td>{{ data.two }}</td>
+                    <td>{{ data.three }}</td>
+                    <td>{{ data.four }}</td>
+                    <td>{{ data.five }}</td>
+                    <td>{{ data.six }}</td>
+                    <td>{{ data.seven }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+<script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>
