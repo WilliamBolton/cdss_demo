@@ -1,0 +1,125 @@
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ patient.name }} - Patient Details</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>{{ patient.name }}</h1>
+
+        <!-- Display patient information -->
+        <br>
+        <p>Age: {{ patient.age }}</p>
+        <p>Sex: {{ patient.sex }}</p>
+        <p>Diagnosis: {{ patient.diagnosis }}</p>
+        <p>Antibiotic: {{ patient.antibiotic }}</p>
+        
+        <!-- Display table -->
+        <br>
+        {% if has_vitals_data %}
+            <h2>Vitals Data</h2>
+            <div class="table-container">
+                <table id="vitals-table">
+                    <!-- Table content will be added dynamically using JavaScript -->
+                </table>
+            </div>
+        {% else %}
+            <p>No vitals data available</p>
+        {% endif %}
+
+        <!-- Additional elements with links to subpages -->
+        <br>
+        <br>
+        <div class="additional-elements">
+            <h2>AI CDSS Prediction / Recommendation</h2>
+            <p><a href="{% url 'prediction_page' patient_id=patient.id %}">{{ patient.prediction }}</a></p>
+            <br>
+            <h2>IVOS Guidelines</h2>
+            <p><a href="{% url 'guideline_page' patient_id=patient.id %}">{{ patient.guideline }}</a></p>
+        </div>
+
+        <!-- User Input Section -->
+        <br>
+        <h2>Your Decision</h2>
+        <form id="userInputForm" method="post" action="{% url 'process_user_input' patient_id=patient.id %}">
+        {% csrf_token %}
+
+        <!-- Dropdown Choice -->
+        <label for="switch_choice"></label>
+        <select id="switch_choice" name="switch_choice" required>
+            <option value="" selected disabled>Select an option</option>
+            <option value="switch">Switch</option>
+            <option value="dont_switch">Don't Switch</option>
+        </select>
+
+        <br>
+        <br>
+
+        <!-- Text Box -->
+        <label for="explanation">Please exsplain your choice:</label>
+        <textarea id="explanation" name="explanation" rows="4" cols="50"></textarea>
+
+        <br>
+        <br>
+        <br>
+
+        <!-- Submit Button -->
+        <button type="submit">Submit</button>
+        <!-- <button type="button" onclick="validateAndSubmit()">Submit</button> -->
+
+        <br>
+        <br>
+        <br>
+        <a href="{% url 'patient_list' %}">Back to All Patients</a>
+    </div>
+
+    <script>
+        // Parse JSON data passed from Django view
+        const vitalsDataJson = {{ vitals_data_json|safe }};
+    
+        // Display CSV data in the table
+        displayCsvData(vitalsDataJson);
+    
+        // Function to display JSON data in the table
+        function displayCsvData(jsonData) {
+            const table = document.getElementById("vitals-table");
+    
+            // Add table header
+            const headerRow = document.createElement("tr");
+            Object.keys(jsonData[0]).forEach(column => {
+                const th = document.createElement("th");
+                th.textContent = column;
+                headerRow.appendChild(th);
+            });
+            table.appendChild(headerRow);
+    
+            // Add table rows
+            jsonData.forEach(dataRow => {
+                const row = document.createElement("tr");
+                Object.values(dataRow).forEach(value => {
+                    const td = document.createElement("td");
+                    td.textContent = value;
+                    row.appendChild(td);
+                });
+                table.appendChild(row);
+            });
+        }
+
+        document.getElementById('userInputForm').addEventListener('submit', function(event) {
+        const dropdown = document.getElementById('switch_choice');
+        if (dropdown.value === "") {
+            // If the dropdown option is not selected, prevent the form submission
+            dropdown.setCustomValidity("Please select an option from the dropdown.");
+            event.preventDefault();
+        } else {
+            // If the dropdown option is selected, remove the custom validity
+            dropdown.setCustomValidity("");
+        }
+        });
+    </script>
+</body>
+</html>

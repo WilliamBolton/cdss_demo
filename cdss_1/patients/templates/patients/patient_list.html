@@ -1,0 +1,6 @@
+<h1>Patients</h1>
+<ul>
+  {% for patient in patients %}
+    <li><a href="{% url 'patient_detail' patient.id %}">{{ patient.name }}</a></li>
+  {% endfor %}
+</ul>

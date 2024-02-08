@@ -1,0 +1,19 @@
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guideline Details</title>
+    <!-- Add any additional head content if needed -->
+</head>
+<body>
+    <h1>Guideline Details</h1>
+    <!-- Your guideline content goes here -->
+    <!-- <p>PDF Document: <a href="{% static 'Final_IV_to_Oral_Switch_Decision_Aid_based_on_NationalCriteria_UKHSA.pdf' %}" target="_blank">View PDF</a></p> -->
+    <embed src="{% static 'Final_IV_to_Oral_Switch_Decision_Aid_based_on_NationalCriteria_UKHSA.pdf' %}" type="application/pdf" width="100%" height="600px" />
+    <br>
+    <br>
+    <p><a href="{% url 'patient_detail' patient_id=patient.id %}">Back to Patient</a></p>
+</body>
+</html>

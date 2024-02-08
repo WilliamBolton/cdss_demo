@@ -1,3 +1,5 @@
+<script src="https://cdn.jsdelivr.net/npm/echarts@5.0.2/dist/echarts.min.js"></script>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,5 +26,10 @@
             {% endfor %}
         </tbody>
     </table>
+
+<div id="app_content">
+    {% include 'plot/index.html' %}
+</div>
+
 </body>
 </html>

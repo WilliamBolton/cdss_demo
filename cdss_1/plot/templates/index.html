@@ -1,0 +1,14 @@
+<!-- Include ECharts library -->
+<script src="https://cdn.jsdelivr.net/npm/echarts@5.0.2/dist/echarts.min.js"></script>
+
+<!-- Include your JavaScript file -->
+<script src="{% static 'cdss_1/plot/static/js/script.js' %}"></script>
+
+<!-- Pass 'vitals_plot_data' to the JavaScript file using json_script -->
+{% load static %}
+{% json_script 'vitals_plot_data' 'vitalsPlotData' %}
+
+<!-- Call a function in your JavaScript file to set the data -->
+<script>
+    setChartData(vitalsPlotData);
+</script>

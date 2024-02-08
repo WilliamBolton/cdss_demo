@@ -8,5 +8,6 @@ from .views import vitals_table_view
 #]
 
 urlpatterns = [
-    path('', vitals_table_view, name='vitals_table_view'),
+    #path('', vitals_table_view, name='vitals_table_view'),
+    #path('patient/<int:patient_id>/', vitals_table_view, name='vitals_table_view'),
 ]

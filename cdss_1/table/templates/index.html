@@ -44,3 +44,11 @@
 <script src="{% static 'js/script.js' %}"></script>
 </body>
 </html>
+
+<h1>{{ patient.name }} - CSV Data</h1>
+{% if table_html %}
+    {{ table_html|safe }}
+{% else %}
+    <p>{{ table_html }}</p>
+{% endif %}
+<p><a href="{% url 'patient_list' %}">Back to Patient List</a></p>

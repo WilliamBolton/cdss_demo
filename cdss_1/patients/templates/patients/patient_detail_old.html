@@ -1,0 +1,11 @@
+<h1>{{ patient.name }}</h1>
+
+{% if has_vitals_data %}
+    <h2>CSV Data</h2>
+    {{ vitals_data|safe }}
+{% else %}
+    <p>No CSV data available.</p>
+{% endif %}
+<br>
+<br>
+<a href="{% url 'patient_list' %}">Back to All Patients</a>
