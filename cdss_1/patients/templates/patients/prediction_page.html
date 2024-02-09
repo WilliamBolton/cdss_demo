@@ -1,3 +1,5 @@
+{% load static %}
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,10 +8,84 @@
     <!-- Add any additional head content if needed -->
 </head>
 <body>
-    <h1>Prediction Page</h1>
-    <!-- Your prediction content goes here -->
-    <br>
-    <br>
-    <p><a href="{% url 'patient_detail' patient_id=patient.id %}">Back to Patient</a></p>
+    <div class="container">
+        <h1>Prediction Page</h1>
+        <!-- Your prediction content goes here -->
+        <!-- Display tables -->
+        {% if has_patient_data %}
+            <h2>This patient</h2>
+            <div class="table-container">
+                <table id="patient-table">
+                    <!-- Table content will be added dynamically using JavaScript -->
+                </table>
+            </div>
+        {% else %}
+            <p>No similar patients available</p>
+        {% endif %}
+        <br>
+        {% if has_similar_patients_data %}
+            <h2>Similar patients</h2>
+            <div class="table-container">
+                <table id="similar-table">
+                    <!-- Table content will be added dynamically using JavaScript -->
+                </table>
+            </div>
+        {% else %}
+            <p>No similar patients available</p>
+        {% endif %}
+
+        
+        <br>
+        <h2>Heatmap indicating feature similarity between this patient and the similar patients</h2>
+        <br>
+
+
+        <br>
+        <h2>LLM Summary</h2>
+        <br>
+
+
+        <br>
+        <br>
+        <p><a href="{% url 'patient_detail' patient_id=patient.id %}">Back to Patient</a></p>
+    </div>
+
+    <script>
+        // Parse JSON data passed from Django view
+        const patientDataJson = {{ patient_data_json|safe }};
+        const similarDataJson = {{ similar_patients_data_json|safe }};
+
+        // Display CSV data in the tables
+        displayCsvData(patientDataJson, "patient-table");
+        displayCsvData(similarDataJson, "similar-table");
+
+        // Function to display JSON data in the table
+        function displayCsvData(jsonData, string) {
+            const table = document.getElementById(string);
+
+            // Clear the table first to avoid appending to existing data
+            table.innerHTML = "";
+
+            // Add table header
+            const headerRow = document.createElement("tr");
+            Object.keys(jsonData[0]).forEach(column => {
+                const th = document.createElement("th");
+                th.textContent = column;
+                headerRow.appendChild(th);
+            });
+            table.appendChild(headerRow);
+
+            // Add table rows
+            jsonData.forEach(dataRow => {
+                const row = document.createElement("tr");
+                Object.values(dataRow).forEach(value => {
+                    const td = document.createElement("td");
+                    td.textContent = value;
+                    row.appendChild(td);
+                });
+                table.appendChild(row);
+            });
+        }
+    </script>
 </body>
 </html>

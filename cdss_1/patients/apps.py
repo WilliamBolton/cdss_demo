@@ -62,22 +62,30 @@ def create_initial_patients(sender, **kwargs):
     for i in range(1, 11):
         # Define name
         patient = Patient.objects.create(name=f"Patient {i}")
+        print(patient.name)
 
         # Define csv_path
-        # Assuming CSV files are in the 'csv_files' directory
-        csv_file_path = os.path.join('csv', f'patient_{i}.csv')
-        print(patient.name)
-        print('csv_file_path', csv_file_path)
-
+        # Assume CSV files are in the 'csv' directory
+        csv_file_path = os.path.join('csv/vitals', f'patient_{i}.csv')
+        #print('csv_file_path', csv_file_path)
         if os.path.exists(csv_file_path):
-            patient.csv_path = csv_file_path
+            patient.vitals_csv_path = csv_file_path
+            patient.save()
+        
+        # Define patients_csv_path
+        csv_file_path = os.path.join('csv/patient', f'patient_{i}.csv')
+        if os.path.exists(csv_file_path):
+            patient.patient_csv_path = csv_file_path
+            patient.save()
+
+        # Define similar_patients_csv_path
+        csv_file_path = os.path.join('csv/similar', f'patient_{i}.csv')
+        if os.path.exists(csv_file_path):
+            patient.similar_patients_csv_path = csv_file_path
             patient.save()
 
         # Define age
-        print('Hi!')
-        print(patient.name)
         patient.age = age_fun(patient.name)
-        print(patient.age)
         patient.save()
             
         # Define sex

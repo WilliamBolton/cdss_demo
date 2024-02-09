@@ -1,6 +1,45 @@
-<h1>Patients</h1>
-<ul>
-  {% for patient in patients %}
-    <li><a href="{% url 'patient_detail' patient.id %}">{{ patient.name }}</a></li>
-  {% endfor %}
-</ul>
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            background-color: #f0f0f0;
+            margin: 10px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        a:hover {
+            color: #0066cc;
+        }
+    </style>
+    <title>Patients</title>
+</head>
+<body>
+    <h1>Patients</h1>
+    <ul>
+        {% for patient in patients %}
+            <li><a href="{% url 'patient_detail' patient.id %}">{{ patient.name }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
