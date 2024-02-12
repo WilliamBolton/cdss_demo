@@ -34,10 +34,15 @@
             <p>No similar patients available</p>
         {% endif %}
 
+        {{ patient.name }}
+        {{ feature_similarity_path }}
+        feature_similarity_path
+
         
         <br>
         <h2>Heatmap indicating feature similarity between this patient and the similar patients</h2>
         <br>
+        <img src="{% static image_path %}" type="application/images" alt="Feature image" width="1000" height="600">
 
 
         <br>

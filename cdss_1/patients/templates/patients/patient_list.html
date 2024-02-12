@@ -8,6 +8,13 @@
     <style>
         body {
             font-family: Arial, sans-serif;
+            background-color: #f9f9f9; /* Add a light background color */
+        }
+
+        .container {
+            max-width: 800px; /* Adjust the width as needed */
+            margin: 0 auto;
+            text-align: center;
         }
 
         ul {
@@ -16,10 +23,11 @@
         }
 
         li {
-            background-color: #f0f0f0;
+            background-color: #fff; /* Set the background color for each patient entry */
             margin: 10px;
             padding: 10px;
             border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow for better visual separation */
         }
 
         a {
@@ -35,11 +43,13 @@
     <title>Patients</title>
 </head>
 <body>
-    <h1>Patients</h1>
-    <ul>
-        {% for patient in patients %}
-            <li><a href="{% url 'patient_detail' patient.id %}">{{ patient.name }}</a></li>
-        {% endfor %}
-    </ul>
+    <div class="container">
+        <h1>Patients</h1>
+        <ul>
+            {% for patient in patients %}
+                <li><a href="{% url 'patient_detail' patient.id %}">{{ patient.name }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
 </body>
 </html>

@@ -1,0 +1,4 @@
+Similar patients, age, sex, ethnicity, infection diganosis, co-morbidities, AI CDSS prediction, Real action
+1,60, Male, White, Pneumonia, Obesity, Dont switch, Didnt switch
+2,50, Female, Asian, NA, -, Dont switch, Didnt switch
+3,70, Male, Black, Pneumonia, Diabetes, Dont switch, Didnt switch

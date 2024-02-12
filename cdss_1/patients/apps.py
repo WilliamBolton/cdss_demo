@@ -18,6 +18,30 @@ def sex_fun(n):
         return 'Female'
     else:
         return 'nan'
+
+def ethnicity_fun(n):
+    if n == 'Patient 1':
+        return 'White'
+    elif n == 'Patient 2':
+        return 'Female'
+    else:
+        return 'nan'
+
+def imddecil_fun(n):
+    if n == 'Patient 1':
+        return '4'
+    elif n == 'Patient 2':
+        return 'xxx'
+    else:
+        return 'nan'
+
+def comorbidities_fun(n):
+    if n == 'Patient 1':
+        return 'Obesity'
+    elif n == 'Patient 2':
+        return 'xxx'
+    else:
+        return 'nan'
     
 def diagosis_fun(n):
     if n == 'Patient 1':
@@ -83,6 +107,12 @@ def create_initial_patients(sender, **kwargs):
         if os.path.exists(csv_file_path):
             patient.similar_patients_csv_path = csv_file_path
             patient.save()
+        
+        # Define similar_patients_csv_path
+        png_file_path = os.path.join('images', f'patient_{i}_feature_similarity.png')
+        if os.path.exists(png_file_path):
+            patient.feature_similarity_path = png_file_path
+            patient.save()
 
         # Define age
         patient.age = age_fun(patient.name)
@@ -90,6 +120,18 @@ def create_initial_patients(sender, **kwargs):
             
         # Define sex
         patient.sex = sex_fun(patient.name)
+        patient.save()
+
+        # Define ethnicity
+        patient.ethnicity = ethnicity_fun(patient.name)
+        patient.save()
+
+        # Define imddecil
+        patient.imddecil = imddecil_fun(patient.name)
+        patient.save()
+
+        # Define comorbidities
+        patient.comorbidities = comorbidities_fun(patient.name)
         patient.save()
             
         # Define diagnosis

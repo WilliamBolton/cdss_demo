@@ -37,30 +37,93 @@
             width: 1.5em;
             height: 1.5em;
         }
+
+        #vitals-table td {
+            text-align: center;
+        }
+
+        /* Add this style to make the heading row darker */
+        #vitals-table th {
+            background-color: #888;
+            color: white;
+        }
+
+        /* Add this style for lighter grey alternative striping */
+        #vitals-table tr:nth-child(odd) {
+            background-color: #f3f3f3;
+        }
+
+        /* Add this style for hover effect on rows */
+        #vitals-table tr:hover {
+            background-color: #e0e0e0;
+        }
     </style>
 
-
-</head>
-<body>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- ECharts Library -->
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.3.0/dist/echarts.min.js"></script>
 
+</head>
+<body>
     <div class="container">
-        <h1>{{ patient.name }}</h1>
+        <br>
+        <br>
+        <h1 style="text-align: center;">{{ patient.name }}</h1>
 
         <!-- Display patient information -->
         <br>
-        <p>Age: {{ patient.age }}</p>
-        <p>Sex: {{ patient.sex }}</p>
-        <p>Diagnosis: {{ patient.diagnosis }}</p>
-        <p>Antibiotic: {{ patient.antibiotic }}</p>
+        <div class="card">
+            <div class="card-header" style="background-color: #f2f2f2;">
+                <h2 class="card-title">Details</h2>
+            </div>
+            <div class="card-body">
+                <dl class="row">
+                    <dt class="col-sm-3">Age:</dt>
+                    <dd class="col-sm-9">{{ patient.age }}</dd>
         
+                    <dt class="col-sm-3">Sex:</dt>
+                    <dd class="col-sm-9">{{ patient.sex }}</dd>
+
+                    <dt class="col-sm-3">Ethnicity:</dt>
+                    <dd class="col-sm-9">{{ patient.ethnicity }}</dd>
+
+                    <dt class="col-sm-3">IMDDECIL:</dt>
+                    <dd class="col-sm-9">{{ patient.imddecil }}</dd>
+
+                    <dt class="col-sm-3">Co-morbidities:</dt>
+                    <dd class="col-sm-9">{{ patient.comorbidities }}</dd>
+
+                    <dt class="col-sm-3"></dt>
+                    <dd class="col-sm-9"></dd>
+                    <dt class="col-sm-3"></dt>
+                    <dd class="col-sm-9"></dd>
+                    <dt class="col-sm-3"></dt>
+                    <dd class="col-sm-9"></dd>
+                    <dt class="col-sm-3"></dt>
+                    <dd class="col-sm-9"></dd>
+                    <dt class="col-sm-3"></dt>
+                    <dd class="col-sm-9"></dd>
+                    <dt class="col-sm-3"></dt>
+                    <dd class="col-sm-9"></dd>
+        
+                    <dt class="col-sm-3">Diagnosis:</dt>
+                    <dd class="col-sm-9">{{ patient.diagnosis }}</dd>
+        
+                    <dt class="col-sm-3">Antibiotic treatment:</dt>
+                    <dd class="col-sm-9">{{ patient.antibiotic }}</dd>
+                </dl>
+            </div>
+        </div>
+        <br>
+
+
         <!-- Display table -->
         <br>
         {% if has_vitals_data %}
-            <h2>Vitals Data</h2>
+            <h2>Vitals</h2>
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
             <div class="container mt-3">
@@ -90,7 +153,13 @@
             <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
         </symbol>
         </svg>
-              
+        <br>
+
+        <!-- ECharts Container -->
+        <div id="echarts-container" style="height: 400px;"></div>
+        <br>
+        <br>  
+        <br>    
         
         <h2>Predictions and Guidelines</h2>
         <br>
@@ -124,9 +193,11 @@
             </div>
         </div>
         <br>
+        <br>
 
         <!-- User Input Section -->
         <h2>Your Decision</h2>
+        <br>
         <form id="userInputForm" method="post" action="{% url 'process_user_input' patient_id=patient.id %}">
         {% csrf_token %}
 
@@ -150,7 +221,6 @@
 
         <br>
         <br>
-        <br>
 
         <!-- Submit Button -->
         <button type="submit" class="btn btn-primary">Submit</button>
@@ -172,27 +242,108 @@
         // Function to display JSON data in the table
         function displayCsvData(jsonData) {
             const table = document.getElementById("vitals-table");
-    
+
+            // Extract metrics and time data
+            const metrics = jsonData.map(item => item["Metric / Time (hours)"]);
+            const timePoints = Object.keys(jsonData[0]).filter(key => key !== "Metric / Time (hours)");
+
             // Add table header
             const headerRow = document.createElement("tr");
-            Object.keys(jsonData[0]).forEach(column => {
+            const th = document.createElement("th");
+            th.textContent = "Metric / Time (hours)";
+            headerRow.appendChild(th);
+            timePoints.forEach(timePoint => {
                 const th = document.createElement("th");
-                th.textContent = column;
+                th.textContent = timePoint;
                 headerRow.appendChild(th);
             });
             table.appendChild(headerRow);
-    
+
             // Add table rows
-            jsonData.forEach(dataRow => {
+            metrics.forEach(metric => {
                 const row = document.createElement("tr");
-                Object.values(dataRow).forEach(value => {
+                const td = document.createElement("td");
+                td.textContent = metric;
+                row.appendChild(td);
+
+                timePoints.forEach(timePoint => {
                     const td = document.createElement("td");
-                    td.textContent = value;
+                    td.textContent = jsonData.find(item => item["Metric / Time (hours)"] === metric)[timePoint];
                     row.appendChild(td);
                 });
+
                 table.appendChild(row);
             });
         }
+
+        // Extract metrics and time data
+        const metrics = vitalsDataJson.map(item => item["Metric / Time (hours)"]);
+        const timePoints = Object.keys(vitalsDataJson[0]).filter(key => key !== "Metric / Time (hours)");
+
+        // Initialize ECharts
+        const echartsContainer = document.getElementById('echarts-container');
+        const echartsInstance = echarts.init(echartsContainer);
+
+        // Use the echartsData to create the line plot
+        echartsInstance.setOption({
+            title: {
+                text: ''
+            },
+            tooltip: {
+                trigger: 'axis'
+            },
+            legend: {
+                data: metrics,
+                selected: {}, // Empty initially, indicating all series are visible
+            },
+            grid: {
+                left: '3%',
+                right: '4%',
+                bottom: '3%',
+                containLabel: true
+            },
+            xAxis: {
+                type: 'category',
+                boundaryGap: false,
+                data: timePoints,
+                // name: 'Hours',
+            },
+            yAxis: {
+                type: 'value',
+                // name: 'Value',
+            },
+            series: metrics.map(metric => ({
+                name: metric,
+                type: 'line',
+                data: timePoints.map(timePoint => vitalsDataJson.find(item => item["Metric / Time (hours)"] === metric)[timePoint]),
+            })),
+            dataZoom: [
+            {
+                type: 'inside',
+                start: 0,
+                end: 100,
+            },
+            {
+                show: true,
+                type: 'slider',
+                bottom: 10,
+                start: 0,
+                end: 100,
+                yAxisIndex: [0], // Specify the yAxisIndex for y-axis zoom
+            },
+        ],
+        });
+
+        // Add legend click event listener
+        echartsInstance.on('legendselectchanged', function (params) {
+            // Toggle visibility of selected series based on legend selection
+            Object.keys(options.legend.selected).forEach(seriesName => {
+                options.legend.selected[seriesName] = params.selected[seriesName];
+            });
+
+            // Update chart with new legend settings
+            echartsInstance.setOption(options);
+        });
 
         document.getElementById('userInputForm').addEventListener('submit', function(event) {
         const dropdown = document.getElementById('switch_choice');

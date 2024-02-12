@@ -131,4 +131,5 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'table/static'),
     os.path.join(BASE_DIR, 'plot/static'),
     os.path.join(BASE_DIR, 'pdf/'),
+    os.path.join(BASE_DIR, 'images/'),
 ]

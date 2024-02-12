@@ -52,6 +52,13 @@ def prediction_page(request, patient_id):
         similar_patients_data = pd.read_csv(patient.similar_patients_csv_path)
         similar_patients_dict = similar_patients_data.to_dict(orient='records')
         similar_patients_data_json = json.dumps(similar_patients_dict)
+    
+    if patient.feature_similarity_path == 'nan':
+        image_path = None
+    else:
+        image_path = patient.feature_similarity_path
+        # Strip to allow for loading in html
+        image_path = image_path.lstrip('images/')
 
     return render(request, 'patients/prediction_page.html', {
         'patient': patient,
@@ -59,6 +66,7 @@ def prediction_page(request, patient_id):
         'has_patient_data': patient_data is not None,
         'similar_patients_data_json': similar_patients_data_json, 
         'has_similar_patients_data': similar_patients_data is not None,
+        'image_path': image_path,
         })
 
 def guideline_page(request, patient_id):
