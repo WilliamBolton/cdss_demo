@@ -1,2 +1,2 @@
-age, sex, ethnicity,IMDDECIL, infection diganosis, co-morbidities, AI CDSS prediction, Real action
-73, Male, White,4, Pneumonia, Obesity, Dont switch, TBC
+Age,Sex,Ethnicity,IMDDECIL,Co-morbidities,Infection diganosis,AI CDSS prediction,Real action
+73, Male, White,4, Obesity, Pneumonia,Dont switch, TBC

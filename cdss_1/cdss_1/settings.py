@@ -103,6 +103,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+AUTHENTICATION_BACKENDS = ['patients.backends.UserProfileBackend']
 
 # Internationalization
 # https://docs.djangoproject.com/en/5.0/topics/i18n/

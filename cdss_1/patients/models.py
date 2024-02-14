@@ -1,4 +1,7 @@
 from django.db import models
+from django.contrib.auth.models import AbstractUser
+from django.contrib.auth.models import Group
+from django.contrib.auth.models import User
 from django.db.models.signals import post_save, post_migrate
 from django.dispatch import receiver
 import os
@@ -21,6 +24,78 @@ class Patient(models.Model):
     antibiotic = models.CharField(max_length=100, default='nan')
     prediction = models.CharField(max_length=100, default='nan')
     guideline = models.CharField(max_length=100, default='nan')
+
+class DecisionPoint(models.Model): # I think this can be removed
+    label = models.CharField(max_length=255)
+    description = models.TextField()
+    
+    def __str__(self):
+        return self.label
+
+class Answer(models.Model):
+    decision_point = models.ForeignKey(DecisionPoint, on_delete=models.CASCADE)
+    text = models.CharField(max_length=255)
+    style = models.CharField(max_length=50, choices=[('success', 'Success'), ('danger', 'Danger'), ('info', 'Info'), ('warning', 'Warning')])
+    bg_class = models.CharField(max_length=50, default='bg-light')
+    text_class = models.CharField(max_length=50, default='text-dark')
+
+    def __str__(self):
+        return self.text
+
+class UserProfile(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE, default=1)
+    id_value = models.CharField(max_length=50)
+    archetype = models.CharField(max_length=50)
+
+    #def __str__(self):
+    #    return f"{self.user.username} - {self.archetype}"
+
+
+'''### USERS ###
+
+class User_A(AbstractUser):
+    # Your additional fields here
+    user_archetype = models.CharField(max_length=100)
+
+    # Specify related_name for groups
+    groups = models.ManyToManyField(
+        Group,
+        verbose_name=('groups_A'),
+        blank=True,
+        help_text=(
+            'The groups this user belongs to. A user will get all permissions '
+            'granted to each of their groups.'
+        ),
+        related_name='user_a_groups',  # Add this line
+    )
+
+    class Meta(AbstractUser.Meta):
+        # Specify related_name for user_permissions
+        permissions = [
+            ("can_view_special_reports", "Can view special reports"),
+        ]
+
+class User_B(AbstractUser):
+    # Your additional fields here
+    user_archetype = models.CharField(max_length=100)
+
+    # Specify related_name for groups
+    groups = models.ManyToManyField(
+        Group,
+        verbose_name=('groups_B'),
+        blank=True,
+        help_text=(
+            'The groups this user belongs to. A user will get all permissions '
+            'granted to each of their groups.'
+        ),
+        related_name='user_b_groups',  # Add this line
+    )
+
+    class Meta(AbstractUser.Meta):
+        # Specify related_name for user_permissions
+        permissions = [
+            ("can_view_special_reports", "Can view special reports"),
+        ]'''
 
 '''@receiver(post_save, sender=Patient)
 def set_default_csv_path(sender, instance, **kwargs):

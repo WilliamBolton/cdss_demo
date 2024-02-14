@@ -1,12 +1,2 @@
-Switch Choice,Explanation
-switch,
-dont_switch,test
-,
-,
-,
-switch,
-switch,
-,
-,
-switch,This is wrong
-dont_switch,Another test
+user_id,user_archetype,switch_choice,explanation
+10,a,switch,Test

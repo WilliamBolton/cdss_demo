@@ -4,55 +4,202 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI CDSS Prediction Details</title>
-    <!-- Add any additional head content if needed -->
+    <title>{{ patient.name }} - Prediction Details</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: white;
+        }
+
+        .container {
+            max-width: 800px; /* Adjust the width as needed */
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .card {
+            margin-top: 20px;
+        }
+
+        .alert_link {
+            font-weight: bold;
+        }
+
+        .btn-secondary {
+            margin-top: 20px;
+        }
+
+        table {
+            width: 100%;
+            text-align: center;
+        }
+
+        th, td {
+            padding: 10px;
+            vertical-align: middle;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        tr:nth-child(odd) {
+            background-color: #f9f9f9;
+        }
+
+        tr:hover {
+            background-color: #e0e0e0;
+        }
+
+        #patient-table td {
+            text-align: center;
+        }
+
+        /* Add this style to make the heading row darker */
+        #patient-table th {
+            background-color: #888;
+            color: white;
+        }
+
+        /* Add this style for lighter grey alternative striping */
+        #patient-table tr:nth-child(odd) {
+            background-color: #f3f3f3;
+        }
+
+        /* Add this style for hover effect on rows */
+        #patient-table tr:hover {
+            background-color: #e0e0e0;
+        }
+
+        #similar-table td {
+            text-align: center;
+        }
+
+        /* Add this style to make the heading row darker */
+        #similar-table th {
+            background-color: #888;
+            color: white;
+        }
+
+        /* Add this style for lighter grey alternative striping */
+        #similar-table tr:nth-child(odd) {
+            background-color: #f3f3f3;
+        }
+
+        /* Add this style for hover effect on rows */
+        #similar-table tr:hover {
+            background-color: #e0e0e0;
+        }
+
+        #feature-image {
+            display: block;
+            margin: auto;
+        }
+
+        .bg-success-light {
+            background-color: #d3ebdb; /* Light green color */
+        }
+
+        .bg-danger-light {
+            background-color: #fbd3db; /* Light red color */
+        }
+
+        .bg-success-bright {
+            background-color: #b3ffb3; /* Bright green color */
+        }
+
+        .bg-danger-bright {
+            background-color: #ffb3b3; /* Bright red color */
+        }
+    </style>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
 </head>
 <body>
     <div class="container">
-        <h1>Prediction Page</h1>
-        <!-- Your prediction content goes here -->
+        <br>
+        <br>
+        <h1>{{ patient.name }} - AI CDSS Prediction Details</h1>
+        <br>
+        <br>
         <!-- Display tables -->
         {% if has_patient_data %}
             <h2>This patient</h2>
-            <div class="table-container">
-                <table id="patient-table">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+            <div class="container mt-3">
+                <div class="table-container">
+                    <table class="table table-striped table-active table-hover" id="patient-table">
                     <!-- Table content will be added dynamically using JavaScript -->
-                </table>
+                    </table>
+                </div>
             </div>
         {% else %}
             <p>No similar patients available</p>
         {% endif %}
+        <br>
         <br>
         {% if has_similar_patients_data %}
             <h2>Similar patients</h2>
-            <div class="table-container">
-                <table id="similar-table">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+            <div class="container mt-3">
+                <div class="table-container">
+                    <table class="table table-striped table-active table-hover" id="similar-table">
                     <!-- Table content will be added dynamically using JavaScript -->
-                </table>
+                    </table>
+                </div>
             </div>
         {% else %}
             <p>No similar patients available</p>
         {% endif %}
-
-        {{ patient.name }}
-        {{ feature_similarity_path }}
-        feature_similarity_path
-
         
         <br>
-        <h2>Heatmap indicating feature similarity between this patient and the similar patients</h2>
         <br>
-        <img src="{% static image_path %}" type="application/images" alt="Feature image" width="1000" height="600">
+        <br>
+        <h2>Heatmap indicating feature similarity between <br> this patient and the similar patients</h2>
+        <br>
+        <img src="{% static image_path %}" type="application/images" id="feature-image" alt="Feature image" width="1000" height="600">
 
 
+        <br>
+        <br>
+        <br>
         <br>
         <h2>LLM Summary</h2>
         <br>
+        <br>
 
+        <div class="row">
+            <div class="col-6">
+                <h3>Positive</h3>
+                <ul class="list-group list-group-flush">
+                    {% for point in positive_points %}
+                        <li class="list-group-item">{{ point }}</li>
+                    {% endfor %}
+                </ul>
+
+            </div>
+            
+            <div class="col-6">
+                <h3>Negative</h3>
+                <ul class="list-group list-group-flush">
+                    {% for point in negative_points %}
+                        <li class="list-group-item">{{ point }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+        
 
         <br>
         <br>
-        <p><a href="{% url 'patient_detail' patient_id=patient.id %}">Back to Patient</a></p>
+        <a href="{% url 'patient_detail' patient_id=patient.id %}" class="btn btn-secondary">Back to Patient</a>
+        <br>
+        <br>
+        <br>
+        <br>
     </div>
 
     <script>
@@ -83,14 +230,56 @@
             // Add table rows
             jsonData.forEach(dataRow => {
                 const row = document.createElement("tr");
-                Object.values(dataRow).forEach(value => {
+                Object.entries(dataRow).forEach(([key, value]) => {
                     const td = document.createElement("td");
                     td.textContent = value;
+                    // console.log(`Cell: ${key}, Value: ${value}`);
+
+                    
+                    // Apply conditional class based on column name and value
+                    if (key === 'AI CDSS prediction' || key === 'Real action') {
+                        const colorClass = getColorClass(value);
+                        // console.log(`Cell: ${key}, Value: ${value}, Color Class: ${colorClass}`);
+                        if (colorClass) {
+                            td.classList.add(colorClass);
+                        }
+                        td.classList.add(getColorClass(value));
+                    }
+
+                    if (key === 'Prediction correct') {
+                        const colorClass = getColorClass2(value);
+                        // console.log(`Cell: ${key}, Value: ${value}, Color Class: ${colorClass}`);
+                        if (colorClass) {
+                            td.classList.add(colorClass);
+                        }
+                        td.classList.add(getColorClass(value));
+                    }
+                    
                     row.appendChild(td);
                 });
                 table.appendChild(row);
             });
         }
+
+        // Function to determine the appropriate class based on the value
+        function getColorClass(value) {
+            const lowercaseValue = value.toLowerCase();  // Convert to lowercase for case-insensitive comparison
+            const isSwitch = lowercaseValue === 'switch' || lowercaseValue === 'switched';
+        
+            if (isSwitch) {
+                return 'bg-success-light';  // Green for Switch or Switched
+            } else if (lowercaseValue === 'dont switch' || lowercaseValue === 'didnt switch') {
+                return 'bg-danger-light';  // Red for Dont switch or Didnt switch
+            } else {
+                return 'default-class';  // Default class if no match
+            }
+        }
+
+        function getColorClass2(value) {
+            const colorClass = value === 'Yes' ? 'bg-success-bright' : (value === 'No' ? 'bg-danger-bright' : 'default-class');
+            return colorClass;
+        }
+
     </script>
 </body>
 </html>

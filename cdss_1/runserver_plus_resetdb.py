@@ -7,6 +7,7 @@ def run():
     os.system('rm db.sqlite3')
     os.system('python manage.py makemigrations')
     os.system('python manage.py migrate')
+    os.system('python manage.py create_test_users')
 
     # Run the development server
     #execute_from_command_line(['manage.py', 'runserver'])

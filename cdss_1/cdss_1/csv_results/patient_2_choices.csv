@@ -1,3 +1,2 @@
-Switch Choice,Explanation
-dont_switch,
-switch,
+user_id,user_archetype,switch_choice,explanation
+10,a,dont_switch,Test
