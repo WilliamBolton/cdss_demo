@@ -69,6 +69,7 @@
 
 </head>
 <body>
+    <div id="patientName" data-name="{{ patient.name }}"></div>
     <div class="container">
         <br>
         <br>
@@ -175,7 +176,8 @@
                 {% endif %}
             </svg>
             <div>
-                AI CDSS Prediction / Recommendation: <a href="{% url 'prediction_page' patient_id=patient.id %}" class="alert_link">{{ patient.prediction }}</a>
+                AI CDSS Prediction / Recommendation: <a id="predictiondetailsLink" href="{% url 'prediction_page' patient_id=patient.id %}" class="alert_link">{{ patient.prediction }}</a>
+                <!-- AI CDSS Prediction / Recommendation: <a id="predictiondetailsLink" class="alert_link">{{ patient.prediction }}</a> -->
             </div>
         </div>
         <br>
@@ -190,7 +192,7 @@
                 {% endif %}
             </svg>
             <div>
-                IVOS Guidelines: <a href="{% url 'guideline_page' patient_id=patient.id %}" class="alert_link">{{ patient.guideline }}</a>
+                IVOS Guidelines: <a id="guidelinedetailsLink" href="{% url 'guideline_page' patient_id=patient.id %}" class="alert_link">{{ patient.guideline }}</a>
             </div>
         </div>
         <br>
@@ -339,7 +341,7 @@
         ],
         });
 
-        // Add legend click event listener
+        // Echarts legend click event listener
         echartsInstance.on('legendselectchanged', function (params) {
             // Toggle visibility of selected series based on legend selection
             Object.keys(options.legend.selected).forEach(seriesName => {
@@ -361,6 +363,75 @@
             dropdown.setCustomValidity("");
         }
         });
+    
+        // Click tracker
+        document.addEventListener('DOMContentLoaded', function () {
+            // Function to send AJAX request
+            function trackLinkClick(linkId) {
+                var xhr = new XMLHttpRequest();
+                xhr.open('POST', '/track_link_click/');
+        
+                // Include CSRF token in headers
+                var csrfToken = getCSRFToken();
+        
+                console.log('csrfToken:', csrfToken);
+        
+                if (csrfToken) {
+                    xhr.setRequestHeader('Content-Type', 'application/json');
+                    xhr.setRequestHeader('X-CSRFToken', csrfToken);
+                    // Set the X-Requested-With header
+                    xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+
+                    // Get patient_id
+                    var patientNameElement = document.getElementById('patientName');
+                    // console.log('patientNameElement', patientNameElement)
+
+                    if (patientNameElement) {
+                        var patientName = patientNameElement.getAttribute('data-name');
+                        // console.log('Patient Name:', patientName);
+        
+                        xhr.onload = function () {
+                            if (xhr.status === 200) {
+                                console.log('Link click recorded successfully');
+                            }
+                        };
+        
+                        // console.log('We are here!');
+                        xhr.send(JSON.stringify({ linkId: linkId, patientId: patientName }));
+                    }
+                }
+            }
+        
+            // Add event listener for 'AI CDSS Prediction / Recommendation' link
+            var predictiondetailsLink = document.getElementById('predictiondetailsLink');
+            // console.log('predictiondetailsLink');
+            predictiondetailsLink.addEventListener('click', function () {
+                trackLinkClick('predictiondetailsLink');
+            });
+        
+            // Add event listener for 'IVOS Guidelines' link
+            var guidelinedetailsLink = document.getElementById('guidelinedetailsLink');
+            // console.log('guidelinedetailsLink');
+            guidelinedetailsLink.addEventListener('click', function () {
+                trackLinkClick('guidelinedetailsLink');
+            });
+
+            // Function to get CSRF token from cookies
+            function getCSRFToken() {
+                var name = 'csrftoken';
+                var value = "; " + document.cookie;
+                var parts = value.split("; " + name + "=");
+                if (parts.length === 2) {
+                    return parts.pop().split(";").shift();
+                }
+                return null;
+            }
+
+            // Log CSRF token
+            var csrf_token = getCSRFToken();
+            console.log('CSRF token from template:', csrf_token);
+        });
+
     </script>
 </body>
 </html>

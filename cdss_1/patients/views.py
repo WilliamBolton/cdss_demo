@@ -16,23 +16,12 @@ from django.contrib.auth import authenticate, login
 from django.contrib.auth.models import User
 from .models import UserProfile
 from django.contrib import messages
+from django.http import JsonResponse
+from .models import LinkClick
 
 def logout_view(request):
     logout(request)
-    return redirect('login')
-
-'''def create_test_user_profiles():
-    # Create UserProfiles
-    for x in range(1): #101
-        username = str(x)
-        archetype = 'b' if x % 2 else 'a'
-
-        # Check if the user with the given username already exists
-        if not User.objects.filter(username=username).exists():
-            # Create the user and user profile
-            test_user = User.objects.create_user(username=username, password='test_password')
-            UserProfile.objects.create(user=test_user, id=username, archetype=archetype)
-            # Currently have users up to 100 with alternating a and b'''
+    return redirect('/')
 
 def login_view(request):
     # Call the function to create test user profiles
@@ -75,6 +64,7 @@ def login_view(request):
     
     return render(request, 'patients/login.html')
 
+@login_required(login_url='/')
 def patient_list(request):
     patients = Patient.objects.all()
     return render(request, 'patients/patient_list.html', {'patients': patients})
@@ -170,6 +160,11 @@ def guideline_page(request, patient_id):
 def process_user_input(request, patient_id):
     #print('hi')
     if request.method == 'POST':
+        # Update patient.form_filled_in
+        patient = get_object_or_404(Patient, pk=patient_id)
+        patient.form_filled_in = True
+        patient.save()
+
         # Get the user input from the form
         switch_choice = request.POST.get('switch_choice')
         explanation = request.POST.get('explanation')
@@ -185,7 +180,7 @@ def process_user_input(request, patient_id):
         print(f"patient_id: {patient_id}, Switch Choice: {switch_choice}, Explanation: {explanation}")
 
         # Save choices to a CSV file
-        csv_file_path = f'/home/wb1115/VSCode_projects/cdss/cdss_1/cdss_1/csv_results/patient_{patient_id}_choices.csv'
+        csv_file_path = f'/home/wb1115/VSCode_projects/cdss/cdss_1/cdss_1/switch_results/patient_{patient_id}_choices.csv'
         #csv_file_path = os.path.join(os.path.dirname(), f'../csv_results/patient_{patient_id}_choices.csv')
         #print(csv_file_path)
         with open(csv_file_path, 'a', newline='') as csvfile:
@@ -201,6 +196,25 @@ def process_user_input(request, patient_id):
     else:
         # Handle other HTTP methods if needed
         return HttpResponse(status=405)
+
+def track_link_click(request):
+    print('request.body:', request.body)
+    if request.method == 'POST' and request.META.get('HTTP_X_REQUESTED_WITH') == 'XMLHttpRequest':
+        data = json.loads(request.body)
+        link_id = data.get('linkId', None)
+        patient_id = data.get('patientId', None)
+
+        print('link_id:', data)
+        print('patient_id:', patient_id)
+
+        # Record link click in the database
+        if link_id:
+            print('Creating LinkClick object')
+            LinkClick.objects.create(link_id=link_id, user=request.user,  patient_id=patient_id)
+
+        return JsonResponse({'message': 'link click recorded successfully'})
+    print('message,', 'Invalid request')
+    return JsonResponse({'message': 'Invalid request'}, status=400)
     
 def llm_positive_fun(n):
     if n == 'Patient 1':

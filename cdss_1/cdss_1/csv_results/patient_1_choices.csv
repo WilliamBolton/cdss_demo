@@ -1,2 +1,21 @@
 user_id,user_archetype,switch_choice,explanation
 10,a,switch,Test
+10,a,switch,Test Test 
+10,a,dont_switch,Test
+10,a,dont_switch,xxx
+10,a,switch,xxx
+10,a,switch,Test test
+10,a,switch,test
+10,a,switch,test
+10,a,switch,test
+10,a,dont_switch,test
+10,a,switch,30
+10,a,switch,50
+10,a,switch,10
+10,a,switch,test
+10,a,switch,test
+10,a,switch,test
+10,a,dont_switch,test xxx
+9,b,switch,
+10,a,switch,test
+10,a,dont_switch,test

@@ -83,7 +83,7 @@ def create_initial_patients(sender, **kwargs):
     # Remove current patients
     Patient.objects.all().delete()
     # Create patients (10)
-    for i in range(1, 11):
+    for i in range(1, 11): #11 #3
         # Define name
         patient = Patient.objects.create(name=f"Patient {i}")
         print(patient.name)
@@ -156,10 +156,12 @@ class PatientsConfig(AppConfig):
     name = 'patients'
 
     def ready(self):
+        import patients.signals
+
         if 'runserver' not in sys.argv:
             return True
         
         # Connect the create_initial_patients function to the post_migrate signal        
         #post_migrate.connect(create_initial_patients, sender=self)
-        create_initial_patients(self)
         
+        create_initial_patients(self)

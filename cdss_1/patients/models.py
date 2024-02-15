@@ -24,6 +24,7 @@ class Patient(models.Model):
     antibiotic = models.CharField(max_length=100, default='nan')
     prediction = models.CharField(max_length=100, default='nan')
     guideline = models.CharField(max_length=100, default='nan')
+    form_filled_in = models.BooleanField(default=False)
 
 class DecisionPoint(models.Model): # I think this can be removed
     label = models.CharField(max_length=255)
@@ -50,7 +51,21 @@ class UserProfile(models.Model):
     #def __str__(self):
     #    return f"{self.user.username} - {self.archetype}"
 
+class PageVisit(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    page_name = models.CharField(max_length=50)
+    entry_timestamp = models.DateTimeField(auto_now_add=True)
+    exit_timestamp = models.DateTimeField(null=True, blank=True) 
 
+class LinkClick(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    link_id = models.CharField(max_length=50)
+    timestamp = models.DateTimeField(auto_now_add=True)
+    patient_id = models.CharField(max_length=50, default='9999')
+
+    def __str__(self):
+        return f'{self.user.username} clicked {self.link_id} at {self.timestamp}'
+    
 '''### USERS ###
 
 class User_A(AbstractUser):

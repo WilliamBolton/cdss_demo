@@ -60,6 +60,8 @@
     </style>
 </head>
 <body>
+    <div id="patientName" data-name="{{ patient.name }}"></div>
+
     <br>
     <br>
     <h1 style="text-align: center;">{{ patient.name }} - Guideline Details</h1>
@@ -120,7 +122,7 @@
     <h2>UKHSA IVOS Guidelines</h2>
     <br>
     <div class="btn-link-container">
-        <a href="https://www.gov.uk/government/publications/antimicrobial-intravenous-to-oral-switch-criteria-for-early-switch/national-antimicrobial-intravenous-to-oral-switch-ivos-criteria-for-early-switch" class="btn btn-dark" target="_blank">Guidelines Link</a>
+        <a id="guidelinesLink" href="https://www.gov.uk/government/publications/antimicrobial-intravenous-to-oral-switch-criteria-for-early-switch/national-antimicrobial-intravenous-to-oral-switch-ivos-criteria-for-early-switch" class="btn btn-dark" target="_blank">Guidelines Link</a>
     </div>
     <br>
     <embed src="{% static 'Final_IV_to_Oral_Switch_Decision_Aid_based_on_NationalCriteria_UKHSA.pdf' %}" type="application/pdf" width="100%" height="600px" />
@@ -137,5 +139,68 @@
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script>
+        // Click tracker
+        document.addEventListener('DOMContentLoaded', function () {
+            // Function to send AJAX request
+            function trackLinkClick(linkId) {
+                var xhr = new XMLHttpRequest();
+                xhr.open('POST', '/track_link_click/');
+        
+                // Include CSRF token in headers
+                var csrfToken = getCSRFToken();
+        
+                console.log('csrfToken:', csrfToken);
+        
+                if (csrfToken) {
+                    xhr.setRequestHeader('Content-Type', 'application/json');
+                    xhr.setRequestHeader('X-CSRFToken', csrfToken);
+                    // Set the X-Requested-With header
+                    xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+
+                    // Get patient_id
+                    var patientNameElement = document.getElementById('patientName');
+                    console.log('patientNameElement', patientNameElement)
+
+                    if (patientNameElement) {
+                        var patientName = patientNameElement.getAttribute('data-name');
+                        console.log('Patient Name:', patientName);
+        
+                        xhr.onload = function () {
+                            if (xhr.status === 200) {
+                                console.log('Link click recorded successfully');
+                            }
+                        };
+        
+                        console.log('We are here!');
+                        xhr.send(JSON.stringify({ linkId: linkId, patientId: patientName }));
+                    }
+                }
+            }
+
+            // Add event listener for 'guidelines' link
+            var guidelinesLink = document.getElementById('guidelinesLink');
+            // console.log('guidelinedetailsLink');
+            guidelinesLink.addEventListener('click', function () {
+                trackLinkClick('guidelinesLink');
+            });
+
+            // Function to get CSRF token from cookies
+            function getCSRFToken() {
+                var name = 'csrftoken';
+                var value = "; " + document.cookie;
+                var parts = value.split("; " + name + "=");
+                if (parts.length === 2) {
+                    return parts.pop().split(";").shift();
+                }
+                return null;
+            }
+
+            // Log CSRF token
+            var csrf_token = getCSRFToken();
+            console.log('CSRF token from template:', csrf_token);
+        });
+
+    </script>
 </body>
 </html>
