@@ -48,14 +48,17 @@ class UserProfile(models.Model):
     id_value = models.CharField(max_length=50)
     archetype = models.CharField(max_length=50)
 
-    #def __str__(self):
-    #    return f"{self.user.username} - {self.archetype}"
+    def __str__(self):
+        return f"username: {self.user.username}, id_value: {self.id_value}, archetype: {self.archetype}"
 
 class PageVisit(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     page_name = models.CharField(max_length=50)
     entry_timestamp = models.DateTimeField(auto_now_add=True)
     exit_timestamp = models.DateTimeField(null=True, blank=True) 
+
+    def __str__(self):
+        return f'{self.user.username} visited {self.page_name} at {self.entry_timestamp} and left at {self.exit_timestamp}'
 
 class LinkClick(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
@@ -64,8 +67,17 @@ class LinkClick(models.Model):
     patient_id = models.CharField(max_length=50, default='9999')
 
     def __str__(self):
-        return f'{self.user.username} clicked {self.link_id} at {self.timestamp}'
-    
+        return f'{self.user.username} clicked {self.link_id} at {self.timestamp} for {self.patient_id}'
+
+class HoverEvent(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    component = models.CharField(max_length=255)
+    hover_duration = models.FloatField()  # Store hover duration in seconds
+    patient_id = models.CharField(max_length=50, default='9999')
+
+    def __str__(self):
+        return f"{self.user.username} hovered over {self.component} for {self.patient_id} for {self.hover_duration} seconds"
+
 '''### USERS ###
 
 class User_A(AbstractUser):

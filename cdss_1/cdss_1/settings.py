@@ -135,3 +135,20 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'pdf/'),
     os.path.join(BASE_DIR, 'images/'),
 ]
+
+# Sto logs such as '[16/Feb/2024 14:33:59] "GET /1/ HTTP/1.1" 200 22341' and '[16/Feb/2024 14:34:17] "POST /record_hover_event/ HTTP/1.1" 200 48' to terminal
+LOGGING_CONFIG = None
+
+'''LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'console': {
+            'class': 'logging.StreamHandler',
+        },
+    },
+    'root': {
+        'handlers': ['console'],
+        'level': 'INFO',  # Adjust the log level as needed
+    },
+}'''

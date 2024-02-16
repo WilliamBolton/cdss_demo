@@ -157,6 +157,7 @@ class PatientsConfig(AppConfig):
 
     def ready(self):
         import patients.signals
+        import patients.receivers
 
         if 'runserver' not in sys.argv:
             return True

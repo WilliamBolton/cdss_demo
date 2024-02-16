@@ -18,6 +18,8 @@ from .models import UserProfile
 from django.contrib import messages
 from django.http import JsonResponse
 from .models import LinkClick
+from django.views.decorators.csrf import csrf_exempt
+from .models import HoverEvent
 
 def logout_view(request):
     logout(request)
@@ -101,6 +103,7 @@ def patient_detail(request, patient_id):
         'has_vitals_data': vitals_data is not None,
         })
 
+@login_required(login_url='/')
 def prediction_page(request, patient_id):
     patient = get_object_or_404(Patient, pk=patient_id)
 
@@ -142,6 +145,7 @@ def prediction_page(request, patient_id):
         'negative_points': negative_points,
         })
 
+@login_required(login_url='/')
 def guideline_page(request, patient_id):
     patient = get_object_or_404(Patient, pk=patient_id)
 
@@ -198,14 +202,14 @@ def process_user_input(request, patient_id):
         return HttpResponse(status=405)
 
 def track_link_click(request):
-    print('request.body:', request.body)
+    #print('request.body:', request.body)
     if request.method == 'POST' and request.META.get('HTTP_X_REQUESTED_WITH') == 'XMLHttpRequest':
         data = json.loads(request.body)
         link_id = data.get('linkId', None)
         patient_id = data.get('patientId', None)
 
-        print('link_id:', data)
-        print('patient_id:', patient_id)
+        #print('link_id:', data)
+        #print('patient_id:', patient_id)
 
         # Record link click in the database
         if link_id:
@@ -213,8 +217,31 @@ def track_link_click(request):
             LinkClick.objects.create(link_id=link_id, user=request.user,  patient_id=patient_id)
 
         return JsonResponse({'message': 'link click recorded successfully'})
+    
     print('message,', 'Invalid request')
     return JsonResponse({'message': 'Invalid request'}, status=400)
+
+@csrf_exempt
+def record_hover_event(request):
+    if request.method == 'POST':
+        data = json.loads(request.body.decode('utf-8'))
+        component = data.get('component')
+        hover_duration = data.get('hover_duration')
+        patient_id = data.get('patientId', None)
+
+        print('Creating HoverEvent object')
+        # Save the hover event to the database
+        HoverEvent.objects.create(
+            user=request.user,
+            component=component,
+            hover_duration=hover_duration,
+            patient_id=patient_id,
+        )
+
+        return JsonResponse({'message': 'hover event recorded successfully'})
+    
+    print('message,', 'Error')
+    return JsonResponse({'message': 'Error'}, status=400)
     
 def llm_positive_fun(n):
     if n == 'Patient 1':
