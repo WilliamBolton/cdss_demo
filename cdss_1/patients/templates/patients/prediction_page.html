@@ -120,6 +120,8 @@
 </head>
 <body>
     <div class="container">
+        <!-- Define patientName for hover logging -->
+        <div id="patientName" data-name="{{ patient.name }}"></div> 
         <br>
         <br>
         <h1>{{ patient.name }} - AI CDSS Prediction Details</h1>
@@ -176,7 +178,7 @@
                 <h3>Positive</h3>
                 <ul class="list-group list-group-flush">
                     {% for point in positive_points %}
-                        <li class="list-group-item">{{ point }}</li>
+                    <li class="list-group-item positive-point">{{ point }}</li>
                     {% endfor %}
                 </ul>
 
@@ -186,7 +188,7 @@
                 <h3>Negative</h3>
                 <ul class="list-group list-group-flush">
                     {% for point in negative_points %}
-                        <li class="list-group-item">{{ point }}</li>
+                    <li class="list-group-item negative-point">{{ point }}</li>
                     {% endfor %}
                 </ul>
             </div>
@@ -280,6 +282,159 @@
             return colorClass;
         }
 
+        // Post other js
+        document.addEventListener('DOMContentLoaded', function () {
+            
+            // Track hovering
+
+            // Variables to track hover start time
+            const patient_table = document.getElementById('patient-table');
+            const similar_table = document.getElementById('similar-table');
+            const image = document.getElementById('feature-image');
+            const positivePoints = document.querySelectorAll('.positive-point');
+            const negativePoints = document.querySelectorAll('.negative-point');
+            
+            let hoverStartTime;
+
+            // Attach event listeners to the entire patient_table for hover events
+            patient_table.addEventListener('mouseover', function (event) {
+                hoverStartTime = new Date().getTime();
+            });
+            console.log('Hover - patient_table');
+
+            patient_table.addEventListener('mouseout', function (event) {
+                const hoverEndTime = new Date().getTime();
+                const hoverDuration = (hoverEndTime - hoverStartTime) / 1000; // Convert to seconds
+
+                // Extract relevant information for recording
+                const component = 'patient_table';
+
+                // Send AJAX request to the server
+                sendHoverEvent(component, hoverDuration);
+            });
+
+            // Attach event listeners to each row in similar patients table for hover events
+            const rows = Array.from(similar_table.getElementsByTagName('tr'));
+            console.log('rows:', rows)
+            rows.forEach(row => {
+                // console.log('row:', row)
+                row.addEventListener('mouseover', function (event) {
+                    hoverStartTime = new Date().getTime();
+                });
+                console.log('Hover - similar_table');
+
+                row.addEventListener('mouseout', function (event) {
+                    const hoverEndTime = new Date().getTime();
+                    const hoverDuration = (hoverEndTime - hoverStartTime) / 1000; // Convert to seconds
+
+                    // Extract relevant information for recording
+                    const component = `similar_table_${row.cells[0].textContent}`; // Updated metric with prefix
+
+                    // Send AJAX request to the server
+                    sendHoverEvent(component, hoverDuration);
+                });
+            });
+
+            // Attach event listeners to the feature-image for hover events
+            image.addEventListener('mouseover', function (event) {
+                hoverStartTime = new Date().getTime();
+            });
+            console.log('Hover - image');
+            image.addEventListener('mouseout', function (event) {
+                const hoverEndTime = new Date().getTime();
+                const hoverDuration = (hoverEndTime - hoverStartTime) / 1000; // Convert to seconds
+
+                // Extract relevant information for recording
+                const component = 'feature_image';
+
+                // Send AJAX request to the server
+                sendHoverEvent(component, hoverDuration);
+            });
+
+            // Attach event listeners to the LLM positive points for hover events
+            positivePoints.forEach(point => {
+                point.addEventListener('mouseover', function (event) {
+                    hoverStartTime = new Date().getTime();
+                });
+                console.log('Hover - positivePoints');
+                point.addEventListener('mouseout', function (event) {
+                    const hoverEndTime = new Date().getTime();
+                    const hoverDuration = (hoverEndTime - hoverStartTime) / 1000; // Convert to seconds
+
+                    // Extract relevant information for recording
+                    const component = 'LLM_positive_points';
+
+                    // Send AJAX request to the server
+                    sendHoverEvent(component, hoverDuration);
+                });
+            });
+
+            // Attach event listeners to the LLM negative points for hover events
+            negativePoints.forEach(point => {
+                point.addEventListener('mouseover', function (event) {
+                    hoverStartTime = new Date().getTime();
+                });
+                console.log('Hover - negativePoints');
+                point.addEventListener('mouseout', function (event) {
+                    const hoverEndTime = new Date().getTime();
+                    const hoverDuration = (hoverEndTime - hoverStartTime) / 1000; // Convert to seconds
+
+                    // Extract relevant information for recording
+                    const component = 'LLM_negative_points';
+
+                    // Send AJAX request to the server
+                    sendHoverEvent(component, hoverDuration);
+                });
+            });
+
+            function sendHoverEvent(component, hoverDuration) {
+                const xhr = new XMLHttpRequest();
+                xhr.open('POST', '/record_hover_event/');
+                xhr.setRequestHeader('Content-Type', 'application/json');
+
+                // Include CSRF token in headers
+                const csrfToken = getCSRFToken();
+                if (csrfToken) {
+                    xhr.setRequestHeader('Content-Type', 'application/json');
+                    xhr.setRequestHeader('X-CSRFToken', csrfToken);
+                    // Set the X-Requested-With header
+                    xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+
+                    // Get patient_id
+                    var patientNameElement = document.getElementById('patientName');
+                    // console.log('patientNameElement', patientNameElement)
+
+                    if (patientNameElement) {
+                        var patientName = patientNameElement.getAttribute('data-name');
+                        // console.log('Patient Name:', patientName);
+        
+                        xhr.onload = function () {
+                            if (xhr.status === 200) {
+                                console.log('Hover event recorded successfully');
+                            }
+                        };
+                        // console.log('component:', component);
+                        // console.log('We are here!');
+                        xhr.send(JSON.stringify({ component: component, hover_duration: hoverDuration, patientId: patientName }));
+                    }
+                }
+            };
+        });
+
+        // Function to get CSRF token from cookies
+        function getCSRFToken() {
+            var name = 'csrftoken';
+            var value = "; " + document.cookie;
+            var parts = value.split("; " + name + "=");
+            if (parts.length === 2) {
+                return parts.pop().split(";").shift();
+            }
+            return null;
+        }
+
+        // Log CSRF token
+        var csrf_token = getCSRFToken();
+        console.log('CSRF token from template:', csrf_token);
     </script>
 </body>
 </html>

@@ -69,6 +69,9 @@
 
 </head>
 <body>
+    <!-- Define patientName for hover logging -->
+    <div id="patientName" data-name="{{ patient.name }}"></div> 
+
     <div class="container">
         <br>
         <br>
@@ -153,7 +156,7 @@
         <h2>UKHSA IVOS Guidelines</h2>
         <br>
         <div class="btn-link-container">
-            <a id="guidelinesLink" href="https://www.gov.uk/government/publications/antimicrobial-intravenous-to-oral-switch-criteria-for-early-switch/national-antimicrobial-intravenous-to-oral-switch-ivos-criteria-for-early-switch" class="btn btn-dark" target="_blank">Guidelines Link</a>
+            <a id="guidelinesLink_simple" href="https://www.gov.uk/government/publications/antimicrobial-intravenous-to-oral-switch-criteria-for-early-switch/national-antimicrobial-intravenous-to-oral-switch-ivos-criteria-for-early-switch" class="btn btn-dark" target="_blank">Guidelines Link</a>
         </div>
         <br>
         <embed src="{% static 'Final_IV_to_Oral_Switch_Decision_Aid_based_on_NationalCriteria_UKHSA.pdf' %}" type="application/pdf" width="100%" height="600px" />
@@ -343,10 +346,7 @@
                 xhr.open('POST', '/track_link_click/');
         
                 // Include CSRF token in headers
-                var csrfToken = getCSRFToken();
-        
-                console.log('csrfToken:', csrfToken);
-        
+                var csrfToken = getCSRFToken();        
                 if (csrfToken) {
                     xhr.setRequestHeader('Content-Type', 'application/json');
                     xhr.setRequestHeader('X-CSRFToken', csrfToken);
@@ -366,18 +366,18 @@
                                 console.log('Link click recorded successfully');
                             }
                         };
-        
-                        console.log('We are here!');
+
+                        // console.log('We are here!');
                         xhr.send(JSON.stringify({ linkId: linkId, patientId: patientName }));
                     }
                 }
             }
 
             // Add event listener for 'guidelines' link
-            var guidelinesLink = document.getElementById('guidelinesLink');
+            var guidelinesLink_simple = document.getElementById('guidelinesLink_simple');
             // console.log('guidelinedetailsLink');
-            guidelinesLink.addEventListener('click', function () {
-                trackLinkClick('guidelinesLink');
+            guidelinesLink_simple.addEventListener('click', function () {
+                trackLinkClick('guidelinesLink_simple');
             });
             
             // Track hovering
@@ -386,7 +386,7 @@
             const table = document.getElementById('vitals-table');
             const plot = document.getElementById('echarts-container');
             const card = document.querySelector('.card');
-            // const guidelinesEmbed = document.querySelector('embed[src*="Final_IV_to_Oral_Switch_Decision_Aid_based_on_NationalCriteria_UKHSA.pdf"]');
+            const guidelinesEmbed = document.querySelector('embed[src*="Final_IV_to_Oral_Switch_Decision_Aid_based_on_NationalCriteria_UKHSA.pdf"]');
             
             let hoverStartTime;
 
@@ -498,7 +498,7 @@
                 });
             });
 
-            /*// Attach event listeners to the guidelinesEmbed for hover events
+            // Attach event listeners to the guidelinesEmbed for hover events
             guidelinesEmbed.addEventListener('mouseover', function (event) {
                 hoverStartTime = new Date().getTime();
             });
@@ -508,11 +508,11 @@
                 const hoverDuration = (hoverEndTime - hoverStartTime) / 1000; // Convert to seconds
 
                 // Extract relevant information for recording
-                const component = 'guidelines_pdf';
+                const component = 'guidelines_pdf_simple';
 
                 // Send AJAX request to the server
                 sendHoverEvent(component, hoverDuration);
-            });*/
+            });
 
             function sendHoverEvent(component, hoverDuration) {
                 const xhr = new XMLHttpRequest();
@@ -540,7 +540,7 @@
                                 console.log('Hover event recorded successfully');
                             }
                         };
-        
+                        // console.log('component:', component);
                         // console.log('We are here!');
                         xhr.send(JSON.stringify({ component: component, hover_duration: hoverDuration, patientId: patientName }));
                     }

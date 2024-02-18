@@ -69,7 +69,9 @@
 
 </head>
 <body>
-    <div id="patientName" data-name="{{ patient.name }}"></div>
+    <!-- Define patientName for hover logging -->
+    <div id="patientName" data-name="{{ patient.name }}"></div> 
+
     <div class="container">
         <br>
         <br>
@@ -600,7 +602,7 @@
                                 console.log('Hover event recorded successfully');
                             }
                         };
-        
+                        // console.log('component:', component);
                         // console.log('We are here!');
                         xhr.send(JSON.stringify({ component: component, hover_duration: hoverDuration, patientId: patientName }));
                     }
