@@ -184,7 +184,7 @@
                 {% endif %}
             </svg>
             <div>
-                AI CDSS Prediction / Recommendation: <a id="predictiondetailsLink" href="{% url 'prediction_page' patient_id=patient.id %}" class="alert_link">{{ patient.prediction }}</a>
+                AI CDSS Prediction / Recommendation: <a id="predictiondetailsLink" href="{% url 'prediction_page_demo' patient_id=patient.id %}" class="alert_link">{{ patient.prediction }}</a>
                 <!-- AI CDSS Prediction / Recommendation: <a id="predictiondetailsLink" class="alert_link">{{ patient.prediction }}</a> -->
             </div>
         </div>
@@ -200,7 +200,7 @@
                 {% endif %}
             </svg>
             <div>
-                IVOS Guidelines: <a id="guidelinedetailsLink" href="{% url 'guideline_page' patient_id=patient.id %}" class="alert_link">{{ patient.guideline }}</a>
+                IVOS Guidelines: <a id="guidelinedetailsLink" href="{% url 'guideline_page_demo' patient_id=patient.id %}" class="alert_link">{{ patient.guideline }}</a>
             </div>
         </div>
         <br>
@@ -209,7 +209,7 @@
         <!-- User Input Section -->
         <h2>Your Decision</h2>
         <br>
-        <form id="userInputForm" method="post" action="{% url 'process_user_input' patient_id=patient.id %}">
+        <form id="userInputForm" method="post" action="{% url 'process_user_input_demo' patient_id=patient.id %}">
         {% csrf_token %}
 
         <!-- Dropdown Choice -->
@@ -240,7 +240,7 @@
         <br>
         <br>
         <br>
-        <a href="{% url 'patient_list' %}" class="btn btn-secondary">Back to All Patients</a>
+        <a href="{% url 'patient_list_demo' %}" class="btn btn-secondary">Back to All Patients</a>
         <br>
         <br>
         <br>

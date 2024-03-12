@@ -26,6 +26,23 @@ class Patient(models.Model):
     guideline = models.CharField(max_length=100, default='nan')
     form_filled_in = models.BooleanField(default=False)
 
+class Patient_demo(models.Model):
+    name = models.CharField(max_length=100)
+    vitals_csv_path = models.CharField(max_length=100, default='nan')
+    patient_csv_path = models.CharField(max_length=100, default='nan')
+    similar_patients_csv_path = models.CharField(max_length=100, default='nan')
+    feature_similarity_path = models.CharField(max_length=100, default='nan')
+    age = models.CharField(max_length=100, default='nan')
+    sex = models.CharField(max_length=100, default='nan')
+    ethnicity = models.CharField(max_length=100, default='nan')
+    imddecil = models.CharField(max_length=100, default='nan')
+    comorbidities = models.CharField(max_length=100, default='nan')
+    diagnosis = models.CharField(max_length=100, default='nan')
+    antibiotic = models.CharField(max_length=100, default='nan')
+    prediction = models.CharField(max_length=100, default='nan')
+    guideline = models.CharField(max_length=100, default='nan')
+    form_filled_in = models.BooleanField(default=False)
+
 class DecisionPoint(models.Model): # I think this can be removed
     label = models.CharField(max_length=255)
     description = models.TextField()

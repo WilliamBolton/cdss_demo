@@ -2,7 +2,7 @@ import csv
 import os
 from django.shortcuts import render, get_object_or_404, redirect
 import pandas as pd
-from .models import Patient
+from .models import Patient, Patient_demo
 import json
 from django.http import HttpResponse
 from django.contrib.auth import logout
@@ -30,7 +30,7 @@ def login_view(request):
     #User.objects.all().delete()
     #create_test_user_profiles()
     
-    print_bool = False
+    #print_bool = False
     print_bool = True
     if print_bool == True:
         # Retrieve all UserProfile instances
@@ -44,6 +44,16 @@ def login_view(request):
         id_value = request.POST['id_value']
         archetype = request.POST['archetype']
         password = 'test_password'
+
+        if id_value == 'demo':
+            # Authenticate the demo user
+            user = authenticate(request, username=id_value, password=password)
+            print('user:', user)
+            if user is not None:
+                login(request, user)
+                return redirect('patient_list_demo')  # Redirect to the demo dashboard
+
+
         try:
             # Authenticate the user
             user = authenticate(request, username=id_value, password=password)
@@ -69,7 +79,14 @@ def login_view(request):
 @login_required(login_url='/')
 def patient_list(request):
     patients = Patient.objects.all()
+    print('patients', patients)
     return render(request, 'patients/patient_list.html', {'patients': patients})
+
+@login_required(login_url='/')
+def patient_list_demo(request):
+    patients_demo = Patient_demo.objects.all()
+    print('patients_demo', patients_demo)
+    return render(request, 'patients/patient_list_demo.html', {'patients': patients_demo})
 
 @login_required(login_url='/')
 def patient_detail(request, patient_id):
@@ -80,12 +97,22 @@ def patient_detail(request, patient_id):
     if patient.vitals_csv_path == 'nan':
         vitals_data = None
         vitals_data_json = None
+        vitals_data_no_nan_json = None
     else:
         vitals_data = pd.read_csv(patient.vitals_csv_path)
+        vitals_data_no_nan = vitals_data.fillna('')
+        vitals_data_no_nan = vitals_data_no_nan.astype(str) # Conver to strings to preserve dp
+        #print(vitals_data)
+        #print(vitals_data_no_nan)
         #vitals_data = vitals_data.to_json(orient='records')
         vitals_data_dict = vitals_data.to_dict(orient='records')
+        vitals_data_no_nan_dict = vitals_data_no_nan.to_dict(orient='records')
+        #print(vitals_data_dict)
+        #print(vitals_data_no_nan_dict)
         vitals_data_json = json.dumps(vitals_data_dict)
+        vitals_data_no_nan_json = json.dumps(vitals_data_no_nan_dict)
         #print(vitals_data_json)
+        #print(vitals_data_no_nan_json)
         #print(type(vitals_data_json))
 
     # Accessing the logged-in user's UserProfile
@@ -99,7 +126,51 @@ def patient_detail(request, patient_id):
 
     return render(request, template, {
         'patient': patient, 
-        'vitals_data_json': vitals_data_json, 
+        'vitals_data_json': vitals_data_json,
+        'vitals_data_no_nan_json': vitals_data_no_nan_json, 
+        'has_vitals_data': vitals_data is not None,
+        })
+
+@login_required(login_url='/')
+def patient_detail_demo(request, patient_id):
+    patient = get_object_or_404(Patient_demo, pk=patient_id)
+    print('patient_id:', patient_id)
+
+    # Read CSV file and put in JSON format if available
+    if patient.vitals_csv_path == 'nan':
+        vitals_data = None
+        vitals_data_json = None
+        vitals_data_no_nan_json = None
+    else:
+        vitals_data = pd.read_csv(patient.vitals_csv_path)
+        vitals_data_no_nan = vitals_data.fillna('')
+        vitals_data_no_nan = vitals_data_no_nan.astype(str) # Conver to strings to preserve dp
+        #print(vitals_data)
+        #print(vitals_data_no_nan)
+        #vitals_data = vitals_data.to_json(orient='records')
+        vitals_data_dict = vitals_data.to_dict(orient='records')
+        vitals_data_no_nan_dict = vitals_data_no_nan.to_dict(orient='records')
+        #print(vitals_data_dict)
+        #print(vitals_data_no_nan_dict)
+        vitals_data_json = json.dumps(vitals_data_dict)
+        vitals_data_no_nan_json = json.dumps(vitals_data_no_nan_dict)
+        #print(vitals_data_json)
+        #print(vitals_data_no_nan_json)
+        #print(type(vitals_data_json))
+
+    # Accessing the logged-in user's UserProfile
+    user_profile = request.user.userprofile
+    user_archetype = user_profile.archetype
+    print('user_archetype:', user_archetype)
+
+    # Get the apropriate template
+    template = get_template_fun_demo(patient_id, user_archetype)
+    print('template:', template)
+
+    return render(request, template, {
+        'patient': patient, 
+        'vitals_data_json': vitals_data_json,
+        'vitals_data_no_nan_json': vitals_data_no_nan_json, 
         'has_vitals_data': vitals_data is not None,
         })
 
@@ -112,6 +183,7 @@ def prediction_page(request, patient_id):
         patient_data_json = None
     else:
         patient_data = pd.read_csv(patient.patient_csv_path)
+        patient_data = patient_data.astype(str) # Conver to strings to preserve dp
         patient_dict = patient_data.to_dict(orient='records')
         patient_data_json = json.dumps(patient_dict)
 
@@ -120,6 +192,7 @@ def prediction_page(request, patient_id):
         similar_patients_data_json = None
     else:
         similar_patients_data = pd.read_csv(patient.similar_patients_csv_path)
+        similar_patients_data = similar_patients_data.astype(str) # Conver to strings to preserve dp
         similar_patients_dict = similar_patients_data.to_dict(orient='records')
         similar_patients_data_json = json.dumps(similar_patients_dict)
     
@@ -146,6 +219,50 @@ def prediction_page(request, patient_id):
         })
 
 @login_required(login_url='/')
+def prediction_page_demo(request, patient_id):
+    patient = get_object_or_404(Patient_demo, pk=patient_id)
+
+    if patient.patient_csv_path == 'nan':
+        patient_data = None
+        patient_data_json = None
+    else:
+        patient_data = pd.read_csv(patient.patient_csv_path)
+        patient_data = patient_data.astype(str) # Conver to strings to preserve dp
+        patient_dict = patient_data.to_dict(orient='records')
+        patient_data_json = json.dumps(patient_dict)
+
+    if patient.similar_patients_csv_path == 'nan':
+        similar_patients_data = None
+        similar_patients_data_json = None
+    else:
+        similar_patients_data = pd.read_csv(patient.similar_patients_csv_path)
+        similar_patients_data = similar_patients_data.astype(str) # Conver to strings to preserve dp
+        similar_patients_dict = similar_patients_data.to_dict(orient='records')
+        similar_patients_data_json = json.dumps(similar_patients_dict)
+    
+    if patient.feature_similarity_path == 'nan':
+        image_path = None
+    else:
+        image_path = patient.feature_similarity_path
+        # Strip to allow for loading in html
+        image_path = image_path.lstrip('images/')
+    
+    # Define llm summary
+    positive_points = llm_positive_fun(patient.name)
+    negative_points = llm_negative_fun(patient.name)
+
+    return render(request, 'patients/prediction_page_demo.html', {
+        'patient': patient,
+        'patient_data_json': patient_data_json, 
+        'has_patient_data': patient_data is not None,
+        'similar_patients_data_json': similar_patients_data_json, 
+        'has_similar_patients_data': similar_patients_data is not None,
+        'image_path': image_path,
+        'positive_points': positive_points,
+        'negative_points': negative_points,
+        })
+
+@login_required(login_url='/')
 def guideline_page(request, patient_id):
     patient = get_object_or_404(Patient, pk=patient_id)
 
@@ -157,6 +274,22 @@ def guideline_page(request, patient_id):
     print(decision_outcome)
 
     return render(request, 'patients/guideline_page.html', {
+        'patient': patient, 
+        'decision_logic': decision_logic, 
+        'decision_outcome': decision_outcome})
+
+@login_required(login_url='/')
+def guideline_page_demo(request, patient_id):
+    patient = get_object_or_404(Patient_demo, pk=patient_id)
+
+    # Define llm summary
+    decision_logic = decision_logic_fun(patient.name)
+
+    # Define llm summary
+    decision_outcome = decision_outcome_fun(patient.name)
+    print(decision_outcome)
+
+    return render(request, 'patients/guideline_page_demo.html', {
         'patient': patient, 
         'decision_logic': decision_logic, 
         'decision_outcome': decision_outcome})
@@ -197,6 +330,20 @@ def process_user_input(request, patient_id):
 
         # Redirect back to the patient details page
         return redirect('patient_list')
+    else:
+        # Handle other HTTP methods if needed
+        return HttpResponse(status=405)
+
+def process_user_input_demo(request, patient_id):
+    print('hi')
+    if request.method == 'POST':
+        # Update patient.form_filled_in
+        patient = get_object_or_404(Patient_demo, pk=patient_id)
+        patient.form_filled_in = True
+        patient.save()
+    
+    # Redirect back to the patient details page
+        return redirect('patient_list_demo')
     else:
         # Handle other HTTP methods if needed
         return HttpResponse(status=405)
@@ -295,3 +442,9 @@ def get_template_fun(patient_id, user_archetype):
         return 'patients/patient_detail_simple.html'
     else:
         return 'patients/patient_detail.html'
+
+def get_template_fun_demo(patient_id, user_archetype):
+    if patient_id == 2 and user_archetype == 'a':
+        return 'patients/patient_detail_simple_demo.html'
+    else:
+        return 'patients/patient_detail_demo.html'

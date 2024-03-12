@@ -1,11 +1,11 @@
-Metric / Time (hours),0,6,12
-Temperature,37.78,38.47,39.28
-Respiratory Rate,19.39,19.56,22.05
-Heart Rate,85.53,88.4,106.98
-Diastolic Blood Pressure,79.62,78.53,74.54
-Systolic Blood Pressure,144.54,143.46,127.32
-Mean Arterial Pressure,96.04,95.33,97.04
-SpO2,96.4,96.18,94.35
-Glasgow Coma Score,15,15,14
-NEWS Conscious Level Score,0,0,0
-NEWS Supplemental Oxgen,2,2,2
+Metric / Time (hours),0,6,12,18,24,30,36,42,48,54
+Temperature,36.48,36.46,36.47,36.51,36.49,36.47,36.51,36.46,36.48,36.49
+Respiratory Rate,17.96,17.69,17.49,17.84,17.78,17.63,16.82,18.00,16.99,17.06
+Heart Rate,78.68,77.88,78.99,78.74,75.04,72.71,73.88,73.64,72.69,76.15
+Diastolic Blood Pressure,66.58,63.39,65.94,60.58,67.35,61.04,65.28,64.94,63.04,73.19
+Systolic Blood Pressure,105.19,103.53,110.56,112.72,120.13,106.78,101.64,112.20,109.31,113.19
+Mean Arterial Pressure,79.87,81.40,82.19,80.32,80.72,81.75,78.40,79.28,81.63,79.40
+SpO2,98.64,99.08,99.73,97.49,99.77,99.89,98.38,98.57,98.30,98.28
+Glasgow Coma Score,15,15,15,15,15,15,15,15,15,15
+NEWS Conscious Level Score,0,0,0,0,0,0,0,0,0,0
+NEWS Supplemental Oxgen,0,0,0,0,0,0,0,0,0,0

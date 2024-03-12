@@ -1,0 +1,2 @@
+Age,Sex,Ethnicity,Systolic Blood Pressure Feature Value,Heart Rate Feature Value,Mean Blood Pressure Feature Value,SpO2 Feature Value,Glasgow Coma Score – Motor Response Feature Value,AI CDSS prediction,AI CDSS prediction (higher threshold),Real action
+83,Female,White,0.32,0.49,0.12,0.46,0.42,Dont switch,Dont switch,TBC

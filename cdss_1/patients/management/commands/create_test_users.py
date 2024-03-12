@@ -4,7 +4,7 @@ from patients.models import UserProfile
 
 def create_test_user_profiles():
     # Create UserProfiles
-    for x in range(11): #101
+    for x in range(31): #101
         username = str(x)
         archetype = 'b' if x % 2 else 'a'
 
@@ -13,7 +13,14 @@ def create_test_user_profiles():
             # Create the user and user profile
             test_user = User.objects.create_user(username=username, password='test_password')
             UserProfile.objects.create(user=test_user, id_value=username, archetype=archetype)
-            # Currently have users up to 100 with alternating a and b
+            # Currently have users up to 30 with alternating a and b
+    
+    # Create demo user
+    username = 'demo'
+    archetype = 'a'
+    if not User.objects.filter(username=username).exists():
+        demo_user = User.objects.create_user(username=username, password='test_password')
+        UserProfile.objects.create(user=demo_user, id_value=username, archetype=archetype)
 
 class Command(BaseCommand):
     help = 'Remove all users and create new test users'
