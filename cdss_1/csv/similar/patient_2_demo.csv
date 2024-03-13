@@ -1,0 +1,6 @@
+Similar patients, age, sex, ethnicity, IMDDECIL, infection diganosis, co-morbidities, AI CDSS prediction, Real action,Prediction correct
+1,25, Female, White, 3, UTI, Diabetes, Switch, Switched, Yes
+2,50, Female, Asian, 5, UTI, -, Switch, Switched, Yes
+3,42, Male, Black, 2, Pneumonia, Diabetes, Switch, Switched, Yes
+4,35, Male, Other, 6, NA, Obesity, Switch, Switched, Yes
+5,70, Female, White, 8, NA, Asthma, Switch, Switched, Yes

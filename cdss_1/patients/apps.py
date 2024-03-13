@@ -129,9 +129,21 @@ def prediction_fun(n):
 
 def guideline_fun(n):
     if n == 'Patient 1':
-        return 'Dont switch'
+        return 'Reassess in 24 hours'
     elif n == 'Patient 2':
         return 'Switch'
+    elif n == 'Patient 7':
+        return 'Reassess in 24 hours'
+    elif n == 'Patient 8':
+        return 'Prompt or assess for switch'
+    elif n == 'Patient 9':
+        return 'Prompt or assess for switch'
+    elif n == 'Patient 10':
+        return 'Prompt or assess for switch'
+    elif n == 'Patient 11':
+        return 'Reassess in 24 hours'
+    elif n == 'Patient 12':
+        return 'Reassess in 24 hours'
     else:
         return 'nan'
 
@@ -212,7 +224,7 @@ def create_initial_patients(sender, **kwargs):
 
 def imddecil_fun_demo(n):
     if n == 'Patient 1':
-        return '4'
+        return '3'
     elif n == 'Patient 2':
         return '7'
     else:
@@ -256,11 +268,11 @@ def prediction_fun_demo(n):
 
 def guideline_fun_demo(n):
     if n == 'Patient 1':
-        return 'Dont switch'
+        return 'Reassess in 24 hours'
     elif n == 'Patient 2':
         return 'Switch'
     elif n == 'Patient 3':
-        return 'Dont switch'
+        return 'Reassess in 24 hours'
     else:
         return 'nan'
 
@@ -298,7 +310,7 @@ def create_initial_demo_patients(sender, **kwargs):
             patient_demo.save()
         
         # Define similar_patients_csv_path
-        png_file_path = os.path.join('images', f'patient_{i}_feature_similarity_demo.png')
+        png_file_path = os.path.join('images', f'patient_{i}_demo_feature_similarity.png')
         if os.path.exists(png_file_path):
             patient_demo.feature_similarity_path = png_file_path
             patient_demo.save()

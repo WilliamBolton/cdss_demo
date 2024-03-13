@@ -191,7 +191,7 @@
         <br>
 
         <!-- Guideline alert -->
-        <div class="alert {% if patient.guideline == 'Switch' %}alert-success{% elif patient.guideline == 'Potentially switch' %}alert-warning{% else %}alert-danger{% endif %} d-flex align-items-center" role="alert" data-alert-id="guideline">
+        <div class="alert {% if patient.guideline == 'Prompt or assess for switch' %}alert-success{% elif patient.guideline == 'Potentially switch' %}alert-warning{% else %}alert-danger{% endif %} d-flex align-items-center" role="alert" data-alert-id="guideline">
             <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Guideline:">
                 {% if patient.guideline == 'Switch' %}
                     <use xlink:href="#check-circle-fill"/>

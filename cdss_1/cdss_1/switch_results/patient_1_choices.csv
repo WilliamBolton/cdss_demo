@@ -6,6 +6,4 @@ user_id,user_archetype,switch_choice,explanation
 10,a,dont_switch,Test Test
 10,a,dont_switch,test
 10,a,dont_switch,test 123
-demo,a,dont_switch,test 12345
-demo,a,dont_switch,test 
 10,a,dont_switch,123

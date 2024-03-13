@@ -79,13 +79,13 @@ def login_view(request):
 @login_required(login_url='/')
 def patient_list(request):
     patients = Patient.objects.all()
-    print('patients', patients)
+    #print('patients', patients)
     return render(request, 'patients/patient_list.html', {'patients': patients})
 
 @login_required(login_url='/')
 def patient_list_demo(request):
     patients_demo = Patient_demo.objects.all()
-    print('patients_demo', patients_demo)
+    #print('patients_demo', patients_demo)
     return render(request, 'patients/patient_list_demo.html', {'patients': patients_demo})
 
 @login_required(login_url='/')
@@ -271,7 +271,7 @@ def guideline_page(request, patient_id):
 
     # Define llm summary
     decision_outcome = decision_outcome_fun(patient.name)
-    print(decision_outcome)
+    #print(decision_outcome)
 
     return render(request, 'patients/guideline_page.html', {
         'patient': patient, 
@@ -283,10 +283,10 @@ def guideline_page_demo(request, patient_id):
     patient = get_object_or_404(Patient_demo, pk=patient_id)
 
     # Define llm summary
-    decision_logic = decision_logic_fun(patient.name)
+    decision_logic = decision_logic_fun_demo(patient.name)
 
     # Define llm summary
-    decision_outcome = decision_outcome_fun(patient.name)
+    decision_outcome = decision_outcome_fun_demo(patient.name)
     print(decision_outcome)
 
     return render(request, 'patients/guideline_page_demo.html', {
@@ -335,7 +335,7 @@ def process_user_input(request, patient_id):
         return HttpResponse(status=405)
 
 def process_user_input_demo(request, patient_id):
-    print('hi')
+    print('Demo input - not saved')
     if request.method == 'POST':
         # Update patient.form_filled_in
         patient = get_object_or_404(Patient_demo, pk=patient_id)
@@ -416,14 +416,83 @@ def decision_logic_fun(n):
     if n == 'Patient 1':
         return [
         {'label': 'Does your patient have an infection that may require special consideration?', 'answers': ['No']},
-        {'label': 'Is the patient’s gastrointestinal tract functioning with no evidence of malabsorption?', 'answers': ['No']},
-        {'label': 'Is the patient’s swallow or enteral tube administration safe?', 'answers': ['No']},
+        {'label': 'Is the patient’s gastrointestinal tract functioning with no evidence of malabsorption?', 'answers': ['Yes']},
+        {'label': 'Is the patient’s swallow or enteral tube administration safe?', 'answers': ['Yes']},
         {'label': 'Are there any significant concerns over patient adherence to oral treatment?', 'answers': ['No']},
         {'label': 'Has the patient vomited within the last 24 hours?', 'answers': ['No']},
         {'label': 'Are the patient’s clinical signs and symptoms of infection improving?', 'answers': ['No']},
         ]
     elif n == 'Patient 2':
-        return 'Switch'
+        return [
+        {'label': 'Does your patient have an infection that may require special consideration?', 'answers': ['No']},
+        {'label': 'Is the patient’s gastrointestinal tract functioning with no evidence of malabsorption?', 'answers': ['Yes']},
+        {'label': 'Is the patient’s swallow or enteral tube administration safe?', 'answers': ['Yes']},
+        {'label': 'Are there any significant concerns over patient adherence to oral treatment?', 'answers': ['No']},
+        {'label': 'Has the patient vomited within the last 24 hours?', 'answers': ['No']},
+        {'label': 'Are the patient’s clinical signs and symptoms of infection improving?', 'answers': ['Yes']},
+        {'label': 'Has the patient’s temperature been between 36-38°C for the past 24 hours?', 'answers': ['Yes']},
+        {'label': 'Is the patient’s Early Warning Score (EWS) decreasing?', 'answers': ['Yes']}
+        ]
+    elif n == 'Patient 7':
+        return [
+        {'label': 'Does your patient have an infection that may require special consideration?', 'answers': ['No']},
+        {'label': 'Is the patient’s gastrointestinal tract functioning with no evidence of malabsorption?', 'answers': ['Yes']},
+        {'label': 'Is the patient’s swallow or enteral tube administration safe?', 'answers': ['Yes']},
+        {'label': 'Are there any significant concerns over patient adherence to oral treatment?', 'answers': ['No']},
+        {'label': 'Has the patient vomited within the last 24 hours?', 'answers': ['No']},
+        {'label': 'Are the patient’s clinical signs and symptoms of infection improving?', 'answers': ['No']},
+        ]
+    elif n == 'Patient 8':
+        return [
+        {'label': 'Does your patient have an infection that may require special consideration?', 'answers': ['No']},
+        {'label': 'Is the patient’s gastrointestinal tract functioning with no evidence of malabsorption?', 'answers': ['Yes']},
+        {'label': 'Is the patient’s swallow or enteral tube administration safe?', 'answers': ['Yes']},
+        {'label': 'Are there any significant concerns over patient adherence to oral treatment?', 'answers': ['No']},
+        {'label': 'Has the patient vomited within the last 24 hours?', 'answers': ['No']},
+        {'label': 'Are the patient’s clinical signs and symptoms of infection improving?', 'answers': ['Yes']},
+        {'label': 'Has the patient’s temperature been between 36-38°C for the past 24 hours?', 'answers': ['Yes']},
+        {'label': 'Is the patient’s Early Warning Score (EWS) decreasing?', 'answers': ['Yes']}
+        ]
+    elif n == 'Patient 9':
+        return [
+        {'label': 'Does your patient have an infection that may require special consideration?', 'answers': ['No']},
+        {'label': 'Is the patient’s gastrointestinal tract functioning with no evidence of malabsorption?', 'answers': ['Yes']},
+        {'label': 'Is the patient’s swallow or enteral tube administration safe?', 'answers': ['Yes']},
+        {'label': 'Are there any significant concerns over patient adherence to oral treatment?', 'answers': ['No']},
+        {'label': 'Has the patient vomited within the last 24 hours?', 'answers': ['No']},
+        {'label': 'Are the patient’s clinical signs and symptoms of infection improving?', 'answers': ['Yes']},
+        {'label': 'Has the patient’s temperature been between 36-38°C for the past 24 hours?', 'answers': ['Yes']},
+        {'label': 'Is the patient’s Early Warning Score (EWS) decreasing?', 'answers': ['Yes']}
+        ]
+    elif n == 'Patient 10':
+        return [
+        {'label': 'Does your patient have an infection that may require special consideration?', 'answers': ['No']},
+        {'label': 'Is the patient’s gastrointestinal tract functioning with no evidence of malabsorption?', 'answers': ['Yes']},
+        {'label': 'Is the patient’s swallow or enteral tube administration safe?', 'answers': ['Yes']},
+        {'label': 'Are there any significant concerns over patient adherence to oral treatment?', 'answers': ['No']},
+        {'label': 'Has the patient vomited within the last 24 hours?', 'answers': ['No']},
+        {'label': 'Are the patient’s clinical signs and symptoms of infection improving?', 'answers': ['Yes']},
+        {'label': 'Has the patient’s temperature been between 36-38°C for the past 24 hours?', 'answers': ['Yes']},
+        {'label': 'Is the patient’s Early Warning Score (EWS) decreasing?', 'answers': ['Yes']}
+        ]
+    elif n == 'Patient 11':
+        return [
+        {'label': 'Does your patient have an infection that may require special consideration?', 'answers': ['No']},
+        {'label': 'Is the patient’s gastrointestinal tract functioning with no evidence of malabsorption?', 'answers': ['Yes']},
+        {'label': 'Is the patient’s swallow or enteral tube administration safe?', 'answers': ['Yes']},
+        {'label': 'Are there any significant concerns over patient adherence to oral treatment?', 'answers': ['No']},
+        {'label': 'Has the patient vomited within the last 24 hours?', 'answers': ['No']},
+        {'label': 'Are the patient’s clinical signs and symptoms of infection improving?', 'answers': ['No']},
+        ]
+    elif n == 'Patient 12':
+        return [
+        {'label': 'Does your patient have an infection that may require special consideration?', 'answers': ['No']},
+        {'label': 'Is the patient’s gastrointestinal tract functioning with no evidence of malabsorption?', 'answers': ['Yes']},
+        {'label': 'Is the patient’s swallow or enteral tube administration safe?', 'answers': ['Yes']},
+        {'label': 'Are there any significant concerns over patient adherence to oral treatment?', 'answers': ['No']},
+        {'label': 'Has the patient vomited within the last 24 hours?', 'answers': ['No']},
+        {'label': 'Are the patient’s clinical signs and symptoms of infection improving?', 'answers': ['No']},
+        ]
     else:
         return 'nan'
 
@@ -431,7 +500,62 @@ def decision_outcome_fun(n):
     if n == 'Patient 1':
         return [{'label': 'Dont switch', 'answers': ['Reassess in 24 hours']}]
     elif n == 'Patient 2':
-        return [{'label': 'Switch', 'answers': ['XXX']}]
+        return [{'label': 'Prompt or assess for switch', 'answers': ['Prescriber or infection specialist to consider IV to oral switch. Identify whether a suitable oral switch option is available, considering for example oral bioavailability, any clinically significant drug interactions, patient allergies or contra-indications']}]
+    elif n == 'Patient 7':
+        return [{'label': 'Dont switch', 'answers': ['Reassess in 24 hours']}]
+    elif n == 'Patient 8':
+        return [{'label': 'Prompt or assess for switch', 'answers': ['Prescriber or infection specialist to consider IV to oral switch. Identify whether a suitable oral switch option is available, considering for example oral bioavailability, any clinically significant drug interactions, patient allergies or contra-indications']}]
+    elif n == 'Patient 9':
+        return [{'label': 'Prompt or assess for switch', 'answers': ['Prescriber or infection specialist to consider IV to oral switch. Identify whether a suitable oral switch option is available, considering for example oral bioavailability, any clinically significant drug interactions, patient allergies or contra-indications']}]
+    elif n == 'Patient 10':
+        return [{'label': 'Prompt or assess for switch', 'answers': ['Prescriber or infection specialist to consider IV to oral switch. Identify whether a suitable oral switch option is available, considering for example oral bioavailability, any clinically significant drug interactions, patient allergies or contra-indications']}]
+    elif n == 'Patient 11':
+        return [{'label': 'Dont switch', 'answers': ['Reassess in 24 hours']}]
+    elif n == 'Patient 12':
+        return [{'label': 'Dont switch', 'answers': ['Reassess in 24 hours']}]
+    else:
+        return 'nan'
+
+def decision_logic_fun_demo(n):
+    if n == 'Patient 1':
+        return [
+        {'label': 'Does your patient have an infection that may require special consideration?', 'answers': ['No']},
+        {'label': 'Is the patient’s gastrointestinal tract functioning with no evidence of malabsorption?', 'answers': ['Yes']},
+        {'label': 'Is the patient’s swallow or enteral tube administration safe?', 'answers': ['Yes']},
+        {'label': 'Are there any significant concerns over patient adherence to oral treatment?', 'answers': ['No']},
+        {'label': 'Has the patient vomited within the last 24 hours?', 'answers': ['No']},
+        {'label': 'Are the patient’s clinical signs and symptoms of infection improving?', 'answers': ['No']},
+        ]
+    elif n == 'Patient 2':
+        return [
+        {'label': 'Does your patient have an infection that may require special consideration?', 'answers': ['No']},
+        {'label': 'Is the patient’s gastrointestinal tract functioning with no evidence of malabsorption?', 'answers': ['Yes']},
+        {'label': 'Is the patient’s swallow or enteral tube administration safe?', 'answers': ['Yes']},
+        {'label': 'Are there any significant concerns over patient adherence to oral treatment?', 'answers': ['No']},
+        {'label': 'Has the patient vomited within the last 24 hours?', 'answers': ['No']},
+        {'label': 'Are the patient’s clinical signs and symptoms of infection improving?', 'answers': ['Yes']},
+        {'label': 'Has the patient’s temperature been between 36-38°C for the past 24 hours?', 'answers': ['Yes']},
+        {'label': 'Is the patient’s Early Warning Score (EWS) decreasing?', 'answers': ['Yes']}
+        ]
+    elif n == 'Patient 3':
+        return [
+        {'label': 'Does your patient have an infection that may require special consideration?', 'answers': ['No']},
+        {'label': 'Is the patient’s gastrointestinal tract functioning with no evidence of malabsorption?', 'answers': ['Yes']},
+        {'label': 'Is the patient’s swallow or enteral tube administration safe?', 'answers': ['Yes']},
+        {'label': 'Are there any significant concerns over patient adherence to oral treatment?', 'answers': ['No']},
+        {'label': 'Has the patient vomited within the last 24 hours?', 'answers': ['No']},
+        {'label': 'Are the patient’s clinical signs and symptoms of infection improving?', 'answers': ['No']},
+        ]
+    else:
+        return 'nan'
+
+def decision_outcome_fun_demo(n):
+    if n == 'Patient 1':
+        return [{'label': 'Dont switch', 'answers': ['Reassess in 24 hours']}]
+    elif n == 'Patient 2':
+        return [{'label': 'Prompt or assess for switch', 'answers': ['Prescriber or infection specialist to consider IV to oral switch. Identify whether a suitable oral switch option is available, considering for example oral bioavailability, any clinically significant drug interactions, patient allergies or contra-indications']}]
+    elif n == 'Patient 3':
+        return [{'label': 'Dont switch', 'answers': ['Reassess in 24 hours']}]
     else:
         return 'nan'
 

@@ -100,7 +100,7 @@
             </div>
         {% endfor %}
         <div class="card mt-4">
-            <div class="card-header {% if decision_outcome.0.label|lower == 'switch' %}bg-success-light{% elif decision_outcome.0.label|lower == 'dont switch' %}bg-danger-light{% else %}bg-warning{% endif %}">
+            <div class="card-header {% if decision_outcome.0.label|lower == 'prompt or assess for switch' %}bg-success-light{% elif decision_outcome.0.label|lower == 'dont switch' %}bg-danger-light{% else %}bg-warning{% endif %}">
                 <h4 class="card-title">{{ decision_outcome.0.label }}</h4>
             </div>
             <div class="card-body">
