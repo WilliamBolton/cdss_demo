@@ -1,6 +1,6 @@
 Similar patient,Age,Sex,Ethnicity,IMDDECIL,Co-morbidities,Infection diganosis,AI CDSS prediction,Real action,Prediction correct
-1,43, Female,White,4, Obesity,Sepsis,Dont switch,Didnt switch,Yes
-2,32, Female,Other,6," Endometriosis, Seasonal allergic rhinitis, Seronegative arthritis, Acne vulgaris",Sepsis,Dont switch,Didnt switch,Yes
-3,76, Male,Asian,5," Diabetes mellitus, Hypertension, Hypercholesterolemia, Vitamin D deficiency, Constipation",NA,Dont switch,Didnt switch,Yes
-4,27, Female,Black,3,Gestational diabetes mellitus,Sepsis,Dont switch,Didnt switch,Yes
-5,21,Male,Other,5,"Myelodysplastic syndrome, Guillain-Barré syndrome",Pneumonia,Dont switch,Didnt switch,Yes
+1,43,Female,White,4, Obesity,Sepsis,Dont switch,Didnt switch,Yes
+2,32,Female,Other,6,"Endometriosis, Seasonal allergic rhinitis, Seronegative arthritis, Acne vulgaris",Sepsis,Dont switch,Didnt switch,Yes
+3,27,Female,Black,3,Gestational diabetes mellitus,Sepsis,Dont switch,Didnt switch,Yes
+4,35,Female,Asian,4,"Obesity, Anemia, Deep venous thrombosis",N/A,Switch,Switched,Yes
+5,46,Female,Asian,3,"Asthma, Hypertension, Osteoarthritis, Hypothyroidism",N/A,Dont switch,Didnt switch,Yes

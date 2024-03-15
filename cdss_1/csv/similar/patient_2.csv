@@ -1,6 +1,6 @@
-Similar patients, age, sex, ethnicity, infection diganosis, co-morbidities, AI CDSS prediction, Real action
-1,60, Male, White, Pneumonia, Obesity, Dont switch, Didnt switch
-2,50, Female, Asian, NA, -, Dont switch, Didnt switch
-3,70, Male, Black, Pneumonia, Diabetes, Dont switch, Didnt switch
-4,TBC, TBC.TBC
-5,
+Similar patient,Age,Sex,Ethnicity,IMDDECIL,Co-morbidities,Infection diganosis,AI CDSS prediction,Real action,Prediction correct
+1, 80, Male, White,6,"Hypertension, Microalbuminuria", N/A, Switch, Switched, Yes
+2, 64, Female, White, 7,"Hypertension, Osteoarthritis", UTI, Switch, Didnt switch, No
+3, 87, Female, White, 4,"Hypertension, Anemia, Diabetes mellitus type 2, Ischemic heart disease, Chronic kidney disease", Sepsis, Switch, Switched, Yes
+4, 82, Female, White, 10,"Hypertension, Diabetes mellitus type 2, Atrial fibrillation, Chronic kidney disease, Asthma, Diverticulitis", N/A, Switch, Didnt switch, No
+5, 40, Female, White, 7,"Hypokalemia, Alcoholic liver damage, Retained products of conception", N/A, Switch, Switched, Yes

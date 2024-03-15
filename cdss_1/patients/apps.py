@@ -7,7 +7,15 @@ def age_fun(n):
     if n == 'Patient 1':
         return '65'
     elif n == 'Patient 2':
-        return '25'
+        return '40'
+    elif n == 'Patient 3':
+        return '55'
+    elif n == 'Patient 4':
+        return '37'
+    elif n == 'Patient 5':
+        return '28'
+    elif n == 'Patient 6':
+        return '63'
     elif n == 'Patient 7':
         return '91'
     elif n == 'Patient 8':
@@ -28,6 +36,14 @@ def sex_fun(n):
         return 'Male'
     elif n == 'Patient 2':
         return 'Female'
+    elif n == 'Patient 3':
+        return 'Male'
+    elif n == 'Patient 4':
+        return 'Female'
+    elif n == 'Patient 5':
+        return 'Female'
+    elif n == 'Patient 6':
+        return 'Male'
     elif n == 'Patient 7':
         return 'Male'
     elif n == 'Patient 8':
@@ -47,7 +63,15 @@ def ethnicity_fun(n):
     if n == 'Patient 1':
         return 'White'
     elif n == 'Patient 2':
-        return 'Female'
+        return 'White'
+    elif n == 'Patient 3':
+        return 'Asian'
+    elif n == 'Patient 4':
+        return 'Black'
+    elif n == 'Patient 5':
+        return 'Other'
+    elif n == 'Patient 6':
+        return 'Other'
     elif n == 'Patient 7':
         return 'White'
     elif n == 'Patient 8':
@@ -67,7 +91,15 @@ def imddecil_fun(n):
     if n == 'Patient 1':
         return '4'
     elif n == 'Patient 2':
-        return 'xxx'
+        return '9'
+    elif n == 'Patient 3':
+        return '4'
+    elif n == 'Patient 4':
+        return '2'
+    elif n == 'Patient 5':
+        return '6'
+    elif n == 'Patient 6':
+        return '5'
     else:
         return 'nan'
 
@@ -75,7 +107,15 @@ def comorbidities_fun(n):
     if n == 'Patient 1':
         return 'Obesity'
     elif n == 'Patient 2':
-        return 'xxx'
+        return 'Hypertension, Anemia'
+    elif n == 'Patient 3':
+        return 'Hypertension, Hypercholesterolemia'
+    elif n == 'Patient 4':
+        return 'Diabetes mellitus type 2'
+    elif n == 'Patient 5':
+        return 'Asthma'
+    elif n == 'Patient 6':
+        return 'Atrial fibrillation, Chronic kidney disease, Osteoarthritis'
     else:
         return 'nan'
     
@@ -84,6 +124,14 @@ def diagosis_fun(n):
         return 'Pneumonia'
     elif n == 'Patient 2':
         return 'Uncomplicated urinary tract infection'
+    elif n == 'Patient 3':
+        return 'Pneumonia'
+    elif n == 'Patient 4':
+        return 'Cellulitis'
+    elif n == 'Patient 5':
+        return 'Uncomplicated urinary tract infection'
+    elif n == 'Patient 6':
+        return 'NA'
     else:
         return 'nan'
     
@@ -91,7 +139,15 @@ def antibiotic_fun(n):
     if n == 'Patient 1':
         return 'IV co-amoxiclav for 1 day'
     elif n == 'Patient 2':
-        return 'IV xxx for 3 days'
+        return 'IV cephalexin for 5 days'
+    elif n == 'Patient 3':
+        return 'IV for ceftriaxone 3 days'
+    elif n == 'Patient 4':
+        return 'IV for flucloxacillin 5 days'
+    elif n == 'Patient 5':
+        return 'IV for cefuroxime 3 days'
+    elif n == 'Patient 6':
+        return 'IV for flucloxacillin 5 days'
     elif n == 'Patient 7':
         return 'IV for 2 days'
     elif n == 'Patient 8':
@@ -112,6 +168,14 @@ def prediction_fun(n):
         return 'Dont switch'
     elif n == 'Patient 2':
         return 'Switch'
+    elif n == 'Patient 3':
+        return 'Switch'
+    elif n == 'Patient 4':
+        return 'Dont switch'
+    elif n == 'Patient 5':
+        return 'Switch'
+    elif n == 'Patient 6':
+        return 'Dont switch'
     elif n == 'Patient 7':
         return 'Dont switch'
     elif n == 'Patient 8':
@@ -131,7 +195,15 @@ def guideline_fun(n):
     if n == 'Patient 1':
         return 'Reassess in 24 hours'
     elif n == 'Patient 2':
-        return 'Switch'
+        return 'Prompt or assess for switch'
+    elif n == 'Patient 3':
+        return 'Reassess in 24 hours'
+    elif n == 'Patient 4':
+        return 'Prompt or assess for switch'
+    elif n == 'Patient 5':
+        return 'Reassess in 24 hours'
+    elif n == 'Patient 6':
+        return 'Prompt or assess for switch'
     elif n == 'Patient 7':
         return 'Reassess in 24 hours'
     elif n == 'Patient 8':

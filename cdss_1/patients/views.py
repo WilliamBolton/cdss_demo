@@ -46,13 +46,23 @@ def login_view(request):
         password = 'test_password'
 
         if id_value == 'demo':
-            # Authenticate the demo user
-            user = authenticate(request, username=id_value, password=password)
-            print('user:', user)
-            if user is not None:
-                login(request, user)
-                return redirect('patient_list_demo')  # Redirect to the demo dashboard
-
+            try:
+                # Authenticate the demo user
+                user = authenticate(request, username=id_value, password=password)
+                print('user:', user)
+                print('archetype:', archetype)
+                if user is not None:
+                    login(request, user)
+                    # Create or update user profile
+                    #profile = UserProfile.objects.create(id_value=id_value, archetype=archetype)
+                    profile, created = UserProfile.objects.get_or_create(user=user, id_value=id_value, archetype=archetype)
+                    profile.save()
+                    return redirect('patient_list_demo')  # Redirect to the demo dashboard
+            except:
+                # Handle the case where UserProfile does not exist
+                print('Invalid ID or Archetype combination. Please try again.')
+                messages.error(request, 'Invalid ID or Archetype combination. Please try again.')
+                return redirect('/')  # Redirect back to the login page
 
         try:
             # Authenticate the user
@@ -71,6 +81,7 @@ def login_view(request):
             
         except:
             # Handle the case where UserProfile does not exist
+            print('Invalid ID or Archetype combination. Please try again.')
             messages.error(request, 'Invalid ID or Archetype combination. Please try again.')
             return redirect('/')  # Redirect back to the login page
     
@@ -182,7 +193,7 @@ def prediction_page(request, patient_id):
         patient_data = None
         patient_data_json = None
     else:
-        patient_data = pd.read_csv(patient.patient_csv_path)
+        patient_data = pd.read_csv(patient.patient_csv_path, keep_default_na=False)
         patient_data = patient_data.astype(str) # Conver to strings to preserve dp
         patient_dict = patient_data.to_dict(orient='records')
         patient_data_json = json.dumps(patient_dict)
@@ -191,7 +202,7 @@ def prediction_page(request, patient_id):
         similar_patients_data = None
         similar_patients_data_json = None
     else:
-        similar_patients_data = pd.read_csv(patient.similar_patients_csv_path)
+        similar_patients_data = pd.read_csv(patient.similar_patients_csv_path, keep_default_na=False)
         similar_patients_data = similar_patients_data.astype(str) # Conver to strings to preserve dp
         similar_patients_dict = similar_patients_data.to_dict(orient='records')
         similar_patients_data_json = json.dumps(similar_patients_dict)
@@ -199,6 +210,7 @@ def prediction_page(request, patient_id):
     if patient.feature_similarity_path == 'nan':
         image_path = None
     else:
+        print(patient.feature_similarity_path)
         image_path = patient.feature_similarity_path
         # Strip to allow for loading in html
         image_path = image_path.lstrip('images/')
@@ -226,7 +238,7 @@ def prediction_page_demo(request, patient_id):
         patient_data = None
         patient_data_json = None
     else:
-        patient_data = pd.read_csv(patient.patient_csv_path)
+        patient_data = pd.read_csv(patient.patient_csv_path, keep_default_na=False)
         patient_data = patient_data.astype(str) # Conver to strings to preserve dp
         patient_dict = patient_data.to_dict(orient='records')
         patient_data_json = json.dumps(patient_dict)
@@ -235,7 +247,7 @@ def prediction_page_demo(request, patient_id):
         similar_patients_data = None
         similar_patients_data_json = None
     else:
-        similar_patients_data = pd.read_csv(patient.similar_patients_csv_path)
+        similar_patients_data = pd.read_csv(patient.similar_patients_csv_path, keep_default_na=False)
         similar_patients_data = similar_patients_data.astype(str) # Conver to strings to preserve dp
         similar_patients_dict = similar_patients_data.to_dict(orient='records')
         similar_patients_data_json = json.dumps(similar_patients_dict)
@@ -421,8 +433,52 @@ def decision_logic_fun(n):
         {'label': 'Are there any significant concerns over patient adherence to oral treatment?', 'answers': ['No']},
         {'label': 'Has the patient vomited within the last 24 hours?', 'answers': ['No']},
         {'label': 'Are the patient’s clinical signs and symptoms of infection improving?', 'answers': ['No']},
+        {'label': 'Has the patient’s temperature been between 36-38°C for the past 24 hours?', 'answers': ['No']},
         ]
     elif n == 'Patient 2':
+        return [
+        {'label': 'Does your patient have an infection that may require special consideration?', 'answers': ['No']},
+        {'label': 'Is the patient’s gastrointestinal tract functioning with no evidence of malabsorption?', 'answers': ['Yes']},
+        {'label': 'Is the patient’s swallow or enteral tube administration safe?', 'answers': ['Yes']},
+        {'label': 'Are there any significant concerns over patient adherence to oral treatment?', 'answers': ['No']},
+        {'label': 'Has the patient vomited within the last 24 hours?', 'answers': ['No']},
+        {'label': 'Are the patient’s clinical signs and symptoms of infection improving?', 'answers': ['Yes']},
+        {'label': 'Has the patient’s temperature been between 36-38°C for the past 24 hours?', 'answers': ['Yes']},
+        {'label': 'Is the patient’s Early Warning Score (EWS) decreasing?', 'answers': ['Yes']}
+        ]
+    elif n == 'Patient 3':
+        return [
+        {'label': 'Does your patient have an infection that may require special consideration?', 'answers': ['No']},
+        {'label': 'Is the patient’s gastrointestinal tract functioning with no evidence of malabsorption?', 'answers': ['Yes']},
+        {'label': 'Is the patient’s swallow or enteral tube administration safe?', 'answers': ['Yes']},
+        {'label': 'Are there any significant concerns over patient adherence to oral treatment?', 'answers': ['No']},
+        {'label': 'Has the patient vomited within the last 24 hours?', 'answers': ['No']},
+        {'label': 'Are the patient’s clinical signs and symptoms of infection improving?', 'answers': ['No']},
+        {'label': 'Has the patient’s temperature been between 36-38°C for the past 24 hours?', 'answers': ['No']},
+        ]
+    elif n == 'Patient 4':
+        return [
+        {'label': 'Does your patient have an infection that may require special consideration?', 'answers': ['No']},
+        {'label': 'Is the patient’s gastrointestinal tract functioning with no evidence of malabsorption?', 'answers': ['Yes']},
+        {'label': 'Is the patient’s swallow or enteral tube administration safe?', 'answers': ['Yes']},
+        {'label': 'Are there any significant concerns over patient adherence to oral treatment?', 'answers': ['No']},
+        {'label': 'Has the patient vomited within the last 24 hours?', 'answers': ['No']},
+        {'label': 'Are the patient’s clinical signs and symptoms of infection improving?', 'answers': ['Yes']},
+        {'label': 'Has the patient’s temperature been between 36-38°C for the past 24 hours?', 'answers': ['Yes']},
+        {'label': 'Is the patient’s Early Warning Score (EWS) decreasing?', 'answers': ['Yes']}
+        ]
+    elif n == 'Patient 5':
+        return [
+        {'label': 'Does your patient have an infection that may require special consideration?', 'answers': ['No']},
+        {'label': 'Is the patient’s gastrointestinal tract functioning with no evidence of malabsorption?', 'answers': ['Yes']},
+        {'label': 'Is the patient’s swallow or enteral tube administration safe?', 'answers': ['Yes']},
+        {'label': 'Are there any significant concerns over patient adherence to oral treatment?', 'answers': ['No']},
+        {'label': 'Has the patient vomited within the last 24 hours?', 'answers': ['No']},
+        {'label': 'Are the patient’s clinical signs and symptoms of infection improving?', 'answers': ['Yes']},
+        {'label': 'Has the patient’s temperature been between 36-38°C for the past 24 hours?', 'answers': ['Yes']},
+        {'label': 'Is the patient’s Early Warning Score (EWS) decreasing?', 'answers': ['No']}
+        ]
+    elif n == 'Patient 6':
         return [
         {'label': 'Does your patient have an infection that may require special consideration?', 'answers': ['No']},
         {'label': 'Is the patient’s gastrointestinal tract functioning with no evidence of malabsorption?', 'answers': ['Yes']},
@@ -501,6 +557,14 @@ def decision_outcome_fun(n):
         return [{'label': 'Dont switch', 'answers': ['Reassess in 24 hours']}]
     elif n == 'Patient 2':
         return [{'label': 'Prompt or assess for switch', 'answers': ['Prescriber or infection specialist to consider IV to oral switch. Identify whether a suitable oral switch option is available, considering for example oral bioavailability, any clinically significant drug interactions, patient allergies or contra-indications']}]
+    elif n == 'Patient 3':
+        return [{'label': 'Dont switch', 'answers': ['Reassess in 24 hours']}]
+    elif n == 'Patient 4':
+        return [{'label': 'Prompt or assess for switch', 'answers': ['Prescriber or infection specialist to consider IV to oral switch. Identify whether a suitable oral switch option is available, considering for example oral bioavailability, any clinically significant drug interactions, patient allergies or contra-indications']}]
+    elif n == 'Patient 5':
+        return [{'label': 'Dont switch', 'answers': ['Reassess in 24 hours']}]
+    elif n == 'Patient 6':
+        return [{'label': 'Prompt or assess for switch', 'answers': ['Prescriber or infection specialist to consider IV to oral switch. Identify whether a suitable oral switch option is available, considering for example oral bioavailability, any clinically significant drug interactions, patient allergies or contra-indications']}]
     elif n == 'Patient 7':
         return [{'label': 'Dont switch', 'answers': ['Reassess in 24 hours']}]
     elif n == 'Patient 8':
@@ -560,14 +624,33 @@ def decision_outcome_fun_demo(n):
         return 'nan'
 
 def get_template_fun(patient_id, user_archetype):
-    if patient_id == 2 and user_archetype == 'a':
+    # Order of seeing CDSS (1) or SOC (2)
+    # a and b are opposites of each other
+    # a = 122121122112
+    # b = 211212211221
+    a_list = [1,2,2,1,2,1,1,2,2,1,1,2]
+    b_list = [2,1,1,2,1,2,2,1,1,2,2,1]
+    if user_archetype == 'a':
+        n = a_list[patient_id-1]
+    elif user_archetype == 'b':
+        n = b_list[patient_id-1]
+    
+    if n == 1:
+        return 'patients/patient_detail.html'
+    elif n == 2:
+        return 'patients/patient_detail_simple.html'
+
+    # Old code for initial dev below
+    '''if patient_id == 2 and user_archetype == 'a':
         return 'patients/patient_detail_simple.html'
     elif patient_id == 4 and user_archetype == 'a':
         return 'patients/patient_detail_simple.html'
     else:
-        return 'patients/patient_detail.html'
+        return 'patients/patient_detail.html'''
 
 def get_template_fun_demo(patient_id, user_archetype):
+    print('patient_id', patient_id)
+    print('user_archetype', user_archetype)
     if patient_id == 2 and user_archetype == 'a':
         return 'patients/patient_detail_simple_demo.html'
     else:
