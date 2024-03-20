@@ -1,28 +1,22 @@
-FROM python:3.10.13
+FROM continuumio/miniconda3
 
-#FROM continuumio/anaconda3
+WORKDIR /cdss_1
 
-ENV PYTHONUNBUFFERED=1
+# Create the environment:
+COPY ./ ./
+RUN conda env create -f environment.yml
 
-WORKDIR /app
+# Make RUN commands use the new environment:
+SHELL ["conda", "run", "-n", "cdss", "/bin/bash", "-c"]
 
-COPY requirements.txt .
-
-#RUN conda install --name app_env --file requirements.txt
-
-#RUN conda update -n base -c defaults conda \
-#    && conda install --name app_env --file requirements.txt
-
-#SHELL ["conda", "run", "-n", "app_env", "/bin/bash", "-c"]
-#RUN conda activate --name app_env
-
-COPY . .
+# Demonstrate the environment is activated:
+RUN echo "Make sure flask is installed:"
 
 EXPOSE 8000
 
-CMD ["conda", "run", "-n", "app_env", "python", "manage.py", "runserver"]
+# Run the server
+ENTRYPOINT ["conda", "run", "--no-capture-output", "-n", "cdss", "python", "runserver_plus_resetdb.py"]
 
-
-
-
-
+# Created docker image called cdss-django-app: 'docbuild -t cdss-django-app .'
+# Run with 'docker run -p 8000:8000 cdss-django-app'
+# View at 'http://172.17.0.2:8000'

@@ -26,8 +26,12 @@ SECRET_KEY = 'django-insecure-sr0by1qe=8r=j2-6d+&vc*^24=o#hd7j9@so#8fj+txk6a&ejr
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = [
+    '*',
+    '0.0.0.0',
+    '127.0.0.1',
+    '<cdss-django-app>.on.dockerize.io',
+]
 
 # Application definition
 

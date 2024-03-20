@@ -11,7 +11,8 @@ def run():
 
     # Run the development server
     #execute_from_command_line(['manage.py', 'runserver'])
-    os.system('python manage.py runserver --noreload')
+    os.system('python manage.py runserver 0.0.0.0:8000 --noreload') # Needed for docker
+    #os.system('python manage.py runserver --noreload') # Otherwise can use this
 
 if __name__ == '__main__':
     run()
