@@ -74,7 +74,7 @@ def handle_logout(sender, request, **kwargs):
         patient_id = patient_id.lstrip('Patient ') # Strip to just return number in string form
         csv_writer3.writerow([user_id, user_archetype, patient_id, event.component, event.hover_duration])
 
-    # Save CSV data to a file in the 'click_results' folder
+    # Save CSV data to a file in the 'hover_results' folder
     csv_file_path3 = f'/home/wb1115/VSCode_projects/cdss/cdss_1/cdss_1/hover_results/{user_id}_hover_events.csv'
 
     with open(csv_file_path3, 'w') as csv_file3:

@@ -4,60 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f9f9f9; /* Add a light background color */
-        }
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/patient_list_demo.css' %}">
 
-        .container {
-            max-width: 800px; /* Adjust the width as needed */
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        li {
-            background-color: #fff; /* Set the background color for each patient entry */
-            margin: 10px;
-            padding: 10px;
-            border-radius: 5px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow for better visual separation */
-        }
-
-        a {
-            text-decoration: none;
-            color: #333;
-            font-weight: bold;
-        }
-
-        a:hover {
-            color: #0066cc;
-        }
-
-        .navbar {
-            display: flex;
-            justify-content: flex-end; /* Align right */
-        }
-
-        .navbar a.logout {
-            margin-right: 20px; /* Add margin to the right for a gap */
-        }
-
-        #completeButton {
-            margin-top: 20px; /* Add top margin to the button */
-            display: block; /* Make the button a block-level element */
-            margin-left: auto; /* Center the button horizontally */
-            margin-right: auto; /* Center the button horizontally */
-        }
-
-    </style>
     <title>Patients</title>
 </head>
 <body>
@@ -94,56 +44,8 @@
     <!-- Complete button -->
     <button id="completeButton" class="btn btn-secondary" disabled>Complete</button>
 
-    <!-- JavaScript to handle button color and click event -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-        var completeButton = document.getElementById('completeButton');
-
-        // Check completion status on page load
-        checkCompletionStatus();
-
-        function checkCompletionStatus() {
-            var allPatients = Array.from(document.querySelectorAll('.patient-item'));
-        
-            // Print information about all patients and their form_filled_in status
-            allPatients.forEach(function (patient) {
-                console.log(`Patient ID: ${patient.dataset.patientId}, Form Filled In: ${patient.dataset.formFilledIn}, Form Filled In Type: ${typeof patient.dataset.formFilledIn}`);
-            });
-
-            var allPatientsFilledIn = allPatients.every(function (patient) {
-                return patient.dataset.formFilledIn === 'True';
-            });
-            
-            console.log('All Patients Filled In:', allPatientsFilledIn);
-            // console.log('All Patients Filled In type:',typeof allPatientsFilledIn);
-
-            if (allPatientsFilledIn) {
-                // If all patients are filled in, enable the 'Complete' button and set it to primary color
-                completeButton.removeAttribute('disabled');
-                completeButton.classList.remove('btn-secondary');
-                completeButton.classList.add('btn-primary');
-            } else {
-                // If not all patients are filled in, disable the 'Complete' button and set it to secondary color
-                completeButton.setAttribute('disabled', 'disabled');
-                completeButton.classList.remove('btn-primary');
-                completeButton.classList.add('btn-secondary');
-            }
-        }
-
-        // Add click event to 'Complete' button
-        completeButton.addEventListener('click', function () {
-            // Redirect to logout URL or perform logout action
-            window.location.href = '{% url 'logout' %}';
-        });
-
-        // Listen for changes in the form_filled_in attribute
-        document.addEventListener('change', function (event) {
-            if (event.target.classList.contains('patient-item')) {
-                checkCompletionStatus();
-            }
-        });
-    });
-    </script>
+    <!-- JavaScript -->
+    <script src="{% static 'js/patient_list_demo.js' %}"></script>
 
 </body>
 </html>

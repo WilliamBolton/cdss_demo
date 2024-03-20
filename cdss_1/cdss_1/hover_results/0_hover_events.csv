@@ -1,0 +1,48 @@
+user_id,user_archetype,patient,component,hover_duration
+0,a,1,patient_details_age:,0.015
+0,a,1,patient_details_sex:,0.037
+0,a,1,guideline_alert,0.173
+0,a,1,guideline_alert,0.032
+0,a,1,guidelines_pdf,0.665
+0,a,1,vitals_table_Metric / Time (hours),0.034
+0,a,3,patient_details_ethnicity:,0.028
+0,a,3,patient_details_imddecil:,0.054
+0,a,3,patient_details_co-morbidities:,0.063
+0,a,3,patient_details_imddecil:,0.083
+0,a,5,patient_details_co-morbidities:,0.041
+0,a,5,patient_details_,0.044
+0,a,5,patient_details_diagnosis:,0.064
+0,a,4,patient_details_ethnicity:,0.079
+0,a,4,patient_details_imddecil:,0.221
+0,a,4,guideline_alert,0.016
+0,a,4,guideline_alert,0.016
+0,a,4,guideline_alert,0.016
+0,a,4,prediction_alert,0.239
+0,a,4,guideline_alert,0.394
+0,a,4,guideline_alert,0.015
+0,a,4,guidelines_pdf,1.015
+0,a,4,patient_details_antibiotic_treatment:,0.037
+0,a,4,patient_details_diagnosis:,0.186
+0,a,4,patient_details_diagnosis:,0.052
+0,a,4,patient_details_antibiotic_treatment:,0.015
+0,a,4,guideline_alert,0.016
+0,a,4,guideline_alert,0.032
+0,a,4,guideline_alert,0.016
+0,a,4,prediction_alert,0.066
+0,a,4,prediction_alert,0.271
+0,a,4,patient_table,0.112
+0,a,4,patient_table,0.032
+0,a,4,similar_table_Similar patient,0.251
+0,a,4,similar_table_1,0.016
+0,a,4,similar_table_2,0.015
+0,a,4,similar_table_5,0.033
+0,a,4,feature_image,0.897
+0,a,4,LLM_positive_points,0.217
+0,a,4,LLM_positive_points,0.167
+0,a,4,LLM_positive_points,0.083
+0,a,4,vitals_table_Metric / Time (hours),0.126
+0,a,4,patient_details_antibiotic_treatment:,0.033
+0,a,4,patient_details_diagnosis:,0.95
+0,a,4,vitals_table_Systolic Blood Pressure,0.051
+0,a,4,vitals_table_Mean Arterial Pressure,0.082
+0,a,4,echarts_plot,0.391

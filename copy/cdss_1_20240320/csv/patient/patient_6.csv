@@ -1,0 +1,2 @@
+Age,Sex,Ethnicity,IMDDECIL,Co-morbidities,Infection diganosis,AI CDSS prediction,Real action
+63,Male,Other,5,"Atrial fibrillation, Chronic kidney disease, Osteoarthritis",N/A,Dont switch,TBC

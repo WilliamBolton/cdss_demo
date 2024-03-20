@@ -1,0 +1,54 @@
+body {
+    background-color: white;
+    }
+table {
+    width: 100%;
+    text-align: center;
+}
+
+th, td {
+    padding: 10px;
+    vertical-align: middle;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #e0e0e0;
+}
+
+/* Customize the size of the alert icons */
+.bi {
+    width: 1.5em;
+    height: 1.5em;
+}
+
+#vitals-table td {
+    text-align: center;
+}
+
+/* Add this style to make the heading row darker */
+#vitals-table th {
+    background-color: #888;
+    color: white;
+}
+
+/* Add this style for lighter grey alternative striping */
+#vitals-table tr:nth-child(odd) {
+    background-color: #f3f3f3;
+}
+
+/* Add this style for hover effect on rows */
+#vitals-table tr:hover {
+    background-color: #e0e0e0;
+}
+
+#echarts-container {
+    height: 750px;
+}

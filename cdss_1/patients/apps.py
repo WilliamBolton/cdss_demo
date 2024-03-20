@@ -320,9 +320,9 @@ def diagosis_fun_demo(n):
     
 def antibiotic_fun_demo(n):
     if n == 'Patient 1':
-        return 'IV co-amoxiclav for 2 days'
+        return 'IV co-amoxiclav for 1 day'
     elif n == 'Patient 2':
-        return 'IV xxx for 2 days'
+        return 'IV cephalexin for 2 days'
     elif n == 'Patient 3':
         return 'IV for 3 days'
     else:

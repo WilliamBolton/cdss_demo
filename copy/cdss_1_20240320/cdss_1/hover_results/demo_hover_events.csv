@@ -1,0 +1,211 @@
+user_id,user_archetype,patient,component,hover_duration
+demo,a,1,patient_details_age:,0.033
+demo,a,1,patient_details_sex:,0.016
+demo,a,1,patient_details_ethnicity:,0.047
+demo,a,1,patient_details_imddecil:,0.133
+demo,a,1,patient_details_co-morbidities:,0.067
+demo,a,1,vitals_table_Respiratory Rate,0.298
+demo,a,1,vitals_table_Respiratory Rate,0.117
+demo,a,1,vitals_table_Heart Rate,0.116
+demo,a,1,vitals_table_Diastolic Blood Pressure,0.234
+demo,a,1,vitals_table_Systolic Blood Pressure,0.183
+demo,a,1,vitals_table_Mean Arterial Pressure,0.165
+demo,a,1,vitals_table_SpO2,0.182
+demo,a,1,vitals_table_SpO2,0.35
+demo,a,1,vitals_table_SpO2,0.267
+demo,a,1,vitals_table_Glasgow Coma Score,0.033
+demo,a,1,vitals_table_Glasgow Coma Score,0.066
+demo,a,1,vitals_table_Glasgow Coma Score,0.017
+demo,a,1,vitals_table_NEWS Conscious Level Score,0.032
+demo,a,1,vitals_table_NEWS Conscious Level Score,0.016
+demo,a,1,vitals_table_NEWS Supplemental Oxgen,0.032
+demo,a,1,echarts_plot,11.666
+demo,a,1,prediction_alert,0.032
+demo,a,1,prediction_alert,0.033
+demo,a,1,prediction_alert,0.016
+demo,a,1,prediction_alert,0.815
+demo,a,1,similar_table_2,1.351
+demo,a,1,similar_table_3,0.1
+demo,a,1,similar_table_4,0.099
+demo,a,1,similar_table_5,0.017
+demo,a,1,similar_table_5,0.149
+demo,a,1,similar_table_5,0.2
+demo,a,1,similar_table_4,0.1
+demo,a,1,similar_table_3,0.049
+demo,a,1,similar_table_2,0.033
+demo,a,1,similar_table_1,0.05
+demo,a,1,similar_table_Similar patient,0.049
+demo,a,1,patient_table,0.035
+demo,a,1,patient_table,0.292
+demo,a,1,patient_table,0.192
+demo,a,1,patient_table,0.385
+demo,a,1,similar_table_Similar patient,0.116
+demo,a,1,similar_table_1,0.066
+demo,a,1,similar_table_1,0.234
+demo,a,1,similar_table_2,0.417
+demo,a,1,similar_table_3,0.984
+demo,a,1,similar_table_4,0.084
+demo,a,1,similar_table_4,0.133
+demo,a,1,feature_image,2.184
+demo,a,1,LLM_positive_points,0.064
+demo,a,1,LLM_positive_points,0.296
+demo,a,1,vitals_table_NEWS Conscious Level Score,1.252
+demo,a,1,vitals_table_NEWS Conscious Level Score,0.166
+demo,a,1,vitals_table_Glasgow Coma Score,0.016
+demo,a,1,vitals_table_Glasgow Coma Score,0.117
+demo,a,1,vitals_table_SpO2,0.167
+demo,a,1,guideline_alert,0.1
+demo,a,1,guideline_alert,0.032
+demo,a,1,guidelines_flowchart,0.538
+demo,a,1,guidelines_flowchart,0.049
+demo,a,1,guidelines_flowchart,0.015
+demo,a,1,guidelines_flowchart,0.018
+demo,a,1,guidelines_flowchart,0.049
+demo,a,1,guidelines_flowchart,0.017
+demo,a,1,guidelines_flowchart,0.033
+demo,a,1,guidelines_flowchart,0.016
+demo,a,1,guidelines_flowchart,0.017
+demo,a,1,guidelines_flowchart,0.033
+demo,a,1,guidelines_flowchart,0.033
+demo,a,1,guidelines_flowchart,0.033
+demo,a,1,guidelines_flowchart,0.034
+demo,a,1,guidelines_flowchart,0.233
+demo,a,1,guidelines_flowchart,0.016
+demo,a,1,guidelines_flowchart,0.017
+demo,a,1,guidelines_flowchart,0.017
+demo,a,1,guidelines_flowchart,0.016
+demo,a,1,guidelines_flowchart,0.016
+demo,a,1,guidelines_flowchart,0.016
+demo,a,1,guidelines_flowchart,0.018
+demo,a,1,guidelines_flowchart,0.015
+demo,a,1,guidelines_flowchart,0.416
+demo,a,1,guidelines_flowchart,0.05
+demo,a,1,guidelines_flowchart,0.016
+demo,a,1,guidelines_flowchart,0.033
+demo,a,1,guidelines_flowchart,0.034
+demo,a,1,guidelines_flowchart,0.033
+demo,a,1,guidelines_flowchart,0.032
+demo,a,1,guidelines_flowchart,0.266
+demo,a,1,guidelines_flowchart,0.018
+demo,a,1,guidelines_flowchart,0.284
+demo,a,1,guidelines_pdf,1.515
+demo,a,1,guidelines_pdf,0.483
+demo,a,1,vitals_table_NEWS Conscious Level Score,0.648
+demo,a,1,vitals_table_Glasgow Coma Score,0.165
+demo,a,1,vitals_table_SpO2,0.018
+demo,a,1,vitals_table_SpO2,0.046
+demo,a,1,vitals_table_Mean Arterial Pressure,0.085
+demo,a,2,patient_details_age:,0.033
+demo,a,2,patient_details_sex:,0.101
+demo,a,2,patient_details_ethnicity:,0.067
+demo,a,2,patient_details_imddecil:,0.133
+demo,a,2,patient_details_co-morbidities:,0.083
+demo,a,2,patient_details_diagnosis:,0.099
+demo,a,2,patient_details_antibiotic_treatment:,0.1
+demo,a,2,vitals_table_Mean Arterial Pressure,0.016
+demo,a,2,vitals_table_Mean Arterial Pressure,0.017
+demo,a,2,vitals_table_SpO2,0.031
+demo,a,2,vitals_table_SpO2,0.017
+demo,a,2,vitals_table_SpO2,0.032
+demo,a,2,vitals_table_SpO2,0.265
+demo,a,2,vitals_table_SpO2,0.05
+demo,a,2,vitals_table_SpO2,0.034
+demo,a,2,vitals_table_SpO2,0.033
+demo,a,2,vitals_table_SpO2,0.033
+demo,a,2,vitals_table_SpO2,0.033
+demo,a,2,echarts_plot,0.417
+demo,a,2,vitals_table_Glasgow Coma Score,0.032
+demo,a,2,vitals_table_NEWS Conscious Level Score,0.016
+demo,a,2,echarts_plot,0.101
+demo,a,2,guidelines_pdf_simple,0.699
+demo,a,3,patient_details_age:,0.369
+demo,a,3,patient_details_sex:,0.021
+demo,a,3,patient_details_ethnicity:,0.031
+demo,a,3,patient_details_antibiotic_treatment:,0.4
+demo,a,3,vitals_table_Diastolic Blood Pressure,0.068
+demo,a,3,vitals_table_Diastolic Blood Pressure,0.065
+demo,a,3,vitals_table_Systolic Blood Pressure,0.017
+demo,a,3,vitals_table_Systolic Blood Pressure,0.065
+demo,a,3,vitals_table_Mean Blood Pressure,0.116
+demo,a,3,vitals_table_SpO2,0.05
+demo,a,3,vitals_table_Glasgow Coma Score – eye opening,0.117
+demo,a,3,vitals_table_Glasgow Coma Score - motor response,0.082
+demo,a,3,vitals_table_Glasgow Coma Score - motor response,0.084
+demo,a,3,vitals_table_Glasgow Coma Score - verbal response,0.563
+demo,a,3,vitals_table_Glasgow Coma Score - motor response,0.035
+demo,a,3,echarts_plot,0.102
+demo,a,3,vitals_table_Glasgow Coma Score - verbal response,0.35
+demo,a,3,vitals_table_Glasgow Coma Score - verbal response,0.412
+demo,a,3,echarts_plot,0.084
+demo,a,3,echarts_plot,0.657
+demo,a,3,guideline_alert,0.152
+demo,a,3,prediction_alert,0.113
+demo,a,3,prediction_alert,0.183
+demo,a,3,similar_table_Similar patient,0.572
+demo,a,3,similar_table_Similar patient,0.062
+demo,a,3,patient_table,0.034
+demo,a,3,patient_table,0.05
+demo,a,3,patient_table,0.428
+demo,a,3,similar_table_3,0.018
+demo,a,3,similar_table_4,0.017
+demo,a,3,similar_table_5,0.033
+demo,a,3,similar_table_5,0.101
+demo,a,3,similar_table_4,0.133
+demo,a,3,similar_table_3,0.38
+demo,a,3,similar_table_4,0.401
+demo,a,3,similar_table_3,0.066
+demo,a,3,similar_table_3,0.083
+demo,a,3,similar_table_3,0.328
+demo,a,3,similar_table_4,0.019
+demo,a,3,similar_table_4,0.2
+demo,a,3,similar_table_4,0.066
+demo,a,3,feature_image,3.081
+demo,a,3,LLM_positive_points,0.04
+demo,a,3,LLM_positive_points,0.095
+demo,a,3,LLM_positive_points,0.08
+demo,a,3,LLM_positive_points,0.015
+demo,a,3,LLM_negative_points,0.287
+demo,a,3,LLM_negative_points,0.08
+demo,a,3,vitals_table_Glasgow Coma Score – eye opening,0.096
+demo,a,3,vitals_table_Glasgow Coma Score – eye opening,0.184
+demo,a,3,vitals_table_Glasgow Coma Score – eye opening,0.1
+demo,a,3,vitals_table_SpO2,0.091
+demo,a,3,vitals_table_SpO2,0.033
+demo,a,3,vitals_table_SpO2,0.029
+demo,a,3,vitals_table_Mean Blood Pressure,0.018
+demo,a,3,vitals_table_Mean Blood Pressure,0.032
+demo,a,3,vitals_table_Mean Blood Pressure,0.01
+demo,a,3,guideline_alert,0.14
+demo,a,3,guideline_alert,0.016
+demo,a,3,guidelines_flowchart,0.015
+demo,a,3,guidelines_flowchart,0.033
+demo,a,3,guidelines_flowchart,0.101
+demo,a,3,guidelines_flowchart,0.115
+demo,a,3,guidelines_flowchart,0.017
+demo,a,3,guidelines_flowchart,0.033
+demo,a,3,guidelines_flowchart,0.185
+demo,a,3,guidelines_flowchart,0.281
+demo,a,3,guidelines_flowchart,0.066
+demo,a,3,guidelines_flowchart,0.032
+demo,a,3,guidelines_flowchart,0.082
+demo,a,3,guidelines_flowchart,0.318
+demo,a,3,guidelines_flowchart,0.316
+demo,a,3,guidelines_flowchart,0.3
+demo,a,3,guidelines_flowchart,0.016
+demo,a,3,guidelines_flowchart,0.034
+demo,a,3,guidelines_flowchart,0.015
+demo,a,3,guidelines_flowchart,0.067
+demo,a,3,guidelines_flowchart,0.016
+demo,a,3,guidelines_flowchart,0.2
+demo,a,3,guidelines_flowchart,0.117
+demo,a,3,guidelines_flowchart,0.05
+demo,a,3,guidelines_pdf,0.383
+demo,a,3,guidelines_pdf,0.666
+demo,a,3,vitals_table_Glasgow Coma Score – eye opening,0.183
+demo,a,3,vitals_table_Glasgow Coma Score – eye opening,0.161
+demo,a,3,vitals_table_Glasgow Coma Score – eye opening,0.066
+demo,a,3,vitals_table_SpO2,0.088
+demo,a,3,vitals_table_SpO2,0.016
+demo,a,3,vitals_table_Mean Blood Pressure,0.037
+demo,a,3,vitals_table_Mean Blood Pressure,0.072
+demo,a,3,vitals_table_Systolic Blood Pressure,0.014

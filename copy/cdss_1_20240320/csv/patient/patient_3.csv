@@ -1,0 +1,2 @@
+Age,Sex,Ethnicity,IMDDECIL,Co-morbidities,Infection diganosis,AI CDSS prediction,Real action
+55,Male,Asian,4,"Hypertension, Hypercholesterolemia",Pneumonia,Switch,TBC

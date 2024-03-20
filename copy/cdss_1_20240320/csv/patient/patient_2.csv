@@ -1,0 +1,2 @@
+Age,Sex,Ethnicity,IMDDECIL,Co-morbidities,Infection diganosis,AI CDSS prediction,Real action
+40,Female,White,9,"Hypertension, Anemia",UTI,Switch,TBC

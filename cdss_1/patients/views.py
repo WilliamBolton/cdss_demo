@@ -126,6 +126,13 @@ def patient_detail(request, patient_id):
         #print(vitals_data_no_nan_json)
         #print(type(vitals_data_json))
 
+    print(patient.comorbidities)
+    print(type(patient.comorbidities))
+    print(patient.imddecil)
+    print(type(patient.imddecil))
+    print(patient.diagnosis)
+    print(type(patient.diagnosis))
+
     # Accessing the logged-in user's UserProfile
     user_profile = request.user.userprofile
     user_archetype = user_profile.archetype
@@ -339,6 +346,7 @@ def process_user_input(request, patient_id):
             if csvfile.tell() == 0:
                 writer.writeheader()
             writer.writerow({'user_id': user_id, 'user_archetype': user_archetype, 'switch_choice': switch_choice, 'explanation': explanation})
+            print('Saved!')
 
         # Redirect back to the patient details page
         return redirect('patient_list')

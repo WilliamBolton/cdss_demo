@@ -1,0 +1,9 @@
+user_id,user_archetype,patient,component,hover_duration
+10,a,2,patient_details_imddecil:,0.0
+10,a,2,patient_details_sex:,0.205
+10,a,2,patient_details_co-morbidities:,0.0
+10,a,2,vitals_table_SpO2,0.004
+10,a,2,vitals_table_Mean Arterial Pressure,0.009
+10,a,2,vitals_table_SpO2,0.273
+10,a,2,echarts_plot,0.405
+10,a,2,guidelines_pdf_simple,0.371
