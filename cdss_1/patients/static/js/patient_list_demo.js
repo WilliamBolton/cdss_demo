@@ -1,4 +1,7 @@
 // JavaScript to handle button color and click event
+    
+    // Get the logout URL from the hidden input field
+    const logoutUrl = document.getElementById('logout-url').value;
 
     document.addEventListener('DOMContentLoaded', function () {
     var completeButton = document.getElementById('completeButton');
@@ -11,7 +14,7 @@
     
         // Print information about all patients and their form_filled_in status
         allPatients.forEach(function (patient) {
-            console.log(`Patient ID: ${patient.dataset.patientId}, Form Filled In: ${patient.dataset.formFilledIn}, Form Filled In Type: ${typeof patient.dataset.formFilledIn}`);
+            console.log(`${patient.dataset.name} Form Filled In: ${patient.dataset.formFilledIn}`);
         });
 
         var allPatientsFilledIn = allPatients.every(function (patient) {
@@ -36,9 +39,46 @@
 
     // Add click event to 'Complete' button
     completeButton.addEventListener('click', function () {
-        // Redirect to logout URL or perform logout action
-        window.location.href = '{% url 'logout' %}';
+        // Make a POST request to the logout endpoint
+        fetch(logoutUrl, {
+            method: 'POST',
+            credentials: 'same-origin',  // Include this option for Django to recognize the session
+            headers: {
+                'X-CSRFToken': getCookie('csrftoken')  // Include CSRF token for CSRF protection
+            }
+        })
+        .then(response => {
+            if (response.ok) {
+                // Redirect to login page after successful logout
+                window.location.href = '';
+            } else {
+                console.error('Logout request failed.');
+                // Handle logout failure here
+            }
+        })
+        .catch(error => {
+            console.error('Error during logout:', error);
+            // Handle logout error here
+        });
     });
+
+    // Function to get CSRF token from cookies
+    function getCookie(name) {
+        let cookieValue = null;
+        if (document.cookie && document.cookie !== '') {
+            const cookies = document.cookie.split(';');
+            for (let i = 0; i < cookies.length; i++) {
+                const cookie = cookies[i].trim();
+                // Check if cookie name matches the requested name
+                if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                    cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                    break;
+                }
+            }
+        }
+        return cookieValue;
+    }
+
 
     // Listen for changes in the form_filled_in attribute
     document.addEventListener('change', function (event) {

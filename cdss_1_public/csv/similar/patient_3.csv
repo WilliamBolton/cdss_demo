@@ -1,0 +1,6 @@
+Similar patient,Age,Sex,Ethnicity,IMDDECIL,Co-morbidities,Infection diganosis,AI CDSS prediction,Real action,Prediction correct
+1,51,Female,Asian,2,"Hypertension, Hypercholesterolemia",Pneumonia,Switch,Didnt switch,No
+2,83,Male,Black,9,"Hypertension, Hypercholesterolemia",N/A,Switch,Switched,Yes
+3,77,Male,White,4,"Hypertension, Hypercholesterolemia",Pneumonia,Switch,Didnt switch,No
+4,66,Male,Black,3,"Hypertension, Hypercholesterolemia",Pneumonia,Switch,Switched,Yes
+5,40,Male,White,2,"Hypertension, Hyperlipidemia",Pneumonia,Dont switch,Didnt switch,Yes

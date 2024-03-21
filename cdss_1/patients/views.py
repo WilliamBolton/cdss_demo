@@ -25,6 +25,9 @@ def logout_view(request):
     logout(request)
     return redirect('/')
 
+def thank_you(request):
+    return render(request, 'patients/thank_you.html')  
+
 def login_view(request):
     # Call the function to create test user profiles
     #User.objects.all().delete()

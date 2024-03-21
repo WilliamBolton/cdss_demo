@@ -1,0 +1,104 @@
+body {
+    background-color: white;
+}
+
+.container {
+    max-width: 800px; /* Adjust the width as needed */
+    margin: 0 auto;
+    text-align: center;
+}
+
+.card {
+    margin-top: 20px;
+}
+
+.alert_link {
+    font-weight: bold;
+}
+
+.btn-secondary {
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    text-align: center;
+}
+
+th, td {
+    padding: 10px;
+    vertical-align: middle;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #e0e0e0;
+}
+
+#patient-table td {
+    text-align: center;
+}
+
+/* Add this style to make the heading row darker */
+#patient-table th {
+    background-color: #888;
+    color: white;
+}
+
+/* Add this style for lighter grey alternative striping */
+#patient-table tr:nth-child(odd) {
+    background-color: #f3f3f3;
+}
+
+/* Add this style for hover effect on rows */
+#patient-table tr:hover {
+    background-color: #e0e0e0;
+}
+
+#similar-table td {
+    text-align: center;
+}
+
+/* Add this style to make the heading row darker */
+#similar-table th {
+    background-color: #888;
+    color: white;
+}
+
+/* Add this style for lighter grey alternative striping */
+#similar-table tr:nth-child(odd) {
+    background-color: #f3f3f3;
+}
+
+/* Add this style for hover effect on rows */
+#similar-table tr:hover {
+    background-color: #e0e0e0;
+}
+
+#feature-image {
+    display: block;
+    margin: auto;
+}
+
+.bg-success-light {
+    background-color: #d3ebdb; /* Light green color */
+}
+
+.bg-danger-light {
+    background-color: #fbd3db; /* Light red color */
+}
+
+.bg-success-bright {
+    background-color: #b3ffb3; /* Bright green color */
+}
+
+.bg-danger-bright {
+    background-color: #ffb3b3; /* Bright red color */
+}

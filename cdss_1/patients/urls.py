@@ -1,8 +1,7 @@
 from django.urls import path
-from .views import guideline_page_demo, login_view, patient_detail_demo, patient_list, patient_detail, patient_list_demo, prediction_page, guideline_page, prediction_page_demo, process_user_input, logout_view, process_user_input_demo, track_link_click, record_hover_event
+from .views import guideline_page_demo, login_view, patient_detail_demo, patient_list, patient_detail, patient_list_demo, prediction_page, guideline_page, prediction_page_demo, process_user_input, logout_view, process_user_input_demo, thank_you, track_link_click, record_hover_event
 
 urlpatterns = [
-    #path('login/', LoginView.as_view(), name='login'),
     path('', login_view, name='login'),
     path('patients', patient_list, name='patient_list'),
     path('patients_demo', patient_list_demo, name='patient_list_demo'),
@@ -15,6 +14,7 @@ urlpatterns = [
     path('<int:patient_id>/process_user_input/', process_user_input, name='process_user_input'),
     path('<int:patient_id>/process_user_input_demo/', process_user_input_demo, name='process_user_input_demo'),
     path('logout/', logout_view, name='logout'),
+    path('thank_you', thank_you, name='thank_you'),
     path('track_link_click/', track_link_click, name='track_link_click'),
     path('record_hover_event/', record_hover_event, name='record_hover_event'),
 ]

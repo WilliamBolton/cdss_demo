@@ -1,0 +1,7 @@
+Similar patient,Age,Sex,Ethnicity,IMDDECIL,Co-morbidities,Infection diganosis,AI CDSS prediction,Real action,Prediction correct
+1, 46, Female, White,4,"Hypertension", N/A, Switch, Switched, Yes
+2, 50, Female, Other, 6,"Hypertension, Osteoarthritis", UTI, Switch, Didnt switch, No
+3, 83, Male, Asian, 5,"Hypertension, Anemia, Diabetes mellitus type 2", Sepsis, Switch, Switched, Yes
+4, 37, Male, WhBlackite, 9,"Hypertension, Diabetes mellitus type 2, Atrial fibrillation, Chronic kidney disease", N/A, Dont switch, Didnt switch, Yes
+5, 75, Female, White, 6,"", N/A, Switch, Didnt switch, No
+

@@ -1,0 +1,47 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    text-align: center;
+}
+
+.container {
+    max-width: 800px; /* Adjust the width as needed */
+    margin: 0 auto;
+    text-align: center;
+}
+
+.arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.bg-success-light {
+    background-color: #d3ebdb; /* Light green color */
+}
+
+.bg-danger-light {
+    background-color: #fbd3db; /* Light red color */
+}
+.card {
+    text-align: center;
+}
+
+.card-title {
+    font-size: 1.5rem; /* Adjust the font size as needed */
+}
+
+.card-body {
+    font-size: 1.2rem; /* Adjust the font size as needed */
+}
+
+.bi-arrow-down {
+    width: 3rem; /* Adjust the width as needed */
+    height: 3rem; /* Adjust the height as needed */
+}
+
+.btn-back-container {
+    text-align: center;
+    margin-top: 20px; /* Adjust the margin as needed */
+}

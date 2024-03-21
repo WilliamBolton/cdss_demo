@@ -1,0 +1,6 @@
+Similar patient,Age,Sex,Ethnicity,IMDDECIL,Co-morbidities,Infection diganosis,AI CDSS prediction,Real action,Prediction correct
+1,51,Male,White,5,Diabetes mellitus type 2,N/A,Dont switch,Switched,No
+2,24,Female,Asia4,4,Diabetes mellitus type 2,N/A,Switch,Switched,Yes
+3,68,Female,Othe3,3,Diabetes mellitus type 2,UTI,Switch,Switched,Yes
+4,53,Male,Other,3,Diabetes mellitus type 2,N/A,Dont switch,Switched,No
+5,50,Female,Other,2,Diabetes mellitus type 2,N/A,Switch,Switched,Yes

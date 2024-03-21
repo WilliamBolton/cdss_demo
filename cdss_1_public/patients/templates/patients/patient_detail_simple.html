@@ -1,0 +1,168 @@
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ patient.name }} - Patient Details</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/patient_detail_simple.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- ECharts Library -->
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.3.0/dist/echarts.min.js"></script>
+
+</head>
+<body>
+    <!-- Define patientName for hover logging -->
+    <div id="patientName" data-name="{{ patient.name }}"></div> 
+
+    <div class="container">
+        <br>
+        <br>
+        <h1 style="text-align: center;">{{ patient.name }}</h1>
+
+        <!-- Display patient information -->
+        <br>
+        <div class="card">
+            <div class="card-header" style="background-color: #f2f2f2;">
+                <h2 class="card-title">Details</h2>
+            </div>
+            <div class="card-body">
+                <dl class="row">
+                    <dt class="col-sm-3">Age:</dt>
+                    <dd class="col-sm-9">{{ patient.age }}</dd>
+        
+                    <dt class="col-sm-3">Sex:</dt>
+                    <dd class="col-sm-9">{{ patient.sex }}</dd>
+
+                    <dt class="col-sm-3">Ethnicity:</dt>
+                    <dd class="col-sm-9">{{ patient.ethnicity }}</dd>
+
+                    {% if patient.imddecil and patient.imddecil != 'nan' %}
+                    <dt class="col-sm-3">IMDDECIL:</dt>
+                    <dd class="col-sm-9">{{ patient.imddecil }}</dd>
+                    {% endif %}
+
+                    {% if patient.comorbidities and patient.comorbidities != 'nan' %}
+                        <dt class="col-sm-3">Co-morbidities:</dt>
+                        <dd class="col-sm-9">{{ patient.comorbidities }}</dd>
+                    {% endif %}
+                    
+                    <!-- These are included to seperate demographics and acute infomration -->
+                    <dt class="col-sm-3"></dt>
+                    <dd class="col-sm-9"></dd>
+                    <dt class="col-sm-3"></dt>
+                    <dd class="col-sm-9"></dd>
+                    <dt class="col-sm-3"></dt>
+                    <dd class="col-sm-9"></dd>
+                    <dt class="col-sm-3"></dt>
+                    <dd class="col-sm-9"></dd>
+                    <dt class="col-sm-3"></dt>
+                    <dd class="col-sm-9"></dd>
+                    <dt class="col-sm-3"></dt>
+                    <dd class="col-sm-9"></dd>
+                    
+                    {% if patient.diagnosis and patient.diagnosis != 'nan' %}
+                    <dt class="col-sm-3">Diagnosis:</dt>
+                    <dd class="col-sm-9">{{ patient.diagnosis }}</dd>
+                    {% endif %}
+        
+                    <dt class="col-sm-3">Antibiotic treatment:</dt>
+                    <dd class="col-sm-9">{{ patient.antibiotic }}</dd>
+                </dl>
+            </div>
+        </div>
+        <br>
+
+
+        <!-- Display table -->
+        <br>
+        {% if has_vitals_data %}
+            <h2>Vitals</h2>
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+            <div class="container mt-3">
+                <div class="table-container">
+                    <table class="table table-striped table-active  table-hover" id="vitals-table">
+                        <!-- Table content will be added dynamically using JavaScript -->
+                    </table>
+                </div>
+            </div>
+
+        {% else %}
+            <p>No vitals data available</p>
+        {% endif %}
+
+        <!-- ECharts Container -->
+        <br>
+        <br>
+        <div id="echarts-container"></div>
+        <br>
+        <br>
+        <br>
+
+        <!-- IVOS Guidelines -->
+        <h2>UKHSA IVOS Guidelines</h2>
+        <br>
+        <div class="btn-link-container">
+            <a id="guidelinesLink_simple" href="https://www.gov.uk/government/publications/antimicrobial-intravenous-to-oral-switch-criteria-for-early-switch/national-antimicrobial-intravenous-to-oral-switch-ivos-criteria-for-early-switch" class="btn btn-dark" target="_blank">Guidelines Link</a>
+        </div>
+        <br>
+        <embed src="{% static 'Final_IV_to_Oral_Switch_Decision_Aid_based_on_NationalCriteria_UKHSA.pdf' %}" type="application/pdf" width="100%" height="600px" />
+        <br>
+        <br>
+        <br>
+
+        <!-- User Input Section -->
+        <h2>Your Decision</h2>
+        <br>
+        <form id="userInputForm" method="post" action="{% url 'process_user_input' patient_id=patient.id %}">
+        {% csrf_token %}
+
+        <!-- Dropdown Choice -->
+        <label for="switch_choice" class="form-label">Please choose an action:</label>
+        <select name="switch_choice" id="switch_choice" class="form-select" required>
+            <option value="" selected disabled>Select an option</option>
+            <option value="switch">Switch</option>
+            <option value="dont_switch">Dont Switch</option>
+        </select>
+                  
+        <br>
+        <br>
+
+
+        <!-- Text Box -->
+        <label for="explanation" class="form-label">Please exsplain your choice:</label>
+        <input name="explanation" type="Please exsplain your choice:" id="explanation" class="form-control" autocomplete="off">
+        <!-- <label for="explanation">Please exsplain your choice:</label> -->
+        <!-- <textarea id="explanation" name="explanation" rows="4" cols="50"></textarea> -->
+
+        <br>
+        <br>
+
+        <!-- Submit Button -->
+        <button type="submit" class="btn btn-primary">Submit</button>
+
+        <br>
+        <br>
+        <br>
+        <a href="{% url 'patient_list' %}" class="btn btn-secondary">Back to All Patients</a>
+        <br>
+        <br>
+        <br>
+        <br>
+    </div>
+    <script>
+        // Parse JSON data passed from Django view
+        // One with nan (for plot)
+        // One with it filled (for table)
+        const vitalsDataJson = {{ vitals_data_json|safe }};
+        const vitalsDataNoNanJson = {{ vitals_data_no_nan_json|safe }};
+    </script>
+    <script src="{% static 'js/patient_detail_simple.js' %}"></script>
+</body>
+</html>
