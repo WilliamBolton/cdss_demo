@@ -1,129 +1,148 @@
 document.addEventListener('DOMContentLoaded', function () {
     // Access the variables defined in the HTML file
     // vitalsDataJson and vitalsDataNoNanJson are now available here
-    
+
+    let timePoints = []; // Declare timePoints globally
+    let metrics = []; // Declare metrics globally
+
     // Display CSV data in the table
     displayCsvData(vitalsDataNoNanJson);
 
     // Function to display JSON data in the table
     function displayCsvData(jsonData) {
-                const table = document.getElementById("vitals-table");
+        const table = document.getElementById("vitals-table");
 
-                // Extract metrics and time data
-                const metrics = jsonData.map(item => item["Metric / Time (hours)"]);
-                const timePoints = Object.keys(jsonData[0]).filter(key => key !== "Metric / Time (hours)");
+        // Extract metrics and time data
+        metrics = jsonData.map(item => item["Metric / Time (hours)"]);
+        timePoints = Object.keys(jsonData[0]).filter(key => key !== "Metric / Time (hours)");
 
-                // Add table header
-                const headerRow = document.createElement("tr");
-                const th = document.createElement("th");
-                th.textContent = "Metric / Time (hours)";
-                headerRow.appendChild(th);
-                timePoints.forEach(timePoint => {
-                    const th = document.createElement("th");
-                    th.textContent = timePoint;
-                    headerRow.appendChild(th);
-                });
-                table.appendChild(headerRow);
+        // Add table header
+        const headerRow = document.createElement("tr");
+        const th = document.createElement("th");
+        th.textContent = "Metric / Time (hours)";
+        headerRow.appendChild(th);
+        timePoints.forEach(timePoint => {
+            const th = document.createElement("th");
+            th.textContent = timePoint;
+            headerRow.appendChild(th);
+        });
+        table.appendChild(headerRow);
 
-                // Add table rows
-                metrics.forEach(metric => {
-                    const row = document.createElement("tr");
-                    const td = document.createElement("td");
-                    td.textContent = metric;
-                    row.appendChild(td);
+        // Add table rows
+        metrics.forEach(metric => {
+            const row = document.createElement("tr");
+            const td = document.createElement("td");
+            td.textContent = metric;
+            row.appendChild(td);
 
-                    timePoints.forEach(timePoint => {
-                        const td = document.createElement("td");
-                        td.textContent = jsonData.find(item => item["Metric / Time (hours)"] === metric)[timePoint];
-                        row.appendChild(td);
-                    });
+            timePoints.forEach(timePoint => {
+                const td = document.createElement("td");
+                td.textContent = jsonData.find(item => item["Metric / Time (hours)"] === metric)[timePoint];
+                row.appendChild(td);
+            });
 
-                    table.appendChild(row);
-                });
-            }
-
-    // Extract metrics and time data
-    const metrics = vitalsDataJson.map(item => item["Metric / Time (hours)"]);
-    const timePoints = Object.keys(vitalsDataJson[0]).filter(key => key !== "Metric / Time (hours)");
-
-    // Set echarts options
-    options = {
-        title: {
-            text: ''
-        },
-        tooltip: {
-            trigger: 'axis'
-        },
-        legend: {
-            data: metrics,
-            selected: {}, // Empty initially, indicating all series are visible
-        },
-        grid: {
-            left: '3%',
-            right: '4%',
-            bottom: '3%',
-            containLabel: true
-        },
-        xAxis: {
-            type: 'category',
-            boundaryGap: false,
-            data: timePoints,
-            // name: 'Hours',
-        },
-        yAxis: {
-            type: 'value',
-            // name: 'Value',
-        },
-        series: metrics.map(metric => ({
-            name: metric,
-            type: 'line',
-            data: timePoints.map(timePoint => vitalsDataJson.find(item => item["Metric / Time (hours)"] === metric)[timePoint]),
-            connectNulls:true
-        })),
-        dataZoom: [
-        {
-            type: 'inside',
-            start: 0,
-            end: 100,
-        },
-        {
-            show: true,
-            type: 'slider',
-            bottom: 10,
-            start: 0,
-            end: 100,
-            yAxisIndex: [0], // Specify the yAxisIndex for y-axis zoom
-        },
-        {
-            show: true,
-            type: 'slider',
-            start: 0,
-            end: 100,
-            xAxisIndex: [0], // Specify the xAxisIndex for x-axis zoom
-            height: '2%',
-            bottom: 5
-        },
-    ],
-    };
-
-    // Initialize ECharts
-    // Use the echartsData to create the line plot
-    const echartsContainer = document.getElementById('echarts-container');
-    const echartsInstance = echarts.init(echartsContainer);
-
-    // Set the initial options
-    echartsInstance.setOption(options);
-
-    // Echarts legend click event listener
-    echartsInstance.on('legendselectchanged', function (params) {
-        // Toggle visibility of selected series based on legend selection
-        Object.keys(options.legend.selected).forEach(seriesName => {
-            options.legend.selected[seriesName] = params.selected[seriesName];
+            table.appendChild(row);
         });
 
-        // Update chart with new legend settings
+        // Update ECharts options after displaying CSV data
+        updateEChartsOptions();
+    }
+
+    // Function to update ECharts options
+    function updateEChartsOptions() {
+        // Set custom colors for the series
+        const customColors = ['#5470C6', '#91CC75', '#EE6666', '#EECBAD', '#ADADAD', '#F4E001', '#0FAEAF', '#FF69B4', '#6B8E23', '#FFA500', '#BA55D3'];
+
+        // Declare options object
+        const options = {
+            title: {
+                text: ''
+            },
+            tooltip: {
+                trigger: 'axis'
+            },
+            legend: {
+                data: [], // Initialize legend data
+                selected: {}, // Empty initially, indicating all series are visible
+            },
+            color: customColors, // Use custom colors
+            grid: {
+                left: '3%',
+                right: '4%',
+                bottom: '3%',
+                containLabel: true
+            },
+            xAxis: {
+                type: 'category',
+                boundaryGap: false,
+                data: timePoints,
+            },
+            yAxis: {
+                type: 'value',
+            },
+            series: [], // Initialize series data
+            dataZoom: [
+                {
+                    type: 'inside',
+                    start: 0,
+                    end: 100,
+                },
+                {
+                    show: true,
+                    type: 'slider',
+                    start: 0,
+                    end: 100,
+                    yAxisIndex: [0],
+                    width: '2%'
+                },
+                {
+                    show: true,
+                    type: 'slider',
+                    start: 0,
+                    end: 100,
+                    xAxisIndex: [0],
+                    height: '2%',
+                    bottom: 5
+                },
+            ],
+        };
+
+        // Add series data and update legend data
+        metrics.forEach(metric => {
+            // Skip metrics with specific names
+            if (metric !== 'Conscious Level' && metric !== 'Supplemental Oxygen') {
+                options.series.push({
+                    name: metric,
+                    type: 'line',
+                    data: timePoints.map(timePoint => {
+                        const item = vitalsDataJson.find(item => item["Metric / Time (hours)"] === metric);
+                        return item ? item[timePoint] : null;
+                    }),
+                    connectNulls: true // Connects points with missingness
+                });
+                // Add metric to legend data
+                options.legend.data.push(metric);
+            }
+        });
+
+        // Initialize ECharts
+        const echartsContainer = document.getElementById('echarts-container');
+        const echartsInstance = echarts.init(echartsContainer);
+
+        // Set the options
         echartsInstance.setOption(options);
-    });
+
+        // Echarts legend click event listener
+        echartsInstance.on('legendselectchanged', function (params) {
+            // Toggle visibility of selected series based on legend selection
+            Object.keys(options.legend.selected).forEach(seriesName => {
+                options.legend.selected[seriesName] = params.selected[seriesName];
+            });
+
+            // Update chart with new legend settings
+            echartsInstance.setOption(options);
+        });
+    }
 
     // User form
     document.getElementById('userInputForm').addEventListener('submit', function(event) {

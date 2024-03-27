@@ -106,7 +106,7 @@
         <br>
 
         <!-- Predictions and Guidelines with links to subpages -->
-        <h2>Predictions and Guidelines</h2>
+        <h2>Recommendations</h2>
         <br>
         <div class="additional-elements">
         <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
@@ -132,7 +132,7 @@
                 {% endif %}
             </svg>
             <div>
-                AI CDSS Prediction / Recommendation: <a id="predictiondetailsLink" href="{% url 'prediction_page' patient_id=patient.id %}" class="alert_link">{{ patient.prediction }}</a>
+                AI CDSS Prediction: <a id="predictiondetailsLink" href="{% url 'prediction_page' patient_id=patient.id %}" class="alert_link">{{ patient.prediction }}</a>
                 <!-- AI CDSS Prediction / Recommendation: <a id="predictiondetailsLink" class="alert_link">{{ patient.prediction }}</a> -->
             </div>
         </div>
@@ -173,9 +173,9 @@
 
 
         <!-- Text Box -->
-        <label for="explanation" class="form-label">Please exsplain your choice:</label>
-        <input name="explanation" type="Please exsplain your choice:" id="explanation" class="form-control" autocomplete="off">
-        <!-- <label for="explanation">Please exsplain your choice:</label> -->
+        <label for="explanation" class="form-label">Please explain your choice:</label>
+        <input name="explanation" type="Please explain your choice:" id="explanation" class="form-control" autocomplete="off">
+        <!-- <label for="explanation">Please explain your choice:</label> -->
         <!-- <textarea id="explanation" name="explanation" rows="4" cols="50"></textarea> -->
 
         <br>

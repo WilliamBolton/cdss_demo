@@ -65,29 +65,16 @@
         <br>
         <br>
         <br>
-        <h2>LLM Summary</h2>
+        <h2>AI insights</h2>
         <br>
         <br>
 
         <div class="row">
-            <div class="col-6">
-                <h3>Positive</h3>
-                <ul class="list-group list-group-flush">
-                    {% for point in positive_points %}
-                    <li class="list-group-item positive-point">{{ point }}</li>
-                    {% endfor %}
-                </ul>
-
-            </div>
-            
-            <div class="col-6">
-                <h3>Negative</h3>
-                <ul class="list-group list-group-flush">
-                    {% for point in negative_points %}
-                    <li class="list-group-item negative-point">{{ point }}</li>
-                    {% endfor %}
-                </ul>
-            </div>
+            <ul class="list-group list-group-flush">
+                {% for point in llm_points %}
+                <li class="list-group-item llm-point">{{ point }}</li>
+                {% endfor %}
+            </ul>
         </div>
         
 

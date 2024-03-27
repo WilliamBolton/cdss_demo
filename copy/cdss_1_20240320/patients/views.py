@@ -2,7 +2,7 @@ import csv
 import os
 from django.shortcuts import render, get_object_or_404, redirect
 import pandas as pd
-from .models import Patient, Patient_demo
+from .models import ParticipantInfo, Patient, Patient_demo
 import json
 from django.http import HttpResponse
 from django.contrib.auth import logout
@@ -77,7 +77,13 @@ def login_view(request):
                 profile, created = UserProfile.objects.get_or_create(user=user, id_value=id_value, archetype=archetype)
                 profile.save()
 
-                return redirect('patient_list')
+                print('hi')
+
+                # Check if the user has filled the additional info form
+                if ParticipantInfo.objects.filter(user=request.user).exists():
+                    return redirect('patient_list')
+                else:
+                    return redirect('details')
             
         except:
             # Handle the case where UserProfile does not exist
@@ -86,6 +92,64 @@ def login_view(request):
             return redirect('/')  # Redirect back to the login page
     
     return render(request, 'patients/login.html')
+
+@login_required(login_url='/')
+def details(request):
+    if request.method == 'POST':
+        age = request.POST['age']
+        sex = request.POST['sex']
+        medical_speciality = request.POST['medical_speciality']
+        grade = request.POST['grade']
+        user = request.user
+        user_archetype = user.archetype
+        user_id = user.id_value
+
+        # Save detials to a CSV file
+        csv_file_path = f'/home/wb1115/VSCode_projects/cdss/cdss_1/cdss_1/demographic_results/demographics.csv'
+        with open(csv_file_path, 'a', newline='') as csvfile:
+            fieldnames = ['user_id', 'user_archetype', 'age', 'sex', 'medical_speciality', 'grade']
+            writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+            # Check if the CSV file is empty and write headers if needed
+            if csvfile.tell() == 0:
+                writer.writeheader()
+            writer.writerow({'user_id': user_id, 'user_archetype': user_archetype, 'age':age, 'sex':sex, 'medical_speciality':medical_speciality, 'grade':grade})
+
+        # Save the additional information
+        additional_info = ParticipantInfo(user=request.user, age=age, sex=sex, medical_speciality=medical_speciality, grade=grade)
+        additional_info.save()
+        
+        return redirect('patients/patient_list')
+    else:
+        return render(request, 'patients/details')
+
+@login_required(login_url='/')
+def details(request):
+    if request.method == 'POST':
+        age = request.POST['age']
+        sex = request.POST['sex']
+        medical_speciality = request.POST['medical_speciality']
+        grade = request.POST['grade']
+        user = request.user
+        user_archetype = user.archetype
+        user_id = user.id_value
+
+        # Save detials to a CSV file
+        csv_file_path = f'/home/wb1115/VSCode_projects/cdss/cdss_1/cdss_1/demographic_results/demographics.csv'
+        with open(csv_file_path, 'a', newline='') as csvfile:
+            fieldnames = ['user_id', 'user_archetype', 'age', 'sex', 'medical_speciality', 'grade']
+            writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+            # Check if the CSV file is empty and write headers if needed
+            if csvfile.tell() == 0:
+                writer.writeheader()
+            writer.writerow({'user_id': user_id, 'user_archetype': user_archetype, 'age':age, 'sex':sex, 'medical_speciality':medical_speciality, 'grade':grade})
+
+        # Save the additional information
+        additional_info = ParticipantInfo(user=request.user, age=age, sex=sex, medical_speciality=medical_speciality, grade=grade)
+        additional_info.save()
+        
+        return redirect('patients/patient_list')
+    else:
+        return render(request, 'patients/details')
 
 @login_required(login_url='/')
 def patient_list(request):

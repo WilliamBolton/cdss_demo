@@ -50,7 +50,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Function to update ECharts options
     function updateEChartsOptions() {
-        // Set echarts options
+        // Set custom colors for the series
+        const customColors = ['#5470C6', '#91CC75', '#EE6666', '#EECBAD', '#ADADAD', '#F4E001', '#0FAEAF', '#FF69B4', '#6B8E23', '#FFA500', '#BA55D3'];
+
+        // Declare options object
         const options = {
             title: {
                 text: ''
@@ -59,9 +62,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 trigger: 'axis'
             },
             legend: {
-                data: metrics,
+                data: [], // Initialize legend data
                 selected: {}, // Empty initially, indicating all series are visible
             },
+            color: customColors, // Use custom colors
             grid: {
                 left: '3%',
                 right: '4%',
@@ -72,18 +76,11 @@ document.addEventListener('DOMContentLoaded', function () {
                 type: 'category',
                 boundaryGap: false,
                 data: timePoints,
-                // name: 'Hours',
             },
             yAxis: {
                 type: 'value',
-                // name: 'Value',
             },
-            series: metrics.map(metric => ({
-                name: metric,
-                type: 'line',
-                data: timePoints.map(timePoint => vitalsDataJson.find(item => item["Metric / Time (hours)"] === metric)[timePoint]),
-                connectNulls:true
-            })),
+            series: [], // Initialize series data
             dataZoom: [
                 {
                     type: 'inside',
@@ -95,7 +92,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     type: 'slider',
                     start: 0,
                     end: 100,
-                    yAxisIndex: [0], // Specify the yAxisIndex for y-axis zoom
+                    yAxisIndex: [0],
                     width: '2%'
                 },
                 {
@@ -103,19 +100,36 @@ document.addEventListener('DOMContentLoaded', function () {
                     type: 'slider',
                     start: 0,
                     end: 100,
-                    xAxisIndex: [0], // Specify the xAxisIndex for x-axis zoom
+                    xAxisIndex: [0],
                     height: '2%',
                     bottom: 5
                 },
             ],
         };
 
+        // Add series data and update legend data
+        metrics.forEach(metric => {
+            // Skip metrics with specific names
+            if (metric !== 'Conscious Level' && metric !== 'Supplemental Oxygen') {
+                options.series.push({
+                    name: metric,
+                    type: 'line',
+                    data: timePoints.map(timePoint => {
+                        const item = vitalsDataJson.find(item => item["Metric / Time (hours)"] === metric);
+                        return item ? item[timePoint] : null;
+                    }),
+                    connectNulls: true // Connects points with missingness
+                });
+                // Add metric to legend data
+                options.legend.data.push(metric);
+            }
+        });
+
         // Initialize ECharts
-        // Use the echartsData to create the line plot
         const echartsContainer = document.getElementById('echarts-container');
         const echartsInstance = echarts.init(echartsContainer);
 
-        // Set the initial options
+        // Set the options
         echartsInstance.setOption(options);
 
         // Echarts legend click event listener
@@ -127,6 +141,56 @@ document.addEventListener('DOMContentLoaded', function () {
 
             // Update chart with new legend settings
             echartsInstance.setOption(options);
+        });
+
+        function logLegendClick(legendName, timestamp) {
+            // Get the patient - ie., second last character of the webpage URL
+            const patient = window.location.href.slice(-2, -1);
+
+            // Prepare data to send to Django
+            const data = {
+                legendName: legendName,
+                patient: patient,
+                timestamp: timestamp
+            };
+                
+            // Send the data to Django using AJAX
+            fetch('/save_legend_click/', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRFToken': getCSRFToken() // Make sure to set this variable with the CSRF token
+                },
+                body: JSON.stringify(data)
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Failed to send legend click data to Django');
+                }
+                return response.json();
+            })
+            .then(data => {
+                console.log('Legend click data successfully sent to Django:', data);
+            })
+            .catch(error => {
+                console.error('Error sending legend click data to Django:', error);
+            });
+        }  
+
+        // Echarts legend click event listener
+        echartsInstance.on('legendselectchanged', function (params) {
+            // Toggle visibility of selected series based on legend selection
+            Object.keys(options.legend.selected).forEach(seriesName => {
+                options.legend.selected[seriesName] = params.selected[seriesName];
+            });
+
+            // Update chart with new legend settings
+            echartsInstance.setOption(options);
+
+            // Log legend click
+            const legendName = params.name; // Get the name of the clicked legend
+            const timestamp = new Date().toISOString(); // Get the current timestamp
+            logLegendClick(legendName, timestamp);
         });
     }
 

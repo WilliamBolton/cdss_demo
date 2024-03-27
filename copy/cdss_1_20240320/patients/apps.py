@@ -123,7 +123,7 @@ def diagosis_fun(n):
     if n == 'Patient 1':
         return 'Pneumonia'
     elif n == 'Patient 2':
-        return 'Uncomplicated urinary tract infection'
+        return 'Complicated urinary tract infection'
     elif n == 'Patient 3':
         return 'Pneumonia'
     elif n == 'Patient 4':
@@ -131,7 +131,7 @@ def diagosis_fun(n):
     elif n == 'Patient 5':
         return 'Uncomplicated urinary tract infection'
     elif n == 'Patient 6':
-        return 'NA'
+        return 'N/A'
     else:
         return 'nan'
     
@@ -139,7 +139,7 @@ def antibiotic_fun(n):
     if n == 'Patient 1':
         return 'IV co-amoxiclav for 1 day'
     elif n == 'Patient 2':
-        return 'IV cephalexin for 5 days'
+        return 'IV cefuroxime for 5 days'
     elif n == 'Patient 3':
         return 'IV for ceftriaxone 3 days'
     elif n == 'Patient 4':

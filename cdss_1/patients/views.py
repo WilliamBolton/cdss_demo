@@ -2,7 +2,7 @@ import csv
 import os
 from django.shortcuts import render, get_object_or_404, redirect
 import pandas as pd
-from .models import Patient, Patient_demo
+from .models import ParticipantInfo, Patient, Patient_demo
 import json
 from django.http import HttpResponse
 from django.contrib.auth import logout
@@ -80,7 +80,7 @@ def login_view(request):
                 profile, created = UserProfile.objects.get_or_create(user=user, id_value=id_value, archetype=archetype)
                 profile.save()
 
-                return redirect('patient_list')
+                return redirect('details')
             
         except:
             # Handle the case where UserProfile does not exist
@@ -89,6 +89,32 @@ def login_view(request):
             return redirect('/')  # Redirect back to the login page
     
     return render(request, 'patients/login.html')
+
+@login_required(login_url='/')
+def details(request):
+    if request.method == 'POST':
+        age = request.POST['age']
+        sex = request.POST['sex']
+        medical_speciality = request.POST['medical_speciality']
+        grade = request.POST['grade']
+        # Accessing the logged-in user's info
+        user = request.user.userprofile
+        user_id = user.id_value
+        user_archetype = user.archetype
+
+        # Save detials to a CSV file
+        csv_file_path = f'/home/wb1115/VSCode_projects/cdss/cdss_1/cdss_1/demographic_results/demographics.csv'
+        with open(csv_file_path, 'a', newline='') as csvfile:
+            fieldnames = ['user_id', 'user_archetype', 'age', 'sex', 'medical_speciality', 'grade']
+            writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+            # Check if the CSV file is empty and write headers if needed
+            if csvfile.tell() == 0:
+                writer.writeheader()
+            writer.writerow({'user_id': user_id, 'user_archetype': user_archetype, 'age':age, 'sex':sex, 'medical_speciality':medical_speciality, 'grade':grade})
+        
+        return redirect('patient_list')
+    else:
+        return render(request, 'patients/details.html')
 
 @login_required(login_url='/')
 def patient_list(request):
@@ -226,8 +252,7 @@ def prediction_page(request, patient_id):
         image_path = image_path.lstrip('images/')
     
     # Define llm summary
-    positive_points = llm_positive_fun(patient.name)
-    negative_points = llm_negative_fun(patient.name)
+    llm_points = llm_fun(patient.name)
 
     return render(request, 'patients/prediction_page.html', {
         'patient': patient,
@@ -236,8 +261,7 @@ def prediction_page(request, patient_id):
         'similar_patients_data_json': similar_patients_data_json, 
         'has_similar_patients_data': similar_patients_data is not None,
         'image_path': image_path,
-        'positive_points': positive_points,
-        'negative_points': negative_points,
+        'llm_points': llm_points,
         })
 
 @login_required(login_url='/')
@@ -270,8 +294,7 @@ def prediction_page_demo(request, patient_id):
         image_path = image_path.lstrip('images/')
     
     # Define llm summary
-    positive_points = llm_positive_fun(patient.name)
-    negative_points = llm_negative_fun(patient.name)
+    llm_points = llm_demo_fun(patient.name)
 
     return render(request, 'patients/prediction_page_demo.html', {
         'patient': patient,
@@ -280,18 +303,17 @@ def prediction_page_demo(request, patient_id):
         'similar_patients_data_json': similar_patients_data_json, 
         'has_similar_patients_data': similar_patients_data is not None,
         'image_path': image_path,
-        'positive_points': positive_points,
-        'negative_points': negative_points,
+        'llm_points': llm_points,
         })
 
 @login_required(login_url='/')
 def guideline_page(request, patient_id):
     patient = get_object_or_404(Patient, pk=patient_id)
 
-    # Define llm summary
+    # Define guideline summary
     decision_logic = decision_logic_fun(patient.name)
 
-    # Define llm summary
+    # Define guideline summary
     decision_outcome = decision_outcome_fun(patient.name)
     #print(decision_outcome)
 
@@ -304,10 +326,10 @@ def guideline_page(request, patient_id):
 def guideline_page_demo(request, patient_id):
     patient = get_object_or_404(Patient_demo, pk=patient_id)
 
-    # Define llm summary
+    # Define guideline summary
     decision_logic = decision_logic_fun_demo(patient.name)
 
-    # Define llm summary
+    # Define guideline summary
     decision_outcome = decision_outcome_fun_demo(patient.name)
     print(decision_outcome)
 
@@ -412,26 +434,60 @@ def record_hover_event(request):
     
     print('message,', 'Error')
     return JsonResponse({'message': 'Error'}, status=400)
+
+@csrf_exempt
+def save_legend_click(request):
+    if request.method == 'POST':
+        data = json.loads(request.body)
+
+        # Extract data from the request
+        legend_name = data.get('legendName')
+        patient = data.get('patient')
+        timestamp = data.get('timestamp')
+
+        # Accessing the logged-in user's info
+        user = request.user.userprofile
+        user_id = user.id_value
+        user_archetype = user.archetype
+
+
+        # Save data to a CSV file
+        csv_file_path = f'/home/wb1115/VSCode_projects/cdss/cdss_1/cdss_1/legend_click_results/legend_click_results.csv'
+        with open(csv_file_path, 'a', newline='') as csvfile:
+            fieldnames = ['user_id', 'user_archetype', 'patient', 'variable', 'timestamp']
+            writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+            # Check if the CSV file is empty and write headers if needed
+            if csvfile.tell() == 0:
+                writer.writeheader()
+            writer.writerow({'user_id': user_id, 'user_archetype': user_archetype, 'patient': patient, 'variable': legend_name, 'timestamp': timestamp})
+        
+        print('Legend click data saved')
+
+        return JsonResponse({'message': 'Legend click data saved successfully'}, status=200)
+
+    return JsonResponse({'error': 'Invalid request method'}, status=405)
     
-def llm_positive_fun(n):
+def llm_fun(n):
     if n == 'Patient 1':
         return [
-        "The model correctly predicts the decision for similar examples",
-        "Features are relativly similar between the patient in question and the similar patients",
+        "The patient has a high index of multiple deprivation (4), indicating significant social disadvantage, which has been linked to poorer health outcomes",
+        "The patient's vitals show a greater similarity to patients for whom the AI model predicted that IV treatment should be continued",
+        "Three out of the five similar patients had Sepsis as the infecting organism and the AI model predicted that they should not switch from IV to oral antibiotics, which aligns with the prediction for the patient in question",
         ]
-    elif n == 'Patient 2':
-        return 'Switch'
+    elif n == 'Patient 7':
+        return [
+        "Feature contribution table shows that SpO2 and Glasgow Coma Score (Motor) features had a negative contribution to switching the patient from IV to oral antibiotics",
+        "Three similar patients with the most importance scores (0.82, 0.08 and 0.06) all had the prediction of not switching from IV to oral antibiotics by the AI model, which is consistent with the prediction for the patient in question",
+        ]
     else:
         return 'nan'
     
-def llm_negative_fun(n):
+def llm_demo_fun(n):
     if n == 'Patient 1':
         return [
-        "A negative point is that there are some diferences between the patient in question and similar patients (e.g., age and co-morbidities)",
-        "This is another point",
+        "Test",
+        "Test",
         ]
-    elif n == 'Patient 2':
-        return 'Switch'
     else:
         return 'nan'
 

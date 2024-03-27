@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (patientName === "Patient 7" || patientName === "Patient 8" || patientName === "Patient 9" || patientName === "Patient 10" || patientName === "Patient 11" || patientName === "Patient 12") {
         document.getElementById("figureTitle").innerHTML = "Table displaying similar patients features for comparison <br> and indicating feature contribution towards the predictions";
         } else {
-        document.getElementById("figureTitle").innerHTML = "Heatmap indicating feature similarity between <br> this patient and the similar patients";
+        document.getElementById("figureTitle").innerHTML = "Heatmap indicating the similarity between <br> this patient and the similar patients vitals";
         }
     }
 
@@ -96,7 +96,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const patient_table = document.getElementById('patient-table');
         const similar_table = document.getElementById('similar-table');
         const image = document.getElementById('feature-image');
-        const positivePoints = document.querySelectorAll('.positive-point');
+        const positivePoints = document.querySelectorAll('.llm-point');
         const negativePoints = document.querySelectorAll('.negative-point');
         
         let hoverStartTime;

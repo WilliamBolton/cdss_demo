@@ -1,0 +1,4 @@
+user_id,user_archetype,patient,variable,timestamp
+7,b,1,Mean Arterial Pressure,2024-03-27T00:04:05.332Z
+7,b,7,Glasgow Coma Score - motor response,2024-03-27T00:04:28.958Z
+7,b,7,Glasgow Coma Score – eye opening,2024-03-27T00:04:31.730Z

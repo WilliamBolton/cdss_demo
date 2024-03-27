@@ -1,5 +1,5 @@
-Similar patient,Age,Sex,Ethnicity,IMDDECIL,Co-morbidities,Infection diganosis,AI CDSS prediction,Real action,Prediction correct
-1,43,Female,White,4, Obesity,Sepsis,Dont switch,Didnt switch,Yes
+Similar patient,Age,Sex,Ethnicity,Index of multiple deprivation,Co-morbidities,Infection diganosis,AI CDSS prediction,Real action,Prediction correct
+1,43,Female,White,4,Obesity,Sepsis,Dont switch,Didnt switch,Yes
 2,32,Female,Other,6,"Endometriosis, Seasonal allergic rhinitis, Seronegative arthritis, Acne vulgaris",Sepsis,Dont switch,Didnt switch,Yes
 3,27,Female,Black,3,Gestational diabetes mellitus,Sepsis,Dont switch,Didnt switch,Yes
 4,35,Female,Asian,4,"Obesity, Anemia, Deep venous thrombosis",N/A,Switch,Switched,Yes

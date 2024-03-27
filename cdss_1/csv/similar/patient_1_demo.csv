@@ -1,4 +1,4 @@
-Similar patient,Age,Sex,Ethnicity,IMDDECIL,Co-morbidities,Infection diganosis,AI CDSS prediction,Real action,Prediction correct
+Similar patient,Age,Sex,Ethnicity,Index of multiple deprivation,Co-morbidities,Infection diganosis,AI CDSS prediction,Real action,Prediction correct
 1,65,Male,White,3,Diabetes,Pneumonia,Dont switch,Didnt switch,Yes
 2,47,Female,White,5,Obesity,Sepsis,Dont switch,Didnt switch,Yes
 3,78,Male,Black,7,Hypertension,N/A,Dont switch,Didnt switch,Yes

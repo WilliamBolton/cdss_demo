@@ -94,3 +94,13 @@ class HoverEvent(models.Model):
 
     def __str__(self):
         return f"{self.user.username} hovered over {self.component} for {self.patient_id} for {self.hover_duration} seconds"
+    
+class ParticipantInfo(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    age = models.CharField(max_length=100)
+    sex = models.CharField(max_length=100)
+    medical_speciality = models.CharField(max_length=100)
+    grade = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.user.username

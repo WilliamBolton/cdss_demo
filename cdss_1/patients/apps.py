@@ -5,9 +5,9 @@ from django.db.models.signals import post_migrate
 
 def age_fun(n):
     if n == 'Patient 1':
-        return '65'
+        return '73'
     elif n == 'Patient 2':
-        return '40'
+        return '44'
     elif n == 'Patient 3':
         return '55'
     elif n == 'Patient 4':
@@ -107,7 +107,7 @@ def comorbidities_fun(n):
     if n == 'Patient 1':
         return 'Obesity'
     elif n == 'Patient 2':
-        return 'Hypertension, Anemia'
+        return 'Cataracts'
     elif n == 'Patient 3':
         return 'Hypertension, Hypercholesterolemia'
     elif n == 'Patient 4':
@@ -123,7 +123,7 @@ def diagosis_fun(n):
     if n == 'Patient 1':
         return 'Pneumonia'
     elif n == 'Patient 2':
-        return 'Uncomplicated urinary tract infection'
+        return 'Complicated urinary tract infection'
     elif n == 'Patient 3':
         return 'Pneumonia'
     elif n == 'Patient 4':
@@ -131,7 +131,7 @@ def diagosis_fun(n):
     elif n == 'Patient 5':
         return 'Uncomplicated urinary tract infection'
     elif n == 'Patient 6':
-        return 'NA'
+        return 'N/A'
     else:
         return 'nan'
     
@@ -139,7 +139,7 @@ def antibiotic_fun(n):
     if n == 'Patient 1':
         return 'IV co-amoxiclav for 1 day'
     elif n == 'Patient 2':
-        return 'IV cephalexin for 5 days'
+        return 'IV cefuroxime for 5 days'
     elif n == 'Patient 3':
         return 'IV for ceftriaxone 3 days'
     elif n == 'Patient 4':
@@ -322,7 +322,7 @@ def antibiotic_fun_demo(n):
     if n == 'Patient 1':
         return 'IV co-amoxiclav for 1 day'
     elif n == 'Patient 2':
-        return 'IV cephalexin for 2 days'
+        return 'IV cefuroxime for 5 days'
     elif n == 'Patient 3':
         return 'IV for 3 days'
     else:

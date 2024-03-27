@@ -123,7 +123,7 @@ def diagosis_fun(n):
     if n == 'Patient 1':
         return 'Pneumonia'
     elif n == 'Patient 2':
-        return 'Uncomplicated urinary tract infection'
+        return 'Complicated urinary tract infection'
     elif n == 'Patient 3':
         return 'Pneumonia'
     elif n == 'Patient 4':
@@ -131,7 +131,19 @@ def diagosis_fun(n):
     elif n == 'Patient 5':
         return 'Uncomplicated urinary tract infection'
     elif n == 'Patient 6':
-        return 'NA'
+        return 'N/A'
+    elif n == 'Patient 7':
+        return 'Not an infection that may require special consideration'
+    elif n == 'Patient 8':
+        return 'Not an infection that may require special consideration'
+    elif n == 'Patient 9':
+        return 'Not an infection that may require special consideration'
+    elif n == 'Patient 10':
+        return 'Not an infection that may require special consideration'
+    elif n == 'Patient 11':
+        return 'Not an infection that may require special consideration'
+    elif n == 'Patient 12':
+        return 'Not an infection that may require special consideration'
     else:
         return 'nan'
     
@@ -139,7 +151,7 @@ def antibiotic_fun(n):
     if n == 'Patient 1':
         return 'IV co-amoxiclav for 1 day'
     elif n == 'Patient 2':
-        return 'IV cephalexin for 5 days'
+        return 'IV cefuroxime for 5 days'
     elif n == 'Patient 3':
         return 'IV for ceftriaxone 3 days'
     elif n == 'Patient 4':
@@ -315,6 +327,8 @@ def diagosis_fun_demo(n):
         return 'Pneumonia'
     elif n == 'Patient 2':
         return 'Urinary tract infection'
+    elif n == 'Patient 3':
+        return 'Not an infection that may require special consideration'
     else:
         return 'nan'
     
@@ -322,7 +336,7 @@ def antibiotic_fun_demo(n):
     if n == 'Patient 1':
         return 'IV co-amoxiclav for 1 day'
     elif n == 'Patient 2':
-        return 'IV cephalexin for 2 days'
+        return 'IV cefuroxime for 2 days'
     elif n == 'Patient 3':
         return 'IV for 3 days'
     else:

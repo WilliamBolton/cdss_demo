@@ -1,11 +1,11 @@
 Metric / Time (hours),0,6,12,18,24,30
 Temperature,37.78,38.47,39.28,39.28,39.28,39.28
 Respiratory Rate,19.39,19.56,22.05,20.32,21.57,21.53
-Heart Rate,85.53,88.40,106.98,126.53,116.17,121.83
-Diastolic Blood Pressure,79.62,78.53,74.54,77.25,78.36,75.99
+Heart Rate,85.53,88.4,106.98,126.53,116.17,121.83
 Systolic Blood Pressure,144.54,143.46,127.32,134.64,135.35,126.09
-Mean Arterial Pressure,112.09,111.00,100.93,105.95,106.85,101.04
+Diastolic Blood Pressure,79.62,78.53,74.54,77.25,78.36,75.99
+Mean Arterial Pressure,112.09,111,100.93,105.95,106.85,101.04
 SpO2,96.4,96.18,94.35,96.22,94.39,98.12
 Glasgow Coma Score,15,15,14,15,15,15
-NEWS Conscious Level Score,0,0,0,0,0,0
-NEWS Supplemental Oxgen,2,2,2,2,2,2
+Conscious Level,Alert,Alert,Alert,Alert,Alert,Alert
+Supplemental Oxygen,Yes,Yes,Yes,Yes,Yes,Yes

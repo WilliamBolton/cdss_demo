@@ -4,3 +4,4 @@ user_id,user_archetype,switch_choice,explanation
 0,a,switch,
 0,a,switch,
 0,a,dont_switch,
+1,b,switch,

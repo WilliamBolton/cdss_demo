@@ -1,0 +1,61 @@
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Participant Information</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+      body {
+          background-color: white;
+      }
+
+      .container {
+          max-width: 800px; /* Adjust the width as needed */
+          margin: 0 auto;
+          text-align: center;
+      }
+    </style>
+</head>
+<body>
+{% block content %}
+    <div class="container">
+        <div class="row justify-content-center mt-5">
+        <div class="col-md-6">
+            <h2 class="mb-4">Please provide the following details</h2>
+            <br>
+            
+            <form method="post">
+                {% csrf_token %}
+                <label for="age">Age:</label>
+                <br>
+                <input type="text" id="age" name="age" autocomplete="off">
+                <br>
+                <br>
+                <label for="sex">Sex:</label>
+                <br>
+                <input type="text" id="sex" name="sex" autocomplete="off">
+                <br>
+                <br>
+                <label for="medical_speciality">Medical speciality:</label>
+                <br>
+                <input type="text" id="medical_speciality" name="medical_speciality" autocomplete="off">
+                <br>
+                <br>
+                <label for="grade">Grade:</label>
+                <br>
+                <input type="text" id="grade" name="grade" autocomplete="off">
+                <br>
+                <br>
+                <br>
+
+                <button type="submit" class="btn btn-primary">Continue</button>
+            </form>
+        </div>
+      </div>
+    </div>
+{% endblock %}
+</body>
+</html>

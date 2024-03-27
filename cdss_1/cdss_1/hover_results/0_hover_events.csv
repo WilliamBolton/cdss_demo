@@ -14,13 +14,13 @@ user_id,user_archetype,patient,component,hover_duration
 0,a,3,patient_details_co-morbidities:,0.0
 0,a,3,patient_details_,0.03
 0,a,3,patient_details_,0.012
-0,a,3,patient_details_imddecil:,0.0
+0,a,3,patient_details_Index of multiple deprivation:,0.0
 0,a,3,patient_details_ethnicity:,0.0
 0,a,3,patient_details_,0.016
 0,a,3,patient_details_diagnosis:,0.052
 0,a,4,patient_details_ethnicity:,0.089
 0,a,4,patient_details_ethnicity:,0.033
-0,a,4,patient_details_imddecil:,0.011
+0,a,4,patient_details_Index of multiple deprivation:,0.011
 0,a,4,patient_details_co-morbidities:,0.016
 0,a,4,patient_details_diagnosis:,0.123
 0,a,4,patient_details_antibiotic_treatment:,0.062

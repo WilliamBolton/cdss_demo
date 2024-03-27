@@ -1,0 +1,3 @@
+user_id,user_archetype,age,sex,medical_speciality,grade
+1,b,test,,,
+7,b,test,,123,

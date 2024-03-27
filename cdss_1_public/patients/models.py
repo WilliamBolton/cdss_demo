@@ -43,7 +43,7 @@ class Patient_demo(models.Model):
     guideline = models.CharField(max_length=100, default='nan')
     form_filled_in = models.BooleanField(default=False)
 
-class DecisionPoint(models.Model): # I think this can be removed
+class DecisionPoint(models.Model):
     label = models.CharField(max_length=255)
     description = models.TextField()
     
