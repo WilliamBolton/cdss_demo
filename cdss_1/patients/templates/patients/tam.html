@@ -1,0 +1,513 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technology Acceptance Model Questionnaire</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: white;
+        }
+  
+        .container {
+            max-width: 800px; /* Adjust the width as needed */
+            margin: 0 auto;
+            text-align: center;
+        }
+      </style>
+</head>
+<body>
+{% block content %}
+    <div class="container">
+        <div class="row justify-content-center mt-5">
+        <div class="col-md-6">
+            <h1>User Feedback</h1>
+            <br>
+            Thank you! Finally, please fill in the following two usability and acceptability questionnaires
+            <br>
+            <br>
+            <br>
+            <h2> Technology Acceptance Model </h2>
+            <form id="tam-form" method="post" action="{% url 'tam' %}">
+                {% csrf_token %}
+                <br>
+                <div>
+                    <label for="q1">I feel comfortable with AI technology in healthcare</label>
+                    <br>
+                    <br>
+                    <select name="q1" id="q1" required>
+                        <option value="" selected disabled>Select an option</option>
+                        <option value="1">Strongly disagree</option>
+                        <option value="2">Disagree</option>
+                        <option value="3">Neither agree nor disagree</option>
+                        <option value="4">Agree</option>
+                        <option value="5">Strongly agree</option>
+                        
+                    </select>
+                </div>
+                <br>
+                <br>
+                <div>
+                    <label for="q2">I liked using the AI CDSS</label>
+                    <br>
+                    <br>
+                    <select name="q2" id="q2" required>
+                        <option value="" selected disabled>Select an option</option>
+                        <option value="1">Strongly disagree</option>
+                        <option value="2">Disagree</option>
+                        <option value="3">Neither agree nor disagree</option>
+                        <option value="4">Agree</option>
+                        <option value="5">Strongly agree</option>
+                        
+                    </select>
+                </div>
+                <br>
+                <br>
+                <div>
+                    <label for="q3">In my job using this AI CDSS would be relevant </label>
+                    <br>
+                    <br>
+                    <select name="q3" id="q3" required>
+                        <option value="" selected disabled>Select an option</option>
+                        <option value="1">Strongly disagree</option>
+                        <option value="2">Disagree</option>
+                        <option value="3">Neither agree nor disagree</option>
+                        <option value="4">Agree</option>
+                        <option value="5">Strongly agree</option>
+                        
+                    </select>
+                </div>
+                <br>
+                <br>
+                <div>
+                    <label for="q4">The data presented in this study is important for delivering care and undertaking antibiotic stewardship</label>
+                    <br>
+                    <br>
+                    <select name="q4" id="q4" required>
+                        <option value="" selected disabled>Select an option</option>
+                        <option value="1">Strongly disagree</option>
+                        <option value="2">Disagree</option>
+                        <option value="3">Neither agree nor disagree</option>
+                        <option value="4">Agree</option>
+                        <option value="5">Strongly agree</option>
+                        
+                    </select>
+                </div>
+                <br>
+                <br>
+                <div>
+                    <label for="q5">I would find the AI CDSS useful in my job</label>
+                    <br>
+                    <br>
+                    <select name="q5" id="q5" required>
+                        <option value="" selected disabled>Select an option</option>
+                        <option value="1">Strongly disagree</option>
+                        <option value="2">Disagree</option>
+                        <option value="3">Neither agree nor disagree</option>
+                        <option value="4">Agree</option>
+                        <option value="5">Strongly agree</option>
+                        
+                    </select>
+                </div>
+                <br>
+                <br>
+                <div>
+                    <label for="q6">Using this AI CDSS in my job would increase my productivity</label>
+                    <br>
+                    <br>
+                    <select name="q6" id="q6" required>
+                        <option value="" selected disabled>Select an option</option>
+                        <option value="1">Strongly disagree</option>
+                        <option value="2">Disagree</option>
+                        <option value="3">Neither agree nor disagree</option>
+                        <option value="4">Agree</option>
+                        <option value="5">Strongly agree</option>
+                        
+                    </select>
+                </div>
+                <br>
+                <br>
+                <div>
+                    <label for="q7">Using this AI CDSS would make it easier to do my job</label>
+                    <br>
+                    <br>
+                    <select name="q7" id="q7" required>
+                        <option value="" selected disabled>Select an option</option>
+                        <option value="1">Strongly disagree</option>
+                        <option value="2">Disagree</option>
+                        <option value="3">Neither agree nor disagree</option>
+                        <option value="4">Agree</option>
+                        <option value="5">Strongly agree</option>
+                        
+                    </select>
+                </div>
+                <br>
+                <br>
+                <div>
+                    <label for="q8">This AI CDSS could improve the quality of care that I deliver</label>
+                    <br>
+                    <br>
+                    <select name="q8" id="q8" required>
+                        <option value="" selected disabled>Select an option</option>
+                        <option value="1">Strongly disagree</option>
+                        <option value="2">Disagree</option>
+                        <option value="3">Neither agree nor disagree</option>
+                        <option value="4">Agree</option>
+                        <option value="5">Strongly agree</option>
+                        
+                    </select>
+                </div>
+                <br>
+                <br>
+                <div>
+                    <label for="q9">The interface was pleasant with information clearly visible</label>
+                    <br>
+                    <br>
+                    <select name="q9" id="q9" required>
+                        <option value="" selected disabled>Select an option</option>
+                        <option value="1">Strongly disagree</option>
+                        <option value="2">Disagree</option>
+                        <option value="3">Neither agree nor disagree</option>
+                        <option value="4">Agree</option>
+                        <option value="5">Strongly agree</option>
+                        
+                    </select>
+                </div>
+                <br>
+                <br>
+                <div>
+                    <label for="q10">It was easy to understand recommendations given by the AI CDSS</label>
+                    <br>
+                    <br>
+                    <select name="q10" id="q10" required>
+                        <option value="" selected disabled>Select an option</option>
+                        <option value="1">Strongly disagree</option>
+                        <option value="2">Disagree</option>
+                        <option value="3">Neither agree nor disagree</option>
+                        <option value="4">Agree</option>
+                        <option value="5">Strongly agree</option>
+                        
+                    </select>
+                </div>
+                <br>
+                <br>
+                <div>
+                    <label for="q11">It was easy to get acquainted using the AI </label>
+                    <br>
+                    <br>
+                    <select name="q11" id="q11" required>
+                        <option value="" selected disabled>Select an option</option>
+                        <option value="1">Strongly disagree</option>
+                        <option value="2">Disagree</option>
+                        <option value="3">Neither agree nor disagree</option>
+                        <option value="4">Agree</option>
+                        <option value="5">Strongly agree</option>
+                        
+                    </select>
+                </div>
+                <br>
+                <br>
+                <div>
+                    <label for="q12">Training on the AI CDSS was sufficient</label>
+                    <br>
+                    <br>
+                    <select name="q12" id="q12" required>
+                        <option value="" selected disabled>Select an option</option>
+                        <option value="1">Strongly disagree</option>
+                        <option value="2">Disagree</option>
+                        <option value="3">Neither agree nor disagree</option>
+                        <option value="4">Agree</option>
+                        <option value="5">Strongly agree</option>
+                        
+                    </select>
+                </div>
+                <br>
+                <br>
+                <div>
+                    <label for="q13">My use of the AI CDSS was voluntary</label>
+                    <br>
+                    <br>
+                    <select name="q13" id="q13" required>
+                        <option value="" selected disabled>Select an option</option>
+                        <option value="1">Strongly disagree</option>
+                        <option value="2">Disagree</option>
+                        <option value="3">Neither agree nor disagree</option>
+                        <option value="4">Agree</option>
+                        <option value="5">Strongly agree</option>
+                        
+                    </select>
+                </div>
+                <br>
+                <br>
+                <div>
+                    <label for="q14">Patients will welcome that I use this AI technology</label>
+                    <br>
+                    <br>
+                    <select name="q14" id="q14" required>
+                        <option value="" selected disabled>Select an option</option>
+                        <option value="1">Strongly disagree</option>
+                        <option value="2">Disagree</option>
+                        <option value="3">Neither agree nor disagree</option>
+                        <option value="4">Agree</option>
+                        <option value="5">Strongly agree</option>
+                        
+                    </select>
+                </div>
+                <br>
+                <br>
+                <div>
+                    <label for="q15">People who are important to me think I should use AI technology</label>
+                    <br>
+                    <br>
+                    <select name="q15" id="q15" required>
+                        <option value="" selected disabled>Select an option</option>
+                        <option value="1">Strongly disagree</option>
+                        <option value="2">Disagree</option>
+                        <option value="3">Neither agree nor disagree</option>
+                        <option value="4">Agree</option>
+                        <option value="5">Strongly agree</option>
+                        
+                    </select>
+                </div>
+                <br>
+                <br>
+                <div>
+                    <label for="q16">People in my organization involved in AI research have more prestige than those who do not</label>
+                    <br>
+                    <br>
+                    <select name="q16" id="q16" required>
+                        <option value="" selected disabled>Select an option</option>
+                        <option value="1">Strongly disagree</option>
+                        <option value="2">Disagree</option>
+                        <option value="3">Neither agree nor disagree</option>
+                        <option value="4">Agree</option>
+                        <option value="5">Strongly agree</option>
+                        
+                    </select>
+                </div>
+                <br>
+                <br>
+                <div>
+                    <label for="q17">The quality of the AI CDSS predictions was high </label>
+                    <br>
+                    <br>
+                    <select name="q17" id="q17" required>
+                        <option value="" selected disabled>Select an option</option>
+                        <option value="1">Strongly disagree</option>
+                        <option value="2">Disagree</option>
+                        <option value="3">Neither agree nor disagree</option>
+                        <option value="4">Agree</option>
+                        <option value="5">Strongly agree</option>
+                        
+                    </select>
+                </div>
+                <br>
+                <br>
+                <div>
+                    <label for="q18">Details such as similar patients and their features improved my trust in the AI CDSS</label>
+                    <br>
+                    <br>
+                    <select name="q18" id="q18" required>
+                        <option value="" selected disabled>Select an option</option>
+                        <option value="1">Strongly disagree</option>
+                        <option value="2">Disagree</option>
+                        <option value="3">Neither agree nor disagree</option>
+                        <option value="4">Agree</option>
+                        <option value="5">Strongly agree</option>
+                        
+                    </select>
+                </div>
+                <br>
+                <br>
+                <div>
+                    <label for="q19">Using the AI CDSS changed my decision making process</label>
+                    <br>
+                    <br>
+                    <select name="q19" id="q19" required>
+                        <option value="" selected disabled>Select an option</option>
+                        <option value="1">Strongly disagree</option>
+                        <option value="2">Disagree</option>
+                        <option value="3">Neither agree nor disagree</option>
+                        <option value="4">Agree</option>
+                        <option value="5">Strongly agree</option>
+                        
+                    </select>
+                </div>
+                <br>
+                <br>
+                <div>
+                    <label for="q20">This AI CDSS could be seamlessly integrated into my current clinical workflow</label>
+                    <br>
+                    <br>
+                    <select name="q20" id="20" required>
+                        <option value="" selected disabled>Select an option</option>
+                        <option value="1">Strongly disagree</option>
+                        <option value="2">Disagree</option>
+                        <option value="3">Neither agree nor disagree</option>
+                        <option value="4">Agree</option>
+                        <option value="5">Strongly agree</option>
+                        
+                    </select>
+                </div>
+                <br>
+                <br>
+                <div>
+                    <label for="q21">I think my healthcare institution has the necessary infrastructure to support this AI CDSS</label>
+                    <br>
+                    <br>
+                    <select name="q21" id="q21" required>
+                        <option value="" selected disabled>Select an option</option>
+                        <option value="1">Strongly disagree</option>
+                        <option value="2">Disagree</option>
+                        <option value="3">Neither agree nor disagree</option>
+                        <option value="4">Agree</option>
+                        <option value="5">Strongly agree</option>
+                        
+                    </select>
+                </div>
+                <br>
+                <br>
+                <div>
+                    <label for="q22">Assuming I had access to the AI CDSS, I would intend to use it</label>
+                    <br>
+                    <br>
+                    <select name="q22" id="q22" required>
+                        <option value="" selected disabled>Select an option</option>
+                        <option value="1">Strongly disagree</option>
+                        <option value="2">Disagree</option>
+                        <option value="3">Neither agree nor disagree</option>
+                        <option value="4">Agree</option>
+                        <option value="5">Strongly agree</option>
+                        
+                    </select>
+                </div>
+                <br>
+                <br>
+                <div>
+                    <label for="q23">How many of your colleagues would use this AI CDSS if it were implemented</label>
+                    <br>
+                    <br>
+                    <select name="q23" id="q23" required>
+                        <option value="" selected disabled>Select an option</option>
+                        <option value="1">None of them</option>
+                        <option value="2">Few of them</option>
+                        <option value="3">Some of them</option>
+                        <option value="4">Most of them</option>
+                        <option value="5">All of them</option>
+                        
+                    </select>
+                </div>
+                <br>
+                <br>
+                <div>
+                    <label for="q24">Overall, I think this AI CDSS has the potential to be a useful tool for antibiotic stewardship</label>
+                    <br>
+                    <br>
+                    <select name="q24" id="q24" required>
+                        <option value="" selected disabled>Select an option</option>
+                        <option value="1">Strongly disagree</option>
+                        <option value="2">Disagree</option>
+                        <option value="3">Neither agree nor disagree</option>
+                        <option value="4">Agree</option>
+                        <option value="5">Strongly agree</option>
+                        
+                    </select>
+                </div>
+                <br>
+                <br>
+                <!-- Free text question at end -->
+                <label for="q25">Do you have any final comments on the AI CDSS investigated in this research or recomendations for future research?</label>
+                <input name="q25" id="q25" autocomplete="off">
+                <br>
+                <br>
+
+                <button type="submit" class="btn btn-secondary" id="continue-btn" disabled>Finish</button>
+                <br>
+                <br>
+            </form>
+        </div>
+      </div>
+    </div>
+{% endblock %}
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const tamForm = document.getElementById('tam-form');
+    const continueButton = document.getElementById('continue-btn');
+
+    // Check completion status on form input change
+    tamForm.addEventListener('change', checkCompletionStatus);
+
+    // Function to check completion status
+    function checkCompletionStatus() {
+        const allQuestions = Array.from(document.querySelectorAll('select'));
+        const allQuestionsFilled = allQuestions.every(question => question.value !== "");
+
+        if (allQuestionsFilled) {
+            // If all questions are filled in, enable the 'Continue' button
+            continueButton.removeAttribute('disabled');
+            continueButton.classList.remove('btn-secondary');
+            continueButton.classList.add('btn-primary');
+        } else {
+            // If not all questions are filled in, disable the 'Continue' button
+            continueButton.setAttribute('disabled', 'disabled');
+            continueButton.classList.remove('btn-primary');
+            continueButton.classList.add('btn-secondary');
+        }
+    }
+
+    // Add event listener for form submission
+    tamForm.addEventListener('submit', function (event) {
+        // Prevent default form submission
+        event.preventDefault();
+
+        // Submit the form
+        const formData = new FormData(this);
+        fetch(this.action, {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'X-CSRFToken': '{{ csrf_token }}'  // Include CSRF token for Django CSRF protection
+            }
+        })
+        .then(response => {
+            if (response.ok) {
+                // Logout the user
+                fetch('/logout/', {
+                    method: 'POST',
+                    credentials: 'same-origin',  // Include this option for Django to recognize the session
+                    headers: {
+                        'X-CSRFToken': '{{ csrf_token }}'  // Include CSRF token for Django CSRF protection
+                    }
+                })
+                .then(logoutResponse => {
+                    if (logoutResponse.ok) {
+                        // Redirect to thank you page after successful logout
+                        window.location.href = '/thank_you';
+                    } else {
+                        console.error('Logout request failed.');
+                        // Handle logout failure here
+                    }
+                })
+                .catch(error => {
+                    console.error('Error during logout:', error);
+                    // Handle logout error here
+                });
+            } else {
+                console.error('Form submission failed.');
+                // Handle form submission failure here
+            }
+        })
+        .catch(error => {
+            console.error('Error during form submission:', error);
+            // Handle form submission error here
+        });
+    });
+});
+</script>
+</body>
+</html>

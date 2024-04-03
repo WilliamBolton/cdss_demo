@@ -113,7 +113,7 @@ AUTHENTICATION_BACKENDS = ['patients.backends.UserProfileBackend']
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'GMT'
+TIME_ZONE = 'Europe/London'
 
 USE_I18N = True
 

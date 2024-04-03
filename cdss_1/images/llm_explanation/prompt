@@ -1,48 +1,58 @@
-Title:  
+Title:   
 
-Explaining an AI Clinical Decision Support Systems (CDSS) Predictions for Antibiotic Stewardship 
+Explaining an AI Clinical Decision Support Systems (CDSS) Predictions for Antibiotic Stewardship  
 
-Scenario:  
+Scenario:   
 
-An inpatient is in hospital and is receiving intravenous (IV) antibiotic treatment. An AI-model based clinical decision support system (CDSS) can help clinicians in the important decision on if and when to switch the patient from IV to oral antibiotics. The model takes patients' demographics including their co-morbidities and their vitals as input features. If the AI CDSS prediction is 'Switch' the model believes changing the antibiotic administration route from IV to oral is appropriate. Alternatively, if the AI CDSS prediction is 'Dont witch' the model believes changing the antibiotic administration route from IV to oral is not appropriate, and that IV treatment should be continued. To help clinicians understand why the AI model predicts a patient should or should not switch they can view more details as shown in the attached image. 
+An inpatient is in hospital and is receiving intravenous (IV) antibiotic treatment. An AI-model based clinical decision support system (CDSS) can help clinicians in the important decision on if and when to switch the patient from IV to oral antibiotics. The model takes a patients' demographics including their co-morbidities and their vitals as input features. If the AI CDSS prediction is 'Switch' the model believes changing the antibiotic administration route from IV to oral is appropriate. Alternatively, if the AI CDSS prediction is 'Dont witch' the model believes changing the antibiotic administration route from IV to oral is not appropriate, and that IV treatment should be continued. To help clinicians understand why the AI model predicts a patient should or should not switch they can view more details as shown in the attached image.  
 
-Task:  
+Task:   
 
-You are an expert in both the medical domain and AI explainability and interpretability. Your task is to provide a overall summary in the form of a couple of bullet points outlining why the AI CDSS made its prediction. You will be provided with CSV data containing the patients' vitals since antibiotic initiation. The attached image presents the explainability and interpretability information available to clinicians. This includes patients' demographics, clinical information, similar historical patient cases, the real switch decision and what the AI model predicted for these similar patients, and a feature similarity plot based on the patients' vitals (plotted via imshow in matplotlib, blue indicates greater similarity between the similar patient and the patient in question while yellow indicates less similarity).
+You are an expert in both the medical domain and AI explainability and interpretability. Your task is to provide an overall summary in the form of a couple of bullet points outlining why the AI CDSS made its prediction. You will be provided with CSV data containing the patients' vitals since antibiotic initiation. The attached image presents the explainability and interpretability information available to clinicians. This includes a table containing the patients' demographics and clinical information, the model's prediction is shown under the 'AI CDSS prediction' column. A table containing historical similar patient cases is also shown with their demographics, clinical information, models prediction shown under the 'AI CDSS prediction' column, the real switch action that was taken is shown under the 'Real action' column, if the prediction was correct and aligns with the real action a yes is indicated in the 'Prediction correct' column otherwise it is No. Finally, a similarity plot based on the patients' feature derived from their vitals compares the similar patients to the patient in question (this was plotted via imshow in matplotlib, blue indicates greater similarity between the similar patient and the patient in question while yellow indicates less similarity). 
 
-Instructions: 
+Instructions:  
 
-1. Review the data and image: 
-- Familiarise yourself with the provided CSV data containing the patients' vitals during their stay. 
-- Examine the attached image, which encompasses demographics, clinical information, AI CDSS prediction, neighboring patient profiles, predicted and real and actions, and a feature similarity plot. 
+1. Review the data and image:  
+- Familiarise yourself with the provided CSV data containing the patients' vitals during their stay.  
+- Examine the attached image, which encompasses demographics, clinical information, AI CDSS prediction, neighboring patient profiles, predicted and real and actions, and a feature similarity plot.  
 
-2. Patient Information: 
-- Analyse the demographics and clinical details of the patient in question. 
-- Identify key factors relevant to the decision-making process, such as age, sex, underlying health conditions, infection, and vitals. 
+2. Patient Information:  
+- Review the demographics and clinical details of the patient in question.  
+- Identify key factors relevant to the decision-making process, such as age, sex, underlying health conditions, infection, and vitals.  
 
-3. Similar Patient Profiles: 
-- Evaluate the demographics and clinical details of similar patients retrieved from the embedding space. 
-- Compare the real actions taken for these similar patients with the actions predicted by the AI model. 
+3. Patient data: 
+- Analyse the csv data provided and identify key trends that could link to the AI models prediction. 
+- In particular focus on the last 24-hour period.  
 
-4. Feature Similarity Plot: 
-- Interpret the feature similarity plot provided, which includes vitals data, indicating the degree of resemblance between the patient in question and neighboring patients. 
-- Discuss how the plot reflects the decision-making process and influences the AI model's prediction. 
+4. Similar Patient Profiles:  
+- Evaluate the demographics and clinical details of similar patients retrieved from the embedding space.  
+- Compare the real actions taken for these similar patients with the actions predicted by the AI model.  
 
-5. Prediction Explanation: 
-- Provide a comprehensive rationale for the AI model's prediction regarding the transition from IV to oral antibiotic therapy or the continuation of the current IV therapy. 
-- Consider all the information provided including the similarities and differences between the patient in question and the neighboring patients in terms of demographics, clinical features, and vitals. 
+5. Feature Similarity Plot:  
+- Interpret the vitals feature similarity plot provided, indicating the degree of resemblance between the patient in question and neighboring patients. 
+- Remember that for each feature on the x axis blue indicates greater feature similarity between the similar patient (on the y axis) and the patient in question, while yellow indicates less similarity, ensuring you understand this distinction. 
+- Discuss how the plot reflects the decision-making process and influences the AI model's prediction.  
 
-Additional Guidance: 
-- Utilise your medical expertise and understanding of AI explainability to interpret the information and situation provided. 
-- Consider the complex and critical nature of medical decision-making for antibiotic stewardship. 
-- Emphasise the potential significance of each factor in the AI CDSS prediction. 
-- Ensure clarity, conciseness, coherence, and relevance in the explanation provided. 
-- Do not make assumptions outside what the data indicates.
+6. Prediction Explanation:  
+- Provide a comprehensive rationale for the AI model's prediction regarding the transition from IV to oral antibiotic therapy or the continuation of the current IV therapy.  
+- Focus on logical reasoning over prior knowledge and consider all the information provided including the similarities and differences between the patient in question and the neighboring patients in terms of demographics and clinical features.  
 
-CSV Data: 
+Example Bullet Points (note the context and meaning of these should be ignored, they are only intended to provide an example of how to structure a potential output): 
+- The patient's temperature has shown an increasing trend over the past 24 hours, which could indicate a worsening infection. 
+- For four out of the five similar patients the AI model predicted that they should not switch from IV to oral antibiotics, which aligns with the prediction for the patient in question. 
+- The patient's vitals show a greater similarity to patients for whom the AI model predicted that IV treatment should be switched. 
+
+Additional Guidance:  
+- Utilise your medical expertise and understanding of AI explainability to interpret the information and situation provided.  
+- Consider the complex and critical nature of medical decision-making for antibiotic stewardship.  
+- Emphasise the potential significance of each factor in the AI CDSS prediction.  
+- Ensure clarity, conciseness, coherence, and relevance in the explanation provided.  
+- Do not make assumptions outside what the data indicates. 
+
+CSV Data:  
 
 
 
-Conclusion:  
+Conclusion:   
 
-To repeat your task is to analyse the provided CSV data and image, summarise the information and provide guidance on why the AI CDSS made its prediction in a few bullet points. Please only provide these bullet points and do not provide any other text.
+To repeat your task is to analyse the provided CSV data and image, summarise the information and provide guidance on why the AI CDSS made its prediction in a few bullet points, do not provide any other text. Please provide at least provide one bullet point related to the csv data and one that comments on the similar patients, feel free to include additional points as necessary based on your analysis. 

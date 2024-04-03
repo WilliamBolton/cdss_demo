@@ -39,6 +39,13 @@
 
     // Add click event to 'Complete' button
     completeButton.addEventListener('click', function () {
+        // Redirect to the SUS web page
+        window.location.href = '/sus';
+    });
+
+    /* Old code to logout before I added questionnaires
+    // Add click event to 'Complete' button
+    completeButton.addEventListener('click', function () {
         // Make a POST request to the logout endpoint
         fetch(logoutUrl, {
             method: 'POST',
@@ -60,7 +67,7 @@
             console.error('Error during logout:', error);
             // Handle logout error here
         });
-    });
+    });*/
 
     // Function to get CSRF token from cookies
     function getCookie(name) {

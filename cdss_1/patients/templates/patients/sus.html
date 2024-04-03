@@ -1,0 +1,246 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Usability Scale Questionnaire</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: white;
+        }
+  
+        .container {
+            max-width: 800px; /* Adjust the width as needed */
+            margin: 0 auto;
+            text-align: center;
+        }
+      </style>
+</head>
+<body>
+{% block content %}
+    <div class="container">
+        <div class="row justify-content-center mt-5">
+        <div class="col-md-6">
+            <h1>User Feedback</h1>
+            <br>
+            Thank you! Finally, please fill in the following two usability and acceptability questionnaires
+            <br>
+            <br>
+            <br>
+            <h2> System Usability Scale </h2>
+            <form id="sus-form" method="post" action="{% url 'sus' %}">
+                {% csrf_token %}
+                <br>
+                <div>
+                    <label for="q1">I think that I would like to use this system frequently</label>
+                    <br>
+                    <br>
+                    <select name="q1" id="q1" required>
+                        <option value="" selected disabled>Select an option</option>
+                        <option value="1">Strongly disagree</option>
+                        <option value="2">Disagree</option>
+                        <option value="3">Neither agree nor disagree</option>
+                        <option value="4">Agree</option>
+                        <option value="5">Strongly agree</option>
+                        
+                    </select>
+                </div>
+                <br>
+                <br>
+                <div>
+                    <label for="q2">I found the system unnecessarily complex</label>
+                    <br>
+                    <br>
+                    <select name="q2" id="q2" required>
+                        <option value="" selected disabled>Select an option</option>
+                        <option value="1">Strongly disagree</option>
+                        <option value="2">Disagree</option>
+                        <option value="3">Neither agree nor disagree</option>
+                        <option value="4">Agree</option>
+                        <option value="5">Strongly agree</option>
+                        
+                    </select>
+                </div>
+                <br>
+                <br>
+                <div>
+                    <label for="q3">I thought the system was easy to use</label>
+                    <br>
+                    <br>
+                    <select name="q3" id="q3" required>
+                        <option value="" selected disabled>Select an option</option>
+                        <option value="1">Strongly disagree</option>
+                        <option value="2">Disagree</option>
+                        <option value="3">Neither agree nor disagree</option>
+                        <option value="4">Agree</option>
+                        <option value="5">Strongly agree</option>
+                        
+                    </select>
+                </div>
+                <br>
+                <br>
+                <div>
+                    <label for="q4">I think that I would need the support of a technical person to be able to use this system</label>
+                    <br>
+                    <br>
+                    <select name="q4" id="q4" required>
+                        <option value="" selected disabled>Select an option</option>
+                        <option value="1">Strongly disagree</option>
+                        <option value="2">Disagree</option>
+                        <option value="3">Neither agree nor disagree</option>
+                        <option value="4">Agree</option>
+                        <option value="5">Strongly agree</option>
+                        
+                    </select>
+                </div>
+                <br>
+                <br>
+                <div>
+                    <label for="q5">I found the various functions in this system were well integrated</label>
+                    <br>
+                    <br>
+                    <select name="q5" id="q5" required>
+                        <option value="" selected disabled>Select an option</option>
+                        <option value="1">Strongly disagree</option>
+                        <option value="2">Disagree</option>
+                        <option value="3">Neither agree nor disagree</option>
+                        <option value="4">Agree</option>
+                        <option value="5">Strongly agree</option>
+                        
+                    </select>
+                </div>
+                <br>
+                <br>
+                <div>
+                    <label for="q6">I thought there was too much inconsistency in this system</label>
+                    <br>
+                    <br>
+                    <select name="q6" id="q6" required>
+                        <option value="" selected disabled>Select an option</option>
+                        <option value="1">Strongly disagree</option>
+                        <option value="2">Disagree</option>
+                        <option value="3">Neither agree nor disagree</option>
+                        <option value="4">Agree</option>
+                        <option value="5">Strongly agree</option>
+                        
+                    </select>
+                </div>
+                <br>
+                <br>
+                <div>
+                    <label for="q7">I would imagine that most people would learn to use this system very quickly</label>
+                    <br>
+                    <br>
+                    <select name="q7" id="q7" required>
+                        <option value="" selected disabled>Select an option</option>
+                        <option value="1">Strongly disagree</option>
+                        <option value="2">Disagree</option>
+                        <option value="3">Neither agree nor disagree</option>
+                        <option value="4">Agree</option>
+                        <option value="5">Strongly agree</option>
+                        
+                    </select>
+                </div>
+                <br>
+                <br>
+                <div>
+                    <label for="q8">I found the system very cumbersome to use</label>
+                    <br>
+                    <br>
+                    <select name="q8" id="q8" required>
+                        <option value="" selected disabled>Select an option</option>
+                        <option value="1">Strongly disagree</option>
+                        <option value="2">Disagree</option>
+                        <option value="3">Neither agree nor disagree</option>
+                        <option value="4">Agree</option>
+                        <option value="5">Strongly agree</option>
+                        
+                    </select>
+                </div>
+                <br>
+                <br>
+                <div>
+                    <label for="q9">I felt very confident using the system</label>
+                    <br>
+                    <br>
+                    <select name="q9" id="q9" required>
+                        <option value="" selected disabled>Select an option</option>
+                        <option value="1">Strongly disagree</option>
+                        <option value="2">Disagree</option>
+                        <option value="3">Neither agree nor disagree</option>
+                        <option value="4">Agree</option>
+                        <option value="5">Strongly agree</option>
+                        
+                    </select>
+                </div>
+                <br>
+                <br>
+                <div>
+                    <label for="q10">I needed to learn a lot of things before I could get going with this system</label>
+                    <br>
+                    <br>
+                    <select name="q10" id="q10" required>
+                        <option value="" selected disabled>Select an option</option>
+                        <option value="1">Strongly disagree</option>
+                        <option value="2">Disagree</option>
+                        <option value="3">Neither agree nor disagree</option>
+                        <option value="4">Agree</option>
+                        <option value="5">Strongly agree</option>
+                        
+                    </select>
+                </div>
+                <br>
+                <br>
+
+                <!-- Repeat the above for all 10 SUS questions -->
+                <!-- You can find the full SUS questionnaire online -->
+
+                <button type="submit" class="btn btn-secondary" id="continue-btn" disabled>Continue</button>
+                <br>
+                <br>
+            </form>
+        </div>
+      </div>
+    </div>
+{% endblock %}
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+            const susForm = document.getElementById('sus-form');
+            const continueButton = document.getElementById('continue-btn');
+
+            // Check completion status on form input change
+            susForm.addEventListener('change', checkCompletionStatus);
+
+            // Function to check completion status
+            function checkCompletionStatus() {
+                const allQuestions = Array.from(document.querySelectorAll('select'));
+                const allQuestionsFilled = allQuestions.every(question => question.value !== "");
+
+                if (allQuestionsFilled) {
+                    // If all questions are filled in, enable the 'Continue' button
+                    continueButton.removeAttribute('disabled');
+                    continueButton.classList.remove('btn-secondary');
+                    continueButton.classList.add('btn-primary');
+                } else {
+                    // If not all questions are filled in, disable the 'Continue' button
+                    continueButton.setAttribute('disabled', 'disabled');
+                    continueButton.classList.remove('btn-primary');
+                    continueButton.classList.add('btn-secondary');
+                }
+            }
+
+            // Add event listener for form submission
+            susForm.addEventListener('submit', function (event) {
+                event.preventDefault(); // Prevent default form submission
+                // Submit the form
+                this.submit();
+            });
+        });
+</script>
+</body>
+</html>

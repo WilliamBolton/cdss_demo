@@ -1,0 +1,16 @@
+user_id,user_archetype,patient,component,hover_duration
+2,a,1,patient_details_imddecil:,0.38
+2,a,1,patient_details_co-morbidities:,0.033
+2,a,1,patient_details_,0.008
+2,a,1,patient_details_diagnosis:,0.022
+2,a,1,patient_details_antibiotic_treatment:,0.024
+2,a,2,guidelines_pdf_simple,0.417
+2,a,3,patient_details_imddecil:,1.469
+2,a,5,patient_details_,0.105
+2,a,5,patient_details_diagnosis:,1.205
+2,a,5,guidelines_pdf_simple,0.782
+2,a,5,echarts_plot,2.052
+2,a,5,vitals_table_Conscious Level,0.614
+2,a,5,vitals_table_Metric / Time (hours),0.666
+2,a,8,guidelines_pdf_simple,0.572
+2,a,9,vitals_table_Metric / Time (hours),0.295
