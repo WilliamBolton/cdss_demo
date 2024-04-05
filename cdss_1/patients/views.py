@@ -540,12 +540,14 @@ def tam(request):
             'q23': request.POST.get('q23'),
             'q24': request.POST.get('q24'),
             'q25': request.POST.get('q25'),
+            'q26': request.POST.get('q26'),
+            'q27': request.POST.get('q27'),
         }
 
         # Save detials to a CSV file
         csv_file_path = f'/home/wb1115/VSCode_projects/cdss/cdss_1/cdss_1/tam_results/tam.csv'
         with open(csv_file_path, 'a', newline='') as csvfile:
-            fieldnames = ['user_id', 'user_archetype', 'q1', 'q2', 'q3', 'q4', 'q5', 'q6', 'q7', 'q8', 'q9', 'q10', 'q11', 'q12', 'q13', 'q14', 'q15', 'q16', 'q17', 'q18', 'q19', 'q20', 'q21', 'q22', 'q23','q24', 'q25']
+            fieldnames = ['user_id', 'user_archetype', 'q1', 'q2', 'q3', 'q4', 'q5', 'q6', 'q7', 'q8', 'q9', 'q10', 'q11', 'q12', 'q13', 'q14', 'q15', 'q16', 'q17', 'q18', 'q19', 'q20', 'q21', 'q22', 'q23','q24', 'q25', 'q26', 'q27']
             writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
             # Check if the CSV file is empty and write headers if needed
             if csvfile.tell() == 0:
