@@ -1,10 +1,5 @@
 user_id,user_archetype,age,sex,medical_speciality,grade
-1,b,test,,,
-7,b,test,,123,
-1,b,,,,
-1,b,,test,,
-1,b,,,,
-1,b,,,,
-2,a,5,5,5,5
-3,b,,,,
-3,b,test,,,
+
+0,a,test,test,test,test
+0,a,,,,
+0,a,,,,

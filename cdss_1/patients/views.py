@@ -104,7 +104,7 @@ def details(request):
 
         # Save detials to a CSV file
         csv_file_path = f'/home/wb1115/VSCode_projects/cdss/cdss_1/cdss_1/demographic_results/demographics.csv'
-        with open(csv_file_path, 'a', newline='') as csvfile:
+        with open(csv_file_path, 'a', newline='') as csvfile: # Would need to change for docker!
             fieldnames = ['user_id', 'user_archetype', 'age', 'sex', 'medical_speciality', 'grade']
             writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
             # Check if the CSV file is empty and write headers if needed

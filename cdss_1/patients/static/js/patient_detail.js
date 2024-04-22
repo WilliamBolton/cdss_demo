@@ -144,8 +144,13 @@ document.addEventListener('DOMContentLoaded', function () {
         });
 
         function logLegendClick(legendName, timestamp) {
-            // Get the patient - ie., second last character of the webpage URL
-            const patient = window.location.href.slice(-2, -1);
+            // Get the patient from webpage URL
+            const url = window.location.href;
+            const match = url.match(/\/(\d+)\/?$/);
+            let patient = null;
+            if (match) {
+                patient = match[1];
+            }
 
             // Prepare data to send to Django
             const data = {
@@ -159,7 +164,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
-                    'X-CSRFToken': getCSRFToken() // Make sure to set this variable with the CSRF token
+                    'X-CSRFToken': getCSRFToken()
                 },
                 body: JSON.stringify(data)
             })
