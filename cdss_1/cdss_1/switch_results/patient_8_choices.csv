@@ -1,3 +1,4 @@
 user_id,user_archetype,switch_choice,explanation
 tim,b,switch,
 0,a,dont_switch,"what is indicaiton, would investigate why sats dropped and if significant would review 24 hours"
+1,b,dont_switch,There is not enough information and this patient was comatose. Better do no harm.

@@ -1,3 +1,4 @@
 user_id,user_archetype,switch_choice,explanation
 tim,b,switch,
 0,a,dont_switch,"review in 24 hours, concerned about respiratory function, need to know if has had supplemental o2 + any pmh respiratory conditions, "
+1,b,switch,"Without diagnosis, antibiotics should be stopped. There is no obvious need for any antibiotics."

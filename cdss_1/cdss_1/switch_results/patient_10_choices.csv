@@ -1,3 +1,4 @@
 user_id,user_archetype,switch_choice,explanation
 tim,b,dont_switch,
 0,a,dont_switch,"respiratory rate is erratic last 12 hours, if <20 would consider ivos, would investiagte why 14-24 last 12 hours"
+1,b,switch,I cannot notice any signs of infections from the vital signs. The patient might not need antibiotic.

@@ -1,138 +1,37 @@
 user_id,user_archetype,patient,component,hover_duration
-demo,a,1,patient_details_ethnicity:,0.004
-demo,a,1,patient_details_co-morbidities:,0.022
-demo,a,1,patient_details_,0.283
-demo,a,1,vitals_table_Respiratory Rate,0.211
-demo,a,1,vitals_table_Heart Rate,0.414
-demo,a,1,vitals_table_Systolic Blood Pressure,14.476
-demo,a,1,vitals_table_Diastolic Blood Pressure,0.104
-demo,a,1,vitals_table_Systolic Blood Pressure,1.305
-demo,a,1,vitals_table_Metric / Time (hours),0.034
-demo,a,1,vitals_table_Temperature,0.062
-demo,a,1,vitals_table_Systolic Blood Pressure,0.215
-demo,a,1,vitals_table_Diastolic Blood Pressure,0.094
-demo,a,1,vitals_table_SpO2,1.737
-demo,a,1,patient_details_antibiotic_treatment:,0.065
-demo,a,1,patient_details_diagnosis:,0.044
-demo,a,1,vitals_table_Glasgow Coma Score,1.267
-demo,a,1,echarts_plot,0.205
-demo,a,1,vitals_table_Supplemental Oxygen,0.227
-demo,a,1,vitals_table_Diastolic Blood Pressure,0.071
-demo,a,1,vitals_table_Mean Arterial Pressure,0.103
-demo,a,1,vitals_table_Conscious Level,0.203
-demo,a,1,vitals_table_Glasgow Coma Score,0.013
-demo,a,1,vitals_table_Diastolic Blood Pressure,0.057
-demo,a,1,vitals_table_Mean Arterial Pressure,0.005
-demo,a,1,vitals_table_SpO2,0.093
-demo,a,1,echarts_plot,1.847
-demo,a,1,echarts_plot,0.409
-demo,a,1,echarts_plot,0.536
-demo,a,1,echarts_plot,0.798
-demo,a,1,guideline_alert,0.101
-demo,a,1,prediction_alert,0.386
-demo,a,1,prediction_alert,0.477
-demo,a,1,guideline_alert,0.145
-demo,a,1,guideline_alert,0.044
-demo,a,1,prediction_alert,0.102
-demo,a,1,similar_table_1,1.148
-demo,a,1,similar_table_1,0.021
-demo,a,1,similar_table_Similar patient,0.024
-demo,a,1,similar_table_Similar patient,0.015
-demo,a,1,patient_table,0.063
-demo,a,1,similar_table_Similar patient,0.131
-demo,a,1,patient_table,0.093
-demo,a,1,patient_table,0.001
-demo,a,1,patient_table,0.282
-demo,a,1,similar_table_2,0.173
-demo,a,1,similar_table_Similar patient,0.1
-demo,a,1,similar_table_4,0.15
-demo,a,1,feature_image,0.267
-demo,a,1,feature_image,0.069
-demo,a,1,feature_image,0.04
-demo,a,1,LLM_positive_points,5.134
-demo,a,1,LLM_positive_points,0.0
-demo,a,1,vitals_table_Diastolic Blood Pressure,0.467
-demo,a,1,guideline_alert,0.069
-demo,a,1,prediction_alert,0.23
-demo,a,1,prediction_alert,0.162
-demo,a,1,prediction_alert,0.065
-demo,a,1,patient_table,1.134
-demo,a,1,similar_table_4,0.019
-demo,a,1,similar_table_3,0.086
-demo,a,1,similar_table_1,0.368
-demo,a,1,similar_table_2,0.133
-demo,a,1,similar_table_4,0.157
-demo,a,1,similar_table_5,0.175
-demo,a,1,similar_table_4,0.077
-demo,a,1,similar_table_3,0.2
-demo,a,1,similar_table_1,0.286
-demo,a,1,similar_table_3,0.152
-demo,a,1,similar_table_5,0.727
-demo,a,1,feature_image,80.568
-demo,a,1,feature_image,0.591
-demo,a,1,feature_image,0.234
-demo,a,1,feature_image,0.619
-demo,a,1,feature_image,0.937
-demo,a,1,feature_image,9.771
-demo,a,1,feature_image,28.96
-demo,a,1,feature_image,0.129
-demo,a,1,feature_image,45.575
-demo,a,1,LLM_positive_points,3.611
-demo,a,1,feature_image,1.161
-demo,a,1,similar_table_5,0.867
-demo,a,1,similar_table_5,0.022
-demo,a,1,similar_table_4,0.039
-demo,a,1,similar_table_4,0.062
-demo,a,1,similar_table_3,0.11
-demo,a,1,similar_table_4,0.318
-demo,a,1,similar_table_4,0.073
-demo,a,1,similar_table_4,0.638
-demo,a,1,similar_table_4,0.224
-demo,a,1,similar_table_4,0.724
-demo,a,1,similar_table_4,0.244
-demo,a,1,similar_table_4,0.326
-demo,a,1,similar_table_4,0.312
-demo,a,1,similar_table_4,0.281
-demo,a,1,similar_table_4,0.001
-demo,a,1,similar_table_3,0.068
-demo,a,1,similar_table_4,0.054
-demo,a,1,similar_table_4,0.236
-demo,a,1,similar_table_4,0.208
-demo,a,1,similar_table_4,0.615
-demo,a,1,similar_table_4,0.004
-demo,a,1,similar_table_4,0.031
-demo,a,1,similar_table_4,0.27
-demo,a,1,similar_table_3,0.093
-demo,a,1,similar_table_4,2.879
-demo,a,1,similar_table_4,0.117
-demo,a,1,similar_table_2,0.055
-demo,a,1,similar_table_3,0.11
-demo,a,1,similar_table_Similar patient,0.07
-demo,a,1,similar_table_1,0.144
-demo,a,1,similar_table_2,0.071
-demo,a,1,similar_table_2,0.139
-demo,a,1,similar_table_3,0.139
-demo,a,1,similar_table_2,0.083
-demo,a,1,similar_table_3,2.67
-demo,a,1,similar_table_4,0.211
-demo,a,1,similar_table_5,0.04
-demo,a,1,LLM_positive_points,0.65
-demo,a,1,guidelines_flowchart,0.072
-demo,a,1,guidelines_flowchart,0.428
-demo,a,1,guidelines_flowchart,0.01
-demo,a,1,guidelines_flowchart,0.287
-demo,a,1,guidelines_flowchart,0.191
-demo,a,1,guidelines_flowchart,0.232
-demo,a,1,guidelines_flowchart,0.079
-demo,a,1,guidelines_flowchart,0.087
-demo,a,1,guidelines_flowchart,0.004
-demo,a,1,guidelines_flowchart,0.003
-demo,a,1,guidelines_flowchart,0.012
-demo,a,1,guidelines_flowchart,0.001
-demo,a,1,guidelines_flowchart,0.298
-demo,a,1,guidelines_flowchart,0.029
-demo,a,1,guidelines_flowchart,0.428
-demo,a,1,guidelines_pdf,0.254
-demo,a,1,guidelines_pdf,0.214
-demo,a,1,guidelines_pdf,0.568
-demo,a,1,vitals_table_Heart Rate,1.092
+demo,a,1,patient_details_sex:,0.339
+demo,a,1,patient_details_age:,0.243
+demo,a,1,patient_details_age:,1.309
+demo,a,1,patient_details_ethnicity:,0.006
+demo,a,1,patient_details_sex:,0.014
+demo,a,1,patient_details_co-morbidities:,0.005
+demo,a,1,patient_details_imddecil:,0.003
+demo,a,1,patient_details_diagnosis:,0.544
+demo,a,1,echarts_plot,0.379
+demo,a,1,echarts_plot,1.775
+demo,a,1,echarts_plot,2.367
+demo,a,1,prediction_alert,0.138
+demo,a,1,prediction_alert,0.18
+demo,a,1,similar_table_Similar patient,1.663
+demo,a,1,patient_table,0.103
+demo,a,1,patient_table,0.226
+demo,a,1,patient_table,0.133
+demo,a,1,patient_table,0.235
+demo,a,1,similar_table_3,0.336
+demo,a,1,similar_table_1,0.129
+demo,a,1,similar_table_Similar patient,0.202
+demo,a,1,feature_image,3.57
+demo,a,1,feature_image,15.807
+demo,a,1,guideline_alert,0.17
+demo,a,1,guidelines_pdf,0.516
+demo,a,1,guidelines_pdf,0.422
+demo,a,1,prediction_alert,0.303
+demo,a,1,prediction_alert,0.621
+demo,a,1,guideline_alert,0.403
+demo,a,3,patient_details_age:,0.872
+demo,a,3,guideline_alert,0.082
+demo,a,3,guideline_alert,0.288
+demo,a,3,guidelines_flowchart,0.064
+demo,a,3,guidelines_pdf,0.855
+demo,a,3,guidelines_pdf,54.996
+demo,a,3,guidelines_pdf,29.21

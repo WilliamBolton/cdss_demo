@@ -1,3 +1,4 @@
 user_id,user_archetype,switch_choice,explanation
 tim,b,dont_switch,
 0,a,dont_switch,"temp and HR increasing, GCS dropped in last 24 hours"
+1,b,dont_switch,"This patient is not improving and should be evaluated for other differential diagnoses, investigated for complications, or evaluated for the pos of drug resistance or other causative pathogens."
