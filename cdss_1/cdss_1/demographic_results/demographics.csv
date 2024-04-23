@@ -1,5 +1,2 @@
 user_id,user_archetype,age,sex,medical_speciality,grade
-
-0,a,test,test,test,test
-0,a,,,,
-0,a,,,,
+0,a,37,M,Pharmacist,8a
