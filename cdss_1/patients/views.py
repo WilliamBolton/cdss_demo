@@ -97,6 +97,7 @@ def details(request):
         sex = request.POST['sex']
         medical_speciality = request.POST['medical_speciality']
         grade = request.POST['grade']
+        ai_familiarity = request.POST['ai']
         # Accessing the logged-in user's info
         user = request.user.userprofile
         user_id = user.id_value
@@ -105,12 +106,12 @@ def details(request):
         # Save detials to a CSV file
         csv_file_path = f'/home/wb1115/VSCode_projects/cdss/cdss_1/cdss_1/demographic_results/demographics.csv'
         with open(csv_file_path, 'a', newline='') as csvfile: # Would need to change for docker!
-            fieldnames = ['user_id', 'user_archetype', 'age', 'sex', 'medical_speciality', 'grade']
+            fieldnames = ['user_id', 'user_archetype', 'age', 'sex', 'medical_speciality', 'grade', 'ai_familiarity']
             writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
             # Check if the CSV file is empty and write headers if needed
             if csvfile.tell() == 0:
                 writer.writeheader()
-            writer.writerow({'user_id': user_id, 'user_archetype': user_archetype, 'age':age, 'sex':sex, 'medical_speciality':medical_speciality, 'grade':grade})
+            writer.writerow({'user_id': user_id, 'user_archetype': user_archetype, 'age':age, 'sex':sex, 'medical_speciality':medical_speciality, 'grade':grade, 'ai_familiarity':ai_familiarity})
         
         return redirect('patient_list')
     else:
