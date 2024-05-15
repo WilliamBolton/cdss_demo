@@ -1,1 +1,3 @@
 user_id,user_archetype,patient,variable,timestamp
+30,a,6,Temperature,2024-05-15T12:21:33.274Z
+30,a,6,Heart Rate,2024-05-15T12:21:34.669Z

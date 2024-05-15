@@ -18,6 +18,18 @@
             margin: 0 auto;
             text-align: center;
         }
+
+        input[type="text"] {
+        border: 1px solid #817878; /* Thicker, more visible border */
+        border-radius: 4px; /* Optional: Adds slight rounding to the corners */
+        padding: 8px; /* Optional: Adds padding inside the input field */
+        outline: none; /* Removes default outline when focused */
+        }
+
+        input[type="text"]:focus {
+            border-color: #5ba5f3ef; /* Changes border color on focus for better visibility */
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Adds a subtle shadow on focus */
+        }
       </style>
 </head>
 <body>
@@ -453,7 +465,7 @@
                 <br>
                 <!-- Free text question at end -->
                 <label for="q27">Do you have any final comments on the AI CDSS investigated in this research or recomendations for future research?</label>
-                <input name="q27" id="q27" autocomplete="off">
+                <input type="text" name="q27" id="q27" autocomplete="off">
                 <br>
                 <br>
 

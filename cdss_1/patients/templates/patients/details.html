@@ -8,15 +8,27 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <style>
-      body {
-          background-color: white;
-      }
+        body {
+            background-color: white;
+        }
 
-      .container {
-          max-width: 800px; /* Adjust the width as needed */
-          margin: 0 auto;
-          text-align: center;
-      }
+        .container {
+            max-width: 800px; /* Adjust the width as needed */
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        input[type="text"] {
+            border: 1px solid #817878; /* Thicker, more visible border */
+            border-radius: 4px; /* Optional: Adds slight rounding to the corners */
+            padding: 8px; /* Optional: Adds padding inside the input field */
+            outline: none; /* Removes default outline when focused */
+        }
+
+        input[type="text"]:focus {
+            border-color: #5ba5f3ef; /* Changes border color on focus for better visibility */
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Adds a subtle shadow on focus */
+        }
     </style>
 </head>
 <body>
@@ -52,8 +64,9 @@
                 <div>
                     <label for="ai">How familiar are you with AI technology?</label>
                     <br>
+                    <br>
                     <select name="ai" id="ai">
-                        <option value="" selected disabled>Select an option</option>
+                        <option value="" selected>Select an option</option>
                         <option value="1">Not familiar</option>
                         <option value="2">Slightly familiar</option>
                         <option value="3">Moderately familiar</option>
