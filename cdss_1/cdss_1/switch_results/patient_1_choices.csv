@@ -2,3 +2,4 @@ user_id,user_archetype,switch_choice,explanation
 tim,b,dont_switch,
 0,a,dont_switch,"temps increasing, systolics dropping, still on supplemental o2"
 1,b,dont_switch,The respiratory rates are increasing.
+2,a,dont_switch,30 hours is not long enough to assess for response.  I would give another 24 hours.  HOWEVER.  If this was a community acquired pneumonia (the q doesn;t say) then i would have started with some 'atypical cover' also e.g. coamox+ clari

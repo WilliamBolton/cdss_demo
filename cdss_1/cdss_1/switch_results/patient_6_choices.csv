@@ -2,3 +2,4 @@ user_id,user_archetype,switch_choice,explanation
 tim,b,switch,
 0,a,dont_switch,"would investiagte why gcs 14 in last 24 hours, if not significant would consider IVOS"
 1,b,switch,"The antibiotic should be stopped, not switched."
+2,a,switch,"Fluctuating GCS appears to be the main problem. His comorbidities do not suggest this is normal for him. Assuming infection is the cause of this, he should be on broader antibiotics than fluclox.  "

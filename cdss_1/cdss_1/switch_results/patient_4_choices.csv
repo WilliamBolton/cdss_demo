@@ -2,3 +2,4 @@ user_id,user_archetype,switch_choice,explanation
 tim,b,switch,
 0,a,switch,"temps and other vitals all ok, and have been since started"
 1,b,switch,I do not think this patient required IV antibiotic since the beginning.
+2,a,dont_switch,"HR downtrending.  However, my decisionin real life would be based on her inflammatory markers (blood tests) and my clinical assessment of her cellulitis (how it looks and feels)"

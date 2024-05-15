@@ -2,3 +2,4 @@ user_id,user_archetype,switch_choice,explanation
 tim,b,switch,
 0,a,switch,all vitals in range
 1,b,switch,There is no need for IV for this patient.
+2,a,dont_switch,"Again, it depends what the term 'uncomplicated UTI' means.  Although blood pressure is down, this is not accompanied by a rise in HR.  She is a young woman and this BP may be normal for her"
