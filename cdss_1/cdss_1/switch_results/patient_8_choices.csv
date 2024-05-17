@@ -3,3 +3,4 @@ tim,b,switch,
 0,a,dont_switch,"what is indicaiton, would investigate why sats dropped and if significant would review 24 hours"
 1,b,dont_switch,There is not enough information and this patient was comatose. Better do no harm.
 2,a,dont_switch,"Patient is still unwell withlow BPs, tachycardic and desaturated during last few hours.  I would NOT switch to oral abx (but i would probably switch to a broader IV abx)"
+3,b,switch,"patient improving, afebrile and had 6 days of IV"

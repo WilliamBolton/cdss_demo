@@ -3,3 +3,4 @@ tim,b,dont_switch,
 0,a,dont_switch,"would reconsider if e.g. background copd, otherwise spo2 toooo low"
 1,b,dont_switch,This patient is having septic shock.The BP has not improved.
 2,a,dont_switch,Still has low sats.  This decision depends on the patient's baseline 02 saturation and what infection he is being treated for
+3,b,switch,afebrile

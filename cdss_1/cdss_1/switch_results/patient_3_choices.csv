@@ -3,3 +3,4 @@ tim,b,dont_switch,
 0,a,dont_switch,"temp and HR increasing, GCS dropped in last 24 hours"
 1,b,dont_switch,"This patient is not improving and should be evaluated for other differential diagnoses, investigated for complications, or evaluated for the pos of drug resistance or other causative pathogens."
 2,a,switch,Becoming febrile.  Without any additionalo data I have to assume pt is not responding to current abx and need to switch
+3,b,dont_switch,"patient now has temperatures, would review with cultures, for potentially switching IV or adding second agent (atypical cover?/)"

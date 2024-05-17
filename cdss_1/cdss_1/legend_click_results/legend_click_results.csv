@@ -1,3 +1,24 @@
 user_id,user_archetype,patient,variable,timestamp
 30,a,6,Temperature,2024-05-15T12:21:33.274Z
 30,a,6,Heart Rate,2024-05-15T12:21:34.669Z
+3,b,1,Respiratory Rate,2024-05-17T11:48:22.961Z
+3,b,1,Systolic Blood Pressure,2024-05-17T11:48:23.820Z
+3,b,1,Diastolic Blood Pressure,2024-05-17T11:48:24.439Z
+3,b,1,Mean Arterial Pressure,2024-05-17T11:48:24.908Z
+3,b,1,SpO2,2024-05-17T11:48:25.349Z
+3,b,1,Glasgow Coma Score,2024-05-17T11:48:25.889Z
+3,b,1,Heart Rate,2024-05-17T11:48:26.345Z
+3,b,1,Respiratory Rate,2024-05-17T11:48:31.473Z
+3,b,1,Systolic Blood Pressure,2024-05-17T11:48:37.750Z
+3,b,2,Respiratory Rate,2024-05-17T11:51:39.596Z
+3,b,2,Heart Rate,2024-05-17T11:51:40.227Z
+3,b,2,Diastolic Blood Pressure,2024-05-17T11:51:40.864Z
+3,b,2,Mean Arterial Pressure,2024-05-17T11:51:41.486Z
+3,b,2,SpO2,2024-05-17T11:51:41.936Z
+3,b,2,Glasgow Coma Score,2024-05-17T11:51:42.460Z
+3,b,2,Systolic Blood Pressure,2024-05-17T11:51:52.110Z
+3,b,2,Respiratory Rate,2024-05-17T11:51:59.636Z
+3,b,2,Systolic Blood Pressure,2024-05-17T11:52:05.424Z
+3,b,2,Heart Rate,2024-05-17T11:52:08.270Z
+3,b,2,Temperature,2024-05-17T11:52:13.039Z
+3,b,2,Diastolic Blood Pressure,2024-05-17T11:52:22.510Z
