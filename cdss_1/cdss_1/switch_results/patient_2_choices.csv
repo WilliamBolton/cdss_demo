@@ -4,3 +4,4 @@ tim,b,switch,
 1,b,switch,Everything is improving. Antibiotic should have been switched by day 2.
 2,a,dont_switch,"HR reducing.  Nothing else (ie no other parameters) to follow.  I would want to see blood test results before making this decision in reality.  Also, what is 'com,plicated UTI' sometimes this means there is an abscess (which is an exclude criteria in the UKHSA guidelines)"
 3,b,switch,no temperatures during admission. Had 5 days of Abby. Oops stable at point of switch recommendation
+4,a,switch,patient has received IV abx for at least 3 days. Their blood pressure has improved after being hypotensive and they are no long er displaying signs of sepsis. Oral switch is therefore reasonable 

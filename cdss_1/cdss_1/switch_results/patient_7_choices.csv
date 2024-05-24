@@ -4,3 +4,4 @@ tim,b,switch,
 1,b,switch,"Without diagnosis, antibiotics should be stopped. There is no obvious need for any antibiotics."
 2,a,dont_switch,"Elderly gentleman, BP only seems to have turned corner in last few hours.  Without knowing anything else i would wait a bit longer before switching to orals"
 3,b,dont_switch,"HR high, ob unstable"
+4,a,dont_switch,marginal but at hour 26 patient had a drop in MAP and therefore at hour 36 of care I would persist with IV

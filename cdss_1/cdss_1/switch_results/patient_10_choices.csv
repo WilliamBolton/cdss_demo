@@ -4,3 +4,4 @@ tim,b,dont_switch,
 1,b,switch,I cannot notice any signs of infections from the vital signs. The patient might not need antibiotic.
 2,a,switch,obs improved
 3,b,switch,"afebrile, appears to be stabilising"
+4,a,dont_switch,MAP has been low only a few hours previously and therefore demonstrating signs of possible sepsis therefore continue on IV therapy

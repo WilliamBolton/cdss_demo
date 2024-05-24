@@ -4,3 +4,4 @@ tim,b,switch,
 1,b,switch,There is no need for IV for this patient.
 2,a,dont_switch,"Again, it depends what the term 'uncomplicated UTI' means.  Although blood pressure is down, this is not accompanied by a rise in HR.  She is a young woman and this BP may be normal for her"
 3,b,switch,no temperatures during admission. IV not required unless resistant organism/interations with oral options/oral options CI
+4,a,switch,no concerning features requiring IV therapy. Although the systolic BP has been reducing I think it is likely within normal range for a young person
