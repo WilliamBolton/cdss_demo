@@ -5,3 +5,5 @@ tim,b,switch,
 2,a,switch,Obs normal
 3,b,switch,
 4,a,dont_switch,GCS still low suggesting possible issues with PO route and still running with low MAP
+5,b,dont_switch,unexplained fluctuant GCS is concerning 
+6,a,switch,parameters stabilising

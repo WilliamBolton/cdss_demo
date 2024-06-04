@@ -1,1 +1,9 @@
 user_id,user_archetype,patient,component,hover_duration
+demo,a,1,patient_details_age:,0.015
+demo,a,1,patient_details_sex:,0.009
+demo,a,1,patient_details_ethnicity:,0.006
+demo,a,1,patient_details_co-morbidities:,0.018
+demo,a,1,patient_details_imddecil:,0.019
+demo,a,1,patient_details_diagnosis:,1.167
+demo,a,1,echarts_plot,0.547
+demo,a,1,prediction_alert,0.94

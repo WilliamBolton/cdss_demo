@@ -5,3 +5,5 @@ tim,b,dont_switch,
 2,a,switch,Becoming febrile.  Without any additionalo data I have to assume pt is not responding to current abx and need to switch
 3,b,dont_switch,"patient now has temperatures, would review with cultures, for potentially switching IV or adding second agent (atypical cover?/)"
 4,a,switch,As long as GCS does not impair his ability to take PO aux then a switch seems reasonable. The recent GCS is 15. If it were lower I would persist with IV
+5,b,dont_switch,signs that the infection has not started to resolve - continued pyrexia. I would look for other evidence of improvement such as CRP or white cell count. 
+6,a,dont_switch,Switch IV abx or need to be able to view more diagnostics and imaging/ needs to stabilise first. 

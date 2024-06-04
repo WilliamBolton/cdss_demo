@@ -5,3 +5,5 @@ tim,b,switch,
 2,a,dont_switch,"Patient is still unwell withlow BPs, tachycardic and desaturated during last few hours.  I would NOT switch to oral abx (but i would probably switch to a broader IV abx)"
 3,b,switch,"patient improving, afebrile and had 6 days of IV"
 4,a,dont_switch,at hour 125 (of 126) the systolic BP was 95 and MAP 69. I would persist with IV route due to possible severity of infection
+5,b,dont_switch,"Still remains tachycardic, I would look to other data like WBC and CRP to help guide this decision. If they were both falling I may switch"
+6,a,dont_switch,Review cultures/ sensitivities / imaging / diagnostics. If none available ? stop and reculture.

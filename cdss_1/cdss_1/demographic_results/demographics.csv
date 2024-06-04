@@ -4,3 +4,5 @@ user_id,user_archetype,age,sex,medical_speciality,grade,ai_familiarity
 2,a,38,m,ID / micro,ST6,2
 3,b,37,Female,Infection,8b,1
 4,a,38,Male,Respiratory,Consultant,2
+5,b,45,male,ICU,Consultant,3
+6,a,43,M,Pharmacy,Consultant,
