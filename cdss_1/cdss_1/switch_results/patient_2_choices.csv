@@ -7,3 +7,5 @@ tim,b,switch,
 4,a,switch,patient has received IV abx for at least 3 days. Their blood pressure has improved after being hypotensive and they are no long er displaying signs of sepsis. Oral switch is therefore reasonable 
 5,b,switch,Signs of clinical improvement
 6,a,switch,Vitals all within normal limits
+7,b,switch,Vitals all stable - incl temp
+7,b,dont_switch,remove
