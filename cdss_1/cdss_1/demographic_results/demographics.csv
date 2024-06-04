@@ -6,3 +6,4 @@ user_id,user_archetype,age,sex,medical_speciality,grade,ai_familiarity
 4,a,38,Male,Respiratory,Consultant,2
 5,b,45,male,ICU,Consultant,3
 6,a,43,M,Pharmacy,Consultant,
+30,a,,,,,
