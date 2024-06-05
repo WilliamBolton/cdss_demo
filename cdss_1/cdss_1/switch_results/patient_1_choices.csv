@@ -8,4 +8,4 @@ tim,b,dont_switch,
 5,b,dont_switch,Signs of clinical worsening with increasing temperature and heart rate. I would consider changing to a new IV antibiotic
 6,a,dont_switch,HR/Temp/RR raised
 7,b,dont_switch,High temperature - reassess in 24hours
-7,b,dont_switch,remove
+8,a,dont_switch,"Rising temperature, HR and rest rate "

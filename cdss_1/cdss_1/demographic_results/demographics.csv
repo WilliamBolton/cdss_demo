@@ -7,3 +7,4 @@ user_id,user_archetype,age,sex,medical_speciality,grade,ai_familiarity
 5,b,45,male,ICU,Consultant,3
 6,a,43,M,Pharmacy,Consultant,
 7,b,34,Female,ID Pharmacist,8a,3
+8,a,37,Female,Pharmacy,8b,2

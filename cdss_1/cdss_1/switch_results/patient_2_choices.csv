@@ -8,4 +8,4 @@ tim,b,switch,
 5,b,switch,Signs of clinical improvement
 6,a,switch,Vitals all within normal limits
 7,b,switch,Vitals all stable - incl temp
-7,b,dont_switch,remove
+8,a,dont_switch,"Would need more information on nature of UTI i.e complicated but need to understand why. Would also like to see wBC, CRP and urine culture/sensitivities before a switch could be considered"
