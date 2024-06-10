@@ -1,2 +1,7 @@
 user_id,user_archetype,patient,link_clicks,timestamp
-10,a,2,guidelinesLink_simple,2024-02-18 01:48:55.425565+00:00
+10,a,4,predictiondetailsLink,2024-06-10 10:06:59.923781+00:00
+10,a,6,predictiondetailsLink,2024-06-10 10:13:56.576138+00:00
+10,a,7,predictiondetailsLink,2024-06-10 10:18:03.029031+00:00
+10,a,10,predictiondetailsLink,2024-06-10 10:25:46.417249+00:00
+10,a,11,predictiondetailsLink,2024-06-10 10:29:21.675275+00:00
+10,a,11,guidelinedetailsLink,2024-06-10 10:30:57.781255+00:00

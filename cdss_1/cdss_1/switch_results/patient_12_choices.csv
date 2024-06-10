@@ -9,3 +9,6 @@ tim,b,switch,
 6,a,switch,parameters stabilising
 7,b,dont_switch,Low GCS +temp  rising - reassess in 24hours
 8,a,dont_switch,Low GCS that has improved on IV abx. Would like to know how patient is doing clinically + infection markers before considering oral switch
+9,b,dont_switch,Would d/w Drs prior to switching to see what the diagnosis is. 
+10,a,switch,Stable vitals for last 24 hrs or so.
+11,b,dont_switch,not enough info - CRP WCC and what is being treated

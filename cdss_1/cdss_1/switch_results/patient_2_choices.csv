@@ -9,3 +9,6 @@ tim,b,switch,
 6,a,switch,Vitals all within normal limits
 7,b,switch,Vitals all stable - incl temp
 8,a,dont_switch,"Would need more information on nature of UTI i.e complicated but need to understand why. Would also like to see wBC, CRP and urine culture/sensitivities before a switch could be considered"
+9,b,switch,"Long preceding course of IVs abx, afeb, other observations ok"
+10,a,switch,A good course (5 days of IV abx has been given). All metrics/observations are reassuring. 
+11,b,switch,seems to be improving but would like to see WCC and CRP

@@ -8,3 +8,6 @@ user_id,user_archetype,age,sex,medical_speciality,grade,ai_familiarity
 6,a,43,M,Pharmacy,Consultant,
 7,b,34,Female,ID Pharmacist,8a,3
 8,a,37,Female,Pharmacy,8b,2
+9,b,45,m,microbiology,cons,2
+10,a,36,M,Medical microbiology,Consultant,4
+11,b,50,F,ID,Consultant,1

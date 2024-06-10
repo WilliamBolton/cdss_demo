@@ -9,3 +9,7 @@ tim,b,switch,
 6,a,switch,Vitals all ok
 7,b,switch,"Temp normal - no spikes, alert, GCS 15"
 8,a,switch,No systemic features of severe infection. Would review infection markers + clinical response and step down to oral for a few more days 
+9,b,switch,"Obs fine, long preceding course of abx. Would like to know how her leg is however. "
+
+10,a,switch,"I would be interested in knowing whether the appearance of cellulitis is stable/improving (e.g., is it spreading or not?). All metrics are reassuring, although one has to be cautious in diabetic patients. I reviewed the AI recommendations, and note that none of the similar patients had cellulitis as an infection diagnosis. "
+11,b,switch,"not enough info - WCC, CRP and appearance of cellulitis"

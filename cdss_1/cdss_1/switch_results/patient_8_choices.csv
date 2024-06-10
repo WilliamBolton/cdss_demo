@@ -9,3 +9,6 @@ tim,b,switch,
 6,a,dont_switch,Review cultures/ sensitivities / imaging / diagnostics. If none available ? stop and reculture.
 7,b,switch,Vitals all stable - nil temp spikes
 8,a,dont_switch,Trends in observations suggest oral switch could be made but need further information regarding infection diagnosis and infection markers
+9,b,dont_switch,Not enough info. Would like to know diagnosis from Drs
+10,a,switch,"I don't think i can pick out specific trends in vital signs. Borderline decision. In this case, knowing WCC/CRP might help decision."
+11,b,switch,"Probably ok, but I would want CRP, WCC"
