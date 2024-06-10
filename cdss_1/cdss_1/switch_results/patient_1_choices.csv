@@ -12,3 +12,4 @@ tim,b,dont_switch,
 9,b,dont_switch,remains tachycardia and febrile
 10,a,dont_switch,"Patient remains febrile, and is high risk of complications (due to obesity). I would be interested in seeing chest x-ray and results for viral PCR swab, but these probably would not change my decision at this point. "
 11,b,dont_switch,Still febrile
+12,a,dont_switch,"24 hrs of IV treatment, patient still spiking fever (unresolved infection)"

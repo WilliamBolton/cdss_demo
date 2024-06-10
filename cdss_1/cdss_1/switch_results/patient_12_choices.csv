@@ -12,3 +12,4 @@ tim,b,switch,
 9,b,dont_switch,Would d/w Drs prior to switching to see what the diagnosis is. 
 10,a,switch,Stable vitals for last 24 hrs or so.
 11,b,dont_switch,not enough info - CRP WCC and what is being treated
+12,a,switch,"day 3, patient is stable"

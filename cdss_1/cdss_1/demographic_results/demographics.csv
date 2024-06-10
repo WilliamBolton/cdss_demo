@@ -11,3 +11,4 @@ user_id,user_archetype,age,sex,medical_speciality,grade,ai_familiarity
 9,b,45,m,microbiology,cons,2
 10,a,36,M,Medical microbiology,Consultant,4
 11,b,50,F,ID,Consultant,1
+12,a,38,male,intensive care,consultant,3
