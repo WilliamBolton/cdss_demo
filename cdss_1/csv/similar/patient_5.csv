@@ -1,4 +1,4 @@
-Similar patient,Age,Sex,Ethnicity,Index of multiple deprivation,Co-morbidities,Infection diganosis,AI CDSS prediction,Real action,Prediction correct
+Similar patient,Age,Sex,Ethnicity,Index of multiple deprivation,Co-morbidities,Infection diganosis,AI CDSS prediction,Real action,Prediction matched real action
 1,30,Female,Asian,5,Asthma,N/A,Switch,Switched,Yes
 2,48,Female,White,4,Asthma,Pneumonia,Switch,Didnt switch,No
 3,53,Female,White,3,Asthma,N/A,Switch,Switched,Yes

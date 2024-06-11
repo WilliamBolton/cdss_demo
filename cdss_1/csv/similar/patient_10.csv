@@ -1,4 +1,4 @@
-Similar patient,Importance,Systolic Blood Pressure Feature Value,Heart Rate Feature Value,Mean Blood Pressure Feature Value,SpO2 Feature Value,Glasgow Coma Score – Motor Response Feature Value,AI CDSS prediction,AI CDSS prediction (higher threshold),Real action,Prediction correct,Higher threshold prediction correct
+Similar patient,Importance,Systolic Blood Pressure Feature Value,Heart Rate Feature Value,Mean Blood Pressure Feature Value,SpO2 Feature Value,Glasgow Coma Score – Motor Response Feature Value,AI CDSS prediction,AI CDSS prediction (higher threshold),Real action,Prediction matched real action,Higher threshold prediction matched real action
 1,0.30,0.32,0.52,0.13,0.46,0.37,Dont switch,Dont switch,Switched,No,No
 2,0.20,0.32,0.51,0.08,0.47,0.41,Dont switch,Dont switch,Didnt switch,Yes,Yes
 3,0.18,0.31,0.52,0.15,0.47,0.41,Dont switch,Dont switch,Didnt switch,Yes,Yes

@@ -1,4 +1,4 @@
-Similar patient,Age,Sex,Ethnicity,IMDDECIL,Co-morbidities,Infection diganosis,AI CDSS prediction,Real action,Prediction correct
+Similar patient,Age,Sex,Ethnicity,IMDDECIL,Co-morbidities,Infection diganosis,AI CDSS prediction,Real action,Prediction matched real action
 1, 46, Female, White,4,"Hypertension", N/A, Switch, Switched, Yes
 2, 50, Female, Other, 6,"Hypertension, Osteoarthritis", UTI, Switch, Didnt switch, No
 3, 83, Male, Asian, 5,"Hypertension, Anemia, Diabetes mellitus type 2", Sepsis, Switch, Switched, Yes

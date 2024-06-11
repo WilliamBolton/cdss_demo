@@ -1,4 +1,4 @@
-Similar patient,Age,Sex,Ethnicity,Index of multiple deprivation,Co-morbidities,Infection diganosis,AI CDSS prediction,Real action,Prediction correct
+Similar patient,Age,Sex,Ethnicity,Index of multiple deprivation,Co-morbidities,Infection diganosis,AI CDSS prediction,Real action,Prediction matched real action
 1,86,Male,White,8,"Atrial fibrillation, Hypertension, Ischemic heart disease, Abdominal aortic aneurysm, Chronic kidney disease, Osteoarthritis, Anaemia, ",N/A,Dont switch,Switched,No
 2,61,Male,Other,4,"Hypertension, Ischemic heart disease, Hypercholesterolemia, Kidney disease, Acute kidney injury, Hypothyroidism, Pleural effusion, Pulmonary edema, Charcot's arthropathy",N/A,Switch,Switched,Yes
 3,90,Female,Black,2,"Atrial fibrillation, Hypertension, Hypercholesterolemia, Chronic renal failure, Osteoarthritis, Hypothyroidism, Gout",N/A,Dont switch,Didnt switch,Yes

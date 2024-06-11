@@ -1,4 +1,4 @@
-Similar patient,Age,Sex,Ethnicity,IMDDECIL,Co-morbidities,Infection diganosis,AI CDSS prediction,Real action,Prediction correct
+Similar patient,Age,Sex,Ethnicity,IMDDECIL,Co-morbidities,Infection diganosis,AI CDSS prediction,Real action,Prediction matched real action
 1,25,Female,White,3,Diabetes,UTI,Switch,Switched,Yes
 2,50,Female,Asian,5,,UTI,Switch,Switched,Yes
 3,42,Male,Black,2,Diabetes,Pneumonia,Switch,Switched,Yes

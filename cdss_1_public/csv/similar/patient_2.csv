@@ -1,4 +1,4 @@
-Similar patient,Age,Sex,Ethnicity,IMDDECIL,Co-morbidities,Infection diganosis,AI CDSS prediction,Real action,Prediction correct
+Similar patient,Age,Sex,Ethnicity,IMDDECIL,Co-morbidities,Infection diganosis,AI CDSS prediction,Real action,Prediction matched real action
 1, 80, Male, White,6,"Hypertension, Microalbuminuria", N/A, Switch, Switched, Yes
 2, 64, Female, White, 7,"Hypertension, Osteoarthritis", UTI, Switch, Didnt switch, No
 3, 87, Female, White, 4,"Hypertension, Anemia, Diabetes mellitus type 2, Ischemic heart disease, Chronic kidney disease", Sepsis, Switch, Switched, Yes

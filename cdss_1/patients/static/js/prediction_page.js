@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     td.classList.add(getColorClass(value));
                 }
 
-                if (key === 'Prediction correct' || key === 'Higher threshold prediction correct') {
+                if (key === 'Prediction matched real action' || key === 'Higher threshold prediction matched real action') {
                     const colorClass = getColorClass2(value);
                     // console.log(`Cell: ${key}, Value: ${value}, Color Class: ${colorClass}`);
                     if (colorClass) {
