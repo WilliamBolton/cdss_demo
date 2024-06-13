@@ -14,3 +14,4 @@ tim,b,switch,
 11,b,switch,Should be ok - might want sensitivities and CRP
 12,a,switch,clinical improvement
 13,b,switch,stop?
+14,a,switch,uncomplicated UTI so could stop. Would need to check crp and WBC

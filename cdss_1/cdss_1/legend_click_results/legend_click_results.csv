@@ -22,5 +22,5 @@ user_id,user_archetype,patient,variable,timestamp
 3,b,2,Heart Rate,2024-05-17T11:52:08.270Z
 3,b,2,Temperature,2024-05-17T11:52:13.039Z
 3,b,2,Diastolic Blood Pressure,2024-05-17T11:52:22.510Z
-demo,a,2,Heart Rate,2024-05-28T14:03:51.848Z
 11,b,9,Mean Blood Pressure,2024-06-10T11:45:15.453Z
+14,a,2,SpO2,2024-06-13T08:40:29.661Z
