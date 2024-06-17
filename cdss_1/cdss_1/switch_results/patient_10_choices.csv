@@ -15,3 +15,6 @@ tim,b,dont_switch,
 12,a,switch,"almost 48th hour post admission, patient seems stable"
 13,b,switch,I would want t reassess if low BP and sats are potentially sepsis driven and whether an alternative iv needed?
 14,a,dont_switch,Reassess in 24 hours
+15,b,switch,inflammatory markers would be useful here but given observations ok and no real change to variable response rate I would stop and observe
+15,b,dont_switch,Latest response rate and sats are concerning. Needs further investigation to exclude infection before switch
+16,a,switch,"Physiologically stable, if still needs abx, could be po."

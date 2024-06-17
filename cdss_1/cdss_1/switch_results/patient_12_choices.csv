@@ -15,3 +15,5 @@ tim,b,switch,
 12,a,switch,"day 3, patient is stable"
 13,b,switch,"not much vitals wise except GCS, reassess if clinically infection or not, de-escalation depends if CNS infection is a differential"
 14,a,switch,CRP + WBc needed
+15,b,dont_switch,"Unclear what GCS baseline is, need more information."
+16,a,switch,Fluctuating and low GCS is the only concern I have about this patient.  They could be given enteral abx via an ng tube (if necessary) as they will also need to be fed as part of their care.

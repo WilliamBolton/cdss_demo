@@ -15,3 +15,5 @@ tim,b,switch,
 12,a,dont_switch,< 48h post admission
 13,b,switch,Reassess clinically  (patient and other parameters) the need
 14,a,dont_switch,not haemodynaicall stable 
+15,b,switch,No evidence of infection based on observations alone.  Given co-morbidities would need CRP etc to inform further. Repeat samples off antimicrobials
+16,a,switch,No clear indication for iv antibiotics to me at this point.

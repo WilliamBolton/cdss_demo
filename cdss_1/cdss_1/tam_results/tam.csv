@@ -14,3 +14,5 @@ user_id,user_archetype,q1,q2,q3,q4,q5,q6,q7,q8,q9,q10,q11,q12,q13,q14,q15,q16,q1
 12,a,2,3,3,3,2,2,2,2,2,4,3,4,4,4,4,3,4,2,3,2,2,4,3,2,3,2,,2,4
 13,b,3,3,2,2,2,4,2,2,4,4,2,4,4,3,4,3,4,3,3,3,2,4,4,4,3,4,I think could be a helpful tool in principle but needs some development,4,4
 14,a,4,4,2,5,5,5,5,4,2,4,2,4,4,4,4,3,2,2,2,4,2,2,3,4,3,4,"Needs to include CRP and WBC. Sensitivities. Need diagnosis and some require longer treatments.  Swabs, cultures and sensitivities - what have you grown. ",4,4
+15,b,4,4,3,4,5,4,4,5,4,4,4,4,4,4,4,3,3,4,3,4,2,4,4,4,3,4,,4,4
+16,a,4,3,2,3,3,2,2,2,2,2,2,4,4,4,4,3,2,2,2,3,2,2,3,2,2,2,We have a love affair with iv antibiotics in healthcare and there is now an emerging body of evidence that po abx are not necessarily inferior to iv abx.  We need to be careful that a model trained on historical practice isn't encumbered by this bias.,3,3

@@ -15,3 +15,5 @@ tim,b,switch,
 12,a,switch,clinical improvement
 13,b,switch,stop?
 14,a,switch,uncomplicated UTI so could stop. Would need to check crp and WBC
+15,b,switch,Stop antibiotics at this point as uncomplicated and 3 days is enough
+16,a,switch,"Clinically well, uncomplicated infection.  Could stop.  Were iv abx ever indicated?"

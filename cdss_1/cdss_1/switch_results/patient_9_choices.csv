@@ -15,3 +15,5 @@ tim,b,switch,
 12,a,switch,"day >2, patient is stable"
 13,b,switch,appears clinically stable
 14,a,switch,Look at CRP and WBC. Temp reducing. 
+15,b,switch,No evidence of infection on initial observations and 57 with no comorbidities. Stop and observe
+16,a,switch,"Clinically stable.  Indication for abx unclear, but physiologically certainly ready to switch to po."

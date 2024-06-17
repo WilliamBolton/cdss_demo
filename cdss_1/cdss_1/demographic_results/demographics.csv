@@ -14,3 +14,5 @@ user_id,user_archetype,age,sex,medical_speciality,grade,ai_familiarity
 12,a,38,male,intensive care,consultant,3
 13,b,49,f,Infectious Diseases,Consultant,1
 14,a,48,female,Antimicrobial pharmacist,band 8a,2
+15,b,47,Female,Infectious Diseases ,Consultant,1
+16,a,52,M,Clinical Infection,Consultant,2

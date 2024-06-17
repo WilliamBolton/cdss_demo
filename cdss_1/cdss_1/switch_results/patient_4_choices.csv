@@ -16,3 +16,6 @@ tim,b,switch,
 12,a,switch,"day 4, patient seems to improving (?), availability of oral drugs with same spectrum"
 13,b,switch,"Assuming the cellulitis is clinically better, CRP responding"
 14,a,dont_switch,not enough info to make a decision here. As diabetic would look to see if any swabs. Is it a simple cellulitis? Need WCC and CRP. Diabetic patients often have gram negative organisms
+15,b,switch,Clinical improvement
+15,b,switch,Would normally stop antimicrobials at this point
+16,a,switch,"Clinically stable, has had 5 days of iv abx.  Could stop or switch to po for 2-5 more days."
