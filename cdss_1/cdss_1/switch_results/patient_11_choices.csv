@@ -17,3 +17,4 @@ tim,b,dont_switch,
 14,a,switch,CRP + WBC needed
 15,b,switch,"Systolic improved, sats remain unchanged and afebrile"
 16,a,switch,Clinically stable (despite low SpO2) - could switch to po abx to complete treatment.
+17,b,dont_switch,was hypotensive and tacchy and decreased GCS on admission. would prob review in another 24-36 hrs (with micro and other investigations) and switch if remains improved

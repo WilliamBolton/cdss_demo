@@ -17,3 +17,4 @@ tim,b,switch,
 14,a,switch,parameters reducing. Would need to look at CRP and WCC  too. Probably could stop 
 15,b,switch,Patient clinically stable 
 16,a,switch,Afebrile for several days.  No physiological markers of severe infection.
+17,b,switch,"haemodynamically stable, if no concerning microbiology/radiology would prob stop antibiotics totally. "

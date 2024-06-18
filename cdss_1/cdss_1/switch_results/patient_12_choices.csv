@@ -17,3 +17,4 @@ tim,b,switch,
 14,a,switch,CRP + WBc needed
 15,b,dont_switch,"Unclear what GCS baseline is, need more information."
 16,a,switch,Fluctuating and low GCS is the only concern I have about this patient.  They could be given enteral abx via an ng tube (if necessary) as they will also need to be fed as part of their care.
+17,b,dont_switch,unwell with poor GCS (Assuming this is new for pt) and now temp creeping slightly with fluctuating BP. if infection thought to be driving would prob ensure IV is suitable for CNS penetration

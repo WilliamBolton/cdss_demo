@@ -17,3 +17,4 @@ tim,b,switch,
 14,a,switch,uncomplicated UTI so could stop. Would need to check crp and WBC
 15,b,switch,Stop antibiotics at this point as uncomplicated and 3 days is enough
 16,a,switch,"Clinically well, uncomplicated infection.  Could stop.  Were iv abx ever indicated?"
+17,b,switch,if no concerning microbiology i would stop antibiotics at 3 days in this scenario
