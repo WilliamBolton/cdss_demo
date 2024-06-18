@@ -18,3 +18,5 @@ tim,b,switch,
 15,b,switch,No evidence of infection based on observations alone.  Given co-morbidities would need CRP etc to inform further. Repeat samples off antimicrobials
 16,a,switch,No clear indication for iv antibiotics to me at this point.
 17,b,switch,vitals don't give compelling picture of i infective process. if no evidence of infection on board would stop antibiotics  esp someone of this age where you'd worry about c diff
+18,a,dont_switch,not enough clinical details to advise - why on; clinical diagnosis; symptoms; bloods etc
+19,b,switch,Stop. Would need to know clinical information and WCC CRP

@@ -18,3 +18,5 @@ tim,b,switch,
 15,b,switch,Patient clinically stable 
 16,a,switch,Afebrile for several days.  No physiological markers of severe infection.
 17,b,switch,"haemodynamically stable, if no concerning microbiology/radiology would prob stop antibiotics totally. "
+18,a,switch,"stop antibiotics: ;would like to see that CRP <,50% of peak"
+19,b,switch,NEWS score suitable. No WCC and CRP though

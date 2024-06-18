@@ -18,3 +18,7 @@ tim,b,switch,
 15,b,dont_switch,Patient had reduced GCS - unclear if this is meningoencephalitis. If so would need 10 days empirical treatment at least. Need CSF to clarify diagnosis and treatment duration
 16,a,switch,"Clinically stable.  Once indication clear, duration can be decided, but certainly no need for further iv abx."
 17,b,switch,vitals/GCS improved. unclear if infection driving any of this so would stop and review
+18,a,dont_switch,not enough information
+18,a,dont_switch,i don't knew whether he has a serious infection e.g. meningitis
+18,a,dont_switch,need more info
+19,b,switch,Stop. ? evidence of infection. Already had 6 days ABx. Need WCC and CRP and more clinical information

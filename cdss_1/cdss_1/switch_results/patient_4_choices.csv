@@ -20,3 +20,5 @@ tim,b,switch,
 15,b,switch,Would normally stop antimicrobials at this point
 16,a,switch,"Clinically stable, has had 5 days of iv abx.  Could stop or switch to po for 2-5 more days."
 17,b,switch,if cellulitis is clinically improving too i would switch to appropriate oral abx based on above
+18,a,switch,appears ready for PO
+19,b,switch,Infection parameters settled

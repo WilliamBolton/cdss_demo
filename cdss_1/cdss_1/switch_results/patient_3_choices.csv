@@ -18,3 +18,5 @@ tim,b,dont_switch,
 15,b,dont_switch,Patient remains febrile with reducing sats. 
 16,a,switch,"He's had 3 days of iv abx, although the patient remains febrile, all of his other markers are favourable.  If no empyema (or effusion clinically) I would switch to po abx."
 17,b,switch,"would switch to different IV. increasingly febrile, labile BP and GCS  despite 3 days cef, would need repeat septic screen and risk assessment for MDRO"
+18,a,switch,still pyrexial unsure if this is ongoing pneumonia or another infection (e.g. C. difficile; line infection; virus). Would like procalcitonin; CRP and clinical details
+19,b,dont_switch,Temperature still raised
