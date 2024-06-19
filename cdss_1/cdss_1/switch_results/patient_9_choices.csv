@@ -20,3 +20,4 @@ tim,b,switch,
 17,b,switch,"again unclear if infection is a driver, vitals stabilised been ion IV for 4 days so would likely switch to stop"
 18,a,switch,
 19,b,dont_switch,NEWS>3 in one parameter. Need more clinical information
+20,a,dont_switch,"resp rate still high, needs clinical assessment"

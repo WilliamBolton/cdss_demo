@@ -20,3 +20,4 @@ tim,b,dont_switch,
 17,b,switch,"would switch to different IV. increasingly febrile, labile BP and GCS  despite 3 days cef, would need repeat septic screen and risk assessment for MDRO"
 18,a,switch,still pyrexial unsure if this is ongoing pneumonia or another infection (e.g. C. difficile; line infection; virus). Would like procalcitonin; CRP and clinical details
 19,b,dont_switch,Temperature still raised
+20,a,dont_switch,"temp and rest rate going up, might try a different IV option"
