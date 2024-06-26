@@ -24,3 +24,31 @@ user_id,user_archetype,patient,variable,timestamp
 3,b,2,Diastolic Blood Pressure,2024-05-17T11:52:22.510Z
 11,b,9,Mean Blood Pressure,2024-06-10T11:45:15.453Z
 14,a,2,SpO2,2024-06-13T08:40:29.661Z
+21,b,1,Mean Arterial Pressure,2024-06-26T07:44:46.553Z
+21,b,1,Mean Arterial Pressure,2024-06-26T07:44:47.178Z
+21,b,1,Mean Arterial Pressure,2024-06-26T07:44:47.856Z
+21,b,1,Mean Arterial Pressure,2024-06-26T07:44:50.448Z
+21,b,2,Mean Arterial Pressure,2024-06-26T07:47:25.440Z
+21,b,2,SpO2,2024-06-26T07:47:26.461Z
+21,b,2,Glasgow Coma Score,2024-06-26T07:47:27.474Z
+21,b,2,Respiratory Rate,2024-06-26T07:47:29.524Z
+21,b,2,Temperature,2024-06-26T07:47:39.714Z
+21,b,8,Glasgow Coma Score - verbal response,2024-06-26T08:09:32.681Z
+21,b,8,Glasgow Coma Score – eye opening,2024-06-26T08:09:36.230Z
+21,b,8,Glasgow Coma Score,2024-06-26T08:09:38.292Z
+21,b,8,Glasgow Coma Score - motor response,2024-06-26T08:09:44.744Z
+21,b,8,Mean Blood Pressure,2024-06-26T08:10:10.100Z
+21,b,8,Mean Blood Pressure,2024-06-26T08:10:11.912Z
+21,b,9,Temperature,2024-06-26T08:14:01.392Z
+21,b,9,Glasgow Coma Score - motor response,2024-06-26T08:14:02.661Z
+21,b,9,Glasgow Coma Score – eye opening,2024-06-26T08:14:04.184Z
+21,b,9,Glasgow Coma Score,2024-06-26T08:14:05.842Z
+21,b,9,Glasgow Coma Score - verbal response,2024-06-26T08:14:09.061Z
+21,b,9,Systolic Blood Pressure,2024-06-26T08:14:11.596Z
+21,b,9,Respiratory Rate,2024-06-26T08:14:15.337Z
+21,b,9,Respiratory Rate,2024-06-26T08:14:16.860Z
+21,b,9,Respiratory Rate,2024-06-26T08:14:21.704Z
+21,b,12,Glasgow Coma Score - motor response,2024-06-26T08:23:52.446Z
+21,b,12,Glasgow Coma Score - motor response,2024-06-26T08:23:53.954Z
+21,b,12,Glasgow Coma Score - motor response,2024-06-26T08:23:58.694Z
+21,b,12,Glasgow Coma Score - verbal response,2024-06-26T08:23:59.725Z
