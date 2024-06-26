@@ -1,0 +1,683 @@
+user_id,user_archetype,patient,component,hover_duration
+22,a,1,patient_details_diagnosis:,0.052
+22,a,1,patient_details_co-morbidities:,0.101
+22,a,1,vitals_table_Metric / Time (hours),2.5
+22,a,1,vitals_table_Temperature,0.697
+22,a,1,vitals_table_Respiratory Rate,3.665
+22,a,1,vitals_table_Heart Rate,1.625
+22,a,1,vitals_table_Heart Rate,0.066
+22,a,1,vitals_table_Systolic Blood Pressure,1.491
+22,a,1,vitals_table_Heart Rate,2.2
+22,a,1,vitals_table_Systolic Blood Pressure,2.114
+22,a,1,vitals_table_Diastolic Blood Pressure,3.538
+22,a,1,vitals_table_Mean Arterial Pressure,0.759
+22,a,1,vitals_table_SpO2,0.451
+22,a,1,vitals_table_Glasgow Coma Score,0.582
+22,a,1,vitals_table_Conscious Level,0.296
+22,a,1,vitals_table_Supplemental Oxygen,0.053
+22,a,1,vitals_table_Conscious Level,0.049
+22,a,1,vitals_table_Glasgow Coma Score,0.058
+22,a,1,vitals_table_Conscious Level,0.045
+22,a,1,vitals_table_Supplemental Oxygen,0.088
+22,a,1,vitals_table_Supplemental Oxygen,0.054
+22,a,1,vitals_table_Conscious Level,0.053
+22,a,1,echarts_plot,1.085
+22,a,1,echarts_plot,8.454
+22,a,1,guideline_alert,0.062
+22,a,1,prediction_alert,0.796
+22,a,1,guideline_alert,0.051
+22,a,1,guideline_alert,0.038
+22,a,1,guideline_alert,0.068
+22,a,1,guideline_alert,0.329
+22,a,1,prediction_alert,0.062
+22,a,1,similar_table_Similar patient,0.103
+22,a,1,similar_table_Similar patient,0.652
+22,a,1,similar_table_Similar patient,0.046
+22,a,1,similar_table_2,0.006
+22,a,1,similar_table_Similar patient,0.34
+22,a,1,LLM_positive_points,0.043
+22,a,1,LLM_positive_points,0.198
+22,a,1,vitals_table_Glasgow Coma Score,0.167
+22,a,1,vitals_table_Glasgow Coma Score,0.179
+22,a,1,vitals_table_Glasgow Coma Score,0.34
+22,a,1,vitals_table_SpO2,0.062
+22,a,1,vitals_table_Diastolic Blood Pressure,0.044
+22,a,1,vitals_table_Heart Rate,0.06
+22,a,1,vitals_table_Heart Rate,0.728
+22,a,1,echarts_plot,1.574
+22,a,1,vitals_table_Conscious Level,0.132
+22,a,1,echarts_plot,0.81
+22,a,1,guideline_alert,0.212
+22,a,1,guidelines_flowchart,0.061
+22,a,1,guidelines_flowchart,0.044
+22,a,1,guidelines_flowchart,0.043
+22,a,1,guidelines_flowchart,0.053
+22,a,1,guidelines_pdf,1.19
+22,a,1,guidelines_pdf,2.361
+22,a,1,guidelines_pdf,2.0
+22,a,1,guidelines_pdf,1.387
+22,a,1,vitals_table_Glasgow Coma Score,0.284
+22,a,1,vitals_table_Conscious Level,0.105
+22,a,1,vitals_table_Glasgow Coma Score,0.358
+22,a,1,vitals_table_Diastolic Blood Pressure,0.038
+22,a,1,vitals_table_Heart Rate,0.076
+22,a,1,vitals_table_Metric / Time (hours),0.089
+22,a,1,echarts_plot,0.066
+22,a,1,vitals_table_Mean Arterial Pressure,0.362
+22,a,2,patient_details_age:,0.039
+22,a,2,patient_details_antibiotic_treatment:,4.982
+22,a,2,vitals_table_Metric / Time (hours),0.041
+22,a,2,vitals_table_Metric / Time (hours),0.058
+22,a,2,vitals_table_Metric / Time (hours),0.148
+22,a,2,vitals_table_Respiratory Rate,0.051
+22,a,2,vitals_table_Respiratory Rate,0.137
+22,a,2,vitals_table_Temperature,0.576
+22,a,2,vitals_table_Temperature,2.238
+22,a,2,vitals_table_Metric / Time (hours),0.085
+22,a,2,vitals_table_Metric / Time (hours),0.063
+22,a,2,vitals_table_Metric / Time (hours),0.102
+22,a,2,vitals_table_Metric / Time (hours),0.099
+22,a,2,vitals_table_Metric / Time (hours),0.103
+22,a,2,vitals_table_Temperature,0.036
+22,a,2,vitals_table_Temperature,0.373
+22,a,2,vitals_table_Temperature,0.721
+22,a,2,vitals_table_Temperature,0.062
+22,a,2,vitals_table_Temperature,0.698
+22,a,2,vitals_table_Temperature,0.1
+22,a,2,vitals_table_Systolic Blood Pressure,0.101
+22,a,2,vitals_table_Systolic Blood Pressure,1.127
+22,a,2,vitals_table_Systolic Blood Pressure,1.585
+22,a,2,vitals_table_Systolic Blood Pressure,0.303
+22,a,2,echarts_plot,1.348
+22,a,2,echarts_plot,0.523
+22,a,2,echarts_plot,2.475
+22,a,3,patient_details_age:,0.074
+22,a,3,patient_details_ethnicity:,0.079
+22,a,3,patient_details_co-morbidities:,0.089
+22,a,3,patient_details_indices_of_multiple_deprivation_decile:,0.064
+22,a,3,vitals_table_Metric / Time (hours),0.062
+22,a,3,vitals_table_Metric / Time (hours),0.042
+22,a,3,vitals_table_Metric / Time (hours),0.724
+22,a,3,vitals_table_Temperature,0.369
+22,a,3,vitals_table_Temperature,0.067
+22,a,3,vitals_table_Temperature,0.051
+22,a,3,vitals_table_Respiratory Rate,0.083
+22,a,3,vitals_table_Heart Rate,0.056
+22,a,3,vitals_table_Heart Rate,0.1
+22,a,3,vitals_table_Respiratory Rate,1.236
+22,a,3,vitals_table_Temperature,2.077
+22,a,3,vitals_table_Respiratory Rate,0.435
+22,a,3,vitals_table_Temperature,0.084
+22,a,3,vitals_table_Temperature,0.098
+22,a,3,vitals_table_Metric / Time (hours),1.561
+22,a,3,vitals_table_Metric / Time (hours),0.111
+22,a,3,vitals_table_Metric / Time (hours),0.027
+22,a,3,vitals_table_Temperature,0.061
+22,a,3,vitals_table_Respiratory Rate,0.04
+22,a,3,vitals_table_Temperature,0.899
+22,a,3,vitals_table_Respiratory Rate,0.06
+22,a,3,vitals_table_Systolic Blood Pressure,0.062
+22,a,3,vitals_table_Diastolic Blood Pressure,0.058
+22,a,3,vitals_table_Diastolic Blood Pressure,0.081
+22,a,3,vitals_table_Mean Arterial Pressure,0.061
+22,a,3,vitals_table_SpO2,0.733
+22,a,3,vitals_table_SpO2,0.06
+22,a,3,vitals_table_Glasgow Coma Score,0.2
+22,a,3,vitals_table_Glasgow Coma Score,0.037
+22,a,3,vitals_table_Glasgow Coma Score,0.061
+22,a,3,vitals_table_Glasgow Coma Score,0.038
+22,a,3,vitals_table_Glasgow Coma Score,0.458
+22,a,3,vitals_table_Glasgow Coma Score,0.138
+22,a,3,vitals_table_Glasgow Coma Score,11.21
+22,a,3,vitals_table_Conscious Level,1.989
+22,a,3,vitals_table_Glasgow Coma Score,0.099
+22,a,3,vitals_table_Diastolic Blood Pressure,0.061
+22,a,3,vitals_table_Heart Rate,0.045
+22,a,3,vitals_table_Respiratory Rate,0.054
+22,a,3,vitals_table_Heart Rate,0.059
+22,a,3,vitals_table_SpO2,0.043
+22,a,3,vitals_table_Supplemental Oxygen,0.343
+22,a,3,vitals_table_Supplemental Oxygen,0.086
+22,a,3,guidelines_pdf_simple,15.601
+22,a,4,patient_details_ethnicity:,0.955
+22,a,4,patient_details_co-morbidities:,0.105
+22,a,4,patient_details_co-morbidities:,1.367
+22,a,4,patient_details_diagnosis:,2.535
+22,a,4,patient_details_antibiotic_treatment:,0.264
+22,a,4,vitals_table_Heart Rate,5.018
+22,a,4,vitals_table_Systolic Blood Pressure,0.982
+22,a,4,vitals_table_Diastolic Blood Pressure,0.798
+22,a,4,vitals_table_Glasgow Coma Score,0.534
+22,a,4,vitals_table_Supplemental Oxygen,0.487
+22,a,4,echarts_plot,2.222
+22,a,4,echarts_plot,3.964
+22,a,4,echarts_plot,0.844
+22,a,4,guideline_alert,0.037
+22,a,4,guideline_alert,0.3
+22,a,4,prediction_alert,0.456
+22,a,4,similar_table_Similar patient,0.06
+22,a,4,LLM_positive_points,0.061
+22,a,4,vitals_table_Diastolic Blood Pressure,0.084
+22,a,4,vitals_table_Diastolic Blood Pressure,0.063
+22,a,4,vitals_table_Systolic Blood Pressure,0.077
+22,a,4,vitals_table_Heart Rate,0.431
+22,a,4,vitals_table_Respiratory Rate,0.083
+22,a,4,vitals_table_Temperature,0.029
+22,a,4,vitals_table_Temperature,1.615
+22,a,4,vitals_table_Respiratory Rate,0.478
+22,a,4,vitals_table_Systolic Blood Pressure,0.063
+22,a,4,vitals_table_Respiratory Rate,0.095
+22,a,4,vitals_table_Metric / Time (hours),0.039
+22,a,4,vitals_table_Metric / Time (hours),0.061
+22,a,5,patient_details_co-morbidities:,0.088
+22,a,5,patient_details_diagnosis:,1.697
+22,a,5,vitals_table_Metric / Time (hours),0.116
+22,a,5,vitals_table_Temperature,0.9
+22,a,5,vitals_table_Respiratory Rate,0.883
+22,a,5,vitals_table_Systolic Blood Pressure,5.897
+22,a,5,vitals_table_Diastolic Blood Pressure,2.901
+22,a,5,vitals_table_Mean Arterial Pressure,0.698
+22,a,5,vitals_table_Glasgow Coma Score,0.7
+22,a,5,vitals_table_Conscious Level,0.898
+22,a,5,vitals_table_Supplemental Oxygen,0.701
+22,a,5,echarts_plot,1.591
+22,a,5,echarts_plot,0.779
+22,a,5,guidelines_pdf_simple,2.333
+22,a,5,vitals_table_Mean Arterial Pressure,0.1
+22,a,5,vitals_table_Diastolic Blood Pressure,0.039
+22,a,5,vitals_table_Systolic Blood Pressure,0.326
+22,a,5,vitals_table_Systolic Blood Pressure,0.009
+22,a,5,vitals_table_Systolic Blood Pressure,0.26
+22,a,5,vitals_table_Diastolic Blood Pressure,0.161
+22,a,5,vitals_table_Systolic Blood Pressure,0.038
+22,a,5,vitals_table_Heart Rate,0.064
+22,a,5,vitals_table_Heart Rate,0.036
+22,a,5,vitals_table_Heart Rate,0.096
+22,a,5,vitals_table_Heart Rate,0.083
+22,a,5,vitals_table_Systolic Blood Pressure,0.026
+22,a,5,vitals_table_Systolic Blood Pressure,0.094
+22,a,5,vitals_table_Systolic Blood Pressure,0.007
+22,a,5,vitals_table_Diastolic Blood Pressure,0.184
+22,a,5,vitals_table_Systolic Blood Pressure,0.029
+22,a,5,vitals_table_Systolic Blood Pressure,0.077
+22,a,5,vitals_table_Systolic Blood Pressure,1.303
+22,a,5,vitals_table_Systolic Blood Pressure,0.248
+22,a,5,vitals_table_Systolic Blood Pressure,17.237
+22,a,6,patient_details_diagnosis:,0.16
+22,a,6,prediction_alert,0.039
+22,a,6,prediction_alert,0.061
+22,a,6,prediction_alert,0.1
+22,a,6,similar_table_2,0.935
+22,a,6,similar_table_1,0.071
+22,a,6,similar_table_1,0.039
+22,a,6,vitals_table_Diastolic Blood Pressure,0.088
+22,a,6,vitals_table_Systolic Blood Pressure,0.018
+22,a,6,vitals_table_Respiratory Rate,0.088
+22,a,6,vitals_table_Respiratory Rate,0.248
+22,a,6,vitals_table_Heart Rate,0.254
+22,a,6,vitals_table_Respiratory Rate,0.053
+22,a,6,vitals_table_Temperature,0.633
+22,a,6,echarts_plot,0.33
+22,a,6,vitals_table_Heart Rate,0.362
+22,a,6,vitals_table_Systolic Blood Pressure,0.053
+22,a,6,vitals_table_Diastolic Blood Pressure,0.246
+22,a,6,vitals_table_Systolic Blood Pressure,0.099
+22,a,6,vitals_table_Respiratory Rate,0.198
+22,a,6,vitals_table_Respiratory Rate,0.042
+22,a,6,vitals_table_Temperature,0.055
+22,a,6,patient_details_antibiotic_treatment:,0.351
+22,a,6,patient_details_antibiotic_treatment:,0.547
+22,a,6,patient_details_antibiotic_treatment:,0.2
+22,a,6,patient_details_antibiotic_treatment:,0.237
+22,a,6,patient_details_antibiotic_treatment:,0.549
+22,a,6,patient_details_diagnosis:,0.135
+22,a,6,patient_details_antibiotic_treatment:,0.1
+22,a,6,patient_details_antibiotic_treatment:,0.098
+22,a,6,patient_details_antibiotic_treatment:,0.151
+22,a,6,patient_details_antibiotic_treatment:,0.096
+22,a,6,patient_details_antibiotic_treatment:,1.399
+22,a,6,patient_details_diagnosis:,0.138
+22,a,6,patient_details_diagnosis:,0.539
+22,a,6,patient_details_antibiotic_treatment:,0.06
+22,a,6,vitals_table_Metric / Time (hours),0.298
+22,a,6,vitals_table_Temperature,0.162
+22,a,6,vitals_table_Metric / Time (hours),0.399
+22,a,6,vitals_table_Metric / Time (hours),0.055
+22,a,6,vitals_table_Metric / Time (hours),0.082
+22,a,6,vitals_table_Metric / Time (hours),0.061
+22,a,6,vitals_table_Metric / Time (hours),0.399
+22,a,7,patient_details_antibiotic_treatment:,0.038
+22,a,7,vitals_table_Heart Rate,0.063
+22,a,7,vitals_table_Systolic Blood Pressure,0.054
+22,a,7,vitals_table_Systolic Blood Pressure,1.39
+22,a,7,vitals_table_Diastolic Blood Pressure,0.9
+22,a,7,vitals_table_Diastolic Blood Pressure,1.265
+22,a,7,vitals_table_Diastolic Blood Pressure,0.298
+22,a,7,vitals_table_Diastolic Blood Pressure,2.399
+22,a,7,vitals_table_Diastolic Blood Pressure,0.4
+22,a,7,vitals_table_Diastolic Blood Pressure,1.199
+22,a,7,vitals_table_Mean Blood Pressure,0.599
+22,a,7,vitals_table_Glasgow Coma Score – eye opening,0.422
+22,a,7,vitals_table_SpO2,0.064
+22,a,7,vitals_table_Mean Blood Pressure,0.646
+22,a,7,vitals_table_Mean Blood Pressure,1.716
+22,a,7,vitals_table_Mean Blood Pressure,1.849
+22,a,7,vitals_table_Mean Blood Pressure,1.098
+22,a,7,vitals_table_Mean Blood Pressure,1.2
+22,a,7,vitals_table_Glasgow Coma Score – eye opening,2.024
+22,a,7,vitals_table_Glasgow Coma Score - motor response,0.068
+22,a,7,vitals_table_Glasgow Coma Score - motor response,2.056
+22,a,7,vitals_table_Glasgow Coma Score - verbal response,0.234
+22,a,7,vitals_table_Glasgow Coma Score - motor response,0.197
+22,a,7,vitals_table_Glasgow Coma Score - motor response,1.649
+22,a,7,vitals_table_Glasgow Coma Score - motor response,2.6
+22,a,7,vitals_table_Glasgow Coma Score - motor response,2.102
+22,a,7,vitals_table_Glasgow Coma Score - motor response,1.863
+22,a,7,vitals_table_Glasgow Coma Score - motor response,3.032
+22,a,7,vitals_table_Glasgow Coma Score - motor response,0.566
+22,a,7,vitals_table_Glasgow Coma Score - motor response,2.001
+22,a,7,vitals_table_Glasgow Coma Score - motor response,0.483
+22,a,7,vitals_table_Glasgow Coma Score - motor response,0.034
+22,a,7,vitals_table_Glasgow Coma Score - motor response,0.04
+22,a,7,vitals_table_Glasgow Coma Score - motor response,0.056
+22,a,7,vitals_table_Glasgow Coma Score - motor response,1.364
+22,a,7,vitals_table_Glasgow Coma Score - motor response,1.083
+22,a,7,vitals_table_Glasgow Coma Score - motor response,1.201
+22,a,7,vitals_table_Glasgow Coma Score - motor response,0.088
+22,a,7,vitals_table_Glasgow Coma Score - verbal response,0.063
+22,a,7,vitals_table_Glasgow Coma Score - verbal response,1.717
+22,a,7,vitals_table_Glasgow Coma Score - verbal response,3.126
+22,a,7,vitals_table_Glasgow Coma Score - verbal response,2.9
+22,a,7,echarts_plot,1.314
+22,a,7,echarts_plot,0.196
+22,a,7,echarts_plot,5.376
+22,a,7,echarts_plot,0.331
+22,a,7,prediction_alert,0.349
+22,a,7,guideline_alert,0.239
+22,a,7,guideline_alert,0.162
+22,a,7,prediction_alert,0.23
+22,a,7,prediction_alert,0.065
+22,a,7,similar_table_Similar patient,0.058
+22,a,7,similar_table_Similar patient,0.049
+22,a,7,similar_table_Similar patient,0.035
+22,a,7,similar_table_Similar patient,0.052
+22,a,7,similar_table_Similar patient,0.038
+22,a,7,similar_table_1,0.56
+22,a,7,similar_table_1,0.3
+22,a,7,patient_table,0.238
+22,a,7,similar_table_Similar patient,1.1
+22,a,7,LLM_positive_points,0.049
+22,a,7,vitals_table_Mean Blood Pressure,0.318
+22,a,7,vitals_table_Diastolic Blood Pressure,0.656
+22,a,7,echarts_plot,1.247
+22,a,7,guideline_alert,0.061
+22,a,7,guideline_alert,0.238
+22,a,7,guideline_alert,0.032
+22,a,7,guideline_alert,0.068
+22,a,7,guideline_alert,0.047
+22,a,7,guideline_alert,0.052
+22,a,7,guideline_alert,0.096
+22,a,7,guideline_alert,0.033
+22,a,7,guideline_alert,0.063
+22,a,7,guidelines_flowchart,0.064
+22,a,7,guidelines_flowchart,0.058
+22,a,7,guidelines_flowchart,0.039
+22,a,7,guidelines_pdf,21.866
+22,a,7,vitals_table_Glasgow Coma Score – eye opening,0.582
+22,a,7,vitals_table_Glasgow Coma Score - motor response,32.98
+22,a,8,patient_details_sex:,0.079
+22,a,8,patient_details_ethnicity:,0.004
+22,a,8,patient_details_ethnicity:,0.038
+22,a,8,vitals_table_Metric / Time (hours),0.101
+22,a,8,vitals_table_Temperature,0.049
+22,a,8,vitals_table_Respiratory Rate,0.059
+22,a,8,vitals_table_Temperature,0.087
+22,a,8,vitals_table_Temperature,0.849
+22,a,8,vitals_table_Temperature,1.965
+22,a,8,vitals_table_Temperature,2.2
+22,a,8,vitals_table_Temperature,2.382
+22,a,8,vitals_table_Temperature,0.746
+22,a,8,vitals_table_Temperature,0.102
+22,a,8,vitals_table_Temperature,0.082
+22,a,8,vitals_table_Temperature,0.07
+22,a,8,vitals_table_Respiratory Rate,0.052
+22,a,8,vitals_table_Respiratory Rate,0.084
+22,a,8,vitals_table_Respiratory Rate,0.096
+22,a,8,vitals_table_Temperature,0.282
+22,a,8,vitals_table_Temperature,1.034
+22,a,8,vitals_table_Temperature,0.596
+22,a,8,vitals_table_Temperature,0.854
+22,a,8,vitals_table_Temperature,0.039
+22,a,8,vitals_table_Respiratory Rate,0.255
+22,a,8,vitals_table_Respiratory Rate,0.041
+22,a,8,vitals_table_Respiratory Rate,0.057
+22,a,8,vitals_table_Systolic Blood Pressure,1.047
+22,a,8,vitals_table_Systolic Blood Pressure,0.657
+22,a,8,vitals_table_Systolic Blood Pressure,0.032
+22,a,8,vitals_table_Heart Rate,0.063
+22,a,8,vitals_table_Metric / Time (hours),0.137
+22,a,8,vitals_table_Glasgow Coma Score,0.032
+22,a,8,vitals_table_Glasgow Coma Score,1.116
+22,a,8,vitals_table_Glasgow Coma Score - verbal response,1.051
+22,a,8,vitals_table_Glasgow Coma Score - verbal response,0.038
+22,a,8,vitals_table_Glasgow Coma Score - verbal response,0.076
+22,a,8,vitals_table_Glasgow Coma Score - verbal response,0.032
+22,a,8,vitals_table_Glasgow Coma Score - verbal response,0.084
+22,a,8,vitals_table_Glasgow Coma Score - verbal response,0.102
+22,a,8,vitals_table_Glasgow Coma Score - verbal response,0.861
+22,a,8,vitals_table_Glasgow Coma Score - verbal response,0.099
+22,a,8,vitals_table_Glasgow Coma Score - verbal response,0.036
+22,a,8,vitals_table_Glasgow Coma Score - verbal response,0.062
+22,a,8,vitals_table_Glasgow Coma Score - verbal response,0.036
+22,a,8,vitals_table_Glasgow Coma Score - verbal response,0.163
+22,a,8,vitals_table_Glasgow Coma Score - verbal response,0.036
+22,a,8,vitals_table_Glasgow Coma Score - verbal response,0.095
+22,a,8,vitals_table_Glasgow Coma Score - motor response,0.572
+22,a,8,vitals_table_Glasgow Coma Score - motor response,0.13
+22,a,8,vitals_table_Glasgow Coma Score - motor response,0.065
+22,a,8,vitals_table_Glasgow Coma Score - verbal response,0.065
+22,a,8,vitals_table_Glasgow Coma Score,0.714
+22,a,8,vitals_table_Glasgow Coma Score,0.882
+22,a,8,vitals_table_Glasgow Coma Score,0.037
+22,a,8,vitals_table_Glasgow Coma Score - verbal response,0.062
+22,a,8,vitals_table_Glasgow Coma Score - verbal response,0.132
+22,a,8,vitals_table_Glasgow Coma Score - verbal response,0.067
+22,a,8,vitals_table_Glasgow Coma Score - verbal response,0.036
+22,a,8,echarts_plot,24.532
+22,a,8,echarts_plot,6.249
+22,a,8,echarts_plot,4.365
+22,a,8,guidelines_pdf_simple,1.136
+22,a,9,vitals_table_Metric / Time (hours),0.091
+22,a,9,vitals_table_Respiratory Rate,0.184
+22,a,9,vitals_table_Respiratory Rate,0.124
+22,a,9,vitals_table_Respiratory Rate,0.012
+22,a,9,vitals_table_Glasgow Coma Score - verbal response,0.052
+22,a,9,vitals_table_Glasgow Coma Score - verbal response,0.044
+22,a,9,vitals_table_Glasgow Coma Score - verbal response,0.078
+22,a,9,vitals_table_Glasgow Coma Score,0.329
+22,a,9,vitals_table_Glasgow Coma Score,0.089
+22,a,9,echarts_plot,4.851
+22,a,9,echarts_plot,5.652
+22,a,9,echarts_plot,0.297
+22,a,9,echarts_plot,2.436
+22,a,9,echarts_plot,7.44
+22,a,9,vitals_table_SpO2,0.039
+22,a,9,vitals_table_Mean Blood Pressure,0.198
+22,a,9,vitals_table_SpO2,3.461
+22,a,9,vitals_table_SpO2,1.666
+22,a,9,vitals_table_SpO2,1.372
+22,a,9,vitals_table_SpO2,0.064
+22,a,9,vitals_table_Glasgow Coma Score – eye opening,0.06
+22,a,9,vitals_table_Glasgow Coma Score – eye opening,0.049
+22,a,9,vitals_table_Glasgow Coma Score – eye opening,0.035
+22,a,9,vitals_table_Glasgow Coma Score – eye opening,0.047
+22,a,9,vitals_table_Glasgow Coma Score – eye opening,3.2
+22,a,9,vitals_table_SpO2,0.028
+22,a,9,vitals_table_Diastolic Blood Pressure,0.408
+22,a,9,vitals_table_Diastolic Blood Pressure,0.056
+22,a,9,vitals_table_SpO2,0.049
+22,a,9,vitals_table_Glasgow Coma Score – eye opening,0.048
+22,a,9,vitals_table_Glasgow Coma Score – eye opening,0.305
+22,a,9,vitals_table_Glasgow Coma Score – eye opening,0.291
+22,a,9,vitals_table_SpO2,0.301
+22,a,9,vitals_table_SpO2,0.047
+22,a,9,vitals_table_Glasgow Coma Score – eye opening,1.348
+22,a,9,vitals_table_SpO2,0.115
+22,a,9,vitals_table_SpO2,3.685
+22,a,9,vitals_table_SpO2,0.096
+22,a,9,vitals_table_Mean Blood Pressure,0.04
+22,a,9,vitals_table_Diastolic Blood Pressure,0.058
+22,a,9,vitals_table_Mean Blood Pressure,0.032
+22,a,9,vitals_table_Mean Blood Pressure,0.058
+22,a,9,vitals_table_Mean Blood Pressure,0.494
+22,a,9,vitals_table_Mean Blood Pressure,0.117
+22,a,9,vitals_table_Diastolic Blood Pressure,0.047
+22,a,9,guidelines_pdf_simple,1.766
+22,a,10,vitals_table_Metric / Time (hours),0.097
+22,a,10,patient_details_antibiotic_treatment:,0.101
+22,a,10,vitals_table_Respiratory Rate,0.076
+22,a,10,vitals_table_Diastolic Blood Pressure,0.036
+22,a,10,vitals_table_Systolic Blood Pressure,0.056
+22,a,10,vitals_table_Respiratory Rate,0.05
+22,a,10,vitals_table_Metric / Time (hours),0.296
+22,a,10,vitals_table_Metric / Time (hours),0.05
+22,a,10,vitals_table_Heart Rate,0.043
+22,a,10,vitals_table_Diastolic Blood Pressure,0.056
+22,a,10,vitals_table_Metric / Time (hours),0.034
+22,a,10,vitals_table_Glasgow Coma Score - motor response,0.681
+22,a,10,vitals_table_Glasgow Coma Score - motor response,0.784
+22,a,10,vitals_table_Glasgow Coma Score - motor response,0.035
+22,a,10,vitals_table_Temperature,0.101
+22,a,10,vitals_table_Temperature,1.001
+22,a,10,vitals_table_Temperature,0.227
+22,a,10,vitals_table_Temperature,0.404
+22,a,10,vitals_table_Temperature,0.861
+22,a,10,vitals_table_Metric / Time (hours),1.432
+22,a,10,vitals_table_Metric / Time (hours),0.076
+22,a,10,vitals_table_Temperature,0.031
+22,a,10,vitals_table_Respiratory Rate,0.623
+22,a,10,vitals_table_Respiratory Rate,0.372
+22,a,10,vitals_table_Heart Rate,0.064
+22,a,10,vitals_table_Systolic Blood Pressure,0.134
+22,a,10,vitals_table_Systolic Blood Pressure,1.914
+22,a,10,vitals_table_Systolic Blood Pressure,0.373
+22,a,10,vitals_table_Systolic Blood Pressure,0.603
+22,a,10,vitals_table_Heart Rate,2.415
+22,a,10,vitals_table_Heart Rate,2.099
+22,a,10,vitals_table_Heart Rate,1.45
+22,a,10,vitals_table_Heart Rate,0.098
+22,a,10,vitals_table_Respiratory Rate,0.1
+22,a,10,vitals_table_Respiratory Rate,0.647
+22,a,10,vitals_table_Heart Rate,0.151
+22,a,10,vitals_table_Respiratory Rate,0.099
+22,a,10,vitals_table_Respiratory Rate,0.715
+22,a,10,vitals_table_Respiratory Rate,2.282
+22,a,10,vitals_table_Respiratory Rate,2.999
+22,a,10,vitals_table_Respiratory Rate,0.551
+22,a,10,vitals_table_Respiratory Rate,2.45
+22,a,10,vitals_table_Respiratory Rate,0.098
+22,a,10,vitals_table_Respiratory Rate,0.43
+22,a,10,vitals_table_Respiratory Rate,0.484
+22,a,10,vitals_table_Respiratory Rate,1.584
+22,a,10,vitals_table_Heart Rate,0.915
+22,a,10,vitals_table_Diastolic Blood Pressure,0.699
+22,a,10,vitals_table_Mean Blood Pressure,0.517
+22,a,10,vitals_table_Glasgow Coma Score – eye opening,0.67
+22,a,10,vitals_table_Glasgow Coma Score - motor response,0.055
+22,a,10,vitals_table_Glasgow Coma Score - verbal response,0.177
+22,a,10,vitals_table_Glasgow Coma Score,0.361
+22,a,10,vitals_table_Glasgow Coma Score,0.17
+22,a,10,vitals_table_Glasgow Coma Score,1.015
+22,a,10,vitals_table_Glasgow Coma Score,1.415
+22,a,10,vitals_table_Glasgow Coma Score - verbal response,0.038
+22,a,10,vitals_table_Glasgow Coma Score - motor response,0.062
+22,a,10,vitals_table_Glasgow Coma Score – eye opening,0.335
+22,a,10,vitals_table_Glasgow Coma Score – eye opening,0.797
+22,a,10,vitals_table_SpO2,2.182
+22,a,10,vitals_table_SpO2,0.621
+22,a,10,vitals_table_SpO2,0.059
+22,a,10,vitals_table_SpO2,0.032
+22,a,10,vitals_table_SpO2,0.101
+22,a,10,vitals_table_SpO2,0.004
+22,a,10,vitals_table_SpO2,0.069
+22,a,10,vitals_table_Mean Blood Pressure,0.091
+22,a,10,vitals_table_Mean Blood Pressure,0.027
+22,a,10,vitals_table_Mean Blood Pressure,0.398
+22,a,10,vitals_table_Mean Blood Pressure,0.925
+22,a,10,vitals_table_Mean Blood Pressure,0.051
+22,a,10,vitals_table_SpO2,0.095
+22,a,10,vitals_table_SpO2,0.696
+22,a,10,vitals_table_SpO2,0.301
+22,a,10,vitals_table_Glasgow Coma Score – eye opening,0.041
+22,a,10,vitals_table_Glasgow Coma Score – eye opening,1.024
+22,a,10,echarts_plot,2.022
+22,a,10,guideline_alert,0.08
+22,a,10,prediction_alert,1.369
+22,a,10,prediction_alert,0.035
+22,a,10,similar_table_2,0.085
+22,a,10,similar_table_2,0.153
+22,a,10,similar_table_3,0.032
+22,a,10,similar_table_4,0.269
+22,a,10,similar_table_3,0.032
+22,a,10,similar_table_1,0.059
+22,a,10,similar_table_1,0.055
+22,a,10,similar_table_1,0.08
+22,a,10,similar_table_2,0.362
+22,a,10,similar_table_2,0.054
+22,a,10,LLM_positive_points,0.065
+22,a,10,LLM_positive_points,0.1
+22,a,10,vitals_table_SpO2,0.867
+22,a,10,vitals_table_Glasgow Coma Score – eye opening,9.633
+22,a,10,vitals_table_Glasgow Coma Score - motor response,0.036
+22,a,10,vitals_table_Glasgow Coma Score – eye opening,0.089
+22,a,10,vitals_table_Glasgow Coma Score – eye opening,0.027
+22,a,10,vitals_table_Glasgow Coma Score - motor response,0.342
+22,a,10,vitals_table_Glasgow Coma Score – eye opening,7.848
+22,a,10,vitals_table_Glasgow Coma Score – eye opening,0.064
+22,a,10,vitals_table_SpO2,0.083
+22,a,10,vitals_table_Mean Blood Pressure,0.936
+22,a,10,vitals_table_Mean Blood Pressure,1.877
+22,a,10,vitals_table_Mean Blood Pressure,2.6
+22,a,10,vitals_table_Mean Blood Pressure,0.7
+22,a,10,vitals_table_Mean Blood Pressure,3.683
+22,a,10,vitals_table_Mean Blood Pressure,0.172
+22,a,10,vitals_table_Diastolic Blood Pressure,0.043
+22,a,10,vitals_table_Systolic Blood Pressure,0.015
+22,a,11,vitals_table_Temperature,0.097
+22,a,11,vitals_table_Systolic Blood Pressure,0.035
+22,a,11,vitals_table_Heart Rate,0.066
+22,a,11,vitals_table_Respiratory Rate,0.698
+22,a,11,vitals_table_Heart Rate,0.062
+22,a,11,vitals_table_Respiratory Rate,0.565
+22,a,11,vitals_table_Respiratory Rate,0.704
+22,a,11,vitals_table_Respiratory Rate,0.379
+22,a,11,vitals_table_Respiratory Rate,5.169
+22,a,11,vitals_table_Respiratory Rate,1.129
+22,a,11,vitals_table_Heart Rate,0.583
+22,a,11,vitals_table_Respiratory Rate,1.467
+22,a,11,vitals_table_Respiratory Rate,0.039
+22,a,11,vitals_table_Diastolic Blood Pressure,0.087
+22,a,11,vitals_table_Glasgow Coma Score – eye opening,0.519
+22,a,11,vitals_table_Glasgow Coma Score – eye opening,2.487
+22,a,11,vitals_table_Glasgow Coma Score – eye opening,1.378
+22,a,11,vitals_table_Glasgow Coma Score – eye opening,0.932
+22,a,11,vitals_table_Glasgow Coma Score – eye opening,4.917
+22,a,11,vitals_table_Glasgow Coma Score – eye opening,0.133
+22,a,11,vitals_table_Mean Blood Pressure,0.099
+22,a,11,echarts_plot,3.115
+22,a,11,prediction_alert,0.85
+22,a,11,prediction_alert,0.038
+22,a,11,prediction_alert,0.093
+22,a,11,similar_table_2,0.843
+22,a,11,similar_table_Similar patient,0.079
+22,a,11,similar_table_Similar patient,0.019
+22,a,11,vitals_table_Mean Blood Pressure,0.035
+22,a,11,vitals_table_Diastolic Blood Pressure,0.062
+22,a,11,vitals_table_Systolic Blood Pressure,0.149
+22,a,11,vitals_table_Systolic Blood Pressure,0.051
+22,a,11,vitals_table_Systolic Blood Pressure,0.954
+22,a,11,vitals_table_Systolic Blood Pressure,0.087
+22,a,11,vitals_table_Heart Rate,0.059
+22,a,11,vitals_table_Respiratory Rate,0.025
+22,a,11,vitals_table_Respiratory Rate,0.123
+22,a,11,vitals_table_Temperature,0.147
+22,a,11,vitals_table_Respiratory Rate,0.099
+22,a,11,vitals_table_Temperature,0.842
+22,a,11,vitals_table_Temperature,1.299
+22,a,11,vitals_table_Temperature,0.708
+22,a,11,vitals_table_Temperature,0.658
+22,a,11,vitals_table_Temperature,1.418
+22,a,11,vitals_table_Temperature,1.698
+22,a,11,vitals_table_Temperature,0.015
+22,a,11,vitals_table_Respiratory Rate,0.09
+22,a,11,vitals_table_Systolic Blood Pressure,0.059
+22,a,11,vitals_table_Systolic Blood Pressure,0.041
+22,a,11,vitals_table_Systolic Blood Pressure,0.037
+22,a,11,vitals_table_Diastolic Blood Pressure,0.059
+22,a,11,vitals_table_Systolic Blood Pressure,0.058
+22,a,11,vitals_table_Systolic Blood Pressure,1.364
+22,a,11,vitals_table_Systolic Blood Pressure,2.284
+22,a,11,vitals_table_Systolic Blood Pressure,0.02
+22,a,11,vitals_table_Systolic Blood Pressure,0.058
+22,a,11,vitals_table_Systolic Blood Pressure,1.183
+22,a,11,vitals_table_Systolic Blood Pressure,0.496
+22,a,11,vitals_table_Systolic Blood Pressure,0.215
+22,a,11,vitals_table_Systolic Blood Pressure,0.069
+22,a,11,vitals_table_Systolic Blood Pressure,0.158
+22,a,11,vitals_table_Systolic Blood Pressure,0.254
+22,a,11,vitals_table_Heart Rate,2.299
+22,a,11,vitals_table_Heart Rate,1.199
+22,a,11,vitals_table_Heart Rate,1.199
+22,a,11,vitals_table_Heart Rate,0.75
+22,a,11,vitals_table_Heart Rate,2.149
+22,a,11,vitals_table_Systolic Blood Pressure,1.021
+22,a,11,vitals_table_Systolic Blood Pressure,0.662
+22,a,11,vitals_table_Systolic Blood Pressure,0.1
+22,a,11,vitals_table_Systolic Blood Pressure,0.101
+22,a,11,vitals_table_Systolic Blood Pressure,0.046
+22,a,11,vitals_table_Systolic Blood Pressure,0.051
+22,a,11,vitals_table_Systolic Blood Pressure,0.051
+22,a,11,vitals_table_Systolic Blood Pressure,0.145
+22,a,11,vitals_table_Systolic Blood Pressure,0.2
+22,a,11,vitals_table_Systolic Blood Pressure,1.098
+22,a,11,vitals_table_Systolic Blood Pressure,1.066
+22,a,11,vitals_table_Systolic Blood Pressure,2.45
+22,a,11,vitals_table_Systolic Blood Pressure,1.223
+22,a,11,vitals_table_Systolic Blood Pressure,0.023
+22,a,11,vitals_table_Systolic Blood Pressure,0.069
+22,a,11,vitals_table_Systolic Blood Pressure,0.068
+22,a,11,vitals_table_Diastolic Blood Pressure,0.041
+22,a,11,vitals_table_Diastolic Blood Pressure,0.567
+22,a,11,vitals_table_Systolic Blood Pressure,1.989
+22,a,11,vitals_table_Diastolic Blood Pressure,0.692
+22,a,11,vitals_table_Diastolic Blood Pressure,0.102
+22,a,11,vitals_table_Systolic Blood Pressure,1.546
+22,a,11,vitals_table_Systolic Blood Pressure,0.902
+22,a,11,vitals_table_Diastolic Blood Pressure,2.646
+22,a,11,vitals_table_Diastolic Blood Pressure,0.314
+22,a,11,vitals_table_Diastolic Blood Pressure,0.65
+22,a,11,vitals_table_Diastolic Blood Pressure,1.948
+22,a,11,vitals_table_Glasgow Coma Score - motor response,1.189
+22,a,11,vitals_table_Glasgow Coma Score - motor response,0.115
+22,a,11,vitals_table_Glasgow Coma Score - motor response,0.028
+22,a,11,vitals_table_Glasgow Coma Score - verbal response,1.196
+22,a,11,echarts_plot,1.705
+22,a,11,vitals_table_SpO2,0.035
+22,a,11,vitals_table_SpO2,1.662
+22,a,11,vitals_table_SpO2,0.989
+22,a,11,vitals_table_Glasgow Coma Score – eye opening,1.043
+22,a,11,vitals_table_SpO2,0.067
+22,a,11,vitals_table_SpO2,0.048
+22,a,11,vitals_table_SpO2,0.049
+22,a,12,vitals_table_Heart Rate,0.46
+22,a,12,vitals_table_Heart Rate,0.192
+22,a,12,vitals_table_Temperature,0.123
+22,a,12,vitals_table_Temperature,0.083
+22,a,12,vitals_table_Metric / Time (hours),0.151
+22,a,12,vitals_table_Metric / Time (hours),2.345
+22,a,12,vitals_table_Respiratory Rate,0.326
+22,a,12,vitals_table_Temperature,0.052
+22,a,12,vitals_table_Temperature,0.101
+22,a,12,vitals_table_Temperature,0.034
+22,a,12,vitals_table_Respiratory Rate,2.314
+22,a,12,vitals_table_Respiratory Rate,0.849
+22,a,12,vitals_table_Temperature,2.07
+22,a,12,vitals_table_Temperature,1.026
+22,a,12,vitals_table_Temperature,1.901
+22,a,12,vitals_table_Heart Rate,4.147
+22,a,12,vitals_table_Heart Rate,17.52
+22,a,12,vitals_table_Heart Rate,0.013
+22,a,12,vitals_table_Heart Rate,0.042
+22,a,12,vitals_table_Heart Rate,0.103
+22,a,12,vitals_table_Heart Rate,0.241
+22,a,12,vitals_table_Heart Rate,0.018
+22,a,12,vitals_table_Heart Rate,0.038
+22,a,12,vitals_table_Heart Rate,0.042
+22,a,12,vitals_table_Heart Rate,0.82
+22,a,12,vitals_table_Heart Rate,1.2
+22,a,12,vitals_table_Systolic Blood Pressure,4.42
+22,a,12,vitals_table_Mean Blood Pressure,0.529
+22,a,12,vitals_table_Mean Blood Pressure,0.084
+22,a,12,vitals_table_Mean Blood Pressure,0.038
+22,a,12,echarts_plot,1.43
+22,a,12,guidelines_pdf_simple,1.714

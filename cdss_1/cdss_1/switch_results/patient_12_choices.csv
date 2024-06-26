@@ -22,3 +22,5 @@ tim,b,switch,
 19,b,switch,Need more clinical information but potential switch on data shown. What is WCC and CRP?
 20,a,dont_switch,"review 24 hours, improving. don't know baseline GCS."
 21,b,dont_switch,"improving GCS and stable Obs, however Ai higher threshold decision tool prompting me to follow the suggestion of not switching. need more clinical info (baseline GCS pre admission WBC/CRp "
+22,a,switch,Vital stable but final decision will depend on diagnosis
+23,b,dont_switch,"Would be tempted to switch here given the improvement in HR over last 24-48hrs or so, however the temp is concerning me slightly and would be inclined to reassess in 24hrs"

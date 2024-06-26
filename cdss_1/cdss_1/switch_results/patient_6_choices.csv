@@ -22,3 +22,5 @@ tim,b,switch,
 19,b,switch,Stop. ? evidence for infection
 20,a,dont_switch,"review - no diagnosis available, may be able to switch"
 21,b,switch,to confirm indication and would step down to oral with specified duration as per indication.pt has comorbidities but none that should result in extending IV therapy. CRP/wBC trend would help to switch if improving 
+22,a,switch,"Has completed 5 days of IV flucoxacillin, not worsening vitals. However no diagnosis so deciosn might change based on diagnosis if source control has not been achieved for example"
+23,b,switch,No clear indication so with no suspected/confirmed diagnosis of something requiring longer term MSSA treatment would de-escalate or stop

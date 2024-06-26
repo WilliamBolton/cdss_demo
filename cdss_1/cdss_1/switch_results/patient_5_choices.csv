@@ -22,3 +22,5 @@ tim,b,switch,
 19,b,switch,Stop
 20,a,switch,"also check symptoms are improving. note low BP - see if there is a reason for this, other parameters fine"
 21,b,switch,consider stopping therapy - guidance for uncomplicated UTI in non pregnant women (assume not pregnant) is 3 days. would also ask about urinary  symptoms. low risk patient with no temp
+22,a,switch,"Not febrile, likely stop if clinically improve as has completed 3 days"
+23,b,switch,"Maintained clinical stability for a number of days in the setting of an uncomplicated UTI, would consider this patient suitable for PO abx"
