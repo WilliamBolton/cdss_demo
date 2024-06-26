@@ -23,3 +23,4 @@ user_id,user_archetype,age,sex,medical_speciality,grade,ai_familiarity
 21,b,28,female,pharmacist,band 8a specialist pharmacist,1
 22,a,45,Female,Paediatric ID,Consultant ,1
 23,b,35,M,Respiratory,ST7,3
+24,a,44,Male,Infectious Diseases & General Medicine,Consultant,3
