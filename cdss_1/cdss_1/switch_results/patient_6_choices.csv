@@ -26,3 +26,5 @@ tim,b,switch,
 23,b,switch,No clear indication so with no suspected/confirmed diagnosis of something requiring longer term MSSA treatment would de-escalate or stop
 24,a,switch,"Normal observations. If infection source still not clear after 5 days, my practice would normally be to stop antibiotics and then reassess. "
 25,b,switch,Stop as may not be infection at all. Consider re-work up of patient
+26,a,switch,"There is no indication given for this antibiotic prescriptions, I would prompt a re-evaluation of the infective diagnosis. Are antibiotics really needed here?"
+27,b,switch,What is the Alert for what are we treating where is the infection. What is the microbiology inefficient info to make full decision but without information i would be tempted to stop antibiotics

@@ -26,3 +26,5 @@ tim,b,switch,
 23,b,switch,"Maintained clinical stability for a number of days in the setting of an uncomplicated UTI, would consider this patient suitable for PO abx"
 24,a,switch,Uncomplicated UTI. Normal observations. Why were IV antibiotics started in the first place?
 25,b,switch,"Stop,?/ could have been treated with orals only"
+26,a,switch,"Stable uncomplicated UTI , I am unclear why she was started on iv in the first place"
+27,b,switch,Not sure that the diagnosis is right Ii would want to see micro results and might consider evidenceand possibly stopping AB 

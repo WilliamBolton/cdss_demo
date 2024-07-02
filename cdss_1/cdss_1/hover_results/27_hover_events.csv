@@ -1,0 +1,55 @@
+user_id,user_archetype,patient,component,hover_duration
+27,b,1,patient_details_age:,0.105
+27,b,1,patient_details_diagnosis:,0.05
+27,b,1,patient_details_antibiotic_treatment:,0.095
+27,b,1,patient_details_diagnosis:,0.199
+27,b,1,guidelines_pdf_simple,0.094
+27,b,2,patient_details_ethnicity:,0.052
+27,b,2,patient_details_co-morbidities:,0.245
+27,b,3,patient_details_age:,0.189
+27,b,3,patient_details_sex:,0.123
+27,b,3,patient_details_indices_of_multiple_deprivation_decile:,0.406
+27,b,3,patient_details_co-morbidities:,0.101
+27,b,3,patient_details_diagnosis:,0.558
+27,b,3,vitals_table_Metric / Time (hours),0.224
+27,b,3,vitals_table_Respiratory Rate,0.446
+27,b,3,vitals_table_Temperature,3.961
+27,b,3,vitals_table_Systolic Blood Pressure,0.549
+27,b,3,vitals_table_Diastolic Blood Pressure,3.548
+27,b,3,vitals_table_SpO2,5.798
+27,b,3,vitals_table_Conscious Level,0.551
+27,b,3,vitals_table_Supplemental Oxygen,0.352
+27,b,3,vitals_table_Conscious Level,0.098
+27,b,4,patient_details_indices_of_multiple_deprivation_decile:,0.298
+27,b,4,patient_details_co-morbidities:,0.103
+27,b,4,patient_details_antibiotic_treatment:,0.121
+27,b,5,patient_details_indices_of_multiple_deprivation_decile:,0.297
+27,b,5,patient_details_indices_of_multiple_deprivation_decile:,2.246
+27,b,5,patient_details_co-morbidities:,0.355
+27,b,5,patient_details_diagnosis:,0.093
+27,b,5,patient_details_diagnosis:,0.094
+27,b,6,patient_details_co-morbidities:,0.504
+27,b,6,patient_details_antibiotic_treatment:,0.099
+27,b,6,patient_details_antibiotic_treatment:,1.349
+27,b,6,patient_details_diagnosis:,1.861
+27,b,6,patient_details_diagnosis:,0.496
+27,b,6,patient_details_antibiotic_treatment:,0.616
+27,b,6,guidelines_pdf_simple,0.509
+27,b,6,guidelines_pdf_simple,0.548
+27,b,7,vitals_table_Metric / Time (hours),0.05
+27,b,7,vitals_table_Metric / Time (hours),0.3
+27,b,7,vitals_table_Metric / Time (hours),0.1
+27,b,7,vitals_table_Metric / Time (hours),0.062
+27,b,8,vitals_table_Metric / Time (hours),0.35
+27,b,8,vitals_table_Metric / Time (hours),0.424
+27,b,8,vitals_table_Metric / Time (hours),0.027
+27,b,10,vitals_table_Metric / Time (hours),0.098
+27,b,10,vitals_table_Metric / Time (hours),0.226
+27,b,10,vitals_table_Metric / Time (hours),0.067
+27,b,10,vitals_table_Metric / Time (hours),0.047
+27,b,10,vitals_table_Metric / Time (hours),0.165
+27,b,10,vitals_table_Metric / Time (hours),0.131
+27,b,11,vitals_table_Metric / Time (hours),0.548
+27,b,11,vitals_table_Metric / Time (hours),0.198
+27,b,12,vitals_table_Temperature,0.498
+27,b,12,vitals_table_Temperature,0.051

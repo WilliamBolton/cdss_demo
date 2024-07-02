@@ -28,3 +28,5 @@ tim,b,switch,
 23,b,dont_switch,I'm not convinced there is sufficient clinical improvement to IVOST. I be considering recapturing or resampling here. I could perhaps be convinced in the setting of markedly improved inflammatory markers or clinical picture
 24,a,switch,"Very limited information here, but based on largely normal observations and the assumption that there is no 'special infection' indication for IVs, I would be inclined to switch to orals. "
 25,b,switch,"Stop,. unclear why pt is on antibiotics. Per-work up patient."
+26,a,switch,Clinicalimprovement and apyrexia. Would be useful to know the diagnosis
+27,b,dont_switch,"GCS though improving may still affect swallow, also without underlying pathology details of culture difficult to be sure what is happening.  If CNSs disease may be tempted to add Listeria cover and consider investigation for fungal causes if remains static "

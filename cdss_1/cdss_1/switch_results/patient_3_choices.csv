@@ -25,5 +25,6 @@ tim,b,dont_switch,
 22,a,dont_switch,Febrile last 24hr
 23,b,dont_switch,"The recent pyrexia would make me concerned there is ongoing infection needing IVs, this could be ongoing/non-responding pneumonia or would also make me consider empyema. In either case I would not feel comfortable IVOST"
 24,a,dont_switch,Remains febrile at 72 hours; inadequate treatment response; would investigate and switch to an alternative agent - probably IV. 
-25,b,switch,Temperature still high
 25,b,dont_switch,Temperature is still high
+26,a,dont_switch,I might escalate or add a second agent (?atypical cover given lack of response and pyrexia at 3 days)
+27,b,switch,Not deteriorating seems static test switch for response

@@ -10,7 +10,6 @@ tim,b,switch,
 7,b,switch,"Temp normal - no spikes, alert, GCS 15"
 8,a,switch,No systemic features of severe infection. Would review infection markers + clinical response and step down to oral for a few more days 
 9,b,switch,"Obs fine, long preceding course of abx. Would like to know how her leg is however. "
-
 10,a,switch,"I would be interested in knowing whether the appearance of cellulitis is stable/improving (e.g., is it spreading or not?). All metrics are reassuring, although one has to be cautious in diabetic patients. I reviewed the AI recommendations, and note that none of the similar patients had cellulitis as an infection diagnosis. "
 11,b,switch,"not enough info - WCC, CRP and appearance of cellulitis"
 12,a,switch,"day 4, patient seems to improving (?), availability of oral drugs with same spectrum"
@@ -28,3 +27,5 @@ tim,b,switch,
 23,b,switch,Systemically well on an antibiotic with a clear oral switch. Clinical visual improvement in cellulitis would also help me make this decision with more confidence
 24,a,switch,Observations have normalised. Would switch (probably would have done so earlier) assuming not bacteraemic
 25,b,switch,"Stop at 5 days, could have been switched to oral earlier"
+26,a,switch,"It is likely that such a patient would be able to be switched to an oral agent by day5, I would like to know whether the cellulitis has improved and what the WCC and CRP results are"
+27,b,switch,Stable  from start why was IV used 

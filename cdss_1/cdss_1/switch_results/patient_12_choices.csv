@@ -26,3 +26,5 @@ tim,b,switch,
 23,b,dont_switch,"Would be tempted to switch here given the improvement in HR over last 24-48hrs or so, however the temp is concerning me slightly and would be inclined to reassess in 24hrs"
 24,a,switch,Satisfactory observations. Assume no special infection. HAs completed 3 days IV Abx. 
 25,b,switch,Stop. unclear why pt is on antibiotics. Needs re-working up.
+26,a,dont_switch,"GCS and BP improving, but not back to normal, was this sepsis as initial diagnosis? Continue iv until further improvement, although assume there may be an NG tube in place so enteral route might be available."
+27,b,dont_switch,Unless NGg tube in place GCSs may cause problems with oral agents 
