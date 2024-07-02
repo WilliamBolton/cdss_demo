@@ -25,3 +25,4 @@ tim,b,switch,
 22,a,switch,"Has completed 5 days of IV flucoxacillin, not worsening vitals. However no diagnosis so deciosn might change based on diagnosis if source control has not been achieved for example"
 23,b,switch,No clear indication so with no suspected/confirmed diagnosis of something requiring longer term MSSA treatment would de-escalate or stop
 24,a,switch,"Normal observations. If infection source still not clear after 5 days, my practice would normally be to stop antibiotics and then reassess. "
+25,b,switch,Stop as may not be infection at all. Consider re-work up of patient

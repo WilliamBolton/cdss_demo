@@ -25,3 +25,4 @@ tim,b,switch,
 22,a,dont_switch,"Final decision will depend on diagnosis, type of antibiotic as per vitals maybe able to switch"
 23,b,switch,"Haemodynamically stable, would depend a bit on the indication which is not provided but as long as no infections requiring special consideration then PO switch would seem appropriate"
 24,a,switch,"Limited information here, but based on normal observations in the last 24 hours, i would be inclined to switch"
+25,b,switch,Stop. Not clear why pt is on antibiotics. Re-work up patient

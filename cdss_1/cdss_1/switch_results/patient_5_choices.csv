@@ -25,3 +25,4 @@ tim,b,switch,
 22,a,switch,"Not febrile, likely stop if clinically improve as has completed 3 days"
 23,b,switch,"Maintained clinical stability for a number of days in the setting of an uncomplicated UTI, would consider this patient suitable for PO abx"
 24,a,switch,Uncomplicated UTI. Normal observations. Why were IV antibiotics started in the first place?
+25,b,switch,"Stop,?/ could have been treated with orals only"

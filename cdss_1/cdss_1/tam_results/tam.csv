@@ -24,3 +24,4 @@ user_id,user_archetype,q1,q2,q3,q4,q5,q6,q7,q8,q9,q10,q11,q12,q13,q14,q15,q16,q1
 22,a,4,4,4,4,4,4,2,4,4,4,4,4,4,4,5,4,2,4,3,4,4,3,2,4,4,5,,5,5
 23,b,4,3,2,4,4,4,3,3,4,4,3,5,4,5,4,3,3,2,4,2,2,4,2,4,3,4,,5,4
 24,a,3,3,4,4,4,2,3,3,4,2,2,2,4,4,5,3,3,2,2,2,2,2,3,3,3,3,VErbal comments given,2,4
+25,b,5,4,4,5,5,5,5,5,5,5,5,5,5,5,5,4,3,4,4,4,4,5,2,5,4,5,"Inflammatory markers such as crp and full blood count, pct, need to be integrated. Hyperthermia is often neglected or not picked up until the patient temp drops to 34, it is a very significant marker for sepsis. ",5,4
