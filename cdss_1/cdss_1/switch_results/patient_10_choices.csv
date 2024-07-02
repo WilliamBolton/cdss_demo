@@ -29,3 +29,5 @@ tim,b,dont_switch,
 25,b,switch,Stop. Unclear why patient is on antibiotics. 
 26,a,switch,"Apyrexial, some decrease in oxygen saturation would prompt evaluation for cause with CXR ? non-infective causes such as heart failure or PE"
 27,b,switch,No reason not to consider oral switch or stop completely depending on pathology 
+28,a,dont_switch,"EWS appear high, mostly RR and BP.Additional information will be useful to decide about escalation to a different IV antibiotic."
+28,a,dont_switch,"High variability on EWS, last day ok but not sustained long enough. Accept IVOS guidelines no red flags at present. I would ideally reassess in 24 hours with repeat markers."

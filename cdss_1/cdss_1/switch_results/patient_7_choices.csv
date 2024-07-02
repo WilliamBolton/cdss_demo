@@ -28,3 +28,4 @@ tim,b,switch,
 25,b,switch,Stop. Not clear why pt is on antibiotics. Re-work up patient
 26,a,switch,"I am unclear what the indication for iv antibiotics is here. There is no information on the diagnosis, nor on the agent prescribed.He is apyrexial throughout with seemingly normal parameters ( except slightly high blood pressure at some point)"
 27,b,switch,I am not sure of diagnosis but Ii can't see a reason not to switch to oral or to stop AB completely 
+28,a,dont_switch,"Elderly patient, likely multiple comorbidities. Red flags : hypothermia, tachypnoeic, low diastolic pressure. Additional information with cultures, radiology and inflammatory markers needed before taking decision. Most likely outcome is escalation to broader spectrum cover."

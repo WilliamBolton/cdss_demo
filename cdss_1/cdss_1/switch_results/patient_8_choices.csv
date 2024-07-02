@@ -30,3 +30,4 @@ tim,b,switch,
 25,b,switch,"Stop,. unclear why pt is on antibiotics. Per-work up patient."
 26,a,switch,Clinicalimprovement and apyrexia. Would be useful to know the diagnosis
 27,b,dont_switch,"GCS though improving may still affect swallow, also without underlying pathology details of culture difficult to be sure what is happening.  If CNSs disease may be tempted to add Listeria cover and consider investigation for fungal causes if remains static "
+28,a,dont_switch,"EWS 5 after long treatment, BP is of concern, need more data with imaging, inflammatory markers to make a decision, also antibiotic history. Likely outcome review/ escalate to a broader antibiotic"

@@ -28,3 +28,4 @@ tim,b,switch,
 25,b,switch,Stop. unclear why pt is on antibiotics. Needs re-working up.
 26,a,dont_switch,"GCS and BP improving, but not back to normal, was this sepsis as initial diagnosis? Continue iv until further improvement, although assume there may be an NG tube in place so enteral route might be available."
 27,b,dont_switch,Unless NGg tube in place GCSs may cause problems with oral agents 
+28,a,switch,Stable for 24 hours no clear red flags

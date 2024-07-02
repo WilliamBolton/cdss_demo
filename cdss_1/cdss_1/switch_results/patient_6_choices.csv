@@ -28,3 +28,4 @@ tim,b,switch,
 25,b,switch,Stop as may not be infection at all. Consider re-work up of patient
 26,a,switch,"There is no indication given for this antibiotic prescriptions, I would prompt a re-evaluation of the infective diagnosis. Are antibiotics really needed here?"
 27,b,switch,What is the Alert for what are we treating where is the infection. What is the microbiology inefficient info to make full decision but without information i would be tempted to stop antibiotics
+28,a,dont_switch,"Multiple risk factors, insufficient data to exclude S. aureus sepsis, need imaging, cultures and inflammatory markers until able to make safe decision"
