@@ -1,115 +1,47 @@
 user_id,user_archetype,patient,component,hover_duration
-demo,a,1,vitals_table_Diastolic Blood Pressure,0.025
-demo,a,1,vitals_table_Systolic Blood Pressure,0.117
-demo,a,1,vitals_table_Diastolic Blood Pressure,0.299
-demo,a,1,vitals_table_Diastolic Blood Pressure,0.049
-demo,a,1,vitals_table_Glasgow Coma Score,0.006
-demo,a,1,vitals_table_Conscious Level,0.327
-demo,a,1,vitals_table_Glasgow Coma Score,0.034
-demo,a,1,vitals_table_SpO2,0.368
-demo,a,1,echarts_plot,6.084
-demo,a,1,echarts_plot,4.908
-demo,a,1,echarts_plot,2.05
-demo,a,1,echarts_plot,0.145
-demo,a,1,echarts_plot,1.509
-demo,a,1,guideline_alert,0.08
-demo,a,1,guideline_alert,0.011
-demo,a,1,guideline_alert,0.065
-demo,a,1,guideline_alert,0.013
-demo,a,1,guideline_alert,0.133
-demo,a,1,guideline_alert,0.095
-demo,a,1,guideline_alert,5.976
-demo,a,1,guideline_alert,0.093
-demo,a,1,guideline_alert,0.033
-demo,a,1,guideline_alert,0.223
+demo,a,1,patient_details_antibiotic_treatment:,0.89
+demo,a,1,vitals_table_Systolic Blood Pressure,0.039
+demo,a,1,vitals_table_Diastolic Blood Pressure,0.022
+demo,a,1,vitals_table_Heart Rate,0.011
+demo,a,1,vitals_table_Temperature,0.3
+demo,a,1,vitals_table_Metric / Time (hours),0.032
+demo,a,1,vitals_table_Respiratory Rate,0.008
+demo,a,1,vitals_table_Respiratory Rate,0.024
+demo,a,1,vitals_table_Metric / Time (hours),0.087
+demo,a,1,vitals_table_Temperature,0.056
+demo,a,1,vitals_table_Diastolic Blood Pressure,0.022
+demo,a,1,patient_details_antibiotic_treatment:,0.262
+demo,a,1,vitals_table_Metric / Time (hours),3.772
+demo,a,1,vitals_table_Metric / Time (hours),0.078
+demo,a,1,vitals_table_Metric / Time (hours),0.108
+demo,a,1,vitals_table_Metric / Time (hours),0.906
+demo,a,1,vitals_table_Metric / Time (hours),0.166
+demo,a,1,vitals_table_Temperature,0.962
+demo,a,1,echarts_plot,6.012
+demo,a,1,guideline_alert,0.439
+demo,a,1,prediction_alert,0.022
 demo,a,1,prediction_alert,0.004
-demo,a,1,guideline_alert,0.034
-demo,a,1,prediction_alert,0.293
-demo,a,1,prediction_alert,0.103
-demo,a,1,prediction_alert,0.033
-demo,a,1,patient_table,0.094
-demo,a,1,patient_table,0.056
-demo,a,1,patient_table,0.089
-demo,a,1,patient_table,0.065
-demo,a,1,patient_table,0.079
-demo,a,1,patient_table,0.007
-demo,a,1,patient_table,0.234
-demo,a,1,similar_table_2,0.095
-demo,a,1,similar_table_2,0.005
-demo,a,1,similar_table_2,0.229
-demo,a,1,similar_table_2,0.031
-demo,a,1,similar_table_1,0.009
-demo,a,1,similar_table_2,0.03
-demo,a,1,similar_table_1,0.168
-demo,a,1,similar_table_1,0.103
-demo,a,1,similar_table_Similar patient,0.502
-demo,a,1,similar_table_1,0.105
-demo,a,1,similar_table_Similar patient,3.302
-demo,a,1,similar_table_2,0.046
-demo,a,1,similar_table_3,0.318
-demo,a,1,similar_table_4,0.006
-demo,a,1,similar_table_2,0.089
-demo,a,1,similar_table_5,0.24
-demo,a,1,feature_image,0.72
-demo,a,1,feature_image,0.058
-demo,a,1,feature_image,0.21
-demo,a,1,feature_image,0.009
-demo,a,1,feature_image,0.016
-demo,a,1,feature_image,0.474
-demo,a,1,feature_image,13.171
-demo,a,1,LLM_positive_points,0.215
-demo,a,1,LLM_positive_points,3.554
-demo,a,1,LLM_positive_points,3.799
-demo,a,1,vitals_table_Heart Rate,0.186
-demo,a,1,guideline_alert,0.031
-demo,a,1,guideline_alert,0.269
-demo,a,1,guideline_alert,0.062
-demo,a,1,guideline_alert,0.094
-demo,a,1,guideline_alert,0.127
-demo,a,1,guideline_alert,0.949
-demo,a,1,guidelines_flowchart,0.134
-demo,a,1,guidelines_pdf,0.099
-demo,a,1,guidelines_pdf,2.818
-demo,a,1,guidelines_pdf,28.293
-demo,a,1,vitals_table_Respiratory Rate,0.222
-demo,a,2,patient_details_indices_of_multiple_deprivation_decile:,0.461
-demo,a,2,vitals_table_Conscious Level,0.002
-demo,a,2,vitals_table_Supplemental Oxygen,0.063
-demo,a,2,vitals_table_Supplemental Oxygen,0.019
-demo,a,2,vitals_table_Metric / Time (hours),0.155
-demo,a,2,vitals_table_Conscious Level,0.012
-demo,a,2,vitals_table_Glasgow Coma Score,0.051
-demo,a,2,vitals_table_Diastolic Blood Pressure,0.024
-demo,a,2,vitals_table_Respiratory Rate,0.086
-demo,a,2,vitals_table_Temperature,0.2
-demo,a,2,vitals_table_Metric / Time (hours),0.049
-demo,a,2,vitals_table_Metric / Time (hours),1.936
-demo,a,2,vitals_table_SpO2,0.06
-demo,a,2,vitals_table_Glasgow Coma Score,0.333
-demo,a,2,vitals_table_Glasgow Coma Score,0.036
-demo,a,2,vitals_table_Supplemental Oxygen,0.06
-demo,a,2,vitals_table_Mean Arterial Pressure,0.389
-demo,a,2,vitals_table_Metric / Time (hours),1.09
-demo,a,3,patient_details_age:,0.315
-demo,a,3,patient_details_,0.049
-demo,a,3,prediction_alert,0.138
-demo,a,3,patient_details_age:,0.448
-demo,a,3,patient_details_ethnicity:,0.291
-demo,a,3,patient_details_,0.269
-demo,a,3,patient_details_antibiotic_treatment:,0.017
-demo,a,3,patient_details_antibiotic_treatment:,0.311
-demo,a,3,patient_details_,0.005
-demo,a,3,patient_details_,0.235
-demo,a,3,patient_details_,0.019
-demo,a,3,patient_details_,0.242
-demo,a,3,patient_details_,1.662
-demo,a,3,patient_details_,0.034
-demo,a,3,patient_details_antibiotic_treatment:,3.928
-demo,a,3,patient_details_antibiotic_treatment:,0.004
-demo,a,3,patient_details_,0.116
-demo,a,3,patient_details_,0.009
-demo,a,3,patient_details_antibiotic_treatment:,0.176
-demo,a,3,patient_details_antibiotic_treatment:,2.023
-demo,a,3,patient_details_antibiotic_treatment:,0.046
-demo,a,3,patient_details_antibiotic_treatment:,0.298
-demo,a,3,patient_details_antibiotic_treatment:,2.265
+demo,a,1,prediction_alert,0.301
+demo,a,1,prediction_alert,0.017
+demo,a,1,prediction_alert,3.527
+demo,a,1,prediction_alert,0.174
+demo,a,1,prediction_alert,0.313
+demo,a,1,prediction_alert,0.194
+demo,a,1,prediction_alert,0.804
+demo,a,1,similar_table_Similar patient,0.042
+demo,a,1,similar_table_Similar patient,0.054
+demo,a,1,similar_table_Similar patient,0.069
+demo,a,1,feature_image,0.029
+demo,a,1,LLM_positive_points,0.141
+demo,a,1,LLM_positive_points,0.152
+demo,a,1,vitals_table_Heart Rate,0.147
+demo,a,1,guideline_alert,0.052
+demo,a,1,guideline_alert,0.201
+demo,a,1,guideline_alert,0.059
+demo,a,1,guideline_alert,0.033
+demo,a,1,guideline_alert,0.291
+demo,a,1,guidelines_flowchart,0.029
+demo,a,1,guidelines_pdf,0.135
+demo,a,1,guidelines_pdf,1.802
+demo,a,1,guidelines_pdf,23.092
+demo,a,1,vitals_table_Respiratory Rate,0.195

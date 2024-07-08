@@ -4,7 +4,7 @@ from patients.models import UserProfile
 
 def create_test_user_profiles():
     # Create UserProfiles
-    for x in range(31): #101
+    for x in range(51): #101
         username = str(x)
         archetype = 'b' if x % 2 else 'a'
 
