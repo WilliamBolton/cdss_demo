@@ -1,6 +1,6 @@
 user_id,user_archetype,age,sex,medical_speciality,grade,ai_familiarity
 0,a,37,M,Pharmacist,8a
-1,b,39,M,ID,
+1,b,39,M,ID,nan
 2,a,38,m,ID / micro,ST6,2
 3,b,37,Female,Infection,8b,1
 4,a,38,Male,Respiratory,Consultant,2
@@ -29,3 +29,5 @@ user_id,user_archetype,age,sex,medical_speciality,grade,ai_familiarity
 27,b,64,f,micro,consultant ,1
 28,a,61,Male,Microbiology,Consultant,2
 29,b,41,Male,Respiratory,Consultant,2
+30,a,39,male,ID/GIM,ST7,3
+

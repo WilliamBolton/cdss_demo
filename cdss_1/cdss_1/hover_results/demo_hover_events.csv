@@ -1,47 +1,32 @@
 user_id,user_archetype,patient,component,hover_duration
-demo,a,1,patient_details_antibiotic_treatment:,0.89
-demo,a,1,vitals_table_Systolic Blood Pressure,0.039
-demo,a,1,vitals_table_Diastolic Blood Pressure,0.022
-demo,a,1,vitals_table_Heart Rate,0.011
-demo,a,1,vitals_table_Temperature,0.3
-demo,a,1,vitals_table_Metric / Time (hours),0.032
-demo,a,1,vitals_table_Respiratory Rate,0.008
-demo,a,1,vitals_table_Respiratory Rate,0.024
-demo,a,1,vitals_table_Metric / Time (hours),0.087
-demo,a,1,vitals_table_Temperature,0.056
-demo,a,1,vitals_table_Diastolic Blood Pressure,0.022
-demo,a,1,patient_details_antibiotic_treatment:,0.262
-demo,a,1,vitals_table_Metric / Time (hours),3.772
-demo,a,1,vitals_table_Metric / Time (hours),0.078
-demo,a,1,vitals_table_Metric / Time (hours),0.108
-demo,a,1,vitals_table_Metric / Time (hours),0.906
-demo,a,1,vitals_table_Metric / Time (hours),0.166
-demo,a,1,vitals_table_Temperature,0.962
-demo,a,1,echarts_plot,6.012
-demo,a,1,guideline_alert,0.439
+demo,a,1,vitals_table_Diastolic Blood Pressure,0.334
+demo,a,1,vitals_table_Mean Arterial Pressure,0.164
+demo,a,1,echarts_plot,1.881
+demo,a,1,prediction_alert,0.259
+demo,a,1,prediction_alert,0.448
 demo,a,1,prediction_alert,0.022
-demo,a,1,prediction_alert,0.004
-demo,a,1,prediction_alert,0.301
-demo,a,1,prediction_alert,0.017
-demo,a,1,prediction_alert,3.527
-demo,a,1,prediction_alert,0.174
-demo,a,1,prediction_alert,0.313
-demo,a,1,prediction_alert,0.194
-demo,a,1,prediction_alert,0.804
-demo,a,1,similar_table_Similar patient,0.042
-demo,a,1,similar_table_Similar patient,0.054
-demo,a,1,similar_table_Similar patient,0.069
-demo,a,1,feature_image,0.029
-demo,a,1,LLM_positive_points,0.141
-demo,a,1,LLM_positive_points,0.152
-demo,a,1,vitals_table_Heart Rate,0.147
-demo,a,1,guideline_alert,0.052
-demo,a,1,guideline_alert,0.201
-demo,a,1,guideline_alert,0.059
-demo,a,1,guideline_alert,0.033
-demo,a,1,guideline_alert,0.291
-demo,a,1,guidelines_flowchart,0.029
-demo,a,1,guidelines_pdf,0.135
-demo,a,1,guidelines_pdf,1.802
-demo,a,1,guidelines_pdf,23.092
-demo,a,1,vitals_table_Respiratory Rate,0.195
+demo,a,1,prediction_alert,0.035
+demo,a,1,prediction_alert,3.343
+demo,a,1,guideline_alert,0.121
+demo,a,1,guideline_alert,5.197
+demo,a,1,guideline_alert,0.071
+demo,a,1,prediction_alert,0.056
+demo,a,1,prediction_alert,0.241
+demo,a,1,patient_table,0.079
+demo,a,1,feature_image,0.541
+demo,a,1,feature_image,0.284
+demo,a,1,feature_image,2.725
+demo,a,1,LLM_positive_points,0.095
+demo,a,1,LLM_positive_points,0.493
+demo,a,1,LLM_positive_points,0.301
+demo,a,1,vitals_table_Heart Rate,0.048
+demo,a,1,guideline_alert,0.016
+demo,a,1,guideline_alert,0.14
+demo,a,1,guideline_alert,0.27
+demo,a,1,guidelines_flowchart,0.069
+demo,a,1,guidelines_flowchart,1.421
+demo,a,1,guidelines_pdf,0.978
+demo,a,1,guidelines_pdf,0.441
+demo,a,1,guidelines_pdf,17.644
+demo,a,1,guidelines_pdf,0.814
+demo,a,1,vitals_table_Respiratory Rate,0.093
