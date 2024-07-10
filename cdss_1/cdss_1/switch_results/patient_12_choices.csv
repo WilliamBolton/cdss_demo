@@ -31,3 +31,4 @@ tim,b,switch,
 28,a,switch,Stable for 24 hours no clear red flags
 29,b,dont_switch,GCS low; low grade fevers 
 30,a,dont_switch,"Low GCS., I would want more information about this case to optimise decision, however most scenarios would likely require a longer course of IV abx (depending on indication)."
+31,b,dont_switch,Low GCS

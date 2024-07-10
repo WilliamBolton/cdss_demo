@@ -31,3 +31,4 @@ tim,b,switch,
 28,a,dont_switch,"Elderly patient, likely multiple comorbidities. Red flags : hypothermia, tachypnoeic, low diastolic pressure. Additional information with cultures, radiology and inflammatory markers needed before taking decision. Most likely outcome is escalation to broader spectrum cover."
 29,b,switch,parameters stable; afebrile
 30,a,switch,Clarify indication for antibiotics. Likely to switch to oral if indication allows. 
+31,b,switch,"Unclear what the diagnosis is or reason for antibiotics, so would depend on clinical history/imaging/bloods, but on the face of it able to switch due to normal observations."

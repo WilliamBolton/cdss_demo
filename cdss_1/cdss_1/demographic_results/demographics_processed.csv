@@ -1,0 +1,32 @@
+user_id,user_archetype,age,sex,medical_speciality,grade,ai_familiarity,age_new,sex_new,medical_speciality_new,grade_new,ai_familiarity_new
+0,a,37.0,M,Pharmacist,8a,,30s,Male,Pharmacist,Other,
+1,b,39.0,M,ID,,,30s,Male,Infectious Diseases,Other,
+2,a,38.0,m,ID / micro,ST6,2.0,30s,Male,Infectious Diseases,Other,Slightly familiar
+3,b,37.0,Female,Infection,8b,1.0,30s,Female,Infectious Diseases,Other,Not familiar
+4,a,38.0,Male,Respiratory,Consultant,2.0,30s,Male,Other,Consultant,Slightly familiar
+5,b,45.0,male,ICU,Consultant,3.0,40s,Male,Other,Consultant,Moderately familiar
+6,a,43.0,M,Pharmacy,Consultant,,40s,Male,Pharmacist,Consultant,
+7,b,34.0,Female,ID Pharmacist,8a,3.0,30s,Female,Pharmacist,Other,Moderately familiar
+8,a,37.0,Female,Pharmacy,8b,2.0,30s,Female,Pharmacist,Other,Slightly familiar
+9,b,45.0,m,microbiology,cons,2.0,40s,Male,Microbiology,Consultant,Slightly familiar
+10,a,36.0,M,Medical microbiology,Consultant,4.0,30s,Male,Microbiology,Consultant,Very familiar
+11,b,50.0,F,ID,Consultant,1.0,50s,Female,Infectious Diseases,Consultant,Not familiar
+12,a,38.0,male,intensive care,consultant,3.0,30s,Male,Other,Consultant,Moderately familiar
+13,b,49.0,f,Infectious Diseases,Consultant,1.0,40s,Female,Infectious Diseases,Consultant,Not familiar
+14,a,48.0,female,Antimicrobial pharmacist,band 8a,2.0,40s,Female,Pharmacist,Other,Slightly familiar
+15,b,47.0,Female,Infectious Diseases ,Consultant,1.0,40s,Female,Infectious Diseases,Consultant,Not familiar
+16,a,52.0,M,Clinical Infection,Consultant,2.0,50s,Male,Infectious Diseases,Consultant,Slightly familiar
+17,b,46.0,Male,Microbiology,Consultant,2.0,40s,Male,Microbiology,Consultant,Slightly familiar
+18,a,53.0,f,microbiology,consultant,2.0,50s,Female,Microbiology,Consultant,Slightly familiar
+19,b,58.0,F,Microbiology,Consultant,3.0,50s,Female,Microbiology,Consultant,Moderately familiar
+20,a,,F,Microbiology,consultant,2.0,nan,Female,Microbiology,Consultant,Slightly familiar
+21,b,28.0,female,pharmacist,band 8a specialist pharmacist,1.0,20s,Female,Pharmacist,Other,Not familiar
+22,a,45.0,Female,Paediatric ID,Consultant ,1.0,40s,Female,Infectious Diseases,Consultant,Not familiar
+23,b,35.0,M,Respiratory,ST7,3.0,30s,Male,Other,Other,Moderately familiar
+24,a,44.0,Male,Infectious Diseases & General Medicine,Consultant,3.0,40s,Male,Infectious Diseases,Consultant,Moderately familiar
+25,b,55.0,Male,Microbiology,consultant,2.0,50s,Male,Microbiology,Consultant,Slightly familiar
+26,a,50.0,F,Medical Microbiology,Consultant,,50s,Female,Microbiology,Consultant,
+27,b,64.0,f,micro,consultant ,1.0,60s,Female,Microbiology,Consultant,Not familiar
+28,a,61.0,Male,Microbiology,Consultant,2.0,60s,Male,Microbiology,Consultant,Slightly familiar
+29,b,41.0,Male,Respiratory,Consultant,2.0,40s,Male,Other,Consultant,Slightly familiar
+30,a,39.0,male,ID/GIM,ST7,3.0,30s,Male,Infectious Diseases,Other,Moderately familiar

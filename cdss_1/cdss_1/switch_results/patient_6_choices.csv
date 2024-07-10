@@ -31,3 +31,4 @@ tim,b,switch,
 28,a,dont_switch,"Multiple risk factors, insufficient data to exclude S. aureus sepsis, need imaging, cultures and inflammatory markers until able to make safe decision"
 29,b,switch,parameters stable 
 30,a,switch,Clarify decision for antibiotics with the clinical team (or myself if I am looking after patient).Re-evalute the need for any antibiotics. Likely to stop if not indicated(or depending on indication) could consider oral option (i.e. if it was for SSTI)
+31,b,switch,"Unclear what the diagnosis is, but assuming no complex infection indication(e.g. Staph aureus bacteraemia), then switch to oral as observations normal."

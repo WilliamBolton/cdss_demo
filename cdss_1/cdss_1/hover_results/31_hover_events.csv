@@ -1,0 +1,23 @@
+user_id,user_archetype,patient,component,hover_duration
+31,b,11,vitals_table_Metric / Time (hours),0.213
+31,b,11,guidelines_pdf_simple,0.102
+31,b,11,guidelines_pdf_simple,0.055
+31,b,11,guidelines_pdf_simple,1.0
+31,b,12,vitals_table_Metric / Time (hours),0.022
+31,b,12,vitals_table_Temperature,0.056
+31,b,12,vitals_table_Temperature,0.585
+31,b,12,vitals_table_Respiratory Rate,4.6
+31,b,12,vitals_table_Respiratory Rate,0.413
+31,b,12,vitals_table_Respiratory Rate,2.233
+31,b,12,vitals_table_Respiratory Rate,2.398
+31,b,12,vitals_table_Respiratory Rate,1.103
+31,b,12,vitals_table_Respiratory Rate,0.088
+31,b,12,vitals_table_Heart Rate,0.059
+31,b,12,vitals_table_Heart Rate,0.048
+31,b,12,vitals_table_Glasgow Coma Score - verbal response,0.049
+31,b,12,vitals_table_Glasgow Coma Score - verbal response,0.077
+31,b,12,vitals_table_Glasgow Coma Score - verbal response,0.731
+31,b,12,vitals_table_Glasgow Coma Score - verbal response,1.99
+31,b,12,vitals_table_Glasgow Coma Score - verbal response,2.566
+31,b,12,vitals_table_Glasgow Coma Score - verbal response,0.889
+31,b,12,vitals_table_Glasgow Coma Score - verbal response,0.051
