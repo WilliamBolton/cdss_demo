@@ -31,4 +31,4 @@ user_id,user_archetype,age,sex,medical_speciality,grade,ai_familiarity
 29,b,41,Male,Respiratory,Consultant,2
 30,a,39,male,ID/GIM,ST7,3
 31,b,37,Male,Infectious Diseases / Microbiology,ST7,3
-49,b,,,,,
+32,a,28,female,ams,lead pharmacist,2

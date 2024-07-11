@@ -1,32 +1,47 @@
 user_id,user_archetype,patient,component,hover_duration
-demo,a,1,vitals_table_Diastolic Blood Pressure,0.334
-demo,a,1,vitals_table_Mean Arterial Pressure,0.164
-demo,a,1,echarts_plot,1.881
-demo,a,1,prediction_alert,0.259
-demo,a,1,prediction_alert,0.448
-demo,a,1,prediction_alert,0.022
-demo,a,1,prediction_alert,0.035
-demo,a,1,prediction_alert,3.343
-demo,a,1,guideline_alert,0.121
-demo,a,1,guideline_alert,5.197
-demo,a,1,guideline_alert,0.071
-demo,a,1,prediction_alert,0.056
-demo,a,1,prediction_alert,0.241
-demo,a,1,patient_table,0.079
-demo,a,1,feature_image,0.541
-demo,a,1,feature_image,0.284
-demo,a,1,feature_image,2.725
-demo,a,1,LLM_positive_points,0.095
-demo,a,1,LLM_positive_points,0.493
-demo,a,1,LLM_positive_points,0.301
-demo,a,1,vitals_table_Heart Rate,0.048
-demo,a,1,guideline_alert,0.016
-demo,a,1,guideline_alert,0.14
-demo,a,1,guideline_alert,0.27
-demo,a,1,guidelines_flowchart,0.069
-demo,a,1,guidelines_flowchart,1.421
-demo,a,1,guidelines_pdf,0.978
-demo,a,1,guidelines_pdf,0.441
-demo,a,1,guidelines_pdf,17.644
-demo,a,1,guidelines_pdf,0.814
-demo,a,1,vitals_table_Respiratory Rate,0.093
+demo,a,1,patient_details_age:,0.023
+demo,a,1,vitals_table_Glasgow Coma Score,0.016
+demo,a,1,vitals_table_SpO2,0.015
+demo,a,1,vitals_table_Temperature,0.029
+demo,a,1,vitals_table_Systolic Blood Pressure,0.06
+demo,a,1,vitals_table_Metric / Time (hours),2.597
+demo,a,1,vitals_table_Metric / Time (hours),0.038
+demo,a,1,vitals_table_Temperature,0.088
+demo,a,1,vitals_table_Metric / Time (hours),0.337
+demo,a,1,vitals_table_Metric / Time (hours),0.21
+demo,a,1,echarts_plot,1.683
+demo,a,1,echarts_plot,1.251
+demo,a,1,guideline_alert,0.017
+demo,a,1,guideline_alert,0.17
+demo,a,1,echarts_plot,0.18
+demo,a,1,vitals_table_Heart Rate,0.036
+demo,a,1,vitals_table_Respiratory Rate,0.096
+demo,a,1,vitals_table_Temperature,0.01
+demo,a,1,vitals_table_Metric / Time (hours),1.309
+demo,a,1,vitals_table_Metric / Time (hours),3.161
+demo,a,1,vitals_table_Metric / Time (hours),9.91
+demo,a,1,vitals_table_Temperature,0.029
+demo,a,1,vitals_table_Respiratory Rate,0.224
+demo,a,1,vitals_table_Heart Rate,0.236
+demo,a,1,vitals_table_Systolic Blood Pressure,0.009
+demo,a,1,vitals_table_SpO2,0.228
+demo,a,1,guideline_alert,0.195
+demo,a,1,guideline_alert,0.127
+demo,a,1,guidelines_pdf,0.229
+demo,a,1,guidelines_pdf,1.07
+demo,a,1,vitals_table_Respiratory Rate,0.062
+demo,a,1,prediction_alert,0.03
+demo,a,1,prediction_alert,0.004
+demo,a,1,prediction_alert,0.294
+demo,a,1,prediction_alert,0.102
+demo,a,1,similar_table_1,0.025
+demo,a,1,patient_table,0.166
+demo,a,1,patient_table,0.039
+demo,a,1,feature_image,0.173
+demo,a,1,feature_image,0.497
+demo,a,1,feature_image,0.118
+demo,a,1,feature_image,10.581
+demo,a,1,LLM_positive_points,0.195
+demo,a,1,LLM_positive_points,2.166
+demo,a,1,LLM_positive_points,0.522
+demo,a,1,vitals_table_Heart Rate,0.033

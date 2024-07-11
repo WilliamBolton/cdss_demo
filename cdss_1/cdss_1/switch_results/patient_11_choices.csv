@@ -32,3 +32,4 @@ tim,b,dont_switch,
 29,b,switch,
 30,a,switch,Acceptable clinical parameters. If indication allows for oral switch. 
 31,b,dont_switch,Recent period of significant hypotension. This needs to be looked at before IVOST
+32,a,switch,"consider whether patient is clinically improving, any co-morbidities, if patient is on supplementary oxygen nd if those requirements are going up/down. Also to consider why are the SpO2  up and down and if this is an infection. To check wbc/ crp and whether any imaging to support infection?"
