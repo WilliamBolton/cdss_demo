@@ -32,6 +32,5 @@ tim,b,switch,
 29,b,switch,parameters stable. no fevers
 30,a,switch,Clinical stable. Oral option likely to be suitable. 
 31,b,switch,Observations normalised. On abx for >5d.
-32,a,switch,also would like to know if patient is clinically responding-  does cellulitis looks like it's improving? aLSO
 32,a,switch,Would like to check whether cellulitis looked like it was improving. 
-32,a,switch,Would like to confirm whether cellulitis was improving
+33,b,switch,"vital signs within normal range, already completed 5 days of IV antibiotics - would be useful to include a visual of the cellulitis area and how it has changed compared to at the start of the treatment course"

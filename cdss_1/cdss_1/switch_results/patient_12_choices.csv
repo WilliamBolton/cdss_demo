@@ -33,3 +33,4 @@ tim,b,switch,
 30,a,dont_switch,"Low GCS., I would want more information about this case to optimise decision, however most scenarios would likely require a longer course of IV abx (depending on indication)."
 31,b,dont_switch,Low GCS
 32,a,dont_switch,"Consider why GCS low, is this back to baseline and is patient clinically improving? any c&s, and what is the indication for abx. Was the patient spiking in temp on admission, why were abx started? does patient require IVs, would they be able to swallow oral abx? "
+33,b,dont_switch,"still very low GCS, but would like more information again regarding history, examination and other investigations"

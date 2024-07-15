@@ -31,3 +31,4 @@ user_id,user_archetype,age,sex,medical_speciality,grade,ai_familiarity,age_new,s
 29,b,41.0,Male,Respiratory,Consultant,2.0,40s,Male,Other,Consultant,Slightly familiar
 30,a,39.0,male,ID/GIM,ST7,3.0,30s,Male,Infectious Diseases,Other,Moderately familiar
 31,b,37.0,Male,Infectious Diseases / Microbiology,ST7,3.0,30s,Male,Infectious Diseases,Other,Moderately familiar
+32,a,28.0,female,ams,lead pharmacist,2.0,20s,Female,Other,Other,Slightly familiar

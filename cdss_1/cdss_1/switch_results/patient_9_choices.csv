@@ -33,3 +33,4 @@ tim,b,switch,
 30,a,switch,"If oral option for abx available, depending on indication would select one. "
 31,b,switch,Obs normalised. Long duration of IV abx already.
 32,a,dont_switch,"would need more information around patient past medical history, why spo2 is up and down and also what the diagnosis is. whether the changes in spo2 are of infective cause? would also like to check crp/wbc any culture and sensitivities? any co-morbidities?"
+33,b,switch,would require more clinical information 
