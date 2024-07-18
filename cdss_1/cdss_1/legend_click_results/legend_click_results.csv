@@ -52,3 +52,9 @@ user_id,user_archetype,patient,variable,timestamp
 21,b,12,Glasgow Coma Score - motor response,2024-06-26T08:23:53.954Z
 21,b,12,Glasgow Coma Score - motor response,2024-06-26T08:23:58.694Z
 21,b,12,Glasgow Coma Score - verbal response,2024-06-26T08:23:59.725Z
+35,b,7,Systolic Blood Pressure,2024-07-18T10:05:15.075Z
+35,b,7,Systolic Blood Pressure,2024-07-18T10:05:16.386Z
+35,b,7,Diastolic Blood Pressure,2024-07-18T10:05:20.553Z
+35,b,7,Diastolic Blood Pressure,2024-07-18T10:05:21.695Z
+35,b,7,Respiratory Rate,2024-07-18T10:05:25.589Z
+35,b,7,Respiratory Rate,2024-07-18T10:05:26.759Z

@@ -35,3 +35,4 @@ tim,b,switch,
 32,a,dont_switch,"Consider why GCS low, is this back to baseline and is patient clinically improving? any c&s, and what is the indication for abx. Was the patient spiking in temp on admission, why were abx started? does patient require IVs, would they be able to swallow oral abx? "
 33,b,dont_switch,"still very low GCS, but would like more information again regarding history, examination and other investigations"
 34,a,dont_switch,Slightly low systolic and temp 37.8 would prompt me to review in 24 hours incase signal of developing complication.
+35,b,dont_switch,"Need more info about cause of low GCS before switch, in absence of this, continue IVs"

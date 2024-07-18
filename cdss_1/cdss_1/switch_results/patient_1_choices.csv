@@ -35,3 +35,4 @@ tim,b,dont_switch,
 32,a,dont_switch,spike in temp last 24 hours- consider change to different IV abx
 33,b,dont_switch,still febrile
 34,a,dont_switch,"Ongoing biochemical evidence consistent with infection, consider adding additional ABX for atypical organisms."
+35,b,dont_switch,"Day 1, still febrile and tachycardia, no signs improvement yet"
