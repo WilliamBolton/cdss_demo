@@ -1,2 +1,4 @@
 user_id,user_archetype,patient,link_clicks,timestamp
-demo,a,1,predictiondetailsLink,2024-07-15 07:06:17.165377+00:00
+demo,a,1,predictiondetailsLink,2024-07-18 08:31:38.305277+00:00
+demo,a,1,guidelinedetailsLink,2024-07-18 08:32:37.597611+00:00
+demo,a,3,predictiondetailsLink,2024-07-18 08:35:10.086229+00:00

@@ -34,3 +34,4 @@ tim,b,dont_switch,
 31,b,dont_switch,"Hypotensive, seemingly new. Would need additional information to reassure to switch (e.g  prior BP and investigations)"
 32,a,dont_switch,"Would require more information around clinical condition, any comorbidities, crp&wbc, whether there is an indication for abx. Also whether the changes in spo2 are due to non-infective cause. Would also like to know if this patient is on oxygen and if these oxygen requirements have changed during admission."
 33,b,switch,"vital signs within range, but would require more clinical information "
+34,a,dont_switch,"Systolic BP lower than baseline, 93% sats, increase in respiratory rate. May reflect underlying chronic co-morbidity. I would maintain ABX and review patient. "
