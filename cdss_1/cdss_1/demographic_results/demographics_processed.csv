@@ -32,3 +32,7 @@ user_id,user_archetype,age,sex,medical_speciality,grade,ai_familiarity,age_new,s
 30,a,39.0,male,ID/GIM,ST7,3.0,30s,Male,Infectious Diseases,Other,Moderately familiar
 31,b,37.0,Male,Infectious Diseases / Microbiology,ST7,3.0,30s,Male,Infectious Diseases,Other,Moderately familiar
 32,a,28.0,female,ams,lead pharmacist,2.0,20s,Female,Other,Other,Slightly familiar
+33,b,32.0,female,respiratory medicine,ST4,2.0,30s,Female,Other,Other,Slightly familiar
+34,a,43.0,Male,Infectious Diseases and Microbiology,Consultant,4.0,40s,Male,Infectious Diseases,Consultant,Very familiar
+35,b,32.0,Male,Infectious Diseases,ST5,3.0,30s,Male,Infectious Diseases,Other,Moderately familiar
+36,a,37.0,Male,Medical Microbiology,Consultant,4.0,30s,Male,Microbiology,Consultant,Very familiar
