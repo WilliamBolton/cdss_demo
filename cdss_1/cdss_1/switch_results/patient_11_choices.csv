@@ -37,3 +37,4 @@ tim,b,dont_switch,
 33,b,switch,"not febrile, not tachycardia or tachypnoeic, but would like more clinical information such as history, examination and investigation findings"
 34,a,switch,Biometrics stable. No evidence of worsening infection. consider orals. 
 35,b,dont_switch,"Recent hypotension, still early"
+36,a,switch,Appears stable

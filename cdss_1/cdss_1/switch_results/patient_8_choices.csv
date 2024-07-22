@@ -36,3 +36,4 @@ tim,b,switch,
 33,b,switch,"similarly, would need more clinical context, including history, clinical examination and blood tests/other investigation results"
 34,a,switch,"Afebrile. Biometrics stable. Needs review to ensure clinically improving. assuming so, consider switching to orals (or stop if infection resolved)"
 35,b,dont_switch,"I need more clinical info, but with the little I have, I'm concerned about persistent tachycardia and borderline hypotension"
+36,a,switch,Assess response to oral  step-down as inpatient

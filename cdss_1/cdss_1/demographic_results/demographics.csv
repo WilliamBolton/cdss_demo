@@ -35,3 +35,4 @@ user_id,user_archetype,age,sex,medical_speciality,grade,ai_familiarity
 33,b,32,female,respiratory medicine,ST4,2
 34,a,43,Male,Infectious Diseases and Microbiology,Consultant,4
 35,b,32,Male,Infectious Diseases,ST5,3
+36,a,37,Male,Medical Microbiology,Consultant,4

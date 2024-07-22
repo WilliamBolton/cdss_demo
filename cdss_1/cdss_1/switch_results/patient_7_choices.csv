@@ -36,3 +36,4 @@ tim,b,switch,
 33,b,switch,"vital signs are within range, but would need more information in reality to make this decision - clinical history, examination findings, blood tests, CXR/blood culture/urine MC&Ss"
 34,a,switch,No information about diagnosis or choice of ABX. needs clinical assessment. Biometrics stable. assuming no reason for continued IV consider to switch to orals (or even stop if no evidence of infection). 
 35,b,dont_switch,"With information I have, concerned about intermittent high respiratory rate, and low MAP, still in first 48 hours"
+36,a,dont_switch,Needs broader assessment before decision can be made (re: the significance of the labile resp rate)
