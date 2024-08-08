@@ -36,3 +36,4 @@ user_id,user_archetype,age,sex,medical_speciality,grade,ai_familiarity,age_new,s
 34,a,43.0,Male,Infectious Diseases and Microbiology,Consultant,4.0,40s,Male,Infectious Diseases,Consultant,Very familiar
 35,b,32.0,Male,Infectious Diseases,ST5,3.0,30s,Male,Infectious Diseases,Other,Moderately familiar
 36,a,37.0,Male,Medical Microbiology,Consultant,4.0,30s,Male,Microbiology,Consultant,Very familiar
+37,b,47.0,F,Respiratory,Consultant,1.0,40s,Female,Other,Consultant,Not familiar
