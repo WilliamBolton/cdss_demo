@@ -40,3 +40,4 @@ tim,b,dont_switch,
 37,b,dont_switch,Clinically unwell and has only been on IV abx for a day
 38,a,dont_switch,high fevers
 39,b,dont_switch,"Haemodynmical instability, consider addition of atypical cover"
+40,a,dont_switch,Still Febrile and only 24hrs into IV abx

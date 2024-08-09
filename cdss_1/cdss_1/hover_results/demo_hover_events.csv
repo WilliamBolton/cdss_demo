@@ -1,71 +1,53 @@
 user_id,user_archetype,patient,component,hover_duration
-demo,a,1,patient_details_co-morbidities:,0.028
-demo,a,1,prediction_alert,0.015
-demo,a,1,prediction_alert,0.233
-demo,a,1,prediction_alert,0.057
-demo,a,1,prediction_alert,0.036
-demo,a,1,prediction_alert,0.608
-demo,a,1,prediction_alert,0.597
-demo,a,1,prediction_alert,0.541
-demo,a,1,prediction_alert,0.2
-demo,a,1,prediction_alert,0.428
-demo,a,1,prediction_alert,0.162
-demo,a,1,guideline_alert,0.52
-demo,a,1,guideline_alert,1.424
-demo,a,1,guideline_alert,0.775
-demo,a,1,guideline_alert,6.448
-demo,a,1,similar_table_1,0.014
-demo,a,1,similar_table_Similar patient,0.178
-demo,a,1,similar_table_Similar patient,0.026
-demo,a,1,similar_table_Similar patient,0.005
-demo,a,1,similar_table_1,0.668
-demo,a,1,patient_table,0.365
-demo,a,1,patient_table,0.42
-demo,a,1,similar_table_Similar patient,1.009
-demo,a,1,similar_table_2,0.698
-demo,a,1,patient_table,0.011
-demo,a,1,similar_table_Similar patient,2.063
-demo,a,1,similar_table_1,3.538
-demo,a,1,similar_table_3,0.159
-demo,a,1,similar_table_5,0.164
-demo,a,1,feature_image,0.774
-demo,a,1,feature_image,0.759
-demo,a,1,feature_image,3.814
-demo,a,1,feature_image,1.99
-demo,a,1,similar_table_2,0.443
-demo,a,1,similar_table_3,0.034
-demo,a,1,similar_table_4,0.168
-demo,a,1,similar_table_2,0.752
-demo,a,1,patient_table,0.211
-demo,a,1,patient_table,0.026
-demo,a,1,patient_table,0.06
-demo,a,1,patient_table,0.057
-demo,a,1,patient_table,0.299
-demo,a,1,patient_table,0.039
-demo,a,1,patient_table,0.094
-demo,a,1,patient_table,1.154
-demo,a,1,feature_image,6.29
-demo,a,1,LLM_positive_points,6.184
-demo,a,1,LLM_positive_points,0.257
-demo,a,1,vitals_table_Respiratory Rate,0.373
-demo,a,1,guidelines_flowchart,0.06
-demo,a,1,guidelines_pdf,0.668
-demo,a,1,guidelines_pdf,24.887
-demo,a,1,patient_details_antibiotic_treatment:,0.374
-demo,a,1,patient_details_antibiotic_treatment:,0.348
-demo,a,1,vitals_table_Metric / Time (hours),0.102
-demo,a,1,vitals_table_Temperature,0.579
-demo,a,1,vitals_table_Metric / Time (hours),0.045
-demo,a,1,vitals_table_Temperature,0.029
-demo,a,1,vitals_table_Metric / Time (hours),3.692
-demo,a,1,vitals_table_Temperature,0.337
-demo,a,1,vitals_table_Metric / Time (hours),3.241
-demo,a,2,vitals_table_Glasgow Coma Score,0.134
-demo,a,2,vitals_table_Mean Arterial Pressure,0.194
-demo,a,2,vitals_table_Supplemental Oxygen,0.102
-demo,a,2,vitals_table_SpO2,0.232
-demo,a,2,vitals_table_Metric / Time (hours),0.098
-demo,a,2,vitals_table_Metric / Time (hours),0.326
-demo,a,2,vitals_table_Metric / Time (hours),0.194
-demo,a,2,echarts_plot,6.201
-demo,a,2,guidelines_pdf_simple,0.427
+demo,a,1,echarts_plot,3.818
+demo,a,1,prediction_alert,0.214
+demo,a,1,prediction_alert,1.227
+demo,a,1,prediction_alert,0.265
+demo,a,1,prediction_alert,2.408
+demo,a,1,prediction_alert,1.446
+demo,a,1,prediction_alert,0.199
+demo,a,1,prediction_alert,0.044
+demo,a,1,prediction_alert,0.509
+demo,a,1,guideline_alert,0.675
+demo,a,1,guideline_alert,1.533
+demo,a,1,guideline_alert,0.181
+demo,a,1,guideline_alert,1.069
+demo,a,1,patient_table,0.077
+demo,a,1,patient_table,0.022
+demo,a,1,similar_table_Similar patient,0.357
+demo,a,1,similar_table_Similar patient,0.004
+demo,a,1,similar_table_Similar patient,0.476
+demo,a,1,similar_table_5,0.396
+demo,a,1,similar_table_2,0.866
+demo,a,1,similar_table_Similar patient,3.874
+demo,a,1,similar_table_1,0.216
+demo,a,1,similar_table_Similar patient,0.431
+demo,a,1,similar_table_Similar patient,0.118
+demo,a,1,similar_table_1,0.126
+demo,a,1,similar_table_1,0.203
+demo,a,1,similar_table_1,0.139
+demo,a,1,similar_table_1,0.407
+demo,a,1,similar_table_1,0.294
+demo,a,1,similar_table_2,0.203
+demo,a,1,similar_table_3,0.095
+demo,a,1,similar_table_4,0.5
+demo,a,1,similar_table_5,0.417
+demo,a,1,similar_table_Similar patient,0.493
+demo,a,1,similar_table_4,0.153
+demo,a,1,feature_image,21.756
+demo,a,1,feature_image,0.911
+demo,a,1,similar_table_4,0.027
+demo,a,1,similar_table_4,0.025
+demo,a,1,similar_table_3,0.033
+demo,a,1,similar_table_3,0.372
+demo,a,1,feature_image,5.278
+demo,a,1,feature_image,0.208
+demo,a,1,feature_image,20.548
+demo,a,1,LLM_positive_points,6.04
+demo,a,1,similar_table_1,0.29
+demo,a,1,patient_table,0.078
+demo,a,1,feature_image,5.266
+demo,a,1,feature_image,11.152
+demo,a,1,feature_image,11.415
+demo,a,1,LLM_positive_points,0.114
+demo,a,1,vitals_table_Heart Rate,0.142
