@@ -58,3 +58,165 @@ user_id,user_archetype,patient,variable,timestamp
 35,b,7,Diastolic Blood Pressure,2024-07-18T10:05:21.695Z
 35,b,7,Respiratory Rate,2024-07-18T10:05:25.589Z
 35,b,7,Respiratory Rate,2024-07-18T10:05:26.759Z
+39,b,2,Systolic Blood Pressure,2024-08-09T08:28:45.539Z
+39,b,2,Systolic Blood Pressure,2024-08-09T08:28:47.167Z
+39,b,2,Respiratory Rate,2024-08-09T08:28:48.662Z
+39,b,2,Temperature,2024-08-09T08:28:49.228Z
+39,b,2,Mean Arterial Pressure,2024-08-09T08:28:51.213Z
+39,b,2,SpO2,2024-08-09T08:28:52.261Z
+39,b,2,Glasgow Coma Score,2024-08-09T08:28:53.065Z
+39,b,4,Respiratory Rate,2024-08-09T08:33:50.832Z
+39,b,4,Mean Arterial Pressure,2024-08-09T08:33:54.944Z
+39,b,4,SpO2,2024-08-09T08:33:55.942Z
+39,b,4,Glasgow Coma Score,2024-08-09T08:33:56.602Z
+39,b,6,Heart Rate,2024-08-09T08:38:31.398Z
+39,b,6,Respiratory Rate,2024-08-09T08:38:32.062Z
+39,b,6,Temperature,2024-08-09T08:38:32.667Z
+39,b,6,SpO2,2024-08-09T08:38:34.266Z
+39,b,6,Glasgow Coma Score,2024-08-09T08:38:34.894Z
+39,b,6,Mean Arterial Pressure,2024-08-09T08:38:40.315Z
+39,b,6,Diastolic Blood Pressure,2024-08-09T08:38:41.163Z
+39,b,6,Systolic Blood Pressure,2024-08-09T08:38:41.842Z
+39,b,6,Heart Rate,2024-08-09T08:38:42.526Z
+39,b,6,Glasgow Coma Score,2024-08-09T08:38:46.752Z
+39,b,6,Heart Rate,2024-08-09T08:38:48.992Z
+39,b,6,Temperature,2024-08-09T08:38:52.622Z
+39,b,6,Temperature,2024-08-09T08:38:58.439Z
+39,b,6,Glasgow Coma Score,2024-08-09T08:39:01.194Z
+39,b,6,Respiratory Rate,2024-08-09T08:39:03.174Z
+39,b,7,Glasgow Coma Score - motor response,2024-08-09T08:41:03.761Z
+39,b,7,Glasgow Coma Score,2024-08-09T08:41:05.637Z
+39,b,7,Glasgow Coma Score – eye opening,2024-08-09T08:41:06.624Z
+39,b,7,Respiratory Rate,2024-08-09T08:41:10.453Z
+39,b,7,Heart Rate,2024-08-09T08:41:11.422Z
+39,b,7,Diastolic Blood Pressure,2024-08-09T08:41:12.915Z
+39,b,7,Mean Blood Pressure,2024-08-09T08:41:13.696Z
+39,b,7,Glasgow Coma Score - verbal response,2024-08-09T08:41:14.735Z
+39,b,7,SpO2,2024-08-09T08:41:16.232Z
+39,b,7,Systolic Blood Pressure,2024-08-09T08:41:19.453Z
+39,b,7,Temperature,2024-08-09T08:41:34.652Z
+39,b,7,Respiratory Rate,2024-08-09T08:41:36.643Z
+39,b,7,Respiratory Rate,2024-08-09T08:41:43.377Z
+39,b,7,SpO2,2024-08-09T08:41:45.033Z
+39,b,7,SpO2,2024-08-09T08:42:09.774Z
+39,b,7,Heart Rate,2024-08-09T08:42:11.724Z
+39,b,7,Heart Rate,2024-08-09T08:42:17.028Z
+39,b,7,Systolic Blood Pressure,2024-08-09T08:42:18.141Z
+39,b,7,Diastolic Blood Pressure,2024-08-09T08:42:19.074Z
+39,b,7,Systolic Blood Pressure,2024-08-09T08:42:35.088Z
+39,b,7,Glasgow Coma Score,2024-08-09T08:42:38.003Z
+39,b,7,Diastolic Blood Pressure,2024-08-09T08:42:39.296Z
+39,b,8,Respiratory Rate,2024-08-09T08:45:36.904Z
+39,b,8,Heart Rate,2024-08-09T08:45:38.274Z
+39,b,8,Diastolic Blood Pressure,2024-08-09T08:45:40.517Z
+39,b,8,Mean Blood Pressure,2024-08-09T08:45:41.519Z
+39,b,8,SpO2,2024-08-09T08:45:42.575Z
+39,b,8,Glasgow Coma Score – eye opening,2024-08-09T08:45:43.576Z
+39,b,8,Glasgow Coma Score,2024-08-09T08:45:47.061Z
+39,b,8,Glasgow Coma Score - verbal response,2024-08-09T08:45:47.904Z
+39,b,8,Glasgow Coma Score - motor response,2024-08-09T08:45:48.703Z
+39,b,8,Systolic Blood Pressure,2024-08-09T08:45:52.137Z
+39,b,8,Temperature,2024-08-09T08:46:10.134Z
+39,b,8,Systolic Blood Pressure,2024-08-09T08:46:11.601Z
+39,b,8,Diastolic Blood Pressure,2024-08-09T08:46:12.863Z
+39,b,8,Systolic Blood Pressure,2024-08-09T08:46:33.107Z
+39,b,8,Diastolic Blood Pressure,2024-08-09T08:46:33.909Z
+39,b,8,Heart Rate,2024-08-09T08:46:35.333Z
+39,b,8,Heart Rate,2024-08-09T08:46:42.700Z
+39,b,8,SpO2,2024-08-09T08:46:43.944Z
+39,b,8,SpO2,2024-08-09T08:46:48.201Z
+39,b,8,Glasgow Coma Score,2024-08-09T08:46:50.339Z
+39,b,9,Glasgow Coma Score - motor response,2024-08-09T08:48:29.094Z
+39,b,9,Respiratory Rate,2024-08-09T08:48:29.702Z
+39,b,9,Glasgow Coma Score - verbal response,2024-08-09T08:48:30.703Z
+39,b,9,Heart Rate,2024-08-09T08:48:31.326Z
+39,b,9,Systolic Blood Pressure,2024-08-09T08:48:32.607Z
+39,b,9,Glasgow Coma Score,2024-08-09T08:48:34.339Z
+39,b,9,Mean Blood Pressure,2024-08-09T08:48:35.717Z
+39,b,9,Diastolic Blood Pressure,2024-08-09T08:48:36.891Z
+39,b,9,SpO2,2024-08-09T08:48:38.281Z
+39,b,9,Glasgow Coma Score – eye opening,2024-08-09T08:48:39.121Z
+39,b,9,Temperature,2024-08-09T08:48:53.303Z
+39,b,9,Heart Rate,2024-08-09T08:48:55.630Z
+39,b,9,Heart Rate,2024-08-09T08:49:01.882Z
+39,b,9,Respiratory Rate,2024-08-09T08:49:02.876Z
+39,b,9,Respiratory Rate,2024-08-09T08:49:49.658Z
+39,b,9,Heart Rate,2024-08-09T08:49:50.887Z
+39,b,9,Heart Rate,2024-08-09T08:49:53.494Z
+39,b,9,Systolic Blood Pressure,2024-08-09T08:49:54.314Z
+39,b,9,Diastolic Blood Pressure,2024-08-09T08:49:55.685Z
+39,b,9,Systolic Blood Pressure,2024-08-09T08:50:07.733Z
+39,b,9,Diastolic Blood Pressure,2024-08-09T08:50:08.995Z
+39,b,9,SpO2,2024-08-09T08:50:10.374Z
+39,b,9,SpO2,2024-08-09T08:50:19.887Z
+39,b,9,Glasgow Coma Score – eye opening,2024-08-09T08:50:21.193Z
+39,b,9,Glasgow Coma Score – eye opening,2024-08-09T08:50:24.087Z
+39,b,9,Glasgow Coma Score,2024-08-09T08:50:25.131Z
+39,b,0,Glasgow Coma Score - motor response,2024-08-09T08:52:39.355Z
+39,b,0,Respiratory Rate,2024-08-09T08:52:40.370Z
+39,b,0,Heart Rate,2024-08-09T08:52:41.500Z
+39,b,0,Glasgow Coma Score - verbal response,2024-08-09T08:52:41.902Z
+39,b,0,Systolic Blood Pressure,2024-08-09T08:52:42.792Z
+39,b,0,Diastolic Blood Pressure,2024-08-09T08:52:43.396Z
+39,b,0,Glasgow Coma Score,2024-08-09T08:52:43.837Z
+39,b,0,Mean Blood Pressure,2024-08-09T08:52:44.559Z
+39,b,0,SpO2,2024-08-09T08:52:45.014Z
+39,b,0,Glasgow Coma Score – eye opening,2024-08-09T08:52:45.426Z
+39,b,0,Temperature,2024-08-09T08:53:27.306Z
+39,b,0,Respiratory Rate,2024-08-09T08:53:28.545Z
+39,b,0,Respiratory Rate,2024-08-09T08:53:42.618Z
+39,b,0,Heart Rate,2024-08-09T08:53:44.198Z
+39,b,0,Heart Rate,2024-08-09T08:53:51.926Z
+39,b,0,Systolic Blood Pressure,2024-08-09T08:53:52.984Z
+39,b,0,Diastolic Blood Pressure,2024-08-09T08:53:55.293Z
+39,b,0,Heart Rate,2024-08-09T08:54:03.048Z
+39,b,0,Heart Rate,2024-08-09T08:54:07.689Z
+39,b,0,Systolic Blood Pressure,2024-08-09T08:54:08.831Z
+39,b,0,Diastolic Blood Pressure,2024-08-09T08:54:09.708Z
+39,b,0,SpO2,2024-08-09T08:54:10.723Z
+39,b,0,SpO2,2024-08-09T08:54:17.177Z
+39,b,0,Glasgow Coma Score,2024-08-09T08:54:21.031Z
+39,b,1,Glasgow Coma Score - motor response,2024-08-09T08:55:49.992Z
+39,b,1,Respiratory Rate,2024-08-09T08:55:50.990Z
+39,b,1,Heart Rate,2024-08-09T08:55:53.294Z
+39,b,1,Glasgow Coma Score - verbal response,2024-08-09T08:55:54.091Z
+39,b,1,Systolic Blood Pressure,2024-08-09T08:55:55.590Z
+39,b,1,Diastolic Blood Pressure,2024-08-09T08:55:56.488Z
+39,b,1,Glasgow Coma Score,2024-08-09T08:55:57.205Z
+39,b,1,Mean Blood Pressure,2024-08-09T08:55:58.224Z
+39,b,1,SpO2,2024-08-09T08:55:58.914Z
+39,b,1,Glasgow Coma Score – eye opening,2024-08-09T08:55:59.530Z
+39,b,1,Temperature,2024-08-09T08:56:14.495Z
+39,b,1,Respiratory Rate,2024-08-09T08:56:15.489Z
+39,b,1,Respiratory Rate,2024-08-09T08:56:22.673Z
+39,b,1,SpO2,2024-08-09T08:56:24.447Z
+39,b,1,SpO2,2024-08-09T08:56:39.050Z
+39,b,1,Systolic Blood Pressure,2024-08-09T08:56:40.696Z
+39,b,1,Diastolic Blood Pressure,2024-08-09T08:56:41.395Z
+39,b,1,Heart Rate,2024-08-09T08:56:58.004Z
+39,b,1,Systolic Blood Pressure,2024-08-09T08:56:59.187Z
+39,b,1,Diastolic Blood Pressure,2024-08-09T08:57:00.190Z
+39,b,1,Heart Rate,2024-08-09T08:57:04.968Z
+39,b,1,Glasgow Coma Score,2024-08-09T08:57:07.387Z
+39,b,12,Glasgow Coma Score - motor response,2024-08-09T08:57:57.982Z
+39,b,12,Respiratory Rate,2024-08-09T08:57:58.696Z
+39,b,12,Systolic Blood Pressure,2024-08-09T08:58:01.509Z
+39,b,12,Diastolic Blood Pressure,2024-08-09T08:58:02.236Z
+39,b,12,Glasgow Coma Score,2024-08-09T08:58:02.659Z
+39,b,12,Mean Blood Pressure,2024-08-09T08:58:03.751Z
+39,b,12,SpO2,2024-08-09T08:58:06.195Z
+39,b,12,Glasgow Coma Score – eye opening,2024-08-09T08:58:06.832Z
+39,b,12,Heart Rate,2024-08-09T08:58:08.644Z
+39,b,12,Glasgow Coma Score - verbal response,2024-08-09T08:58:09.195Z
+39,b,12,Temperature,2024-08-09T08:58:34.540Z
+39,b,12,Respiratory Rate,2024-08-09T08:58:35.488Z
+39,b,12,Heart Rate,2024-08-09T08:58:42.947Z
+39,b,12,Respiratory Rate,2024-08-09T08:58:44.379Z
+39,b,12,Heart Rate,2024-08-09T08:58:53.512Z
+39,b,12,Systolic Blood Pressure,2024-08-09T08:58:54.719Z
+39,b,12,Diastolic Blood Pressure,2024-08-09T08:58:56.207Z
+39,b,12,Systolic Blood Pressure,2024-08-09T08:59:07.942Z
+39,b,12,SpO2,2024-08-09T08:59:10.609Z
+39,b,12,Diastolic Blood Pressure,2024-08-09T08:59:12.785Z
+39,b,12,SpO2,2024-08-09T08:59:21.952Z
+39,b,12,Glasgow Coma Score,2024-08-09T08:59:24.134Z

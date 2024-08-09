@@ -39,3 +39,4 @@ tim,b,switch,
 36,a,dont_switch,Concerns about GCS and swallowing
 37,b,dont_switch,"low gas, need to ensure safe oral can be taken first and temp over 37.5. Unclearwhy abx taken so need further information here"
 38,a,dont_switch,"reduced GCS, unlikely will tolerate an oral"
+39,b,switch,"Concerning features here are the low GCS. Assuming we are not treating a CNS infection, i think it is reasonable to IVOS"
