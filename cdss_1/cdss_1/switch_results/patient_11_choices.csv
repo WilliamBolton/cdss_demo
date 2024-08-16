@@ -41,3 +41,4 @@ tim,b,dont_switch,
 38,a,dont_switch,depends on what his target sats is. Is he hypoxic from infection or is this his normal target sats (? COPD with sats 88-92 range) - can make decision to switch or not once clarified
 39,b,dont_switch,Significant period of hypotension with preceding 24hours. 
 40,a,switch,"Need other information to support decision - i.e. CRP response, PMH h- does this patient have COPD - is this his baseline oxygenation?"
+41,b,dont_switch,news score 

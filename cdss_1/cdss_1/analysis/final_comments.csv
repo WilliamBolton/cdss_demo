@@ -1,0 +1,42 @@
+,final_comments
+0,"i found it useful where i was uncertain, the similarity scores were helpful but took sme gettting used to + interpret, the graphing function is slow over the interent but would be more likely to use this in practice, can you calculate ews in the sytem, worth included shaded area for normal range on graph when you hover (could use ranges from NEWS score), could you highlight last 24 hours in the data table, "
+1,"It should be used to informed the potential cases that may have been missed, not to directly influence decision to switch."
+2,thanks for this interesting opportunity
+3,CRP would be helpful. providing ranges for the biochemistry would help
+4,
+5,
+6,Does the AI CDSS provide reassurance to your independent decision making. 
+7,The population of the graphs was not always easy to see trends particularly for temperature as the axis range was so big.
+8,"I think this tool would be really beneficial in a clinical context provided it had the relevant clinical details. As opposed to making a recommendation, i think this tool would be useful for highlighting potential patients that may be suitable for an oral switch."
+9,The key piece of information missing from some of the vignettes was what the diagnosis was. I was often unwilling to make a decision without knowing what infection was being treated. Determination of diagnosis would be a key area for AI in the future. 
+10,"I think that much of the decision making around IV-to-oral switch is centred on the infection diagnosis and antimicrobial therapy (in combination with the patient's vital signs and subjective improvement). Infection diagnosis did not seem to feature in the AI decision making which would be a concern for users. Also, the use of ""prediction correct"" in the AI table could have better terminology as implies that this is what ""should have happened"", rather than ""what actually did happen"". "
+11,"It would be better to have less data eg no need for both MAP and BP, difficult to scroll across, would be helpful to have blood test results, comments about appearance of cellulitis and general appearance of patients "
+12,
+13,I think could be a helpful tool in principle but needs some development
+14,"Needs to include CRP and WBC. Sensitivities. Need diagnosis and some require longer treatments.  Swabs, cultures and sensitivities - what have you grown. "
+15,
+16,We have a love affair with iv antibiotics in healthcare and there is now an emerging body of evidence that po abx are not necessarily inferior to iv abx.  We need to be careful that a model trained on historical practice isn't encumbered by this bias.
+17,potentially exciting tool
+18,useful for junior non-specialist antibiotic prescribers
+19,
+20,"useful tool aimed at ward nurses / junior docs in a ward round context, would potentially free up microbiologist time and increase IVOS happening early. research on how to integrate it would be essential."
+21,reliance on the AICDSS was very high when little clinical information was present
+22,
+23,
+24,VErbal comments given
+25,"Inflammatory markers such as crp and full blood count, pct, need to be integrated. Hyperthermia is often neglected or not picked up until the patient temp drops to 34, it is a very significant marker for sepsis. "
+26,"I think it is a fantastic development, I presume there will be other parameters included in the tool to allow full functionality comparable with ""good clinical judgement"". The toolsets to use many frequent readings of various parameters which is overall higher than the number of readings in real NHS practice. Not having information on the fuller clinical picture of the cases presented did not perfectly in some of them real clinical practice."
+27,It doesn't use lab results previous culture results presence of NG tube or CRP
+28,"It will be very useful to have access to real time datasets, for example EWS calculator or calculated, blood results, inflammatory markers and culture data  to help validate the decision making process"
+29,The lack of blood tests reduces my confidence in identifying when to step down
+30,"Some of the CDSS systems of similarities reported back felt to be bias, and over influenced decision making towards parameterised similar patients, so I did not like this example. I found the heat map less intuitive and hence less user-friendly. What I liked was the the recommendations and reasons for why (i.e. weighted future importance) and way that CDSS made me question my decision making where it differed. I also liked the ease of reference to guidance which would b e useful for a learning tool to reinforce good practice on up-to-date guidance."
+31,A lot of the answers here depend  on the underlying clinical outcome data.
+32,"dashboard would be useful with overview of patients and ai outcome, scroll down on the page could be improved, overall can see benefit in having this decision aid. knowing what action other clinicians made didn't give me confidence, rather knowing patient outcomes would. "
+33,"it would be good if it integrated even more data relevant to the decision such as examination findings, history and blood tests/other investigations"
+34,
+35,"For decision making, need to replicate real life clinical IV to oral switch, which would always include a more detailed clinical scenario including presentation, imaging, and blood tests"
+36,
+37,as discussed in interview. I used AI only when there was I felt some information lacking to make a decision and so I needed some more reassurance 
+38,"confidence in it would be improved by having CRP, WCC, Neut & also their delirium score & their ability to absorb (e.g. ?vomiting ?diarrhoea), + to be sure there isn't more than 1 infection (e.g. hospital acquired). For cellulitis - clinically would need to see photos of improving redness to help with my decision making - if AI could incorporate that would be great as feel less confident using the tool for cellulitis compared with other infections in the above task"
+39,
+40,

@@ -38,3 +38,5 @@ user_id,user_archetype,age,sex,medical_speciality,grade,ai_familiarity,age_new,s
 36,a,37.0,Male,Medical Microbiology,Consultant,4.0,30s,Male,Microbiology,Consultant,Very familiar
 37,b,47.0,F,Respiratory,Consultant,1.0,40s,Female,Other,Consultant,Not familiar
 38,a,28.0,F,Elderly Medicine,IMT2 (SHO),1.0,20s,Female,Other,Other,Not familiar
+39,b,38.0,Male,ID/MM,Consultant,2.0,30s,Male,Infectious Diseases,Consultant,Slightly familiar
+40,a,39.0,m,medical microbiology,consultant,2.0,30s,Male,Microbiology,Consultant,Slightly familiar

@@ -41,3 +41,4 @@ tim,b,switch,
 38,a,dont_switch,"reduced GCS, unlikely will tolerate an oral"
 39,b,switch,"Concerning features here are the low GCS. Assuming we are not treating a CNS infection, i think it is reasonable to IVOS"
 40,a,dont_switch,Given low grade fever and reduced GCS - need more clinical information and CRP/WCC response to inform decision here
+41,b,dont_switch,low grade temp spike 

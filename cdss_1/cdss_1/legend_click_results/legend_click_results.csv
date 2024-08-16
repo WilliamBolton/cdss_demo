@@ -220,3 +220,20 @@ user_id,user_archetype,patient,variable,timestamp
 39,b,12,Diastolic Blood Pressure,2024-08-09T08:59:12.785Z
 39,b,12,SpO2,2024-08-09T08:59:21.952Z
 39,b,12,Glasgow Coma Score,2024-08-09T08:59:24.134Z
+41,b,8,Respiratory Rate,2024-08-16T10:53:43.545Z
+41,b,8,Heart Rate,2024-08-16T10:53:45.873Z
+41,b,8,Glasgow Coma Score,2024-08-16T10:53:50.666Z
+41,b,8,Glasgow Coma Score,2024-08-16T10:53:51.789Z
+41,b,8,Glasgow Coma Score - verbal response,2024-08-16T10:53:52.815Z
+41,b,8,Glasgow Coma Score,2024-08-16T10:53:55.373Z
+41,b,8,Glasgow Coma Score - motor response,2024-08-16T10:53:57.775Z
+41,b,8,Glasgow Coma Score – eye opening,2024-08-16T10:54:02.246Z
+41,b,8,Mean Blood Pressure,2024-08-16T10:54:04.030Z
+41,b,8,Diastolic Blood Pressure,2024-08-16T10:54:05.954Z
+41,b,8,Heart Rate,2024-08-16T10:54:07.896Z
+41,b,8,Respiratory Rate,2024-08-16T10:54:09.595Z
+41,b,9,Glasgow Coma Score - verbal response,2024-08-16T11:03:35.292Z
+41,b,9,Glasgow Coma Score,2024-08-16T11:03:36.689Z
+41,b,9,Glasgow Coma Score - motor response,2024-08-16T11:03:39.011Z
+41,b,9,Glasgow Coma Score – eye opening,2024-08-16T11:03:43.444Z
+41,b,9,Mean Blood Pressure,2024-08-16T11:03:47.076Z
