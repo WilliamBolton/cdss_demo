@@ -40,3 +40,4 @@ user_id,user_archetype,age,sex,medical_speciality,grade,ai_familiarity,age_new,s
 38,a,28.0,F,Elderly Medicine,IMT2 (SHO),1.0,20s,Female,Other,Other,Not familiar
 39,b,38.0,Male,ID/MM,Consultant,2.0,30s,Male,Infectious Diseases,Consultant,Slightly familiar
 40,a,39.0,m,medical microbiology,consultant,2.0,30s,Male,Microbiology,Consultant,Slightly familiar
+41,b,29.0,F,Neurology,Clinical Fellow ,2.0,20s,Female,Other,Other,Slightly familiar
